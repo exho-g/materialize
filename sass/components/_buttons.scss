@@ -13,6 +13,33 @@
     margin: 3px 0;
     vertical-align: middle;
     -webkit-tap-highlight-color: transparent; // Gets rid of tap active state
+    &.tiny {
+        height: 26px;
+        line-height: 26px;
+        font-size: 12px;
+        padding: 0 12px;
+        i {
+            margin-right: 7px;
+            font-size: .8rem;
+        }
+    }
+    &.small {
+        height: $button-small-height;
+        line-height: $button-small-height;
+        font-size: $button-small-font-size;
+        i {
+            font-size: $button-small-icon-font-size;
+        }
+    }
+    &.large {
+        height: $button-large-height;
+        line-height: $button-large-height;
+        font-size: $button-large-font-size;
+        padding: 0 28px;
+        i {
+            font-size: $button-large-icon-font-size;
+        }
+    }
 }
 
 // Disabled shared style

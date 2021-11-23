@@ -3960,7 +3960,8 @@ $jscomp.polyfill = function (e, r, p, m) {
   if (M.jQueryLoaded) {
     M.initializeJqueryWrapper(Modal, 'modal', 'M_Modal');
   }
-})(cash, M.anime);;(function ($, anim) {
+})(cash, M.anime);
+;(function ($, anim) {
   'use strict';
 
   var _defaults = {
@@ -4629,7 +4630,8 @@ $jscomp.polyfill = function (e, r, p, m) {
   if (M.jQueryLoaded) {
     M.initializeJqueryWrapper(Parallax, 'parallax', 'M_Parallax');
   }
-})(cash);;(function ($, anim) {
+})(cash);
+;(function ($, anim) {
   'use strict';
 
   var _defaults = {
@@ -5455,7 +5457,8 @@ $jscomp.polyfill = function (e, r, p, m) {
   if (M.jQueryLoaded) {
     M.initializeJqueryWrapper(Tooltip, 'tooltip', 'M_Tooltip');
   }
-})(cash, M.anime);;(function ($, anim) {
+})(cash, M.anime);
+;(function ($, anim) {
   'use strict';
 
   var _defaults = {
@@ -6466,7 +6469,8 @@ $jscomp.polyfill = function (e, r, p, m) {
   if (M.jQueryLoaded) {
     M.initializeJqueryWrapper(Sidenav, 'sidenav', 'M_Sidenav');
   }
-})(cash, M.anime);;(function ($, anim) {
+})(cash, M.anime);
+;(function ($, anim) {
   'use strict';
 
   var _defaults = {
@@ -10070,7 +10074,8 @@ $jscomp.polyfill = function (e, r, p, m) {
   if (M.jQueryLoaded) {
     M.initializeJqueryWrapper(Datepicker, 'datepicker', 'M_Datepicker');
   }
-})(cash);;(function ($) {
+})(cash);
+;(function ($) {
   'use strict';
 
   var _defaults = {
@@ -10715,7 +10720,8 @@ $jscomp.polyfill = function (e, r, p, m) {
   if (M.jQueryLoaded) {
     M.initializeJqueryWrapper(Timepicker, 'timepicker', 'M_Timepicker');
   }
-})(cash);;(function ($) {
+})(cash);
+;(function ($) {
   'use strict';
 
   var _defaults = {};
@@ -12538,7 +12544,8 @@ $jscomp.polyfill = function (e, r, p, m) {
   if (M.jQueryLoaded) {
     M.initializeJqueryWrapper(FormSelect, 'formSelect', 'M_FormSelect');
   }
-})(cash);;(function ($, anim) {
+})(cash);
+;(function ($, anim) {
   'use strict';
 
   var _defaults = {};

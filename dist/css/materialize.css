@@ -13556,7 +13556,7 @@ html:not(.no-dark-mode) .tabs .tab.disabled a:hover {
   html:not(.no-dark-mode) img:after {
     color: #efefef;
   }
-  html:not(.no-dark-mode) img .carousel .carousel-item.active img {
+  html:not(.no-dark-mode) .carousel .carousel-item.active img {
     opacity: 1;
   }
   html:not(.no-dark-mode) .dropdown-content {
@@ -17673,7 +17673,7 @@ html.dark-mode img:before {
 html.dark-mode img:after {
   color: #efefef;
 }
-html.dark-mode img .carousel .carousel-item.active img {
+html.dark-mode .carousel .carousel-item.active img {
   opacity: 1;
 }
 html.dark-mode .dropdown-content {

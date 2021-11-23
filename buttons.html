@@ -13,7 +13,7 @@
     <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
     <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
     <!--  Android 5 Chrome Color-->
-    <meta name="theme-color" content="#EE6E73">
+    <meta name="theme-color" content="#1976D2">
     <!-- CSS-->
     <link href="css/prism.css" rel="stylesheet">
     <link href="css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
@@ -51,14 +51,15 @@
             <div class="search-results"></div>
           </div>
         </li>
-        <li class="bold"><a class="waves-effect waves-teal" href="about.html">About</a></li>
-        <li class="bold"><a class="waves-effect waves-teal" href="getting-started.html">Getting Started</a></li>
+        <li class="bold"><a class="waves-effect" href="about.html">About</a></li>
+        <li class="bold"><a class="waves-effect" href="getting-started.html">Getting Started</a></li>
         <li class="no-padding">
           <ul class="collapsible collapsible-accordion">
-            <li class="bold"><a class="collapsible-header waves-effect waves-teal">CSS</a>
+            <li class="bold"><a class="collapsible-header waves-effect">CSS</a>
               <div class="collapsible-body">
                 <ul>
                   <li><a href="color.html">Color</a></li>
+                  <li><a href="dark-mode.html">Dark Mode</a></li>
                   <li><a href="grid.html">Grid</a></li>
                   <li><a href="helpers.html">Helpers</a></li>
                   <li><a href="media-css.html">Media</a></li>
@@ -71,9 +72,10 @@
                 </ul>
               </div>
             </li>
-            <li class="bold active"><a class="collapsible-header waves-effect waves-teal">Components</a>
+            <li class="bold active"><a class="collapsible-header waves-effect">Components</a>
               <div class="collapsible-body">
                 <ul>
+                  <li><a href="alerts.html">Alerts</a></li>
                   <li><a href="badges.html">Badges</a></li>
                   <li class="active"><a href="buttons.html">Buttons</a></li>
                   <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
@@ -85,10 +87,11 @@
                   <li><a href="navbar.html">Navbar</a></li>
                   <li><a href="pagination.html">Pagination</a></li>
                   <li><a href="preloader.html">Preloader</a></li>
+                  <li><a href="tree.html">Tree View</a></li>
                 </ul>
               </div>
             </li>
-            <li class="bold"><a class="collapsible-header waves-effect waves-teal">JavaScript</a>
+            <li class="bold"><a class="collapsible-header waves-effect">JavaScript</a>
               <div class="collapsible-body">
                 <ul>
                   <li><a href="auto-init.html">Auto Init</a></li>
@@ -102,6 +105,7 @@
                   <li><a href="pushpin.html">Pushpin</a></li>
                   <li><a href="scrollspy.html">Scrollspy</a></li>
                   <li><a href="sidenav.html">Sidenav</a></li>
+                  <li><a href="stepper.html">Stepper</a></li>
                   <li><a href="tabs.html">Tabs</a></li>
                   <li><a href="toasts.html">Toasts</a></li>
                   <li><a href="tooltips.html">Tooltips</a></li>
@@ -109,7 +113,7 @@
                 </ul>
               </div>
             </li>
-            <li class="bold"><a class="collapsible-header waves-effect waves-teal">Forms</a>
+            <li class="bold"><a class="collapsible-header waves-effect">Forms</a>
               <div class="collapsible-body">
                 <ul>
                   <li><a href="autocomplete.html">Autocomplete</a></li>
@@ -126,22 +130,23 @@
             </li>
           </ul>
         </li>
-        <li class="bold"><a class="waves-effect waves-teal" href="mobile.html">Mobile</a></li>
+        <li class="bold"><a class="waves-effect" href="mobile.html">Mobile</a></li>
       </ul>
     </header>
     <main><div class="container">
-  <div class="row">
+    <div class="row">
 
-    <div class="col s12 m8 offset-m1 xl7 offset-xl1">
-      <div id="raised" class="section scrollspy">
-        <p class="caption">
-        There are 3 main button types described in material design. The raised button is a standard button that signify actions and seek to give depth to a mostly flat page. The floating circular action button is meant for very important functions. Flat buttons are usually used within elements that already have depth like cards or modals.
-        </p>
-        <h3 class="header">Raised</h3>
-        <a class="waves-effect waves-light btn">button</a>
-        <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a>
-        <a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>button</a>
-        <pre style="padding-top: 0px;">
+        <div class="col s12 m8 offset-m1 xl7 offset-xl1">
+            <div id="raised" class="section scrollspy">
+                <p class="caption">
+                    There are 3 main button types described in material design. The raised button is a standard button that signify actions and seek to give depth to a mostly flat page. The floating circular action button is meant for very important functions. Flat buttons
+                    are usually used within elements that already have depth like cards or modals.
+                </p>
+                <h3 class="header">Raised</h3>
+                <a class="waves-effect waves-light btn">button</a>
+                <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a>
+                <a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>button</a>
+                <pre style="padding-top: 0px;">
           <span class="copyMessage">Copied!</span>
           <i class="material-icons copyButton">content_copy</i>
           <code class="language-markup col s12 copiedText">
@@ -150,39 +155,203 @@
 &lt;a class="waves-effect waves-light btn">&lt;i class="material-icons right">cloud&lt;/i>button&lt;/a>
           </code>
         </pre>
-      </div>
-      <div id="floating" class="section scrollspy">
-        <h3 class="header">Floating</h3>
-        <a class="btn-floating waves-effect waves-light btn-large red"><i class="material-icons">add</i></a><br><br>
-        <pre style="padding-top: 0px;">
+            </div>
+
+            <div id="types" class="section scrollspy">
+                <h3 class="header">Types</h3>
+                <p class="caption">
+                    Button types according to semantic purpose.
+                </p>
+                <a class="waves-effect waves-light btn primary">primary</a>
+                <a class="waves-effect waves-light btn">secondary/default</a>
+                <a class="waves-effect waves-light btn info">info</a>
+                <a class="waves-effect waves-light btn success">success</a>
+                <a class="waves-effect waves-light btn warning">warning</a>
+                <a class="waves-effect waves-light btn danger">danger</a>
+                <a class="waves-effect btn light">light</a>
+                <a class="waves-effect waves-light btn dark">dark</a>
+
+                <pre style="padding-top: 0px;">
+          <span class="copyMessage">Copied!</span>
+          <i class="material-icons copyButton">content_copy</i>
+          <code class="language-markup col s12 copiedText">
+&lt;a class="waves-effect waves-light btn primary">primary&lt;/a>
+&lt;a class="waves-effect waves-light btn">secondary/default&lt;/a>
+&lt;a class="waves-effect waves-light btn info">info&lt;/a>
+&lt;a class="waves-effect waves-light btn success">success&lt;/a>
+&lt;a class="waves-effect waves-light btn warning">warning&lt;/a>
+&lt;a class="waves-effect waves-light btn danger">danger&lt;/a>
+&lt;a class="waves-effect btn light">light&lt;/a>
+&lt;a class="waves-effect waves-light btn dark">dark&lt;/a>
+          </code>
+        </pre>
+            </div>
+
+            <div id="rounded" class="section scrollspy">
+                <h3 class="header">Rounded</h3>
+                <p class="caption">
+                    To make the button rounded just add <code class="language-markup">rounded</code> class.
+                </p>
+                <a class="waves-effect waves-light btn rounded primary">primary</a>
+                <a class="waves-effect waves-light btn rounded">secondary/default</a>
+                <a class="waves-effect waves-light btn rounded info">info</a>
+                <a class="waves-effect waves-light btn rounded success">success</a>
+                <a class="waves-effect waves-light btn rounded warning">warning</a>
+                <a class="waves-effect waves-light btn rounded danger">danger</a>
+                <a class="waves-effect btn rounded light">light</a>
+                <a class="waves-effect waves-light btn rounded dark">dark</a>
+
+                <pre style="padding-top: 0px;">
+          <span class="copyMessage">Copied!</span>
+          <i class="material-icons copyButton">content_copy</i>
+          <code class="language-markup col s12 copiedText">
+&lt;a class="waves-effect waves-light btn rounded primary">primary&lt;/a>
+&lt;a class="waves-effect waves-light btn rounded">secondary/default&lt;/a>
+&lt;a class="waves-effect waves-light btn rounded info">info&lt;/a>
+&lt;a class="waves-effect waves-light btn rounded success">success&lt;/a>
+&lt;a class="waves-effect waves-light btn rounded warning">warning&lt;/a>
+&lt;a class="waves-effect waves-light btn rounded danger">danger&lt;/a>
+&lt;a class="waves-effect btn rounded light">light&lt;/a>
+&lt;a class="waves-effect waves-light btn roundeddark">dark&lt;/a>
+          </code>
+        </pre>
+            </div>
+
+            <div id="soft" class="section scrollspy">
+                <h3 class="header">Soft</h3>
+                <p class="caption">
+                    Flat buttons with background-color. Best used as action buttons inside tables.
+                </p>
+                <a class="waves-effect btn-soft primary">primary</a>
+                <a class="waves-effect btn-soft">secondary/default</a>
+                <a class="waves-effect btn-soft info">info</a>
+                <a class="waves-effect btn-soft success">success</a>
+                <a class="waves-effect btn-soft warning">warning</a>
+                <a class="waves-effect btn-soft danger">danger</a>
+                <a class="waves-effect waves-light btn-soft dark ondark-hide">dark</a>
+                <a class="waves-effect waves-light btn-soft light ondark-show">light</a>
+                <div class="card-panel black ondark-hide">
+                    <a class="waves-effect btn-soft light">light</a>
+                </div>
+                <div class="card-panel grey ondark-show">
+                    <a class="waves-effect btn-soft dark">dark</a>
+                </div>
+
+                <pre style="padding-top: 0px;">
+          <span class="copyMessage">Copied!</span>
+          <i class="material-icons copyButton">content_copy</i>
+          <code class="language-markup col s12 copiedText">
+&lt;a class="waves-effect btn-soft primary">primary&lt;/a>
+&lt;a class="waves-effect btn-soft">secondary/default&lt;/a>
+&lt;a class="waves-effect btn-soft info">info&lt;/a>
+&lt;a class="waves-effect btn-soft success">success&lt;/a>
+&lt;a class="waves-effect btn-soft warning">warning&lt;/a>
+&lt;a class="waves-effect btn-soft danger">danger&lt;/a>
+&lt;a class="waves-effect waves-light btn-soft dark">dark&lt;/a>
+&lt;a class="waves-effect btn-soft light">light&lt;/a>
+          </code>
+        </pre>
+            </div>
+
+            <div id="outlined" class="section scrollspy">
+                <h3 class="header">Outlined</h3>
+                <p class="caption">
+                    Flat buttons with border outlined.
+                </p>
+                <a class="btn-outlined primary">primary</a>
+                <a class="btn-outlined">secondary/default</a>
+                <a class="btn-outlined info">info</a>
+                <a class="btn-outlined success">success</a>
+                <a class="btn-outlined warning">warning</a>
+                <a class="btn-outlined danger">danger</a>
+                <a class="btn-outlined dark ondark-hide">dark</a>
+                <a class="btn-outlined light ondark-show">light</a>
+                <div class="card-panel black ondark-hide">
+                    <a class="btn-outlined light">light</a>
+                </div>
+                <div class="card-panel grey ondark-show">
+                    <a class="btn-outlined dark">dark</a>
+                </div>
+                <pre style="padding-top: 0px;">
+          <span class="copyMessage">Copied!</span>
+          <i class="material-icons copyButton">content_copy</i>
+          <code class="language-markup col s12 copiedText">
+&lt;a class="btn-outlined primary">primary&lt;/a>
+&lt;a class="btn-outlined">secondary/default&lt;/a>
+&lt;a class="btn-outlined info">info&lt;/a>
+&lt;a class="btn-outlined success">success&lt;/a>
+&lt;a class="btn-outlined warning">warning&lt;/a>
+&lt;a class="btn-outlined danger">danger&lt;/a>
+&lt;a class="btn-outlined light">light&lt;/a>
+          </code>
+        </pre>
+                <p class="caption">
+                    For thinner border, just add <code class="language-markup">thin</code> class.
+                </p>
+                <a class="btn-outlined thin primary">primary</a>
+                <a class="btn-outlined thin">secondary/default</a>
+                <a class="btn-outlined thin info">info</a>
+                <a class="btn-outlined thin success">success</a>
+                <a class="btn-outlined thin warning">warning</a>
+                <a class="btn-outlined thin danger">danger</a>
+                <a class="btn-outlined thin dark ondark-hide">dark</a>
+                <a class="btn-outlined thin light ondark-show">light</a>
+                <div class="card-panel black ondark-hide">
+                    <a class="btn-outlined thin light">light</a>
+                </div>
+                <div class="card-panel grey ondark-show">
+                    <a class="btn-outlined thin dark">dark</a>
+                </div>
+
+                <pre style="padding-top: 0px;">
+          <span class="copyMessage">Copied!</span>
+          <i class="material-icons copyButton">content_copy</i>
+          <code class="language-markup col s12 copiedText">
+&lt;a class="btn-outlined thin primary">primary&lt;/a>
+&lt;a class="btn-outlined thin">secondary/default&lt;/a>
+&lt;a class="btn-outlined thin info">info&lt;/a>
+&lt;a class="btn-outlined thin success">success&lt;/a>
+&lt;a class="btn-outlined thin warning">warning&lt;/a>
+&lt;a class="btn-outlined thin danger">danger&lt;/a>
+&lt;a class="btn-outlined thin dark">dark</a>
+&lt;div class="card-panel black">
+  &lt;a class="btn-outlined thin light">light&lt;/a>
+&lt;/div>
+          </code>
+        </pre>
+            </div>
+            <div id="floating" class="section scrollspy">
+                <h3 class="header">Floating</h3>
+                <a class="btn-floating waves-effect waves-light btn-large red"><i class="material-icons">add</i></a><br><br>
+                <pre style="padding-top: 0px;">
           <span class="copyMessage">Copied!</span>
           <i class="material-icons copyButton">content_copy</i>
           <code class="language-markup col s12 copiedText">
   &lt;a class="btn-floating btn-large waves-effect waves-light red">&lt;i class="material-icons">add&lt;/i>&lt;/a>
           </code>
         </pre>
-        <br>
+                <br>
 
-        <h5>Floating Action Button</h5>
-        <p>See the documentation on <a href="floating-action-button.html">this page</a></p>
-      </div>
-      <div id="flat" class="section scrollspy">
-        <h3 class="header">Flat</h3>
-        <p>Flat buttons are used to reduce excessive layering. For example, flat buttons are usually used for actions within a card or modal so there aren't too many overlapping shadows.</p>
-        <a class="waves-effect waves-teal btn-flat">Button</a>
-        <pre style="padding-top: 0px;">
+                <h5>Floating Action Button</h5>
+                <p>See the documentation on <a href="/materialize/floating-action-button.html">this page</a></p>
+            </div>
+            <div id="flat" class="section scrollspy">
+                <h3 class="header">Flat</h3>
+                <p>Flat buttons are used to reduce excessive layering. For example, flat buttons are usually used for actions within a card or modal so there aren't too many overlapping shadows.</p>
+                <a class="waves-effect waves-teal btn-flat">Button</a>
+                <pre style="padding-top: 0px;">
           <span class="copyMessage">Copied!</span>
           <i class="material-icons copyButton">content_copy</i>
           <code class="language-markup col s12 copiedText">
   &lt;a class="waves-effect waves-teal btn-flat">Button&lt;/a>
           </code>
         </pre>
-      </div>
-      <div id="submit" class="section scrollspy">
-        <h3 class="header">Submit Button</h3>
-        <p>When you use a button to submit a form, instead of using a input tag, use a button tag with a type submit</p>
-        <button class="btn waves-effect waves-light" type="submit" name="action">Submit<i class="material-icons right">send</i></button>
-        <pre style="padding-top: 0px;">
+            </div>
+            <div id="submit" class="section scrollspy">
+                <h3 class="header">Submit Button</h3>
+                <p>When you use a button to submit a form, instead of using a input tag, use a button tag with a type submit</p>
+                <button class="btn waves-effect waves-light" type="submit" name="action">Submit<i class="material-icons right">send</i></button>
+                <pre style="padding-top: 0px;">
           <span class="copyMessage">Copied!</span>
           <i class="material-icons copyButton">content_copy</i>
           <code class="language-markup copiedText">
@@ -191,15 +360,15 @@
   &lt;/button>
           </code>
         </pre>
-      </div>
+            </div>
 
-      <div id="large" class="section scrollspy">
-        <h3 class="header">Large</h3>
-        <p>This button has a larger height for buttons that need more attention.</p>
-        <a class="waves-effect waves-light btn-large">Button</a>
-        <a class="waves-effect waves-light btn-large"><i class="material-icons left">cloud</i>button</a>
-        <a class="waves-effect waves-light btn-large"><i class="material-icons right">cloud</i>button</a>
-        <pre style="padding-top: 0px;">
+            <div id="large" class="section scrollspy">
+                <h3 class="header">Large</h3>
+                <p>This button has a larger height for buttons that need more attention.</p>
+                <a class="waves-effect waves-light btn-large">Button</a>
+                <a class="waves-effect waves-light btn-large"><i class="material-icons left">cloud</i>button</a>
+                <a class="waves-effect waves-light btn-large"><i class="material-icons right">cloud</i>button</a>
+                <pre style="padding-top: 0px;">
           <span class="copyMessage">Copied!</span>
           <i class="material-icons copyButton">content_copy</i>
           <code class="language-markup col s12 copiedText">
@@ -208,16 +377,16 @@
 &lt;a class="waves-effect waves-light btn-large">&lt;i class="material-icons right">cloud&lt;/i>button&lt;/a>
           </code>
         </pre>
-      </div>
+            </div>
 
 
-      <div id="small" class="section scrollspy">
-        <h3 class="header">Small</h3>
-        <p>When mouse and keyboard are the primary input methods, this smaller button is useful for denser UI layouts.</p>
-        <a class="waves-effect waves-light btn-small">Button</a>
-        <a class="waves-effect waves-light btn-small"><i class="material-icons left">cloud</i>button</a>
-        <a class="waves-effect waves-light btn-small"><i class="material-icons right">cloud</i>button</a>
-        <pre style="padding-top: 0px;">
+            <div id="small" class="section scrollspy">
+                <h3 class="header">Small</h3>
+                <p>When mouse and keyboard are the primary input methods, this smaller button is useful for denser UI layouts.</p>
+                <a class="waves-effect waves-light btn-small">Button</a>
+                <a class="waves-effect waves-light btn-small"><i class="material-icons left">cloud</i>button</a>
+                <a class="waves-effect waves-light btn-small"><i class="material-icons right">cloud</i>button</a>
+                <pre style="padding-top: 0px;">
           <span class="copyMessage">Copied!</span>
           <i class="material-icons copyButton">content_copy</i>
           <code class="language-markup col s12 copiedText">
@@ -226,17 +395,17 @@
 &lt;a class="waves-effect waves-light btn-small">&lt;i class="material-icons right">cloud&lt;/i>button&lt;/a>
           </code>
         </pre>
-      </div>
+            </div>
 
 
-      <div id="disabled" class="section scrollspy">
-        <h3 class="header">Disabled</h3>
-        <p>This style can be applied to all button types</p>
-        <a class="btn-large disabled">Button</a>
-        <a class="btn disabled">Button</a>
-        <a class="btn-flat disabled">Button</a>
-        <a class="btn-floating disabled"><i class="material-icons">add</i></a>
-        <pre style="padding-top: 0px;">
+            <div id="disabled" class="section scrollspy">
+                <h3 class="header">Disabled</h3>
+                <p>This style can be applied to all button types</p>
+                <a class="btn-large disabled">Button</a>
+                <a class="btn disabled">Button</a>
+                <a class="btn-flat disabled">Button</a>
+                <a class="btn-floating disabled"><i class="material-icons">add</i></a>
+                <pre style="padding-top: 0px;">
           <span class="copyMessage">Copied!</span>
           <i class="material-icons copyButton">content_copy</i>
           <code class="language-markup col s12 copiedText">
@@ -246,62 +415,67 @@
 &lt;a class="btn-floating disabled">&lt;i class="material-icons">add&lt;/i>&lt;/a>
           </code>
         </pre>
-      </div>
+            </div>
 
-    </div>
-
-    <div class="col hide-on-small-only m3 xl3 offset-xl1">
-      <div class="toc-wrapper">
-
-        <div style="height: 1px;">
-          <ul class="section table-of-contents">
-            <li><a href="#raised">Raised</a></li>
-            <li><a href="#floating">Floating</a></li>
-            <li><a href="#flat">Flat</a></li>
-            <li><a href="#submit">Submit</a></li>
-            <li><a href="#large">Large</a></li>
-            <li><a href="#small">Small</a></li>
-            <li><a href="#disabled">Disabled</a></li>
-          </ul>
         </div>
-      </div>
-    </div>
 
-  </div>
+        <div class="col hide-on-small-only m3 xl3 offset-xl1">
+            <div class="toc-wrapper">
+
+                <div style="height: 1px;">
+                    <ul class="section table-of-contents">
+                        <li><a href="#raised">Raised</a></li>
+                        <li><a href="#types">Types</a></li>
+                        <li><a href="#rounded">Rounded</a></li>
+                        <li><a href="#soft">Soft</a></li>
+                        <li><a href="#outlined">Outlined</a></li>
+                        <li><a href="#floating">Floating</a></li>
+                        <li><a href="#flat">Flat</a></li>
+                        <li><a href="#submit">Submit</a></li>
+                        <li><a href="#large">Large</a></li>
+                        <li><a href="#small">Small</a></li>
+                        <li><a href="#disabled">Disabled</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>
-
-    </main>    <footer class="page-footer docs-footer">
-      <div class="container">
+    </main><footer class="page-footer docs-footer">
+    <div class="container">
         <div class="row" style="margin-bottom: 0;">
-          <div class="col s12 m10 offset-m1">
-            <div class="row">
-              <div class="col l4 s12">
-                <h5>Help Materialize Grow</h5>
-                <p class="grey-text text-darken-2">We hope you have enjoyed using Materialize and if you feel like it has helped you out and want to support the team you can help us by opening issues or contributing on GitHub.</p>
-                <a class="btn waves-effect waves-light red lighten-2" href="https://github.com/materializecss/materialize">Contribute</a>
+            <div class="col s12 m10 offset-m1">
+                <div class="row">
+                    <div class="col l4 s12">
+                        <h5>Help Materialize Grow</h5>
+                        <p class="grey-text text-darken-2">We hope you have enjoyed using Materialize and if you feel like it has helped you out and want to support the team you can help us by opening issues or contributing on GitHub.</p>
+                        <a class="btn waves-effect" href="https://github.com/materializecss/materialize">Contribute</a>
 
-              </div>
-              <div class="col l4 s12">
-                <h5>Join the Discussion</h5>
-                <p class="grey-text text-darken-2">We have a Gitter chat room set up where you can talk directly with us. Come in and discuss new features, future goals, general problems or questions, or anything else you can think of.</p>
-                <a class="btn waves-effect waves-light red lighten-2" target="_blank" href="https://gitter.im/materializecss/materialize">Chat</a>
-              </div>
-              <div class="col l4 s12" style="overflow: hidden;">
-                <h5>Star us</h5>
-                <iframe src="https://ghbtns.com/github-btn.html?user=materializecss&repo=materialize&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
-              </div>
+                    </div>
+                    <div class="col l4 s12">
+                        <h5>Join the Discussion</h5>
+                        <p class="grey-text text-darken-2">We have a Gitter chat room set up where you can talk directly with us. Come in and discuss new features, future goals, general problems or questions, or anything else you can think of.</p>
+                        <a class="btn waves-effect" target="_blank" href="https://gitter.im/materializecss/materialize">Chat</a>
+                    </div>
+                    <div class="col l4 s12" style="overflow: hidden;">
+                        <h5>Star me</h5>
+                        <iframe src="https://ghbtns.com/github-btn.html?user=iamjerichog&repo=materialize&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
+                    </div>
+                </div>
+
+                <div class="footer-copyright">
+                    © 2014-<noscript>2018</noscript>
+                    <script type="text/javascript">
+                        document.write(new Date().getFullYear());
+                    </script> Materialize, All rights reserved.
+                    <a class="grey-text text-darken-1 right" href="https://github.com/materializecss/materialize/blob/master/LICENSE">MIT License</a>
+                </div>
+
             </div>
-
-            <div class="footer-copyright">
-              © 2014-<noscript>2018</noscript><script type="text/javascript">document.write(new Date().getFullYear());</script> Materialize, All rights reserved.
-              <a class="grey-text text-darken-1 right" href="https://github.com/materializecss/materialize/blob/master/LICENSE">MIT License</a>
-            </div>
-
-          </div>
         </div>
-      </div>
-    </footer>
-    
+    </div>
+</footer>
     <!--  Scripts-->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script>if (!window.jQuery) { document.write('<script src="bin/jquery-3.2.1.min.js"><\/script>'); }

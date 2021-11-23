@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="description" content="Materialize is a modern responsive CSS framework based on Material Design by Google. ">
-    <title>Collections - Materialize</title>
+    <title>Tree View - Materialize</title>
     <!-- Favicons-->
     <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
     <meta name="msapplication-TileColor" content="#FFFFFF">
@@ -27,7 +27,7 @@
           <div class="nav-wrapper">
             <div class="row">
               <div class="col s12 m10 offset-m1">
-                <h1 class="header">Collections</h1>
+                <h1 class="header">Tree View</h1>
               </div>
             </div>
           </div>
@@ -80,14 +80,14 @@
                   <li><a href="buttons.html">Buttons</a></li>
                   <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
                   <li><a href="cards.html">Cards</a></li>
-                  <li class="active"><a href="collections.html">Collections</a></li>
+                  <li><a href="collections.html">Collections</a></li>
                   <li><a href="floating-action-button.html">Floating Action Button</a></li>
                   <li><a href="footer.html">Footer</a></li>
                   <li><a href="icons.html">Icons</a></li>
                   <li><a href="navbar.html">Navbar</a></li>
                   <li><a href="pagination.html">Pagination</a></li>
                   <li><a href="preloader.html">Preloader</a></li>
-                  <li><a href="tree.html">Tree View</a></li>
+                  <li class="active"><a href="tree.html">Tree View</a></li>
                 </ul>
               </div>
             </li>
@@ -143,212 +143,355 @@
 
         <div class="row">
           <div class="col s12">
-            <p class="caption">Collections allow you to group list objects together.</p>
+            <p class="caption">Tree viewing is a way of displaying heirarchy. This is a modified version of <a
+                href="https://codepen.io/willpower/pen/pJKdej" target="_blank" rel="no-referrer"
+                title="Github Link">pure css tree view test</a> pen by Felipe Nunes. </p>
+
             <h3 class="header">Basic</h3>
-            <ul class="collection">
-              <li class="collection-item">Alvin</li>
-              <li class="collection-item">Alvin</li>
-              <li class="collection-item">Alvin</li>
-              <li class="collection-item">Alvin</li>
-            </ul>
-            <pre style="padding-top: 0px;">
-              <span class="copyMessage">Copied!</span>
-              <i class="material-icons copyButton">content_copy</i>
-              <code class="language-markup copiedText">
-    &lt;ul class="collection">
-      &lt;li class="collection-item">Alvin&lt;/li>
-      &lt;li class="collection-item">Alvin&lt;/li>
-      &lt;li class="collection-item">Alvin&lt;/li>
-      &lt;li class="collection-item">Alvin&lt;/li>
-    &lt;/ul>
-              </code>
-            </pre>
+
+            <div class="card-panel">
+              <div class="tree">
+                <span class="root">Top Level Item</span>
+                <ul class="branches">
+                  <li>
+                    <span>Item 1</span>
+                  </li>
+                  <li>
+                    <span>Item 1</span>
+                    <ul>
+                      <li>
+                        <span>Item 2</span>
+                      </li>
+                      <li>
+                        <span>Item 2</span>
+                      </li>
+                      <li>
+                        <span class="active">Item 2</span>
+                      </li>
+                      <li>
+                        <span>Item 2</span>
+                      </li>
+                      <li>
+                        <span>Item 2</span>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span>Item 1</span>
+                    <ul>
+                      <li>
+                        <span>Item 2</span>
+                        <ul>
+                          <li>
+                            <span class="disabled">Item 3</span>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <br>
+            <pre><code class="language-markup">
+  &lt;div class="card-panel">
+    &lt;div class="tree">
+      &lt;span class="root">Top Level Item&lt;/span>
+      &lt;ul class="branches">
+        &lt;li>
+          &lt;span>Item 1&lt;/span>
+        &lt;/li>
+        &lt;li>
+          &lt;span>Item 1&lt;/span>
+          &lt;ul>
+            &lt;li>
+              &lt;span>Item 2&lt;/span>
+            &lt;/li>
+            &lt;li>
+              &lt;span>Item 2&lt;/span>
+            &lt;/li>
+            &lt;li>
+              &lt;span class="active">Item 2&lt;/span>
+            &lt;/li>
+            &lt;li>
+              &lt;span>Item 2&lt;/span>
+            &lt;/li>
+            &lt;li>
+              &lt;span>Item 2&lt;/span>
+            &lt;/li>
+          &lt;/ul>
+        &lt;/li>
+        &lt;li>
+          &lt;span>Item 1&lt;/span>
+          &lt;ul>
+            &lt;li>
+              &lt;span>Item 2&lt;/span>
+              &lt;ul>
+                &lt;li>
+                  &lt;span class="disabled">Item 3&lt;/span>
+                &lt;/li>
+              &lt;/ul>
+            &lt;/li>
+          &lt;/ul>
+        &lt;/li>
+      &lt;/ul>
+    &lt;/div>
+  &lt;/div>
+            </code></pre>
+            <br>
             <br>
           </div>
         </div>
       </div>
 
-      <div id="links" class="section scrollspy">
+      <div id="outlined" class="section scrollspy">
+
         <div class="row">
           <div class="col s12">
-            <h3 class="header">Links</h3>
-            <div class="collection">
-              <a href="#!" class="collection-item">Alvin</a>
-              <a href="#!" class="collection-item active">Alvin</a>
-              <a href="#!" class="collection-item">Alvin</a>
-              <a href="#!" class="collection-item">Alvin</a>
+
+            <h3 class="header">Outlined</h3>
+            <p class="caption">If you want the item to use outlined instead of fill, just add <code class="language-markup">.outlined</code> on the <code class="language-markup">.tree</code> element.</p>
+
+            <div class="card-panel">
+              <div class="tree outlined">
+                <span class="root">Top Level Item</span>
+                <ul class="branches">
+                  <li>
+                    <span>Item 1</span>
+                  </li>
+                  <li>
+                    <span>Item 1</span>
+                    <ul>
+                      <li>
+                        <span>Item 2</span>
+                      </li>
+                      <li>
+                        <span>Item 2</span>
+                      </li>
+                      <li>
+                        <span class="active">Item 2</span>
+                      </li>
+                      <li>
+                        <span>Item 2</span>
+                      </li>
+                      <li>
+                        <span>Item 2</span>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span>Item 1</span>
+                    <ul>
+                      <li>
+                        <span>Item 2</span>
+                        <ul>
+                          <li>
+                            <span class="disabled">Item 3</span>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <pre style="padding-top: 0px;">
-              <span class="copyMessage">Copied!</span>
-              <i class="material-icons copyButton">content_copy</i>
-              <code class="language-markup copiedText">
-      &lt;div class="collection">
-        &lt;a href="#!" class="collection-item">Alvin&lt;/a>
-        &lt;a href="#!" class="collection-item active">Alvin&lt;/a>
-        &lt;a href="#!" class="collection-item">Alvin&lt;/a>
-        &lt;a href="#!" class="collection-item">Alvin&lt;/a>
-      &lt;/div>
-              </code>
-            </pre>
+
+            <br>
+            <pre><code class="language-markup">
+  &lt;div class="card-panel">
+    &lt;div class="tree outlined">
+      &lt;!-- Tree Contents -->
+    &lt;/div>
+  &lt;/div>
+            </code></pre>
+            <br>
+            <br>
           </div>
         </div>
       </div>
 
-      <div id="headers" class="section scrollspy">
+      <div id="block" class="section scrollspy">
+
         <div class="row">
           <div class="col s12">
-            <h3 class="header">Headers</h3>
-            <ul class="collection with-header">
-              <li class="collection-header"><h4>First Names</h4></li>
-              <li class="collection-item">Alvin</li>
-              <li class="collection-item">Alvin</li>
-              <li class="collection-item">Alvin</li>
-              <li class="collection-item">Alvin</li>
-            </ul>
-            <pre style="padding-top: 0px;">
-              <span class="copyMessage">Copied!</span>
-              <i class="material-icons copyButton">content_copy</i>
-              <code class="language-markup copiedText">
-      &lt;ul class="collection with-header">
-        &lt;li class="collection-header">&lt;h4>First Names&lt;/h4>&lt;/li>
-        &lt;li class="collection-item">Alvin&lt;/li>
-        &lt;li class="collection-item">Alvin&lt;/li>
-        &lt;li class="collection-item">Alvin&lt;/li>
-        &lt;li class="collection-item">Alvin&lt;/li>
+
+            <h3 class="header">Block</h3>
+            <p class="caption">If you want the item to cover the container's width, just add <code class="language-markup">.block</code> on the <code class="language-markup">.tree</code> element.</p>
+
+            <div class="card-panel">
+              <div class="tree block">
+                <span class="root">Top Level Item</span>
+                <ul class="branches">
+                  <li>
+                    <span>Item 1</span>
+                  </li>
+                  <li>
+                    <span>Item 1</span>
+                    <ul>
+                      <li>
+                        <span>Item 2</span>
+                      </li>
+                      <li>
+                        <span>Item 2</span>
+                      </li>
+                      <li>
+                        <span class="active">Item 2</span>
+                      </li>
+                      <li>
+                        <span>Item 2</span>
+                      </li>
+                      <li>
+                        <span>Item 2</span>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span>Item 1</span>
+                    <ul>
+                      <li>
+                        <span>Item 2</span>
+                        <ul>
+                          <li>
+                            <span class="disabled">Item 3</span>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <br>
+            <pre><code class="language-markup">
+  &lt;div class="card-panel">
+    &lt;div class="tree block">
+      &lt;!-- Tree Contents -->
+    &lt;/div>
+  &lt;/div>
+            </code></pre>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+
+      <div id="link" class="section scrollspy">
+
+        <div class="row">
+          <div class="col s12">
+
+            <h3 class="header">Link</h3>
+            <p class="caption">You can also use the <code class="language-markup">&lt;a></code> tag instead of <code class="language-markup">&lt;span></code> tag.</p>
+
+            <div class="card-panel">
+              <div class="tree outlined">
+                <a href="#!" class="root">Top Level Item</a>
+                <ul class="branches">
+                  <li>
+                    <a href="#!">Item 1</a>
+                  </li>
+                  <li>
+                    <a href="#!">Item 1</a>
+                    <ul>
+                      <li>
+                        <a href="#!">Item 2</a>
+                      </li>
+                      <li>
+                        <a href="#!">Item 2</a>
+                      </li>
+                      <li>
+                        <a href="#!" class="active">Item 2</a>
+                      </li>
+                      <li>
+                        <a href="#!">Item 2</a>
+                      </li>
+                      <li>
+                        <a href="#!">Item 2</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#!">Item 1</a>
+                    <ul>
+                      <li>
+                        <a href="#!">Item 2</a>
+                        <ul>
+                          <li>
+                            <a href="#!" class="disabled">Item 3</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <br>
+            <pre><code class="language-markup">
+  &lt;div class="card-panel">
+    &lt;div class="tree outlined">
+      &lt;a href="#!" class="root">Top Level Item&lt;/a>
+      &lt;ul class="branches">
+        &lt;li>
+          &lt;a href="#!">Item 1&lt;/a>
+        &lt;/li>
+        &lt;li>
+          &lt;a href="#!">Item 1&lt;/a>
+          &lt;ul>
+            &lt;li>
+              &lt;a href="#!">Item 2&lt;/a>
+            &lt;/li>
+            &lt;li>
+              &lt;a href="#!">Item 2&lt;/a>
+            &lt;/li>
+            &lt;li>
+              &lt;a href="#!" class="active">Item 2&lt;/a>
+            &lt;/li>
+            &lt;li>
+              &lt;a href="#!">Item 2&lt;/a>
+            &lt;/li>
+            &lt;li>
+              &lt;a href="#!">Item 2&lt;/a>
+            &lt;/li>
+          &lt;/ul>
+        &lt;/li>
+        &lt;li>
+          &lt;a href="#!">Item 1&lt;/a>
+          &lt;ul>
+            &lt;li>
+              &lt;a href="#!">Item 2&lt;/a>
+              &lt;ul>
+                &lt;li>
+                  &lt;a href="#!" class="disabled">Item 3&lt;/a>
+                &lt;/li>
+              &lt;/ul>
+            &lt;/li>
+          &lt;/ul>
+        &lt;/li>
       &lt;/ul>
-              </code>
-            </pre>
+    &lt;/div>
+  &lt;/div>
+            </code></pre>
+            <br>
+            <br>
           </div>
         </div>
       </div>
 
-
-      <div id="secondary" class="section scrollspy">
-        <div class="row">
-          <div class="col s12">
-            <h3 class="header">Secondary content</h3>
-            <ul class="collection with-header">
-              <li class="collection-header"><h4>First Names</h4></li>
-              <li class="collection-item">Alvin<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></li>
-              <li class="collection-item">Alvin<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></li>
-              <li class="collection-item">Alvin<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></li>
-              <li class="collection-item">Alvin<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></li>
-            </ul>
-            <pre style="padding-top: 0px;">
-              <span class="copyMessage">Copied!</span>
-              <i class="material-icons copyButton">content_copy</i>
-              <code class="language-markup copiedText">
-      &lt;ul class="collection with-header">
-        &lt;li class="collection-header">&lt;h4>First Names&lt;/h4>&lt;/li>
-        &lt;li class="collection-item">&lt;div>Alvin&lt;a href="#!" class="secondary-content">&lt;i class="material-icons">send&lt;/i>&lt;/a>&lt;/div>&lt;/li>
-        &lt;li class="collection-item">&lt;div>Alvin&lt;a href="#!" class="secondary-content">&lt;i class="material-icons">send&lt;/i>&lt;/a>&lt;/div>&lt;/li>
-        &lt;li class="collection-item">&lt;div>Alvin&lt;a href="#!" class="secondary-content">&lt;i class="material-icons">send&lt;/i>&lt;/a>&lt;/div>&lt;/li>
-        &lt;li class="collection-item">&lt;div>Alvin&lt;a href="#!" class="secondary-content">&lt;i class="material-icons">send&lt;/i>&lt;/a>&lt;/div>&lt;/li>
-      &lt;/ul>
-              </code>
-            </pre>
-          </div>
-
-        </div>
-      </div>
-
-      <div id="circle" class="section scrollspy">
-        <div class="row">
-          <div class="col s12">
-            <h3 class="header">Avatar Content</h3>
-            <ul class="collection">
-              <li class="collection-item avatar">
-                <img src="images/yuna.jpg" alt="" class="circle">
-                <span class="title">Title</span>
-                <p>First Line <br>
-                   Second Line
-                </p>
-                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-              </li>
-              <li class="collection-item avatar">
-                <i class="material-icons circle">folder</i>
-                <span class="title">Title</span>
-                <p>First Line <br>
-                   Second Line
-                </p>
-                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-              </li>
-              <li class="collection-item avatar">
-                <i class="material-icons circle green">insert_chart</i>
-                <span class="title">Title</span>
-                <p>First Line <br>
-                   Second Line
-                </p>
-                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-              </li>
-              <li class="collection-item avatar">
-                <i class="material-icons circle red">play_arrow</i>
-                <span class="title">Title</span>
-                <p>First Line <br>
-                   Second Line
-                </p>
-                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-              </li>
-            </ul>
-            <pre style="padding-top: 0px;">
-              <span class="copyMessage">Copied!</span>
-              <i class="material-icons copyButton">content_copy</i>
-              <code class="language-markup copiedText">
-  &lt;ul class="collection">
-    &lt;li class="collection-item avatar">
-      &lt;img src="images/yuna.jpg" alt="" class="circle">
-      &lt;span class="title">Title&lt;/span>
-      &lt;p>First Line &lt;br>
-         Second Line
-      &lt;/p>
-      &lt;a href="#!" class="secondary-content">&lt;i class="material-icons">grade&lt;/i>&lt;/a>
-    &lt;/li>
-    &lt;li class="collection-item avatar">
-      &lt;i class="material-icons circle">folder&lt;/i>
-      &lt;span class="title">Title&lt;/span>
-      &lt;p>First Line &lt;br>
-         Second Line
-      &lt;/p>
-      &lt;a href="#!" class="secondary-content">&lt;i class="material-icons">grade&lt;/i>&lt;/a>
-    &lt;/li>
-    &lt;li class="collection-item avatar">
-      &lt;i class="material-icons circle green">insert_chart&lt;/i>
-      &lt;span class="title">Title&lt;/span>
-      &lt;p>First Line &lt;br>
-         Second Line
-      &lt;/p>
-      &lt;a href="#!" class="secondary-content">&lt;i class="material-icons">grade&lt;/i>&lt;/a>
-    &lt;/li>
-    &lt;li class="collection-item avatar">
-      &lt;i class="material-icons circle red">play_arrow&lt;/i>
-      &lt;span class="title">Title&lt;/span>
-      &lt;p>First Line &lt;br>
-         Second Line
-      &lt;/p>
-      &lt;a href="#!" class="secondary-content">&lt;i class="material-icons">grade&lt;/i>&lt;/a>
-    &lt;/li>
-  &lt;/ul>
-              </code>
-            </pre>
-          </div>
-
-        </div>
-      </div>
       <!-- End collections -->
-
-
     </div>
 
     <div class="col hide-on-small-only m3 xl3 offset-xl1">
       <div class="toc-wrapper">
-
         <div style="height: 1px;">
           <ul class="section table-of-contents">
             <li><a href="#basic">Basic</a></li>
-            <li><a href="#links">Links</a></li>
-            <li><a href="#headers">Headers</a></li>
-            <li><a href="#secondary">Secondary Content</a></li>
-            <li><a href="#circle">Avatar Content</a></li>
+            <li><a href="#outlined">Outlined</a></li>
+            <li><a href="#block">Block</a></li>
+            <li><a href="#link">Link</a></li>
           </ul>
         </div>
       </div>
@@ -356,8 +499,6 @@
 
   </div>
 </div>
-
-
     </main><footer class="page-footer docs-footer">
     <div class="container">
         <div class="row" style="margin-bottom: 0;">

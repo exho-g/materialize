@@ -13,7 +13,7 @@
     <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
     <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
     <!--  Android 5 Chrome Color-->
-    <meta name="theme-color" content="#EE6E73">
+    <meta name="theme-color" content="#1976D2">
     <!-- CSS-->
     <link href="css/prism.css" rel="stylesheet">
     <link href="css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
@@ -40,14 +40,15 @@
             <div class="search-results"></div>
           </div>
         </li>
-        <li class="bold"><a class="waves-effect waves-teal" href="about.html">About</a></li>
-        <li class="bold"><a class="waves-effect waves-teal" href="getting-started.html">Getting Started</a></li>
+        <li class="bold"><a class="waves-effect" href="about.html">About</a></li>
+        <li class="bold"><a class="waves-effect" href="getting-started.html">Getting Started</a></li>
         <li class="no-padding">
           <ul class="collapsible collapsible-accordion">
-            <li class="bold"><a class="collapsible-header waves-effect waves-teal">CSS</a>
+            <li class="bold"><a class="collapsible-header waves-effect">CSS</a>
               <div class="collapsible-body">
                 <ul>
                   <li><a href="color.html">Color</a></li>
+                  <li><a href="dark-mode.html">Dark Mode</a></li>
                   <li><a href="grid.html">Grid</a></li>
                   <li><a href="helpers.html">Helpers</a></li>
                   <li><a href="media-css.html">Media</a></li>
@@ -60,9 +61,10 @@
                 </ul>
               </div>
             </li>
-            <li class="bold"><a class="collapsible-header waves-effect waves-teal">Components</a>
+            <li class="bold"><a class="collapsible-header waves-effect">Components</a>
               <div class="collapsible-body">
                 <ul>
+                  <li><a href="alerts.html">Alerts</a></li>
                   <li><a href="badges.html">Badges</a></li>
                   <li><a href="buttons.html">Buttons</a></li>
                   <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
@@ -74,10 +76,11 @@
                   <li><a href="navbar.html">Navbar</a></li>
                   <li><a href="pagination.html">Pagination</a></li>
                   <li><a href="preloader.html">Preloader</a></li>
+                  <li><a href="tree.html">Tree View</a></li>
                 </ul>
               </div>
             </li>
-            <li class="bold"><a class="collapsible-header waves-effect waves-teal">JavaScript</a>
+            <li class="bold"><a class="collapsible-header waves-effect">JavaScript</a>
               <div class="collapsible-body">
                 <ul>
                   <li><a href="auto-init.html">Auto Init</a></li>
@@ -91,6 +94,7 @@
                   <li><a href="pushpin.html">Pushpin</a></li>
                   <li><a href="scrollspy.html">Scrollspy</a></li>
                   <li><a href="sidenav.html">Sidenav</a></li>
+                  <li><a href="stepper.html">Stepper</a></li>
                   <li><a href="tabs.html">Tabs</a></li>
                   <li><a href="toasts.html">Toasts</a></li>
                   <li><a href="tooltips.html">Tooltips</a></li>
@@ -98,7 +102,7 @@
                 </ul>
               </div>
             </li>
-            <li class="bold"><a class="collapsible-header waves-effect waves-teal">Forms</a>
+            <li class="bold"><a class="collapsible-header waves-effect">Forms</a>
               <div class="collapsible-body">
                 <ul>
                   <li><a href="autocomplete.html">Autocomplete</a></li>
@@ -115,7 +119,7 @@
             </li>
           </ul>
         </li>
-        <li class="bold"><a class="waves-effect waves-teal" href="mobile.html">Mobile</a></li>
+        <li class="bold"><a class="waves-effect" href="mobile.html">Mobile</a></li>
       </ul>
     </header>
     <main><div class="section" id="index-banner">
@@ -146,38 +150,40 @@
   </div>
 </div> <!-- End Container -->
 
-    </main>    <footer class="page-footer docs-footer">
-      <div class="container">
+    </main><footer class="page-footer docs-footer">
+    <div class="container">
         <div class="row" style="margin-bottom: 0;">
-          <div class="col s12 m10 offset-m1">
-            <div class="row">
-              <div class="col l4 s12">
-                <h5>Help Materialize Grow</h5>
-                <p class="grey-text text-darken-2">We hope you have enjoyed using Materialize and if you feel like it has helped you out and want to support the team you can help us by opening issues or contributing on GitHub.</p>
-                <a class="btn waves-effect waves-light red lighten-2" href="https://github.com/materializecss/materialize">Contribute</a>
+            <div class="col s12 m10 offset-m1">
+                <div class="row">
+                    <div class="col l4 s12">
+                        <h5>Help Materialize Grow</h5>
+                        <p class="grey-text text-darken-2">We hope you have enjoyed using Materialize and if you feel like it has helped you out and want to support the team you can help us by opening issues or contributing on GitHub.</p>
+                        <a class="btn waves-effect" href="https://github.com/materializecss/materialize">Contribute</a>
 
-              </div>
-              <div class="col l4 s12">
-                <h5>Join the Discussion</h5>
-                <p class="grey-text text-darken-2">We have a Gitter chat room set up where you can talk directly with us. Come in and discuss new features, future goals, general problems or questions, or anything else you can think of.</p>
-                <a class="btn waves-effect waves-light red lighten-2" target="_blank" href="https://gitter.im/materializecss/materialize">Chat</a>
-              </div>
-              <div class="col l4 s12" style="overflow: hidden;">
-                <h5>Star us</h5>
-                <iframe src="https://ghbtns.com/github-btn.html?user=materializecss&repo=materialize&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
-              </div>
+                    </div>
+                    <div class="col l4 s12">
+                        <h5>Join the Discussion</h5>
+                        <p class="grey-text text-darken-2">We have a Gitter chat room set up where you can talk directly with us. Come in and discuss new features, future goals, general problems or questions, or anything else you can think of.</p>
+                        <a class="btn waves-effect" target="_blank" href="https://gitter.im/materializecss/materialize">Chat</a>
+                    </div>
+                    <div class="col l4 s12" style="overflow: hidden;">
+                        <h5>Star me</h5>
+                        <iframe src="https://ghbtns.com/github-btn.html?user=iamjerichog&repo=materialize&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
+                    </div>
+                </div>
+
+                <div class="footer-copyright">
+                    © 2014-<noscript>2018</noscript>
+                    <script type="text/javascript">
+                        document.write(new Date().getFullYear());
+                    </script> Materialize, All rights reserved.
+                    <a class="grey-text text-darken-1 right" href="https://github.com/materializecss/materialize/blob/master/LICENSE">MIT License</a>
+                </div>
+
             </div>
-
-            <div class="footer-copyright">
-              © 2014-<noscript>2018</noscript><script type="text/javascript">document.write(new Date().getFullYear());</script> Materialize, All rights reserved.
-              <a class="grey-text text-darken-1 right" href="https://github.com/materializecss/materialize/blob/master/LICENSE">MIT License</a>
-            </div>
-
-          </div>
         </div>
-      </div>
-    </footer>
-    
+    </div>
+</footer>
     <!--  Scripts-->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script>if (!window.jQuery) { document.write('<script src="bin/jquery-3.2.1.min.js"><\/script>'); }

@@ -3517,7 +3517,7 @@ $jscomp.polyfill = function (e, r, p, m) {
   'use strict';
 
   var _defaults = {
-    opacity: 0.5,
+    opacity: 1,
     inDuration: 250,
     outDuration: 250,
     onOpenStart: null,
@@ -3614,6 +3614,10 @@ $jscomp.polyfill = function (e, r, p, m) {
         }
         this.$overlay[0].addEventListener('click', this._handleOverlayClickBound);
         this.el.addEventListener('click', this._handleModalCloseClickBound);
+
+        if (this.$el[0].classList.contains('blur-overlay')) {
+          this.$overlay[0].classList.add('blur-overlay');
+        }
       }
 
       /**
@@ -4481,6 +4485,10 @@ $jscomp.polyfill = function (e, r, p, m) {
       _this21._enabled = window.innerWidth > _this21.options.responsiveThreshold;
 
       _this21.$img = _this21.$el.find('img').first();
+      if (_this21.$el.find('img').length == 0) {
+        _this21.$img = _this21.$el.find('video').first();
+      }
+
       _this21.$img.each(function () {
         var el = this;
         if (el.complete) $(el).trigger('load');
@@ -5155,6 +5163,10 @@ $jscomp.polyfill = function (e, r, p, m) {
 
         tooltipEl.appendChild(tooltipContentEl);
         document.body.appendChild(tooltipEl);
+
+        if (this.el.classList.contains('blur-bg')) {
+          this.tooltipEl.classList.add('blur-bg');
+        }
       }
     }, {
       key: "_setTooltipContent",
@@ -5911,6 +5923,10 @@ $jscomp.polyfill = function (e, r, p, m) {
         var overlay = document.createElement('div');
         this._closeBound = this.close.bind(this);
         overlay.classList.add('sidenav-overlay');
+
+        if (this.el.classList.contains('blur-overlay')) {
+          overlay.classList.add('blur-overlay');
+        }
 
         overlay.addEventListener('click', this._closeBound);
 
@@ -9638,7 +9654,7 @@ $jscomp.polyfill = function (e, r, p, m) {
         yearHtml = "<select class=\"datepicker-select orig-select-year\" tabindex=\"-1\">" + arr.join('') + "</select>";
 
         var leftArrow = '<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/><path d="M0-.5h24v24H0z" fill="none"/></svg>';
-        html += "<button class=\"month-prev" + (prev ? '' : ' is-disabled') + "\" type=\"button\">" + leftArrow + "</button>";
+        html += "<button class=\"waves-effect month-prev" + (prev ? '' : ' is-disabled') + "\" type=\"button\">" + leftArrow + "</button>";
 
         html += '<div class="selects-container">';
         if (opts.showMonthAfterYear) {
@@ -9657,7 +9673,7 @@ $jscomp.polyfill = function (e, r, p, m) {
         }
 
         var rightArrow = '<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/><path d="M0-.25h24v24H0z" fill="none"/></svg>';
-        html += "<button class=\"month-next" + (next ? '' : ' is-disabled') + "\" type=\"button\">" + rightArrow + "</button>";
+        html += "<button class=\"waves-effect month-next" + (next ? '' : ' is-disabled') + "\" type=\"button\">" + rightArrow + "</button>";
 
         return html += '</div>';
       }
@@ -9804,6 +9820,14 @@ $jscomp.polyfill = function (e, r, p, m) {
             return _this56.date.getFullYear();
           }
         };
+
+        if (this.el.classList.contains('blur-bg')) {
+          this.modalEl.classList.add('blur-bg');
+        }
+
+        if (this.el.classList.contains('blur-overlay')) {
+          this.modalEl.classList.add('blur-overlay');
+        }
       }
 
       /**
@@ -10277,6 +10301,14 @@ $jscomp.polyfill = function (e, r, p, m) {
         this.spanAmPm = this.modalEl.querySelector('.timepicker-span-am-pm');
         this.footer = this.modalEl.querySelector('.timepicker-footer');
         this.amOrPm = 'PM';
+
+        if (this.el.classList.contains('blur-bg')) {
+          this.modalEl.classList.add('blur-bg');
+        }
+
+        if (this.el.classList.contains('blur-overlay')) {
+          this.modalEl.classList.add('blur-overlay');
+        }
       }
     }, {
       key: "_pickerSetup",
@@ -12292,6 +12324,11 @@ $jscomp.polyfill = function (e, r, p, m) {
 
         // Add initial selections
         this._setSelectedStates();
+
+        //Add Blur background
+        if (this.el.classList.contains('blur-bg')) {
+          this.dropdown.dropdownEl.classList.add('blur-bg');
+        }
       }
 
       /**

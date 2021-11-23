@@ -1,0 +1,76 @@
+@mixin beautify-scrollbar {
+
+    /* width */
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.03);
+        border-radius: 5px;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    /* Corner */
+    &::-webkit-scrollbar-corner {
+        background: rgba(0, 0, 0, 0);
+    }
+}
+
+@media #{$large-and-up} {
+    .scrollbar {
+        overflow: auto;
+
+        @include beautify-scrollbar();
+
+        &-x {
+            overflow: unset;
+            overflow-x: auto;
+        }
+
+        &-y {
+            overflow: unset;
+            overflow-y: auto;
+        }
+    }
+
+    body.scrollbar {
+        * {
+            @include beautify-scrollbar();
+        }
+    }
+}
+
+.scrollbar-force {
+    overflow: auto;
+
+    @include beautify-scrollbar();
+
+    &-x {
+        overflow: unset;
+        overflow-x: auto;
+    }
+
+    &-y {
+        overflow: unset;
+        overflow-y: auto;
+    }
+}
+
+body.scrollbar-force {
+    * {
+        @include beautify-scrollbar();
+    }
+}

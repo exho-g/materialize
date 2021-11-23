@@ -1,214 +1,237 @@
 .sidenav {
-  position: fixed;
-  width: $sidenav-width;
-  left: 0;
-  top: 0;
-  margin: 0;
-  transform: translateX(-100%);
-  height: 100vh;
-  padding-bottom: 60px;
-  background-color: $sidenav-bg-color;
-  z-index: 999;
-  overflow-y: auto;
-  will-change: transform;
-  backface-visibility: hidden;
-  transform: translateX(-105%);
-
-  @extend .z-depth-1;
-
-  // Right Align
-  &.right-aligned {
-    right: 0;
-    transform: translateX(105%);
-    left: auto;
-    transform: translateX(100%);
-  }
-
-  .collapsible {
+    position: fixed;
+    width: $sidenav-width;
+    left: 0;
+    top: 0;
     margin: 0;
-  }
-
-
-  li {
-    float: none;
-    line-height: $sidenav-line-height;
-
-    &.active { background-color: rgba(0,0,0,.05); }
-  }
-
-  li > a {
-    color: $sidenav-font-color;
-    display: block;
-    font-size: $sidenav-font-size;
-    font-weight: 500;
-    height: $sidenav-item-height;
-    line-height: $sidenav-line-height;
-    padding: 0 ($sidenav-padding * 2);
-
-    &:hover { background-color: rgba(0,0,0,.05);}
-
-    &.btn, &.btn-large, &.btn-flat, &.btn-floating {
-      margin: 10px 15px;
+    transform: translateX(-100%);
+    height: 100vh;
+    padding-bottom: 60px;
+    background-color: $sidenav-bg-color;
+    z-index: 999;
+    overflow-y: auto;
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translateX(-105%);
+    @extend .z-depth-1;
+    &.blur-bg {
+        background-color: rgba($sidenav-bg-color, .6);
+        backdrop-filter: blur(15px);
     }
-
-    &.btn,
-    &.btn-large,
-    &.btn-floating { color: $button-raised-color; }
-    &.btn-flat { color: $button-flat-color; }
-
-    &.btn:hover,
-    &.btn-large:hover { background-color: lighten($button-raised-background, 5%); }
-    &.btn-floating:hover { background-color: $button-raised-background; }
-
-    & > i,
-    & > [class^="mdi-"], li > a > [class*="mdi-"],
-    & > i.material-icons {
-      float: left;
-      height: $sidenav-item-height;
-      line-height: $sidenav-line-height;
-      margin: 0 ($sidenav-padding * 2) 0 0;
-      width: $sidenav-item-height * 0.5;
-      color: rgba(0,0,0,.54);
+    // Right Align
+    &.right-aligned {
+        right: 0;
+        transform: translateX(105%);
+        left: auto;
+        transform: translateX(100%);
     }
-  }
-
-
-  .divider {
-    margin: ($sidenav-padding * 0.5) 0 0 0;
-  }
-
-  .subheader {
-    &:hover {
-      background-color: transparent;
+    .collapsible {
+        margin: 0;
     }
-
-    cursor: initial;
-    pointer-events: none;
-    color: rgba(0,0,0,.54);
-    font-size: $sidenav-font-size;
-    font-weight: 500;
-    line-height: $sidenav-line-height;
-  }
-
-  .user-view {
-    position: relative;
-    padding: ($sidenav-padding * 2) ($sidenav-padding * 2) 0;
-    margin-bottom: $sidenav-padding * 0.5;
-
-    & > a {
-      &:hover { background-color: transparent; }
-      height: auto;
-      padding: 0;
+    li {
+        float: none;
+        line-height: $sidenav-line-height;
+        &.active {
+            background-color: rgba(0, 0, 0, .05);
+        }
     }
-
-    .background {
-      overflow: hidden;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: -1;
+    li>a {
+        color: $sidenav-font-color;
+        display: block;
+        font-size: $sidenav-font-size;
+        font-weight: 500;
+        height: $sidenav-item-height;
+        line-height: $sidenav-line-height;
+        padding: 0 ($sidenav-padding * 2);
+        &:hover {
+            background-color: rgba(0, 0, 0, .05);
+        }
+        &.btn,
+        &.btn-large,
+        &.btn-flat,
+        &.btn-floating {
+            margin: 10px 15px;
+        }
+        &.btn,
+        &.btn-large,
+        &.btn-floating {
+            color: $button-raised-color;
+        }
+        &.btn-flat {
+            color: $button-flat-color;
+        }
+        &.btn:hover,
+        &.btn-large:hover {
+            background-color: lighten($button-raised-background, 5%);
+        }
+        &.btn-floating:hover {
+            background-color: $button-raised-background;
+        }
+        &>i,
+        &>[class^="mdi-"],
+        li>a>[class*="mdi-"],
+        &>i.material-icons {
+            float: left;
+            height: $sidenav-item-height;
+            line-height: $sidenav-line-height;
+            margin: 0 ($sidenav-padding * 2) 0 0;
+            width: $sidenav-item-height * 0.5;
+            color: rgba(0, 0, 0, .54);
+        }
     }
-
-    .circle, .name, .email {
-      display: block;
+    .divider {
+        margin: ($sidenav-padding * 0.5) 0 0 0;
     }
-
-    .circle {
-      height: 64px;
-      width: 64px;
+    .subheader {
+        &:hover {
+            background-color: transparent;
+        }
+        cursor: initial;
+        pointer-events: none;
+        color: rgba(0, 0, 0, .54);
+        font-size: $sidenav-font-size;
+        font-weight: 500;
+        line-height: $sidenav-line-height;
     }
-
-    .name,
-    .email {
-      font-size: $sidenav-font-size;
-      line-height: $sidenav-line-height * 0.5;
+    .user-view {
+        position: relative;
+        padding: ($sidenav-padding * 2) ($sidenav-padding * 2) 0;
+        margin-bottom: $sidenav-padding * 0.5;
+        &>a {
+            &:hover {
+                background-color: transparent;
+            }
+            height: auto;
+            padding: 0;
+        }
+        .background {
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .circle,
+        .name,
+        .email {
+            display: block;
+        }
+        .circle {
+            height: 64px;
+            width: 64px;
+        }
+        .name,
+        .email {
+            font-size: $sidenav-font-size;
+            line-height: $sidenav-line-height * 0.5;
+        }
+        .name {
+            margin-top: 16px;
+            font-weight: 500;
+        }
+        .email {
+            padding-bottom: 16px;
+            font-weight: 400;
+        }
     }
-
-    .name {
-      margin-top: 16px;
-      font-weight: 500;
-    }
-
-    .email {
-      padding-bottom: 16px;
-      font-weight: 400;
-    }
-  }
 }
-
 
 // Touch interaction
 .drag-target {
-  // Right Align
-  &.right-aligned {
-    right: 0;
-  }
-
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 998;
+    // Right Align
+    &.right-aligned {
+        right: 0;
+    }
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 998;
 }
-
 
 // Fixed Sidenav shown
 .sidenav.sidenav-fixed {
-  // Right Align
-  &.right-aligned {
-    right: 0;
-    left: auto;
-  }
+    // Right Align
+    &.right-aligned {
+        right: 0;
+        left: auto;
+    }
+    left: 0;
+    transform: translateX(0);
+    position: fixed;
+}
 
-  left: 0;
-  transform: translateX(0);
-  position: fixed;
+// Adjust Contents for Fixed Sidenav
+header.sidenav-fixed,
+main.sidenav-fixed,
+footer.sidenav-fixed {
+    padding-left: 300px;
+}
+
+nav.sidenav-fixed {
+    width: calc(100% - 300px);
+}
+
+.fixed-action-btn.toolbar.active.sidenav-fixed {
+    width: calc(100% - 300px) !important;
+    margin-left: 300px;
 }
 
 // Fixed Sidenav hide on smaller
 @media #{$medium-and-down} {
-  .sidenav {
-    &.sidenav-fixed {
-      transform: translateX(-105%);
-
-      &.right-aligned {
-        transform: translateX(105%);
-      }
+    .sidenav {
+        &.sidenav-fixed {
+            transform: translateX(-105%);
+            &.right-aligned {
+                transform: translateX(105%);
+            }
+        }
+        >a {
+            padding: 0 $sidenav-padding;
+        }
+        .user-view {
+            padding: $sidenav-padding $sidenav-padding 0;
+        }
     }
-
-    > a {
-      padding: 0 $sidenav-padding;
+    header.sidenav-fixed,
+    main.sidenav-fixed,
+    footer.v {
+        padding-left: 0;
     }
-
-    .user-view {
-      padding: $sidenav-padding $sidenav-padding 0;
+    nav.sidenav-fixed {
+        width: 100%;
     }
-  }
+    .fixed-action-btn.toolbar.active.sidenav-fixed {
+        width: 100%;
+        margin-left: unset;
+    }
 }
 
-
-.sidenav .collapsible-body > ul:not(.collapsible) > li.active,
-.sidenav.sidenav-fixed .collapsible-body > ul:not(.collapsible) > li.active {
-  background-color: $primary-color;
-  a {
-    color: $sidenav-bg-color;
-  }
+.sidenav .collapsible-body>ul:not(.collapsible)>li.active,
+.sidenav.sidenav-fixed .collapsible-body>ul:not(.collapsible)>li.active {
+    background-color: $primary-color;
+    a {
+        color: $sidenav-bg-color;
+    }
 }
+
 .sidenav .collapsible-body {
-  padding: 0;
+    padding: 0;
 }
-
 
 .sidenav-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  opacity: 0;
-  height: 120vh;
-  background-color: rgba(0,0,0,.5);
-  z-index: 997;
-  display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    height: 120vh;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 997;
+    display: none;
+    &.blur-overlay {
+        backdrop-filter: blur(2px);
+    }
 }

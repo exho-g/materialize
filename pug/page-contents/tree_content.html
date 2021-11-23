@@ -1,0 +1,366 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col s12 m8 offset-m1 xl7 offset-xl1">
+
+      <!--  Collections Section  -->
+      <div id="basic" class="section scrollspy">
+
+        <div class="row">
+          <div class="col s12">
+            <p class="caption">Tree viewing is a way of displaying heirarchy. This is a modified version of <a
+                href="https://codepen.io/willpower/pen/pJKdej" target="_blank" rel="no-referrer"
+                title="Github Link">pure css tree view test</a> pen by Felipe Nunes. </p>
+
+            <h3 class="header">Basic</h3>
+
+            <div class="card-panel">
+              <div class="tree">
+                <span class="root">Top Level Item</span>
+                <ul class="branches">
+                  <li>
+                    <span>Item 1</span>
+                  </li>
+                  <li>
+                    <span>Item 1</span>
+                    <ul>
+                      <li>
+                        <span>Item 2</span>
+                      </li>
+                      <li>
+                        <span>Item 2</span>
+                      </li>
+                      <li>
+                        <span class="active">Item 2</span>
+                      </li>
+                      <li>
+                        <span>Item 2</span>
+                      </li>
+                      <li>
+                        <span>Item 2</span>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span>Item 1</span>
+                    <ul>
+                      <li>
+                        <span>Item 2</span>
+                        <ul>
+                          <li>
+                            <span class="disabled">Item 3</span>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <br>
+            <pre><code class="language-markup">
+  &lt;div class="card-panel">
+    &lt;div class="tree">
+      &lt;span class="root">Top Level Item&lt;/span>
+      &lt;ul class="branches">
+        &lt;li>
+          &lt;span>Item 1&lt;/span>
+        &lt;/li>
+        &lt;li>
+          &lt;span>Item 1&lt;/span>
+          &lt;ul>
+            &lt;li>
+              &lt;span>Item 2&lt;/span>
+            &lt;/li>
+            &lt;li>
+              &lt;span>Item 2&lt;/span>
+            &lt;/li>
+            &lt;li>
+              &lt;span class="active">Item 2&lt;/span>
+            &lt;/li>
+            &lt;li>
+              &lt;span>Item 2&lt;/span>
+            &lt;/li>
+            &lt;li>
+              &lt;span>Item 2&lt;/span>
+            &lt;/li>
+          &lt;/ul>
+        &lt;/li>
+        &lt;li>
+          &lt;span>Item 1&lt;/span>
+          &lt;ul>
+            &lt;li>
+              &lt;span>Item 2&lt;/span>
+              &lt;ul>
+                &lt;li>
+                  &lt;span class="disabled">Item 3&lt;/span>
+                &lt;/li>
+              &lt;/ul>
+            &lt;/li>
+          &lt;/ul>
+        &lt;/li>
+      &lt;/ul>
+    &lt;/div>
+  &lt;/div>
+            </code></pre>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+
+      <div id="outlined" class="section scrollspy">
+
+        <div class="row">
+          <div class="col s12">
+
+            <h3 class="header">Outlined</h3>
+            <p class="caption">If you want the item to use outlined instead of fill, just add <code class="language-markup">.outlined</code> on the <code class="language-markup">.tree</code> element.</p>
+
+            <div class="card-panel">
+              <div class="tree outlined">
+                <span class="root">Top Level Item</span>
+                <ul class="branches">
+                  <li>
+                    <span>Item 1</span>
+                  </li>
+                  <li>
+                    <span>Item 1</span>
+                    <ul>
+                      <li>
+                        <span>Item 2</span>
+                      </li>
+                      <li>
+                        <span>Item 2</span>
+                      </li>
+                      <li>
+                        <span class="active">Item 2</span>
+                      </li>
+                      <li>
+                        <span>Item 2</span>
+                      </li>
+                      <li>
+                        <span>Item 2</span>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span>Item 1</span>
+                    <ul>
+                      <li>
+                        <span>Item 2</span>
+                        <ul>
+                          <li>
+                            <span class="disabled">Item 3</span>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <br>
+            <pre><code class="language-markup">
+  &lt;div class="card-panel">
+    &lt;div class="tree outlined">
+      &lt;!-- Tree Contents -->
+    &lt;/div>
+  &lt;/div>
+            </code></pre>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+
+      <div id="block" class="section scrollspy">
+
+        <div class="row">
+          <div class="col s12">
+
+            <h3 class="header">Block</h3>
+            <p class="caption">If you want the item to cover the container's width, just add <code class="language-markup">.block</code> on the <code class="language-markup">.tree</code> element.</p>
+
+            <div class="card-panel">
+              <div class="tree block">
+                <span class="root">Top Level Item</span>
+                <ul class="branches">
+                  <li>
+                    <span>Item 1</span>
+                  </li>
+                  <li>
+                    <span>Item 1</span>
+                    <ul>
+                      <li>
+                        <span>Item 2</span>
+                      </li>
+                      <li>
+                        <span>Item 2</span>
+                      </li>
+                      <li>
+                        <span class="active">Item 2</span>
+                      </li>
+                      <li>
+                        <span>Item 2</span>
+                      </li>
+                      <li>
+                        <span>Item 2</span>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span>Item 1</span>
+                    <ul>
+                      <li>
+                        <span>Item 2</span>
+                        <ul>
+                          <li>
+                            <span class="disabled">Item 3</span>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <br>
+            <pre><code class="language-markup">
+  &lt;div class="card-panel">
+    &lt;div class="tree block">
+      &lt;!-- Tree Contents -->
+    &lt;/div>
+  &lt;/div>
+            </code></pre>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+
+      <div id="link" class="section scrollspy">
+
+        <div class="row">
+          <div class="col s12">
+
+            <h3 class="header">Link</h3>
+            <p class="caption">You can also use the <code class="language-markup">&lt;a></code> tag instead of <code class="language-markup">&lt;span></code> tag.</p>
+
+            <div class="card-panel">
+              <div class="tree outlined">
+                <a href="#!" class="root">Top Level Item</a>
+                <ul class="branches">
+                  <li>
+                    <a href="#!">Item 1</a>
+                  </li>
+                  <li>
+                    <a href="#!">Item 1</a>
+                    <ul>
+                      <li>
+                        <a href="#!">Item 2</a>
+                      </li>
+                      <li>
+                        <a href="#!">Item 2</a>
+                      </li>
+                      <li>
+                        <a href="#!" class="active">Item 2</a>
+                      </li>
+                      <li>
+                        <a href="#!">Item 2</a>
+                      </li>
+                      <li>
+                        <a href="#!">Item 2</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#!">Item 1</a>
+                    <ul>
+                      <li>
+                        <a href="#!">Item 2</a>
+                        <ul>
+                          <li>
+                            <a href="#!" class="disabled">Item 3</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <br>
+            <pre><code class="language-markup">
+  &lt;div class="card-panel">
+    &lt;div class="tree outlined">
+      &lt;a href="#!" class="root">Top Level Item&lt;/a>
+      &lt;ul class="branches">
+        &lt;li>
+          &lt;a href="#!">Item 1&lt;/a>
+        &lt;/li>
+        &lt;li>
+          &lt;a href="#!">Item 1&lt;/a>
+          &lt;ul>
+            &lt;li>
+              &lt;a href="#!">Item 2&lt;/a>
+            &lt;/li>
+            &lt;li>
+              &lt;a href="#!">Item 2&lt;/a>
+            &lt;/li>
+            &lt;li>
+              &lt;a href="#!" class="active">Item 2&lt;/a>
+            &lt;/li>
+            &lt;li>
+              &lt;a href="#!">Item 2&lt;/a>
+            &lt;/li>
+            &lt;li>
+              &lt;a href="#!">Item 2&lt;/a>
+            &lt;/li>
+          &lt;/ul>
+        &lt;/li>
+        &lt;li>
+          &lt;a href="#!">Item 1&lt;/a>
+          &lt;ul>
+            &lt;li>
+              &lt;a href="#!">Item 2&lt;/a>
+              &lt;ul>
+                &lt;li>
+                  &lt;a href="#!" class="disabled">Item 3&lt;/a>
+                &lt;/li>
+              &lt;/ul>
+            &lt;/li>
+          &lt;/ul>
+        &lt;/li>
+      &lt;/ul>
+    &lt;/div>
+  &lt;/div>
+            </code></pre>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+
+      <!-- End collections -->
+    </div>
+
+    <div class="col hide-on-small-only m3 xl3 offset-xl1">
+      <div class="toc-wrapper">
+        <div style="height: 1px;">
+          <ul class="section table-of-contents">
+            <li><a href="#basic">Basic</a></li>
+            <li><a href="#outlined">Outlined</a></li>
+            <li><a href="#block">Block</a></li>
+            <li><a href="#link">Link</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

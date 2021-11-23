@@ -280,6 +280,11 @@
 
       // Add initial selections
       this._setSelectedStates();
+
+      //Add Blur background
+      if (this.el.classList.contains('blur-bg')) {
+        this.dropdown.dropdownEl.classList.add('blur-bg');
+      }
     }
 
     /**
@@ -379,7 +384,9 @@
 
       options.each((el) => {
         if ($(el).prop('selected')) {
-          let text = $(el).text().trim();
+          let text = $(el)
+            .text()
+            .trim();
           values.push(text);
         }
       });

@@ -1,15 +1,11 @@
 @charset "UTF-8";
-
 // Color
 @import "components/color-variables";
 @import "components/color-classes";
-
 // Variables;
 @import "components/variables";
-
 // Reset
 @import "components/normalize";
-
 // components
 @import "components/global";
 @import "components/collection";
@@ -40,3 +36,9 @@
 @import "components/pulse";
 @import "components/datepicker";
 @import "components/timepicker";
+//newly added
+@import "components/alerts";
+@import "components/scrollbars";
+@import "components/stepper";
+@import "components/tree";
+@import "components/dark-mode";

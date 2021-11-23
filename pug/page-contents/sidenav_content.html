@@ -1,58 +1,129 @@
 <div class="container">
-  <div class="row">
+    <div class="row">
 
-    <div class="col s12 m8 offset-m1 xl7 offset-xl1">
+        <div class="col s12 m8 offset-m1 xl7 offset-xl1">
 
-      <div id="structure" class="section scrollspy">
-        <p class="caption">
-          This is a slide out menu. You can add a dropdown to your sidebar by using our collapsible component. If you want to see a
-          demo, our sidebar will use this on smaller screens. To use this in conjunction with a fullscreen navigation, you
-          have to use two copies of the same UL.
-        </p>
-        <p>
-          <strong>Please note that the sidenav HTML should not be contained within the navbar HTML.</strong>
-        </p>
+            <div id="structure" class="section scrollspy">
+                <p class="caption">
+                    This is a slide out menu. You can add a dropdown to your sidebar by using our collapsible component. If you want to see a demo, our sidebar will use this on smaller screens. To use this in conjunction with a fullscreen navigation, you have to use two
+                    copies of the same UL.
+                </p>
+                <p class="caption">To add a blur effect to the overlay, just add <code class="language-markup">blur-overlay</code> to the <code class="language-markup">sidenav</code> element. Or use <code class="language-markup">blur-bg</code> instead if you just want to
+                    blur the sidenav.</p>
+                <p>
+                    <strong>Please note that the sidenav HTML should not be contained within the navbar HTML.</strong>
+                </p>
 
-        <a href="#" data-target="slide-out" class="sidenav-trigger btn">Side nav demo</a>
+                <a href="#" data-target="slide-out" class="sidenav-trigger btn">Side nav demo</a>
+                <a href="#" data-target="slide-out-blur-bg" class="sidenav-trigger btn">Blurred Background</a>
+                <a href="#" data-target="slide-out-blur-overlay" class="sidenav-trigger btn">Blurred Overlay</a>
 
-        <ul id="slide-out" class="sidenav">
-          <li>
-            <div class="user-view">
-              <div class="background">
-                <img src="images/office.jpg">
-              </div>
-              <a href="#user">
-                <img class="circle" src="images/yuna.jpg">
-              </a>
-              <a href="#name">
-                <span class="white-text name">John Doe</span>
-              </a>
-              <a href="#email">
-                <span class="white-text email">jdoe@example.com</span>
-              </a>
-            </div>
-          </li>
-          <li>
-            <a href="#!">
-              <i class="material-icons">cloud</i>First Link With Icon</a>
-          </li>
-          <li>
-            <a href="#!">Second Link</a>
-          </li>
-          <li>
-            <div class="divider"></div>
-          </li>
-          <li>
-            <a class="subheader">Subheader</a>
-          </li>
-          <li>
-            <a class="waves-effect" href="#!">Third Link With Waves</a>
-          </li>
-        </ul>
+                <ul id="slide-out" class="sidenav">
+                    <li>
+                        <div class="user-view">
+                            <div class="background">
+                                <img src="images/office.jpg">
+                            </div>
+                            <a href="#user">
+                                <img class="circle" src="images/yuna.jpg">
+                            </a>
+                            <a href="#name">
+                                <span class="white-text name">John Doe</span>
+                            </a>
+                            <a href="#email">
+                                <span class="white-text email">jdoe@example.com</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#!">
+                            <i class="material-icons">cloud</i>First Link With Icon</a>
+                    </li>
+                    <li>
+                        <a href="#!">Second Link</a>
+                    </li>
+                    <li>
+                        <div class="divider"></div>
+                    </li>
+                    <li>
+                        <a class="subheader">Subheader</a>
+                    </li>
+                    <li>
+                        <a class="waves-effect" href="#!">Third Link With Waves</a>
+                    </li>
+                </ul>
+                <ul id="slide-out-blur-bg" class="sidenav blur-bg">
+                    <li>
+                        <div class="user-view">
+                            <div class="background">
+                                <img src="images/office.jpg">
+                            </div>
+                            <a href="#user">
+                                <img class="circle" src="images/yuna.jpg">
+                            </a>
+                            <a href="#name">
+                                <span class="white-text name">John Doe</span>
+                            </a>
+                            <a href="#email">
+                                <span class="white-text email">jdoe@example.com</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#!">
+                            <i class="material-icons">cloud</i>First Link With Icon</a>
+                    </li>
+                    <li>
+                        <a href="#!">Second Link</a>
+                    </li>
+                    <li>
+                        <div class="divider"></div>
+                    </li>
+                    <li>
+                        <a class="subheader">Subheader</a>
+                    </li>
+                    <li>
+                        <a class="waves-effect" href="#!">Third Link With Waves</a>
+                    </li>
+                </ul>
+                <ul id="slide-out-blur-overlay" class="sidenav blur-overlay">
+                    <li>
+                        <div class="user-view">
+                            <div class="background">
+                                <img src="images/office.jpg">
+                            </div>
+                            <a href="#user">
+                                <img class="circle" src="images/yuna.jpg">
+                            </a>
+                            <a href="#name">
+                                <span class="white-text name">John Doe</span>
+                            </a>
+                            <a href="#email">
+                                <span class="white-text email">jdoe@example.com</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#!">
+                            <i class="material-icons">cloud</i>First Link With Icon</a>
+                    </li>
+                    <li>
+                        <a href="#!">Second Link</a>
+                    </li>
+                    <li>
+                        <div class="divider"></div>
+                    </li>
+                    <li>
+                        <a class="subheader">Subheader</a>
+                    </li>
+                    <li>
+                        <a class="waves-effect" href="#!">Third Link With Waves</a>
+                    </li>
+                </ul>
 
-        <br/>
+                <br/>
 
-        <pre><code class="language-markup col s12">
+                <pre><code class="language-markup col s12">
 
   &lt;nav> &lt;!-- navbar content here  --> &lt;/nav>
 
@@ -73,11 +144,11 @@
   &lt;/ul>
   &lt;a href="#" data-target="slide-out" class="sidenav-trigger">&lt;i class="material-icons">menu&lt;/i>&lt;/a>
         </code></pre>
-      </div>
+            </div>
 
-      <div id="initialization" class="section scrollspy">
-        <h3 class="header">Initialization</h3>
-        <pre><code class="language-javascript col s12">
+            <div id="initialization" class="section scrollspy">
+                <h3 class="header">Initialization</h3>
+                <pre><code class="language-javascript col s12">
   document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.sidenav');
     var instances = M.Sidenav.init(elems, {
@@ -99,94 +170,93 @@
     });
   });
         </code></pre>
-      </div>
+            </div>
 
 
-      <div id="options" class="scrollspy section">
-        <h3 class="header">Options</h3>
-        <table class="striped">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Type</th>
-              <th>Default</th>
-              <th>Description</th>
-            </tr>
-          </thead>
+            <div id="options" class="scrollspy section">
+                <h3 class="header">Options</h3>
+                <table class="striped">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Default</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
 
-          <tbody>
-            <tr>
-              <td>edge</td>
-              <td>String</td>
-              <td>'left'</td>
-              <td>Side of screen on which Sidenav appears.</td>
-            </tr>
-            <tr>
-              <td>draggable</td>
-              <td>Boolean</td>
-              <td>true</td>
-              <td>Allow swipe gestures to open/close Sidenav.</td>
-            </tr>
-            <tr>
-              <td>dragTargetWidth</td>
-              <td>String</td>
-              <td>'10px'</td>
-              <td>Width of the area where you can start dragging.</td>
-            </tr>
-            <tr>
-              <td>inDuration</td>
-              <td>Number</td>
-              <td>250</td>
-              <td>Length in ms of enter transition.</td>
-            </tr>
-            <tr>
-              <td>outDuration</td>
-              <td>Number</td>
-              <td>200</td>
-              <td>Length in ms of exit transition.</td>
-            </tr>
-            <tr>
-              <td>onOpenStart</td>
-              <td>Function</td>
-              <td>null</td>
-              <td>Function called when sidenav starts entering.</td>
-            </tr>
-            <tr>
-              <td>onOpenEnd</td>
-              <td>Function</td>
-              <td>null</td>
-              <td>Function called when sidenav finishes entering.</td>
-            </tr>
-            <tr>
-              <td>onCloseStart</td>
-              <td>Function</td>
-              <td>null</td>
-              <td>Function called when sidenav starts exiting.</td>
-            </tr>
-            <tr>
-              <td>onCloseEnd</td>
-              <td>Function</td>
-              <td>null</td>
-              <td>Function called when sidenav finishes exiting.</td>
-            </tr>
-            <tr>
-              <td>preventScrolling</td>
-              <td>Boolean</td>
-              <td>true</td>
-              <td>Prevent page from scrolling while sidenav is open.</td>
-            </tr>
-          </tbody>
-        </table>
-        <br>
-      </div>
+                    <tbody>
+                        <tr>
+                            <td>edge</td>
+                            <td>String</td>
+                            <td>'left'</td>
+                            <td>Side of screen on which Sidenav appears.</td>
+                        </tr>
+                        <tr>
+                            <td>draggable</td>
+                            <td>Boolean</td>
+                            <td>true</td>
+                            <td>Allow swipe gestures to open/close Sidenav.</td>
+                        </tr>
+                        <tr>
+                            <td>dragTargetWidth</td>
+                            <td>String</td>
+                            <td>'10px'</td>
+                            <td>Width of the area where you can start dragging.</td>
+                        </tr>
+                        <tr>
+                            <td>inDuration</td>
+                            <td>Number</td>
+                            <td>250</td>
+                            <td>Length in ms of enter transition.</td>
+                        </tr>
+                        <tr>
+                            <td>outDuration</td>
+                            <td>Number</td>
+                            <td>200</td>
+                            <td>Length in ms of exit transition.</td>
+                        </tr>
+                        <tr>
+                            <td>onOpenStart</td>
+                            <td>Function</td>
+                            <td>null</td>
+                            <td>Function called when sidenav starts entering.</td>
+                        </tr>
+                        <tr>
+                            <td>onOpenEnd</td>
+                            <td>Function</td>
+                            <td>null</td>
+                            <td>Function called when sidenav finishes entering.</td>
+                        </tr>
+                        <tr>
+                            <td>onCloseStart</td>
+                            <td>Function</td>
+                            <td>null</td>
+                            <td>Function called when sidenav starts exiting.</td>
+                        </tr>
+                        <tr>
+                            <td>onCloseEnd</td>
+                            <td>Function</td>
+                            <td>null</td>
+                            <td>Function called when sidenav finishes exiting.</td>
+                        </tr>
+                        <tr>
+                            <td>preventScrolling</td>
+                            <td>Boolean</td>
+                            <td>true</td>
+                            <td>Prevent page from scrolling while sidenav is open.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+            </div>
 
 
-      <div id="methods" class="scrollspy section">
-        <h3 class="header">Methods</h3>
-        <blockquote>
-          <p>Because jQuery is no longer a dependency, all the methods are called on the plugin instance. You can get the plugin
-            instance like this: </p>
-          <pre><code class="language-javascript col s12">
+            <div id="methods" class="scrollspy section">
+                <h3 class="header">Methods</h3>
+                <blockquote>
+                    <p>Because jQuery is no longer a dependency, all the methods are called on the plugin instance. You can get the plugin instance like this: </p>
+                    <pre><code class="language-javascript col s12">
   var instance = M.Sidenav.getInstance(elem);
 
   /* jQuery Method Calls
@@ -197,100 +267,99 @@
     $('.sidenav').sidenav('methodName', paramName);
   */
           </code></pre>
-        </blockquote>
-        <h5 class="method-header">
-          .open();
-        </h5>
-        <p>Opens Sidenav.</p>
-        <pre><code class="language-javascript col s12">
+                </blockquote>
+                <h5 class="method-header">
+                    .open();
+                </h5>
+                <p>Opens Sidenav.</p>
+                <pre><code class="language-javascript col s12">
 instance.open();
         </code></pre>
-        <br>
+                <br>
 
-        <h5 class="method-header">
-          .close();
-        </h5>
-        <p>Closes Sidenav.</p>
-        <pre><code class="language-javascript col s12">
+                <h5 class="method-header">
+                    .close();
+                </h5>
+                <p>Closes Sidenav.</p>
+                <pre><code class="language-javascript col s12">
 instance.close();
         </code></pre>
-        <br>
+                <br>
 
-        <h5 class="method-header">
-          .destroy();
-        </h5>
-        <p>Destroy plugin instance and teardown</p>
-        <pre><code class="language-javascript col s12">
+                <h5 class="method-header">
+                    .destroy();
+                </h5>
+                <p>Destroy plugin instance and teardown</p>
+                <pre><code class="language-javascript col s12">
 instance.destroy();
         </code></pre>
-      </div>
+            </div>
 
 
-      <div id="properties" class="scrollspy section">
-        <h3 class="header">Properties</h3>
-        <table class="striped">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Type</th>
-              <th>Description</th>
-            </tr>
-          </thead>
+            <div id="properties" class="scrollspy section">
+                <h3 class="header">Properties</h3>
+                <table class="striped">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
 
-          <tbody>
-            <tr>
-              <td>el</td>
-              <td>Element</td>
-              <td>The DOM element the plugin was initialized with.</td>
-            </tr>
-            <tr>
-              <td>options</td>
-              <td>Object</td>
-              <td>The options the instance was initialized with.</td>
-            </tr>
-            <tr>
-              <td>isOpen</td>
-              <td>Boolean</td>
-              <td>Describes open/close state of Sidenav.</td>
-            </tr>
-            <tr>
-              <td>isFixed</td>
-              <td>Boolean</td>
-              <td>Describes if sidenav is fixed.</td>
-            </tr>
-            <tr>
-              <td>isDragged</td>
-              <td>Boolean</td>
-              <td>Describes if Sidenav is being dragged.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+                    <tbody>
+                        <tr>
+                            <td>el</td>
+                            <td>Element</td>
+                            <td>The DOM element the plugin was initialized with.</td>
+                        </tr>
+                        <tr>
+                            <td>options</td>
+                            <td>Object</td>
+                            <td>The options the instance was initialized with.</td>
+                        </tr>
+                        <tr>
+                            <td>isOpen</td>
+                            <td>Boolean</td>
+                            <td>Describes open/close state of Sidenav.</td>
+                        </tr>
+                        <tr>
+                            <td>isFixed</td>
+                            <td>Boolean</td>
+                            <td>Describes if sidenav is fixed.</td>
+                        </tr>
+                        <tr>
+                            <td>isDragged</td>
+                            <td>Boolean</td>
+                            <td>Describes if Sidenav is being dragged.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
 
-      <div id="close-trigger" class="section scrollspy">
-        <h3 class="header">Close Trigger</h3>
-        <p>Add the class
-          <code class="language-markup">.sidenav-close</code> to an element inside the sidenav and any click event on that element will cause the sidenav to close. This is
-          useful in Single Page Apps where the page does not refresh on link clicks.</p>
-        <pre><code class="language-markup col s12">
+            <div id="close-trigger" class="section scrollspy">
+                <h3 class="header">Close Trigger</h3>
+                <p>Add the class
+                    <code class="language-markup">.sidenav-close</code> to an element inside the sidenav and any click event on that element will cause the sidenav to close. This is useful in Single Page Apps where the page does not refresh on link clicks.</p>
+                <pre><code class="language-markup col s12">
   &lt;ul id="slide-out" class="sidenav">
       &lt;li>&lt;a class="sidenav-close" href="#!">Clicking this will close Sidenav&lt;/a>&lt;/li>
   &lt;/ul>
   &lt;a href="#" data-target="slide-out" class="sidenav-trigger">&lt;i class="material-icons">menu&lt;/i>&lt;/a>
           </code></pre>
-      </div>
+            </div>
 
 
-      <div id="variations" class="scrollspy section">
-        <h3 class="header">Variations</h3>
-        <p class="caption">
-          Here are some useful variations and additional elements you can add to your sidebar.
-        </p>
+            <div id="variations" class="scrollspy section">
+                <h3 class="header">Variations</h3>
+                <p class="caption">
+                    Here are some useful variations and additional elements you can add to your sidebar.
+                </p>
 
-        <h4>Dropdown HTML Structure</h4>
-        <p>Add collapsible menus to your sidebar.</p>
-        <pre><code class="language-markup col s12">
+                <h4>Dropdown HTML Structure</h4>
+                <p>Add collapsible menus to your sidebar.</p>
+                <pre><code class="language-markup col s12">
     &lt;ul id="slide-out" class="sidenav">
       &lt;li>&lt;a href="#!">First Sidebar Link&lt;/a>&lt;/li>
       &lt;li>&lt;a href="#!">Second Sidebar Link&lt;/a>&lt;/li>
@@ -323,79 +392,106 @@ instance.destroy();
     &lt;/ul>
     &lt;a href="#" data-target="slide-out" class="sidenav-trigger">&lt;i class="material-icons">menu&lt;/i>&lt;/a>
           </code></pre>
-        <br>
+                <br>
 
-        <h4>Fullscreen HTML Structure</h4>
-        <p>If you want the menu to be accessible on all screensizes you just have to add a simple helper class
-          <code class="language-markup">show-on-large</code> to the
-          <code class="language-markup">.sidenav-trigger</code>. </p>
+                <h4>Fullscreen HTML Structure</h4>
+                <p>If you want the menu to be accessible on all screensizes you just have to add a simple helper class
+                    <code class="language-markup">show-on-large</code> to the
+                    <code class="language-markup">.sidenav-trigger</code>. </p>
 
-        <pre><code class="language-markup col s12">
+                <pre><code class="language-markup col s12">
     &lt;ul id="slide-out" class="sidenav">
       &lt;li>&lt;a href="#!">First Sidebar Link&lt;/a>&lt;/li>
       &lt;li>&lt;a href="#!">Second Sidebar Link&lt;/a>&lt;/li>
     &lt;/ul>
     &lt;a href="#" data-target="slide-out" class="sidenav-trigger show-on-large">&lt;i class="material-icons">menu&lt;/i>&lt;/a>
           </code></pre>
-        <br>
+                <br>
 
-        <h4>Fixed HTML Structure</h4>
-        <p>Add the class
-          <code class="language-markup">sidenav-fixed</code> to have the sidenav be fixed and open on large screens and hides to the regular functionality on smaller screens.
-          Our sidenav on the left is an example of this.</p>
-        <pre><code class="language-markup col s12">
+                <h4>Fixed HTML Structure</h4>
+                <p>Add the class
+                    <code class="language-markup">sidenav-fixed</code> to have the sidenav be fixed and open on large screens and hides to the regular functionality on smaller screens. Our sidenav on the left is an example of this.</p>
+                <pre><code class="language-markup col s12">
     &lt;ul id="slide-out" class="sidenav sidenav-fixed">
       &lt;li>&lt;a href="#!">First Sidebar Link&lt;/a>&lt;/li>
       &lt;li>&lt;a href="#!">Second Sidebar Link&lt;/a>&lt;/li>
     &lt;/ul>
     &lt;a href="#" data-target="slide-out" class="sidenav-trigger">&lt;i class="material-icons">menu&lt;/i>&lt;/a>
           </code></pre>
-        <p>If you are planning on using this you will have to offset your content by the width of the side menu. Place the padding
-          on where the offset content will be, which in our case is in header, main and footer.</p>
-        <pre><code class="language-css col s12">
-    header, main, footer {
-      padding-left: 300px;
-    }
+                <p>If you are planning on using this you will have to offset your content by the width of the side menu. Also add the <code class="language-markup">.sidenav-fixed</code> class on where the offset content will be, which in our case is in header
+                    or nav, main and footer.</p>
+                <pre><code class="language-markup col s12">
+    &lt;!-- If you use header to contain the nav -->
+    &lt;header class="sidenav-fixed">
+      &lt;nav>
+        &lt;!-- Nav Contents -->
+      &lt;/nav>
+    &lt;/header>
 
-    @media only screen and (max-width : 992px) {
-      header, main, footer {
-        padding-left: 0;
-      }
-    }
+    &lt;!-- or -->
+
+    &lt;!-- If you only use the nav, without the header container -->
+    &lt;nav class="sidenav-fixed">
+      &lt;!-- Nav Contents -->
+    &lt;/nav>
+
+    &lt;!-- This will be your page contents -->
+    &lt;main class="sidenav-fixed">
+      &lt;!-- Page Contents -->
+    &lt;/main>
+
+    &lt;!-- And lastly, your footer -->
+    &lt;footer class="sidenav-fixed">
+      &lt;!-- Footer Contents -->
+    &lt;/footer>
+
+    &lt;!-- If you will be using FAB to toolbar, please also use this -->
+    &lt;!-- Toolbar FAB -->
+    &lt;div class="fixed-action-btn toolbar sidenav-fixed">
+      &lt;a class="btn-floating btn-large">
+        &lt;i class="large material-icons">mode_edit&lt;/i>
+      &lt;/a>
+      &lt;ul>
+        &lt;li class="waves-effect">&lt;a href="#!">&lt;i class="material-icons">insert_chart&lt;/i>&lt;/a>&lt;/li>
+        &lt;li class="waves-effect">&lt;a href="#!">&lt;i class="material-icons">format_quote&lt;/i>&lt;/a>&lt;/li>
+        &lt;li class="waves-effect">&lt;a href="#!">&lt;i class="material-icons">publish&lt;/i>&lt;/a>&lt;/li>
+        &lt;li class="waves-effect">&lt;a href="#!">&lt;i class="material-icons">attach_file&lt;/i>&lt;/a>&lt;/li>
+      &lt;/ul>
+    &lt;/div>
           </code></pre>
-      </div>
-    </div>
-
-    <!-- Table of Contents -->
-    <div class="col hide-on-small-only m3 xl3 offset-xl1">
-      <div class="toc-wrapper">
-        <div style="height: 1px;">
-          <ul class="section table-of-contents">
-            <li>
-              <a href="#structure">Structure</a>
-            </li>
-            <li>
-              <a href="#initialization">Initialization</a>
-            </li>
-            <li>
-              <a href="#options">Options</a>
-            </li>
-            <li>
-              <a href="#methods">Methods</a>
-            </li>
-            <li>
-              <a href="#properties">Properties</a>
-            </li>
-            <li>
-              <a href="#close-trigger">Close Trigger</a>
-            </li>
-            <li>
-              <a href="#variations">Variations</a>
-            </li>
-          </ul>
+            </div>
         </div>
-      </div>
-    </div>
 
-  </div>
+        <!-- Table of Contents -->
+        <div class="col hide-on-small-only m3 xl3 offset-xl1">
+            <div class="toc-wrapper">
+                <div style="height: 1px;">
+                    <ul class="section table-of-contents">
+                        <li>
+                            <a href="#structure">Structure</a>
+                        </li>
+                        <li>
+                            <a href="#initialization">Initialization</a>
+                        </li>
+                        <li>
+                            <a href="#options">Options</a>
+                        </li>
+                        <li>
+                            <a href="#methods">Methods</a>
+                        </li>
+                        <li>
+                            <a href="#properties">Properties</a>
+                        </li>
+                        <li>
+                            <a href="#close-trigger">Close Trigger</a>
+                        </li>
+                        <li>
+                            <a href="#variations">Variations</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>

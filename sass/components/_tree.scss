@@ -1,0 +1,212 @@
+$tree-line: #f2f2f2;
+$tree-line-hover: #d9d9d9;
+$tree-span-hover: rgba(0, 0, 0, .15);
+$tree-span-child-hover: rgba(0, 0, 0, .1);
+$ident: 20px;
+$left: -($ident);
+
+.tree {
+    padding: 1rem;
+
+    ul {
+        margin-left: $ident;
+    }
+
+    .root,
+    li span,
+    li a {
+        display: inline-block;
+        padding: 7px 16px;
+        text-decoration: none;
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0, .05);
+
+        &.active {
+            background-color: $secondary-color;
+            color: #FFF;
+        }
+
+        &.disabled {
+            background-color: rgba(0, 0, 0, .03);
+            color: rgba(0, 0, 0, .5);
+        }
+    }
+
+    li a {
+
+        &.active,
+        &.disabled {
+            cursor: default;
+        }
+    }
+
+    &.block {
+
+        .root,
+        li span,
+        li a {
+            display: block;
+        }
+    }
+
+    &.outlined {
+
+        .root,
+        li span,
+        li a {
+            background-color: unset;
+            border: 2px solid $tree-line;
+
+            &.active {
+                border-color: $secondary-color;
+                color: $secondary-color;
+            }
+
+            &.disabled {
+                border-color: rgba(0, 0, 0, .03);
+                color: rgba(0, 0, 0, .5);
+            }
+        }
+    }
+
+    li {
+        list-style-type: none;
+        margin: 10px 0 10px 10px;
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: $left;
+            border-left: 2px solid $tree-line;
+            border-bottom: 2px solid $tree-line;
+            width: $ident;
+            height: 15px;
+        }
+
+        &:after {
+            position: absolute;
+            content: "";
+            top: 5px;
+            left: $left;
+            border-left: 2px solid $tree-line;
+            border-top: 2px solid $tree-line;
+            width: $ident;
+            height: 100%;
+        }
+
+        &:last-child:before {
+            border-bottom-left-radius: 5px;
+        }
+
+        &:last-child:after {
+            display: none;
+        }
+    }
+
+    .branches {
+        margin-top: 0;
+
+        ul li:first-child {
+            margin-top: 5px;
+        }
+
+        li {
+            list-style-type: none;
+            margin: 10px 0 10px 10px;
+            position: relative;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: -10px;
+                left: $left;
+                border-left: 2px solid $tree-line;
+                border-bottom: 2px solid $tree-line;
+                width: $ident;
+                height: 30px;
+            }
+
+            &:after {
+                position: absolute;
+                content: "";
+                top: 5px;
+                left: $left;
+                border-left: 2px solid $tree-line;
+                border-top: unset;
+                width: $ident;
+                height: 100%;
+            }
+
+            &:last-child:before {
+                border-bottom-left-radius: 5px;
+            }
+
+            &:last-child:after {
+                display: none;
+            }
+        }
+    }
+
+    .branches li span,
+    .branches li a,
+    .root {
+
+        &:not(.active):not(.disabled) {
+
+            &:hover,
+            &:focus {
+                background-color: $tree-span-hover;
+
+                &+ul {
+
+                    li span,
+                    li a {
+                        &:not(.active):not(.disabled) {
+                            background-color: $tree-span-child-hover;
+                        }
+                    }
+                }
+            }
+        }
+
+        &:hover+ul,
+        &:focus+ul {
+            li {
+
+                &:after,
+                &:before {
+                    border-color: $tree-line-hover;
+                }
+            }
+        }
+    }
+
+    &.outlined {
+
+        .root,
+        li span,
+        li a {
+            &:not(.active):not(.disabled) {
+
+                &:hover,
+                &:focus {
+                    background-color: unset;
+                    border-color: $tree-line-hover;
+
+                    &+ul {
+
+                        li span,
+                        li a {
+                            &:not(.active):not(.disabled) {
+                                background-color: unset;
+                                border-color: $tree-line-hover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

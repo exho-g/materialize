@@ -74,6 +74,10 @@
 
       tooltipEl.appendChild(tooltipContentEl);
       document.body.appendChild(tooltipEl);
+
+      if (this.el.classList.contains('blur-bg')) {
+        this.tooltipEl.classList.add('blur-bg');
+      }
     }
 
     _setTooltipContent(tooltipContentEl) {

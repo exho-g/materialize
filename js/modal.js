@@ -2,7 +2,7 @@
   'use strict';
 
   let _defaults = {
-    opacity: 0.5,
+    opacity: 1,
     inDuration: 250,
     outDuration: 250,
     onOpenStart: null,
@@ -102,6 +102,10 @@
       }
       this.$overlay[0].addEventListener('click', this._handleOverlayClickBound);
       this.el.addEventListener('click', this._handleModalCloseClickBound);
+
+      if (this.$el[0].classList.contains('blur-overlay')) {
+        this.$overlay[0].classList.add('blur-overlay');
+      }
     }
 
     /**

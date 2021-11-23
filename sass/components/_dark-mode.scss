@@ -1,0 +1,1466 @@
+@mixin dark-mode {
+    color: #FFF;
+
+    //colors
+    @each $color_name,
+    $color in $colors {
+
+        @each $color_type,
+        $color_value in $color {
+            @if $color_type=="base" {
+                .ondark-#{$color_name} {
+                    background-color: $color_value !important;
+                }
+
+                .ondark-#{$color_name}-text {
+                    color: $color_value !important;
+                }
+            }
+
+            @else if $color_name !="shades" {
+
+                // if same color as light mode
+                .#{$color_name}.ondark-#{$color_type} {
+                    background-color: $color_value !important;
+                }
+
+                .#{$color_name}-text.ondark-text-#{$color_type} {
+                    color: $color_value !important;
+                }
+
+                //if not the same color as light mode
+                .ondark-#{$color_name}.ondark-#{$color_type} {
+                    background-color: $color_value !important;
+                }
+
+                .ondark-#{$color_name}-text.ondark-text-#{$color_type} {
+                    color: $color_value !important;
+                }
+            }
+        }
+    }
+
+    // Shade classes
+    @each $color,
+    $color_value in $shades {
+        .ondark-#{$color} {
+            background-color: $color_value !important;
+        }
+
+        .ondark-#{$color}-text {
+            color: $color_value !important;
+        }
+    }
+
+
+    a {
+        color: lighten($primary-color, 10%);
+    }
+
+    .secondary-content {
+        color: $primary-color;
+    }
+
+    //error notes
+    .error-notes {
+        background-color: darken(color('red', 'darken-4'), 20%);
+        color: color('red', 'lighten-4');
+    }
+
+    //check if allow dark mode
+    body {
+        background-color: #000;
+    }
+
+    // Navigations
+    nav {
+        background-color: darken(color('grey', 'darken-4'), 1%);
+
+        li a:not(.brand-logo) {
+            color: $primary-color;
+
+            &:not(.brand-logo):not(.breadcrumb) {
+                color: #FFF;
+
+                &:hover {
+                    background-color: lighten(color('grey', 'darken-4'), 5%);
+                }
+            }
+
+            &.breadcrumb {
+                color: rgba(255, 255, 255, 0.5);
+
+                &:before {
+                    color: rgba(255, 255, 255, 0.5);
+                }
+
+                &:last-child {
+                    color: lighten($primary-color, 10%);
+                }
+            }
+        }
+
+        .brand-logo {
+            img {
+                opacity: 1;
+            }
+        }
+
+        &.flat {
+            background-color: transparent;
+        }
+    }
+
+    //collapsible
+    .collapsible {
+        &:not(.popout) {
+            border-top: 1px solid color('grey', 'darken-3');
+            border-right: 1px solid color('grey', 'darken-3');
+            border-left: 1px solid color('grey', 'darken-3');
+        }
+
+        .collapsible-header {
+            background-color: color('grey', 'darken-4');
+            border-bottom: 1px solid color('grey', 'darken-3');
+        }
+
+        .collapsible-body {
+            border-bottom: 1px solid color('grey', 'darken-3');
+        }
+
+        &.popout {
+            li.active {
+                border: 1px solid color('grey', 'darken-1');
+            }
+        }
+    }
+
+    .sidenav {
+        background-color: color('grey', 'darken-4');
+
+        &.blur-bg {
+            background-color: rgba(color('grey', 'darken-4'), .5);
+        }
+
+        li {
+
+            >a {
+
+                >i,
+                &:not(.subheader) {
+                    color: #FFF !important;
+                }
+
+                &.subheader {
+                    color: color('red', 'lighten-1');
+                }
+
+                &:hover {
+                    background-color: lighten(color('grey', 'darken-4'), 5%);
+                }
+            }
+
+            &.active {
+                background-color: rgba(255, 255, 255, .05);
+                ;
+
+                >a:hover {
+                    background-color: transparent;
+                }
+            }
+        }
+
+        .collapsible {
+            border: unset;
+
+            .collapsible-header {
+                border: unset;
+
+                &:hover {
+                    background-color: lighten(color('grey', 'darken-4'), 5%);
+                }
+            }
+
+            .collapsible-body {
+                border: unset;
+                background-color: lighten(color('grey', 'darken-4'), 2%);
+            }
+        }
+    }
+
+    .divider {
+        background-color: rgba(color('grey', 'darken-3'), .5);
+    }
+
+    //fabs
+    .btn-floating {
+        background-color: $primary-color;
+
+        &:hover {
+            background-color: darken($primary-color, 5%);
+        }
+
+        i {
+            color: #FFF;
+        }
+    }
+
+    //buttons
+    .btn,
+    .btn-large,
+    .btn-small {
+        color: #FFF;
+
+        &.light {
+            color: #000;
+        }
+
+        &:not(.light):not(.dark) {
+            background-color: darken($button-raised-background, 20%);
+
+            &.primary {
+                background-color: darken($primary-color, 20%);
+            }
+
+            &.info {
+                background-color: darken($info-color, 20%);
+            }
+
+            &.success {
+                background-color: darken($success-color, 20%);
+            }
+
+            &.warning {
+                background-color: darken($warning-color, 20%);
+            }
+
+            &.danger {
+                background-color: darken($danger-color, 20%);
+            }
+        }
+    }
+
+    .btn-flat {
+        color: #FFF;
+    }
+
+    .btn-soft {
+        background-color: darken($button-raised-background, 30%);
+        color: lighten($button-raised-background, 20%);
+
+        &:hover {
+            background-color: rgba(darken($button-raised-background, 30%), 0.7);
+        }
+
+        &.dark {
+            color: #FFF;
+
+            &:hover {
+                background-color: rgba(#000, 0.7);
+            }
+        }
+
+        &.light {
+            color: #000;
+            background-color: rgb(200, 200, 200);
+
+            &:hover {
+                background-color: rgba(200, 200, 200, 0.7);
+            }
+        }
+
+        &.primary {
+            color: lighten($primary-color, 25%);
+            background-color: darken($primary-color, 30%);
+
+            &:hover {
+                background-color: rgba(darken($primary-color, 30%), 0.7);
+            }
+        }
+
+        &.info {
+            color: lighten($info-color, 25%);
+            background-color: darken($info-color, 30%);
+
+            &:hover {
+                background-color: rgba(darken($info-color, 30%), 0.7);
+            }
+        }
+
+        &.success {
+            color: lighten($success-color, 25%);
+            background-color: darken($success-color, 30%);
+
+            &:hover {
+                background-color: rgba(darken($success-color, 30%), 0.7);
+            }
+        }
+
+        &.warning {
+            color: lighten($warning-color, 25%);
+            background-color: darken($warning-color, 30%);
+
+            &:hover {
+                background-color: rgba(darken($warning-color, 30%), 0.7);
+            }
+        }
+
+        &.danger {
+            color: lighten($danger-color, 25%);
+            background-color: darken($danger-color, 30%);
+
+            &:hover {
+                background-color: rgba(darken($danger-color, 30%), 0.7);
+            }
+        }
+    }
+
+    .btn-outlined:not(.light):not(.dark) {
+        border-color: lighten($button-raised-background, 10%);
+        color: lighten($button-raised-background, 10%);
+
+        &:hover {
+            background-color: rgba($button-raised-background, 0.3);
+        }
+
+        &:focus,
+        &:active {
+            color: lighten($button-raised-background, 25%);
+            background-color: rgba($button-raised-background, 0.5);
+        }
+
+        &.primary {
+            border-color: lighten($primary-color, 10%);
+            color: lighten($primary-color, 10%);
+
+            &:hover {
+                background-color: rgba($primary-color, 0.3);
+            }
+
+            &:focus,
+            &:active {
+                color: lighten($primary-color, 25%);
+                background-color: rgba($primary-color, 0.5);
+            }
+        }
+
+        &.info {
+            border-color: lighten($info-color, 10%);
+            color: lighten($info-color, 10%);
+
+            &:hover {
+                background-color: rgba($info-color, 0.3);
+            }
+
+            &:focus,
+            &:active {
+                color: lighten($info-color, 25%);
+                background-color: rgba($info-color, 0.5);
+            }
+        }
+
+        &.success {
+            border-color: lighten($success-color, 10%);
+            color: lighten($success-color, 10%);
+
+            &:hover {
+                background-color: rgba($success-color, 0.3);
+            }
+
+            &:focus,
+            &:active {
+                color: lighten($success-color, 25%);
+                background-color: rgba($success-color, 0.5);
+            }
+        }
+
+        &.warning {
+            border-color: lighten($warning-color, 10%);
+            color: lighten($warning-color, 10%);
+
+            &:hover {
+                background-color: rgba($warning-color, 0.3);
+            }
+
+            &:focus,
+            &:active {
+                color: lighten($warning-color, 25%);
+                background-color: rgba($warning-color, 0.5);
+            }
+        }
+
+        &.danger {
+            border-color: lighten($danger-color, 10%);
+            color: lighten($danger-color, 10%);
+
+            &:hover {
+                background-color: rgba($danger-color, 0.3);
+            }
+
+            &:focus,
+            &:active {
+                color: lighten($danger-color, 25%);
+                background-color: rgba($danger-color, 0.5);
+            }
+        }
+    }
+
+    .btn-outlined.light {
+        color: rgb(200, 200, 200);
+        border-color: rgba(200, 200, 200);
+    }
+
+    // buttons disabled
+    .btn.disabled,
+    .btn-floating.disabled,
+    .btn-large.disabled,
+    .btn-small.disabled,
+    .btn-soft.disabled,
+    .btn:disabled,
+    .btn-floating:disabled,
+    .btn-large:disabled,
+    .btn-small:disabled,
+    .btn-soft:disabled,
+    .btn[disabled],
+    .btn-floating[disabled],
+    .btn-large[disabled],
+    .btn-small[disabled],
+    .btn-soft[disabled] {
+        background-color: rgba($button-disabled-background, 0.2) !important;
+        color: rgba($button-disabled-color, 0.3) !important;
+
+        &:hover {
+            background-color: rgba($button-disabled-background, 0.2) !important;
+            color: rgba($button-disabled-color, 0.3) !important;
+        }
+
+        .material-icons {
+            color: rgba($button-disabled-color, 0.3) !important;
+        }
+    }
+
+    .btn-flat.disabled,
+    .btn-flat:disabled,
+    .btn-flat[disabled] {
+        color: rgba($button-disabled-color, 0.3) !important;
+    }
+
+    .btn-outlined.disabled,
+    .btn-outlined:disabled,
+    .btn-outlined[disabled] {
+        color: rgba($button-disabled-color, 0.3) !important;
+        border-color: rgba($button-disabled-background, 0.2) !important;
+    }
+
+    //tabs
+    .tabs {
+        background-color: color('grey', 'darken-4');
+
+        .tab {
+            a {
+                color: color('grey', 'lighten-1');
+
+                &:hover {
+                    color: color('grey', 'lighten-3');
+                }
+
+                &.active {
+                    color: color('grey', 'lighten-4');
+                }
+            }
+
+            &.disabled {
+
+                a,
+                a:hover {
+                    color: color('grey', 'darken-2');
+                }
+            }
+        }
+
+        .indicator {
+            background-color: $primary-color;
+        }
+    }
+
+    //slider
+    .slider {
+        .indicators {
+            .indicator-item {
+                background-color: color('grey', 'darken-2');
+
+                &.active {
+                    background-color: color('grey', 'lighten-4');
+                }
+            }
+        }
+    }
+
+
+    //Images
+    img {
+        &:not(.remove-dark-mode) {
+            opacity: 0.8; //adjust images to darker
+        }
+
+
+        // Broken Images
+        font-size: 12px;
+
+        &:before {
+            color: #efefef;
+            background-color: #000;
+        }
+
+        &:after {
+            color: #efefef;
+        }
+
+        .carousel {
+            .carousel-item {
+                &.active {
+                    img {
+                        opacity: 1; //set active image to not transparent
+                    }
+                }
+            }
+        }
+    }
+
+    //dropdown
+
+    .dropdown-content {
+        background-color: color('grey', 'darken-4');
+
+        li {
+
+            a,
+            span {
+                color: #FFF;
+            }
+        }
+
+        &.select-dropdown {
+            li {
+                &:hover {
+                    background-color: lighten(color('grey', 'darken-4'), 5%);
+                }
+
+                &.optgroup {
+                    border-top-color: rgba(color('grey', 'darken-3'), .5);
+                }
+
+                &.selected {
+                    background-color: lighten(color('grey', 'darken-4'), 10%);
+
+                    label span {
+
+                        &:before,
+                        &:after {
+                            border-right: 2px solid #FFF;
+                            border-bottom: 2px solid #FFF;
+                        }
+                    }
+                }
+
+                &.disabled {
+                    background-color: lighten(color('grey', 'darken-4'), 5%);
+                    opacity: 0.7;
+
+                    span {
+                        color: rgba(255, 255, 255, 0.5);
+                    }
+                }
+            }
+
+            &.blur-bg {
+                background-color: rgba(50, 50, 50, 0.8);
+
+                li {
+
+                    &.disabled {
+                        background-color: rgba(255, 255, 255, 0.05);
+                        opacity: 0.5;
+                    }
+
+                    &:hover {
+                        background-color: rgba(255, 255, 255, 0.05);
+                    }
+
+                    &.selected {
+                        background-color: rgba(255, 255, 255, 0.10);
+                    }
+                }
+            }
+        }
+
+        &:not(.select-dropdown) {
+            li {
+                &:hover {
+                    background-color: lighten(color('grey', 'darken-4'), 5%);
+                }
+
+                &.active {
+                    background-color: lighten(color('grey', 'darken-4'), 10%);
+                }
+
+                &.disabled {
+                    background-color: lighten(color('grey', 'darken-4'), 5%);
+                    opacity: 0.7;
+                }
+            }
+
+            &.blur-bg {
+                background-color: rgba(50, 50, 50, 0.8);
+
+                li {
+
+                    &.disabled {
+                        background-color: rgba(255, 255, 255, 0.05);
+                        opacity: 0.5;
+                    }
+
+                    &:hover {
+                        background-color: rgba(255, 255, 255, 0.05);
+                    }
+
+                    &.active {
+                        background-color: rgba(255, 255, 255, 0.10);
+                    }
+                }
+            }
+        }
+    }
+
+    //select
+    select {
+        background-color: rgba(20, 20, 20, 0.9);
+        color: #FFF;
+        border-color: rgba(255, 255, 255, .5);
+    }
+
+    //modals
+    .modal {
+        background-color: color('grey', 'darken-4');
+
+        .modal-footer,
+        .modal-header {
+            background-color: rgba(color('grey', 'darken-4'), .5);
+        }
+
+        &.blur-bg {
+            background-color: rgba(color('grey', 'darken-4'), .5);
+        }
+    }
+
+    .modal-overlay {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    //collections
+    .collection {
+        border: 1px solid color('grey', 'darken-3');
+
+        .collection-item {
+            background-color: color('grey', 'darken-4');
+            border-bottom: 1px solid color('grey', 'darken-3');
+
+            &.avatar i.circle {
+                background-color: color('grey', 'darken-3');
+            }
+        }
+
+        a {
+            &:not(.secondary-content) {
+                color: $primary-color-light;
+            }
+
+            &.collection-item:not(.active):hover {
+                background-color: color('grey', 'darken-3');
+            }
+
+            &.active {
+                background-color: $primary-color;
+                color: #FFF;
+            }
+        }
+
+        &.with-header {
+            .collection-header {
+                background-color: color('grey', 'darken-4');
+                border-bottom: 1px solid color('grey', 'base');
+            }
+        }
+    }
+
+    //badge {
+    span.badge {
+        &.new {
+            background-color: color('grey', 'darken-2');
+        }
+    }
+
+    //cards
+    .card,
+    .card-panel {
+        background-color: color('grey', 'darken-4');
+    }
+
+    //progress
+    .progress {
+        background-color: darken($progress-bar-color, 30%);
+    }
+
+    //pagination
+    .pagination {
+        li {
+
+            a {
+                color: color('grey', 'lighten-4');
+            }
+
+            &.disabled {
+                a {
+                    color: color('grey', 'darken-3');
+                }
+            }
+        }
+    }
+
+    //forms 
+    label,
+    .helper-text {
+        color: color('grey', 'lighten-1');
+    }
+
+    [type=radio] {
+
+        &:not(:checked)+span:before {
+            border: 2px solid color('grey', 'lighten-1');
+        }
+
+        &:checked+span:after,
+        &.with-gap:checked+span:after {
+            background-color: lighten($secondary-color, 20%);
+            border-color: lighten($secondary-color, 20%);
+
+        }
+
+        &.with-gap:checked+span:before {
+            border-color: lighten($secondary-color, 20%);
+        }
+
+        &:disabled {
+            +span {
+                color: color('grey', 'darken-1');
+
+                &:before {
+                    border-color: color('grey', 'darken-1');
+                }
+
+                &:after {
+                    background-color: color('grey', 'darken-1');
+                }
+            }
+
+            &:checked+span:after {
+                border-color: color('grey', 'darken-1');
+            }
+        }
+
+        &.with-gap {
+            &:disabled {
+                +span {
+
+                    &:before,
+                    &:checked:before {
+                        border-color: color('grey', 'darken-1');
+                    }
+
+                    &:after {
+                        background-color: color('grey', 'darken-1');
+                    }
+                }
+            }
+        }
+    }
+
+    .select-wrapper {
+        .caret {
+            fill: rgba(255, 255, 255, .87);
+        }
+    }
+
+    .input-field input[type=search]:focus:not(.browser-default) {
+        background-color: color('grey', 'lighten-1');
+    }
+
+    [type=checkbox] {
+
+        +span:not(.lever):before,
+        &:not(.filled-in)+span:not(.lever):after {
+            border: 2px solid color('grey', 'lighten-1');
+        }
+
+        &:checked+span:before {
+            border: unset;
+            border-right: 2px solid lighten($secondary-color, 20%);
+            border-bottom: 2px solid lighten($secondary-color, 20%);
+        }
+
+        &:disabled+span {
+            color: color('grey', 'darken-1');
+
+            &:before {
+                border-right: 2px solid color('grey', 'darken-2');
+                border-bottom: 2px solid color('grey', 'darken-2');
+            }
+        }
+
+        &:not(:checked):disabled:not(.filled-in)+span:not(.lever):before {
+            border: 2px solid color('grey', 'darken-2');
+            background-color: unset;
+        }
+
+        &:indeterminate {
+            +span:not(.lever):before {
+                border: unset;
+                border-right: 2px solid lighten($secondary-color, 20%);
+            }
+
+            &:disabled,
+            &.disabled {
+                +span:not(.lever):before {
+                    border: unset !important;
+                    border-right: 2px solid color('grey', 'darken-2') !important;
+                }
+            }
+        }
+    }
+
+    .chips input:not([type]):not(.browser-default).input {
+        color: color('grey', 'lighten-3');
+    }
+
+    .chip {
+        background-color: color('grey', 'darken-3');
+        color: color('grey', 'lighten-3');
+
+        &:focus {
+            background-color: lighten($secondary-color, 10%);
+        }
+    }
+
+    .switch {
+        [type=checkbox] {
+            &:checked {
+                +span:before {
+                    border: unset;
+                }
+
+                +.lever:after {
+                    background-color: lighten($secondary-color, 20%);
+                }
+            }
+
+            &:not(:disabled)~.lever:active:before {
+                background-color: rgba(lighten($secondary-color, 20%), .3);
+            }
+        }
+
+        label .lever {
+            background-color: color('grey', 'darken-3');
+        }
+
+        input[type=checkbox][disabled]+.lever {
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+    }
+
+    input[type=range] {
+        border: unset;
+    }
+
+    .datepicker-modal {
+
+        .month-prev,
+        .month-next {
+            svg {
+                fill: color('grey', 'lighten-3');
+            }
+        }
+
+        .datepicker-table {
+            tr {
+                border: unset;
+            }
+
+            td {
+                &.is-today {
+                    color: lighten($secondary-color, 30%);
+                }
+
+                &.is-selected {
+                    color: #FFF;
+                }
+            }
+        }
+
+        .datepicker-cancel,
+        .datepicker-clear,
+        .datepicker-today,
+        .datepicker-done {
+            color: lighten($secondary-color, 40%);
+            font-weight: 500;
+        }
+
+        &.blur-bg {
+            background-color: transparent;
+
+            .datepicker-date-display {
+                background-color: rgba($secondary-color, .3);
+            }
+
+            .datepicker-calendar-container {
+                background-color: color('grey', 'darken-4');
+            }
+        }
+    }
+
+    .timepicker-modal {
+        .timepicker-plate {
+            background-color: color('grey', 'darken-4');
+
+            .timepicker-tick {
+                color: color('grey', 'lighten-3');
+            }
+        }
+
+        .timepicker-close {
+            color: lighten($secondary-color, 40%);
+            font-weight: 500;
+        }
+
+        &.blur-bg {
+            background-color: transparent;
+
+            .timepicker-digital-display {
+                background-color: rgba($secondary-color, .3);
+            }
+
+            .timepicker-analog-display {
+                background-color: color('grey', 'darken-4');
+            }
+        }
+    }
+
+    .noUi-target {
+        background: color('grey', 'darken-3');
+    }
+
+    //stepper
+    ul.stepper {
+
+        .step {
+            .step-title::after {
+                color: color('grey', 'lighten-1');
+            }
+
+            &:not(:last-of-type)::after {
+                background-color: color('grey', 'darken-2');
+            }
+
+            &::before {
+                background-color: darken($secondary-color, 10%);
+                font-weight: 500;
+                color: color('grey', 'base');
+            }
+
+            &.active::before {
+                background-color: lighten($secondary-color, 10%);
+                color: color('grey', 'lighten-4');
+            }
+
+            &.done::before {
+                background-color: darken($success-color, 10%);
+                color: color('grey', 'lighten-4');
+            }
+
+            &.wrong::before {
+                background-color: darken($danger-color, 10%);
+                color: color('grey', 'lighten-4');
+            }
+        }
+
+        &.horizontal {
+
+            &::before {
+                background-color: color('grey', 'darken-4');
+                box-shadow: unset;
+                border-bottom: 1px solid color('grey', 'darken-3');
+            }
+
+            .step {
+                &:not(:last-of-type)::after {
+                    background-color: color('grey', 'darken-2');
+                    z-index: 1;
+                }
+
+                .step-title {
+                    &::after {
+                        color: color('grey', 'lighten-1');
+                    }
+
+                    &::before {
+                        background-color: darken($secondary-color, 10%);
+                        font-weight: 500;
+                        color: color('grey', 'base');
+                    }
+                }
+
+
+                &.active .step-title::before {
+                    background-color: lighten($secondary-color, 10%);
+                    color: color('grey', 'lighten-4');
+                }
+
+                &.done .step-title::before {
+                    background-color: darken($success-color, 10%);
+                    color: color('grey', 'lighten-4');
+                }
+
+                &.wrong .step-title::before {
+                    background-color: darken($danger-color, 10%);
+                    color: color('grey', 'lighten-4');
+                }
+
+            }
+        }
+    }
+
+    //table
+    table {
+        th {
+            color: #FFF;
+        }
+
+        tr {
+            border-bottom: 1px solid color('grey', 'darken-3');
+        }
+
+        &.striped {
+            tbody>tr {
+                border-bottom: unset;
+
+                &:nth-child(odd) {
+                    background-color: color('grey', 'darken-4');
+                }
+            }
+        }
+
+        &.highlight {
+            tbody>tr:hover {
+                background-color: #313131;
+            }
+        }
+
+        &.sticky {
+            tr.sticky-header {
+                th {
+                    background-color: color('grey', 'darken-4');
+                }
+
+                &.blur-bg {
+                    th {
+                        background-color: rgba(color('grey', 'darken-4'), 0.8);
+                    }
+                }
+            }
+        }
+    }
+
+    .toast,
+    .material-tooltip {
+        background-color: rgb(200, 200, 200);
+        color: #000;
+        font-weight: 500;
+
+        &.blur-bg {
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+    }
+
+    // table of contents 
+
+    .table-of-contents {
+        a {
+            color: rgba(255, 255, 255, .55);
+
+            &:hover {
+                color: rgba(255, 255, 255, .8);
+            }
+
+            &.active {
+                color: rgba(255, 255, 255, 1);
+            }
+        }
+    }
+
+    //alerts
+    .alert {
+        color: #FFF;
+
+        .btn-flat {
+            background-color: rgba(255, 255, 255, .1);
+        }
+
+        &:not(.outlined) {
+            background-color: color('grey', 'darken-4');
+
+            &.primary {
+                background-color: darken($primary-color, 20%);
+            }
+
+            &.info {
+                background-color: darken($info-color, 20%);
+            }
+
+            &.success {
+                background-color: darken($success-color, 20%);
+            }
+
+            &.warning {
+                background-color: darken($warning-color, 20%);
+            }
+
+            &.danger {
+                background-color: darken($danger-color, 20%);
+            }
+        }
+
+        &.outlined {
+            border-color: color('grey', 'lighten-2');
+
+            &.primary {
+                border-color: $primary-color;
+                color: lighten($primary-color, 20%);
+            }
+
+            &.info {
+                border-color: $info-color;
+                color: lighten($info-color, 20%);
+            }
+
+            &.success {
+                border-color: $success-color;
+                color: lighten($success-color, 20%);
+            }
+
+            &.warning {
+                border-color: $warning-color;
+                color: lighten($warning-color, 20%);
+            }
+
+            &.danger {
+                border-color: $danger-color;
+                color: lighten($danger-color, 20%);
+            }
+        }
+
+        &.multiline {
+            .content {
+                color: #FFF;
+            }
+        }
+    }
+
+    //footer
+    .page-footer {
+        background-color: color('grey', 'darken-4');
+    }
+
+    input:not([type]):not(.browser-default),
+    input[type=text]:not(.browser-default),
+    input[type=password]:not(.browser-default),
+    input[type=email]:not(.browser-default),
+    input[type=url]:not(.browser-default),
+    input[type=time]:not(.browser-default),
+    input[type=date]:not(.browser-default),
+    input[type=datetime]:not(.browser-default),
+    input[type=datetime-local]:not(.browser-default),
+    input[type=tel]:not(.browser-default),
+    input[type=number]:not(.browser-default),
+    input[type=search]:not(.browser-default),
+    textarea.materialize-textarea {
+        color: #FFF;
+
+        &:focus {
+            border-color: lighten($secondary-color, 20%);
+            box-shadow: 0 1px 0 0 lighten($secondary-color, 20%);
+
+            +label {
+                color: lighten($secondary-color, 20%);
+            }
+        }
+
+        // Disabled input style
+        &:disabled,
+        &[readonly="readonly"] {
+            color: rgba(255, 255, 255, .5);
+            border-bottom: 1px dotted rgba(255, 255, 255, .5);
+        }
+
+        // Disabled label style
+        &:disabled+label,
+        &[readonly="readonly"]+label {
+            color: rgba(255, 255, 255, .5);
+        }
+    }
+
+    // waves effect
+    .waves-effect {
+        &:not(.waves-light) .waves-ripple {
+            background: rgba(255, 255, 255, 0.4);
+            $gradient: rgba(255, 255, 255, 0.2) 0, rgba(255, 255, 255, .3) 40%, rgba(255, 255, 255, .4) 50%, rgba(255, 255, 255, .5) 60%, rgba(255, 255, 255, 0) 70%;
+            background: -webkit-radial-gradient($gradient);
+            background: -o-radial-gradient($gradient);
+            background: -moz-radial-gradient($gradient);
+            background: radial-gradient($gradient);
+        }
+
+        //for light buttons
+        &.light .waves-ripple {
+            background: rgba(0, 0, 0, 0.2);
+            $gradient: rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, .3) 40%, rgba(0, 0, 0, .4) 50%, rgba(0, 0, 0, .5) 60%, rgba(255, 255, 255, 0) 70%;
+            background: -webkit-radial-gradient($gradient);
+            background: -o-radial-gradient($gradient);
+            background: -moz-radial-gradient($gradient);
+            background: radial-gradient($gradient);
+        }
+    }
+
+    //feature discovery
+    .tap-target-wave::before,
+    .tap-target-wave::after {
+        background-color: #000;
+    }
+
+    //tree view
+    $tree-line: #383838;
+    $tree-line-hover: #4d4d4d;
+    $tree-span-hover: rgba(255, 255, 255, .2);
+    $tree-span-child-hover: rgba(255, 255, 255, .15);
+
+    .tree {
+
+        .root,
+        li span,
+        li a {
+            background-color: rgba(255, 255, 255, .1);
+
+            &.active {
+                background-color: $secondary-color;
+            }
+
+            &.disabled {
+                background-color: rgba(255, 255, 255, .03);
+                color: rgba(255, 255, 255, .5);
+            }
+        }
+
+        &.outlined {
+
+            .root,
+            li span,
+            li a {
+                background-color: unset;
+                border: 2px solid $tree-line;
+
+                &.active {
+                    border-color: lighten($secondary-color, 10%);
+                    color: lighten($secondary-color, 15%);
+                }
+
+                &.disabled {
+                    border-color: rgba(255, 255, 255, .03);
+                }
+            }
+        }
+
+        li {
+            &:before {
+                border-left-color: $tree-line;
+                border-bottom-color: $tree-line;
+            }
+
+            &:after {
+                border-left-color: $tree-line;
+                border-top-color: $tree-line;
+            }
+        }
+
+        .branches {
+
+            li {
+
+                &:before {
+                    border-left-color: $tree-line;
+                    border-bottom-color: $tree-line;
+                }
+
+                &:after {
+                    border-left-color: $tree-line;
+                }
+            }
+
+            &:hover+ul,
+            &:focus+ul {
+                li {
+
+                    &:after,
+                    &:before {
+                        border-color: $tree-line-hover;
+                    }
+                }
+            }
+        }
+
+        .branches li span,
+        .branches li a,
+        .root {
+
+            &:not(.active):not(.disabled) {
+
+                &:hover,
+                &:focus {
+                    background: $tree-span-hover;
+
+                    &+ul {
+
+                        li span,
+                        li a {
+                            &:not(.active):not(.disabled) {
+                                background: $tree-span-child-hover;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:hover+ul,
+            &:focus+ul {
+                li {
+
+                    &:after,
+                    &:before {
+                        border-color: $tree-line-hover;
+                    }
+                }
+            }
+        }
+
+        &.outlined {
+
+            .root,
+            li span,
+            li a {
+                &:not(.active):not(.disabled) {
+
+                    &:hover,
+                    &:focus {
+                        background-color: unset;
+                        border-color: $tree-line-hover;
+
+                        &+ul {
+
+                            li span,
+                            li a {
+                                &:not(.active):not(.disabled) {
+                                    background-color: unset;
+                                    border-color: $tree-line-hover;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //helpers
+    .ondark-hide {
+        display: none;
+    }
+
+    div.ondark-show {
+        display: block;
+    }
+
+    .btn,
+    .btn-small,
+    .btn-large,
+    .btn-soft,
+    .btn-outlined,
+    .btn-flat {
+        &.ondark-show {
+            display: inline-block;
+        }
+    }
+
+    @media #{$large-and-up} {
+        .scrollbar {
+
+            /* Track */
+            &::-webkit-scrollbar-track {
+                background: rgba(255, 255, 255, 0.1);
+            }
+
+            /* Handle */
+            &::-webkit-scrollbar-thumb {
+                background: rgba(255, 255, 255, 0.3);
+            }
+
+            /* Handle on hover */
+            &::-webkit-scrollbar-thumb:hover {
+                background: rgba(255, 255, 255, 0.5);
+            }
+        }
+
+        body.scrollbar {
+            * {
+
+                /* Track */
+                &::-webkit-scrollbar-track {
+                    background: rgba(255, 255, 255, 0.1);
+                }
+
+                /* Handle */
+                &::-webkit-scrollbar-thumb {
+                    background: rgba(255, 255, 255, 0.3);
+                }
+
+                /* Handle on hover */
+                &::-webkit-scrollbar-thumb:hover {
+                    background: rgba(255, 255, 255, 0.5);
+                }
+            }
+        }
+    }
+}
+
+//init helper
+.ondark-show {
+    display: none;
+}
+
+//auto dark mode - using system preferred if html tag doesn't have .no-dark-mode class
+@media (prefers-color-scheme: dark) {
+    html:not(.no-dark-mode) {
+        @include dark-mode;
+    }
+}
+
+//force dark-mode, add .dark-mode class to the html tag
+html.dark-mode {
+    @include dark-mode;
+}

@@ -29,19 +29,21 @@ header
         i.material-icons search
         div.search-results
     li.bold(class=(page == "About" ? "active" : ""))
-      a.waves-effect.waves-teal(href='about.html') About
+      a.waves-effect(href='about.html') About
     li.bold(class=(page == "Getting Started" ? "active" : ""))
-      a.waves-effect.waves-teal(href='getting-started.html') Getting Started
+      a.waves-effect(href='getting-started.html') Getting Started
 
     li.no-padding
       ul.collapsible.collapsible-accordion
-        li.bold(class=(page == "Sass" || page == "Typography" || page == "Color" || page == "Shadow" || page == "Grid" || page == "Media CSS" || page == "Pulse" || page == "Table" || page == "CSS Transitions" || page == "Helpers" ? "active" : ""))
-          a.collapsible-header(class="waves-effect waves-teal")
+        li.bold(class=(page == "Sass" || page == "Typography" || page == "Color" || page == "Shadow" || page == "Grid" || page == "Media CSS" || page == "Dark Mode" || page == "Pulse" || page == "Table" || page == "CSS Transitions" || page == "Helpers" ? "active" : ""))
+          a.collapsible-header(class="waves-effect")
             | CSS
           .collapsible-body
             ul
               li(class=(page == "Color" ? "active" : ""))
                 a(href='color.html') Color
+              li(class=(page == "Dark Mode" ? "active" : ""))
+                a(href='dark-mode.html') Dark Mode
               li(class=(page == "Grid" ? "active" : ""))
                 a(href='grid.html') Grid
               li(class=(page == "Helpers" ? "active" : ""))
@@ -60,11 +62,13 @@ header
                 a(href='css-transitions.html') Transitions
               li(class=(page == "Typography" ? "active" : ""))
                 a(href='typography.html') Typography
-        li.bold(class=(page == "Buttons" || page == "Floating Action Button" || page == "Navbar" || page == "Cards" || page == "Preloader" || page == "Pagination" || page == "Collections" || page == "Badges" || page == "Breadcrumbs" || page == "Footer" || page == "Icons" ? "active" : ""))
-          a.collapsible-header(class="waves-effect waves-teal")
+        li.bold(class=(page == "Buttons" || page == "Floating Action Button" || page == "Navbar" || page == "Cards" || page == "Preloader" || page == "Tree View" || page == "Pagination" || page == "Collections" || page == "Badges" || page == "Breadcrumbs" || page == "Footer" || page == "Alerts" || page == "Icons" ? "active" : ""))
+          a.collapsible-header(class="waves-effect")
             | Components
           .collapsible-body
             ul
+              li(class=(page == "Alerts" ? "active" : ""))
+                a(href='alerts.html') Alerts
               li(class=(page == "Badges" ? "active" : ""))
                 a(href='badges.html') Badges
               li(class=(page == "Buttons" ? "active" : ""))
@@ -87,8 +91,10 @@ header
                 a(href='pagination.html') Pagination
               li(class=(page == "Preloader" ? "active" : ""))
                 a(href='preloader.html') Preloader
-        li.bold(class=(page == "Auto Init" || page == "Tooltips" || page == "Toasts" || page == "Modals" || page == "Dropdown" || page == "FeatureDiscovery" || page == "Tabs" || page == "Scrollspy" || page == "Sidenav" || page == "Pushpin" || page == "Waves" || page == "Media" || page == "Parallax" || page == "Collapsible" || page == "Carousel" ? "active" : ""))
-          a.collapsible-header(class="waves-effect waves-teal")
+              li(class=(page == "Tree View" ? "active" : ""))
+                a(href='tree.html') Tree View
+        li.bold(class=(page == "Auto Init" || page == "Tooltips" || page == "Toasts" || page == "Modals" || page == "Dropdown" || page == "FeatureDiscovery" || page == "Tabs" || page == "Scrollspy" || page == "Sidenav" || page == "Stepper" || page == "Pushpin" || page == "Waves" || page == "Media" || page == "Parallax" || page == "Collapsible" || page == "Carousel" ? "active" : ""))
+          a.collapsible-header(class="waves-effect")
             | JavaScript
           .collapsible-body
             ul
@@ -114,6 +120,8 @@ header
                 a(href='scrollspy.html') Scrollspy
               li(class=(page == "Sidenav" ? "active" : ""))
                 a(href='sidenav.html') Sidenav
+              li(class=(page == "Stepper" ? "active" : ""))
+                a(href='stepper.html') Stepper
               li(class=(page == "Tabs" ? "active" : ""))
                 a(href='tabs.html') Tabs
               li(class=(page == "Toasts" ? "active" : ""))
@@ -123,7 +131,7 @@ header
               li(class=(page == "Waves" ? "active" : ""))
                 a(href='waves.html') Waves
         li.bold(class=(page == "Autocomplete" || page == "Checkboxes" || page == "Chips" || page == "Pickers" || page == "Radio Buttons" || page == "Range" || page == "Select" || page == "Switches" || page == "Text Inputs" ? "active" : ""))
-          a.collapsible-header(class="waves-effect waves-teal")
+          a.collapsible-header(class="waves-effect")
             | Forms
           .collapsible-body
             ul
@@ -147,4 +155,4 @@ header
                 a(href='text-inputs.html') Text Inputs
 
     li.bold(class=(page == "Mobile" ? "active" : ""))
-      a.waves-effect.waves-teal(href='mobile.html') Mobile
+      a.waves-effect(href='mobile.html') Mobile

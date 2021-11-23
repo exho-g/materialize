@@ -20,6 +20,10 @@
       this._enabled = window.innerWidth > this.options.responsiveThreshold;
 
       this.$img = this.$el.find('img').first();
+      if (this.$el.find('img').length == 0) {
+        this.$img = this.$el.find('video').first();
+      }
+
       this.$img.each(function() {
         let el = this;
         if (el.complete) $(el).trigger('load');

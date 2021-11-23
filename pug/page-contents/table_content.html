@@ -1,49 +1,49 @@
 <div class="container">
-  <div class="row">
+    <div class="row">
 
-    <div class="col s12 m8 offset-m1 xl7 offset-xl1">
+        <div class="col s12 m8 offset-m1 xl7 offset-xl1">
 
-      <!--  Tables Section-->
-      <div id="introduction" class="section scrollspy">
-        <p class="caption">Tables are a nice way to organize a lot of data. We provide a few utility classes to help you style your table as easily as possible. In addition, to improve mobile experience, all tables on mobile-screen widths are centered automatically.</p>
-        <div class="row">
-          <div class="col s12">
-            <table>
-              <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Item Name</th>
-                    <th>Item Price</th>
-                </tr>
-              </thead>
+            <!--  Tables Section-->
+            <div id="introduction" class="section scrollspy">
+                <p class="caption">Tables are a nice way to organize a lot of data. We provide a few utility classes to help you style your table as easily as possible. In addition, to improve mobile experience, all tables on mobile-screen widths are centered automatically.</p>
+                <div class="row">
+                    <div class="col s12">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Item Name</th>
+                                    <th>Item Price</th>
+                                </tr>
+                            </thead>
 
-              <tbody>
-                <tr>
-                  <td>Alvin</td>
-                  <td>Eclair</td>
-                  <td>$0.87</td>
-                </tr>
-                <tr>
-                  <td>Alan</td>
-                  <td>Jellybean</td>
-                  <td>$3.76</td>
-                </tr>
-                <tr>
-                  <td>Jonathan</td>
-                  <td>Lollipop</td>
-                  <td>$7.00</td>
-                </tr>
-                <tr>
-                  <td>Shannon</td>
-                  <td>KitKat</td>
-                  <td>$9.99</td>
-                </tr>
-              </tbody>
+                            <tbody>
+                                <tr>
+                                    <td>Alvin</td>
+                                    <td>Eclair</td>
+                                    <td>$0.87</td>
+                                </tr>
+                                <tr>
+                                    <td>Alan</td>
+                                    <td>Jellybean</td>
+                                    <td>$3.76</td>
+                                </tr>
+                                <tr>
+                                    <td>Jonathan</td>
+                                    <td>Lollipop</td>
+                                    <td>$7.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Shannon</td>
+                                    <td>KitKat</td>
+                                    <td>$9.99</td>
+                                </tr>
+                            </tbody>
 
-            </table>
-          </div>
-          <div class="col s12">
-            <pre><code class="language-markup">
+                        </table>
+                    </div>
+                    <div class="col s12">
+                        <pre><code class="language-markup">
       &lt;table>
         &lt;thead>
           &lt;tr>
@@ -72,189 +72,260 @@
         &lt;/tbody>
       &lt;/table>
             </code></pre>
-          </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="striped" class="section scrollspy">
+                <h3 class="header">Striped Table</h3>
+                <div class="row">
+                    <div class="col s12">
+                        <p>Add <code class="language-markup">class="striped"</code> to the table tag for a striped table</p>
+                        <table class="striped">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Item Name</th>
+                                    <th>Item Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Alvin</td>
+                                    <td>Eclair</td>
+                                    <td>$0.87</td>
+                                </tr>
+                                <tr>
+                                    <td>Alan</td>
+                                    <td>Jellybean</td>
+                                    <td>$3.76</td>
+                                </tr>
+                                <tr>
+                                    <td>Jonathan</td>
+                                    <td>Lollipop</td>
+                                    <td>$7.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Shannon</td>
+                                    <td>KitKat</td>
+                                    <td>$9.99</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div id="highlight" class="section scrollspy">
+                <h3 class="header">Highlight Table</h3>
+                <div class="row">
+                    <div class="col s12">
+                        <p>Add <code class="language-markup">class="highlight"</code> to the table tag for a highlight table.</p>
+                        <table class="highlight">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Item Name</th>
+                                    <th>Item Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Alvin</td>
+                                    <td>Eclair</td>
+                                    <td>$0.87</td>
+                                </tr>
+                                <tr>
+                                    <td>Alan</td>
+                                    <td>Jellybean</td>
+                                    <td>$3.76</td>
+                                </tr>
+                                <tr>
+                                    <td>Jonathan</td>
+                                    <td>Lollipop</td>
+                                    <td>$7.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Shannon</td>
+                                    <td>KitKat</td>
+                                    <td>$9.99</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sticky" class="section scrollspy">
+                <h3 class="header">Sticky Header</h3>
+                <div class="row">
+                    <div class="col s12">
+                        <p>Add <code class="language-markup">class="sticky"</code> to the table tag and <code class="language-markup">class="sticky-header"</code> to the <code class="language-markup">&lt;tr></code> tag to make it stick to the top. You can
+                            also add <code class="language-markup">class="blur-bg"</code> to the <code class="language-markup">&lt;tr></code> tag to make the header translucent.</p>
+                        <p>Please note that the header will only stick if the elements inside the <code class="language-markup">&lt;tr></code> tag are <code class="language-markup">&lt;th></code> instead of <code class="language-markup">&lt;td></code> and
+                            the container of the table must not have <code class="language-css">overflow: auto|scroll</code>.
+                        </p>
+                        <table class="sticky">
+                            <thead>
+                                <tr class="sticky-header blur-bg">
+                                    <th>Name</th>
+                                    <th>Item Name</th>
+                                    <th>Item Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Alvin</td>
+                                    <td>Eclair</td>
+                                    <td>$0.87</td>
+                                </tr>
+                                <tr>
+                                    <td>Alan</td>
+                                    <td>Jellybean</td>
+                                    <td>$3.76</td>
+                                </tr>
+                                <tr>
+                                    <td>Jonathan</td>
+                                    <td>Lollipop</td>
+                                    <td>$7.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Shannon</td>
+                                    <td>KitKat</td>
+                                    <td>$9.99</td>
+                                </tr>
+                                <tr class="sticky-header">
+                                    <th>Name</th>
+                                    <th>Item Name</th>
+                                    <th>Item Price</th>
+                                </tr>
+                                <tr>
+                                    <td>Alvin</td>
+                                    <td>Eclair</td>
+                                    <td>$0.87</td>
+                                </tr>
+                                <tr>
+                                    <td>Alan</td>
+                                    <td>Jellybean</td>
+                                    <td>$3.76</td>
+                                </tr>
+                                <tr>
+                                    <td>Jonathan</td>
+                                    <td>Lollipop</td>
+                                    <td>$7.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Shannon</td>
+                                    <td>KitKat</td>
+                                    <td>$9.99</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <div id="centered" class="section scrollspy">
+                <h3 class="header">Centered Table</h3>
+                <div class="row">
+                    <div class="col s12">
+                        <p>Add <code class="language-markup">class="centered"</code> to the table tag to center align all the text in the table</p>
+                        <table class="centered">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Item Name</th>
+                                    <th>Item Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Alvin</td>
+                                    <td>Eclair</td>
+                                    <td>$0.87</td>
+                                </tr>
+                                <tr>
+                                    <td>Alan</td>
+                                    <td>Jellybean</td>
+                                    <td>$3.76</td>
+                                </tr>
+                                <tr>
+                                    <td>Jonathan</td>
+                                    <td>Lollipop</td>
+                                    <td>$7.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Shannon</td>
+                                    <td>KitKat</td>
+                                    <td>$9.99</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="responsive" class="section scrollspy">
+                <h3 class="header">Responsive Table</h3>
+                <div class="row">
+                    <div class="col s12">
+                        <p>Add <code class="language-markup">class="responsive-table"</code> to the table tag to make the table horizontally scrollable on smaller screen widths.</p>
+                        <table class="responsive-table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Item Name</th>
+                                    <th>Item Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Alvin</td>
+                                    <td>Eclair</td>
+                                    <td>$0.87</td>
+                                </tr>
+                                <tr>
+                                    <td>Alan</td>
+                                    <td>Jellybean</td>
+                                    <td>$3.76</td>
+                                </tr>
+                                <tr>
+                                    <td>Jonathan</td>
+                                    <td>Lollipop</td>
+                                    <td>$7.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Shannon</td>
+                                    <td>KitKat</td>
+                                    <td>$9.99</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+
         </div>
-      </div>
+        <!--  End Tables Section  -->
 
-      <div id="striped" class="section scrollspy">
-        <h3 class="header">Striped Table</h3>
-        <div class="row">
-          <div class="col s12">
-            <p>Add <code class="language-markup">class="striped"</code> to the table tag for a striped table</p>
-            <table class="striped">
-              <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Item Name</th>
-                    <th>Item Price</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Alvin</td>
-                  <td>Eclair</td>
-                  <td>$0.87</td>
-                </tr>
-                <tr>
-                  <td>Alan</td>
-                  <td>Jellybean</td>
-                  <td>$3.76</td>
-                </tr>
-                <tr>
-                  <td>Jonathan</td>
-                  <td>Lollipop</td>
-                  <td>$7.00</td>
-                </tr>
-                <tr>
-                  <td>Shannon</td>
-                  <td>KitKat</td>
-                  <td>$9.99</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
+        <div class="col hide-on-small-only m3 xl3 offset-xl1">
+            <div class="toc-wrapper">
 
-      <div id="highlight" class="section scrollspy">
-        <h3 class="header">Highlight Table</h3>
-        <div class="row">
-          <div class="col s12">
-            <p>Add <code class="language-markup">class="highlight"</code> to the table tag for a highlight table.</p>
-            <table class="highlight">
-              <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Item Name</th>
-                    <th>Item Price</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Alvin</td>
-                  <td>Eclair</td>
-                  <td>$0.87</td>
-                </tr>
-                <tr>
-                  <td>Alan</td>
-                  <td>Jellybean</td>
-                  <td>$3.76</td>
-                </tr>
-                <tr>
-                  <td>Jonathan</td>
-                  <td>Lollipop</td>
-                  <td>$7.00</td>
-                </tr>
-                <tr>
-                  <td>Shannon</td>
-                  <td>KitKat</td>
-                  <td>$9.99</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <div id="centered" class="section scrollspy">
-        <h3 class="header">Centered Table</h3>
-        <div class="row">
-          <div class="col s12">
-            <p>Add <code class="language-markup">class="centered"</code> to the table tag to center align all the text in the table</p>
-            <table class="centered">
-              <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Item Name</th>
-                    <th>Item Price</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Alvin</td>
-                  <td>Eclair</td>
-                  <td>$0.87</td>
-                </tr>
-                <tr>
-                  <td>Alan</td>
-                  <td>Jellybean</td>
-                  <td>$3.76</td>
-                </tr>
-                <tr>
-                  <td>Jonathan</td>
-                  <td>Lollipop</td>
-                  <td>$7.00</td>
-                </tr>
-                <tr>
-                  <td>Shannon</td>
-                  <td>KitKat</td>
-                  <td>$9.99</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+                <div style="height: 1px;">
+                    <ul class="section table-of-contents">
+                        <li><a href="#introduction">Introduction</a></li>
+                        <li><a href="#striped">Striped</a></li>
+                        <li><a href="#highlight">Highlight</a></li>
+                        <li><a href="#sticky">Sticky</a></li>
+                        <li><a href="#centered">Centered</a></li>
+                        <li><a href="#responsive">Responsive</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
-      </div>
-
-      <div id="responsive" class="section scrollspy">
-        <h3 class="header">Responsive Table</h3>
-        <div class="row">
-          <div class="col s12">
-            <p>Add <code class="language-markup">class="responsive-table"</code> to the table tag to make the table horizontally scrollable on smaller screen widths.</p>
-            <table class="responsive-table">
-              <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Item Name</th>
-                    <th>Item Price</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Alvin</td>
-                  <td>Eclair</td>
-                  <td>$0.87</td>
-                </tr>
-                <tr>
-                  <td>Alan</td>
-                  <td>Jellybean</td>
-                  <td>$3.76</td>
-                </tr>
-                <tr>
-                  <td>Jonathan</td>
-                  <td>Lollipop</td>
-                  <td>$7.00</td>
-                </tr>
-                <tr>
-                  <td>Shannon</td>
-                  <td>KitKat</td>
-                  <td>$9.99</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-      </div>
-
-
-    </div><!--  End Tables Section  -->
-
-    <div class="col hide-on-small-only m3 xl3 offset-xl1">
-      <div class="toc-wrapper">
-
-        <div style="height: 1px;">
-          <ul class="section table-of-contents">
-            <li><a href="#introduction">Introduction</a></li>
-            <li><a href="#striped">Striped</a></li>
-            <li><a href="#highlight">Highlight</a></li>
-            <li><a href="#centered">Centered</a></li>
-            <li><a href="#responsive">Responsive</a></li>
-          </ul>
-        </div>
-      </div>
     </div>
-
-  </div>
 </div>

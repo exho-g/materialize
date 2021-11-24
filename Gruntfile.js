@@ -98,7 +98,7 @@ module.exports = function(grunt) {
                     sourcemap: false
                 },
                 files: {
-                    'docs/materialize.min.css': 'sass/materialize.scss'
+                    'docs/css/materialize.min.css': 'sass/materialize.scss'
                 }
             },
 
@@ -635,7 +635,7 @@ module.exports = function(grunt) {
             },
             min_docs: {
                 src: 'dist/materialize.min.js',
-                dest: 'docs/materialize.min.js'
+                dest: 'docs/js/materialize.min.js'
             }
         }
 

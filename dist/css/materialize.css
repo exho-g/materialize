@@ -5226,6 +5226,51 @@ small {
   vertical-align: middle;
   -webkit-tap-highlight-color: transparent;
 }
+.btn.tiny, .tiny.btn-small, .tiny.btn-large,
+.btn-flat.tiny,
+.btn-soft.tiny,
+.btn-outlined.tiny {
+  height: 26px;
+  line-height: 26px;
+  font-size: 12px;
+  padding: 0 12px;
+}
+.btn.tiny i, .tiny.btn-small i, .tiny.btn-large i,
+.btn-flat.tiny i,
+.btn-soft.tiny i,
+.btn-outlined.tiny i {
+  margin-right: 7px;
+  font-size: 0.8rem;
+}
+.btn.small, .small.btn-small, .small.btn-large,
+.btn-flat.small,
+.btn-soft.small,
+.btn-outlined.small {
+  height: 32.4px;
+  line-height: 32.4px;
+  font-size: 13px;
+}
+.btn.small i, .small.btn-small i, .small.btn-large i,
+.btn-flat.small i,
+.btn-soft.small i,
+.btn-outlined.small i {
+  font-size: 1.2rem;
+}
+.btn.large, .large.btn-small, .large.btn-large,
+.btn-flat.large,
+.btn-soft.large,
+.btn-outlined.large {
+  height: 54px;
+  line-height: 54px;
+  font-size: 15px;
+  padding: 0 28px;
+}
+.btn.large i, .large.btn-small i, .large.btn-large i,
+.btn-flat.large i,
+.btn-soft.large i,
+.btn-outlined.large i {
+  font-size: 1.6rem;
+}
 
 .btn.disabled,
 .btn-floating.disabled,
@@ -13225,6 +13270,12 @@ ul.stepper > li:not(:last-of-type) {
   html:not(.no-dark-mode) nav.flat {
     background-color: transparent;
   }
+  html:not(.no-dark-mode) nav.flat .breadcrumb {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  html:not(.no-dark-mode) nav.flat .breadcrumb:before {
+    color: rgba(255, 255, 255, 0.5);
+  }
   html:not(.no-dark-mode) .collapsible:not(.popout) {
     border-top: 1px solid #424242;
     border-right: 1px solid #424242;
@@ -17341,6 +17392,12 @@ html.dark-mode nav .brand-logo img {
 }
 html.dark-mode nav.flat {
   background-color: transparent;
+}
+html.dark-mode nav.flat .breadcrumb {
+  color: rgba(255, 255, 255, 0.5);
+}
+html.dark-mode nav.flat .breadcrumb:before {
+  color: rgba(255, 255, 255, 0.5);
 }
 html.dark-mode .collapsible:not(.popout) {
   border-top: 1px solid #424242;

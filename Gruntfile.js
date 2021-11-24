@@ -92,6 +92,16 @@ module.exports = function(grunt) {
                 }
             },
 
+            min_docs: {
+                options: {
+                    outputStyle: 'compressed',
+                    sourcemap: false
+                },
+                files: {
+                    'docs/materialize.min.css': 'sass/materialize.scss'
+                }
+            },
+
             // Compile ghpages css
             gh: {
                 options: {
@@ -699,5 +709,5 @@ module.exports = function(grunt) {
         grunt.task.run(tasks);
 
     });
-    grunt.registerTask('docs', ['js_compile', 'copy:docs', 'sass:gh', 'postcss:gh', 'pug', 'replace:docs']);
+    grunt.registerTask('docs', ['js_compile', 'copy:docs', 'sass:gh', 'sass:min_docs', 'postcss:gh', 'pug', 'replace:docs']);
 };

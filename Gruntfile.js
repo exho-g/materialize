@@ -78,7 +78,8 @@ module.exports = function(grunt) {
                     sourcemap: false
                 },
                 files: {
-                    'dist/css/materialize.css': 'sass/materialize.scss'
+                    'dist/css/materialize.css': 'sass/materialize.scss',
+                    'docs/materialize.css': 'sass/materialize.scss'
                 }
             },
 
@@ -88,7 +89,8 @@ module.exports = function(grunt) {
                     sourcemap: false
                 },
                 files: {
-                    'dist/css/materialize.min.css': 'sass/materialize.scss'
+                    'dist/css/materialize.min.css': 'sass/materialize.scss',
+                    'docs/materialize.min.css': 'sass/materialize.scss'
                 }
             },
 
@@ -166,7 +168,8 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    'dist/js/materialize.js': 'temp/js/materialize.js'
+                    'dist/js/materialize.js': 'temp/js/materialize.js',
+                    'docs/materialize.js': 'temp/js/materialize.js'
                 }
             }
         },
@@ -222,7 +225,8 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    'dist/js/materialize.min.js': ['dist/js/materialize.js']
+                    'dist/js/materialize.min.js': ['dist/js/materialize.js'],
+                    'docs/materialize.min.js': ['dist/js/materialize.js']
                 }
             },
             bin: {

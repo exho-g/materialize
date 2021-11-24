@@ -84,7 +84,7 @@
         }
         &.flat {
             background-color: transparent;
-            .breadcrumb {
+            .breadcrumb:not(:last-child) {
                 color: rgba(255, 255, 255, .5);
                 &:before {
                     color: rgba(255, 255, 255, .5);

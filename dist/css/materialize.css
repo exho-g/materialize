@@ -13270,10 +13270,10 @@ ul.stepper > li:not(:last-of-type) {
   html:not(.no-dark-mode) nav.flat {
     background-color: transparent;
   }
-  html:not(.no-dark-mode) nav.flat .breadcrumb {
+  html:not(.no-dark-mode) nav.flat .breadcrumb:not(:last-child) {
     color: rgba(255, 255, 255, 0.5);
   }
-  html:not(.no-dark-mode) nav.flat .breadcrumb:before {
+  html:not(.no-dark-mode) nav.flat .breadcrumb:not(:last-child):before {
     color: rgba(255, 255, 255, 0.5);
   }
   html:not(.no-dark-mode) .collapsible:not(.popout) {
@@ -17393,10 +17393,10 @@ html.dark-mode nav .brand-logo img {
 html.dark-mode nav.flat {
   background-color: transparent;
 }
-html.dark-mode nav.flat .breadcrumb {
+html.dark-mode nav.flat .breadcrumb:not(:last-child) {
   color: rgba(255, 255, 255, 0.5);
 }
-html.dark-mode nav.flat .breadcrumb:before {
+html.dark-mode nav.flat .breadcrumb:not(:last-child):before {
   color: rgba(255, 255, 255, 0.5);
 }
 html.dark-mode .collapsible:not(.popout) {

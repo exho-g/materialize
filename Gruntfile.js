@@ -632,6 +632,10 @@ module.exports = function(grunt) {
             docs: {
                 src: 'bin/materialize.js',
                 dest: 'docs/js/materialize.js'
+            },
+            min_docs: {
+                src: 'dist/materialize.min.js',
+                dest: 'docs/materialize.min.js'
             }
         }
 
@@ -709,5 +713,5 @@ module.exports = function(grunt) {
         grunt.task.run(tasks);
 
     });
-    grunt.registerTask('docs', ['js_compile', 'copy:docs', 'sass:gh', 'sass:min_docs', 'postcss:gh', 'pug', 'replace:docs']);
+    grunt.registerTask('docs', ['js_compile', 'copy:docs', 'copy:min_docs', 'sass:gh', 'sass:min_docs', 'postcss:gh', 'pug', 'replace:docs']);
 };

@@ -9595,7 +9595,7 @@ footer.v {
     background: rgba(0, 0, 0, 0);
   }
 }
-.scrollbar-force {
+.scrollbar.force {
   overflow: auto;
   /* width */
   /* Track */
@@ -9603,56 +9603,56 @@ footer.v {
   /* Handle on hover */
   /* Corner */
 }
-.scrollbar-force::-webkit-scrollbar {
+.scrollbar.force::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
-.scrollbar-force::-webkit-scrollbar-track {
+.scrollbar.force::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.03);
   border-radius: 5px;
 }
-.scrollbar-force::-webkit-scrollbar-thumb {
+.scrollbar.force::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.3);
   border-radius: 5px;
 }
-.scrollbar-force::-webkit-scrollbar-thumb:hover {
+.scrollbar.force::-webkit-scrollbar-thumb:hover {
   background: rgba(0, 0, 0, 0.5);
 }
-.scrollbar-force::-webkit-scrollbar-corner {
+.scrollbar.force::-webkit-scrollbar-corner {
   background: rgba(0, 0, 0, 0);
 }
-.scrollbar-force-x {
+.scrollbar.force-x {
   overflow: unset;
   overflow-x: auto;
 }
-.scrollbar-force-y {
+.scrollbar.force-y {
   overflow: unset;
   overflow-y: auto;
 }
 
-body.scrollbar-force * {
+body.scrollbar.force * {
   /* width */
   /* Track */
   /* Handle */
   /* Handle on hover */
   /* Corner */
 }
-body.scrollbar-force *::-webkit-scrollbar {
+body.scrollbar.force *::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
-body.scrollbar-force *::-webkit-scrollbar-track {
+body.scrollbar.force *::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.03);
   border-radius: 5px;
 }
-body.scrollbar-force *::-webkit-scrollbar-thumb {
+body.scrollbar.force *::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.3);
   border-radius: 5px;
 }
-body.scrollbar-force *::-webkit-scrollbar-thumb:hover {
+body.scrollbar.force *::-webkit-scrollbar-thumb:hover {
   background: rgba(0, 0, 0, 0.5);
 }
-body.scrollbar-force *::-webkit-scrollbar-corner {
+body.scrollbar.force *::-webkit-scrollbar-corner {
   background: rgba(0, 0, 0, 0);
 }
 

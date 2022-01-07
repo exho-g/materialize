@@ -12,23 +12,8 @@
   <a href="https://iamjerichog.github.io/materialize/"><strong>-- Browse the docs --</strong></a>
   <br>
   <br>
-  <a href="https://github.com/materializecss/materialize/actions/">
-    <img src="https://github.com/materializecss/materialize/actions/workflows/nightly.yml/badge.svg" alt="GitHub Actions badge">
-  </a>
-  <a href="https://www.npmjs.com/package/@materializecss/materialize">
-    <img src="https://badge.fury.io/js/%40materializecss%2Fmaterialize.svg" alt="npm version badge">
-  </a>
-  <a href="https://www.jsdelivr.com/package/npm/@materializecss/materialize">
-    <img src="https://data.jsdelivr.com/v1/package/npm/@materializecss/materialize/badge" alt="jsDelivr version badge">
-  </a>
-  <a href="https://david-dm.org/materializecss/materialize">
-    <img src="https://david-dm.org/materializecss/materialize/status.svg" alt="dependencies Status badge">
-    </a>
-  <a href="https://david-dm.org/materializecss/materialize#info=devDependencies">
-    <img src="https://david-dm.org/materializecss/materialize/dev-status.svg" alt="devDependency Status badge">
-  </a>
-  <a href="https://gitter.im/materializecss/materialize">
-    <img src="https://badges.gitter.im/Join%20Chat.svg" alt="Gitter badge">
+  <a href="https://github.com/iamjerichog/materialize/actions/">
+    <img src="https://github.com/iamjerichog/materialize/actions/workflows/nightly.yml/badge.svg" alt="GitHub Actions badge">
   </a>
 </p>
 

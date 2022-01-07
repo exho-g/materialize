@@ -12,6 +12,9 @@
     &.active {
         cursor: zoom-out;
     }
+    &.blur-overlay.active {
+        opacity: 1;
+    }
 }
 
 #materialbox-overlay {

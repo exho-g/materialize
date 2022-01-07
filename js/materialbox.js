@@ -323,6 +323,10 @@
           }
         });
 
+      if (this.$el[0].classList.contains('blur-overlay')) {
+        this.$overlay[0].classList.add('blur-overlay');
+      }
+
       // Put before in origin image to preserve z-index layering.
       this.$el.before(this.$overlay);
 

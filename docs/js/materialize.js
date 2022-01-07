@@ -4302,6 +4302,10 @@ $jscomp.polyfill = function (e, r, p, m) {
           }
         });
 
+        if (this.$el[0].classList.contains('blur-overlay')) {
+          this.$overlay[0].classList.add('blur-overlay');
+        }
+
         // Put before in origin image to preserve z-index layering.
         this.$el.before(this.$overlay);
 
@@ -4458,8 +4462,7 @@ $jscomp.polyfill = function (e, r, p, m) {
   if (M.jQueryLoaded) {
     M.initializeJqueryWrapper(Materialbox, 'materialbox', 'M_Materialbox');
   }
-})(cash, M.anime);
-;(function ($) {
+})(cash, M.anime);;(function ($) {
   'use strict';
 
   var _defaults = {

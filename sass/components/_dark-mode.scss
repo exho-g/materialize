@@ -279,72 +279,84 @@
     .btn-outlined:not(.light):not(.dark) {
         border-color: lighten($button-raised-background, 10%);
         color: lighten($button-raised-background, 10%);
-        &:hover {
-            background-color: rgba($button-raised-background, 0.3);
-        }
-        &:focus,
-        &:active {
-            color: lighten($button-raised-background, 25%);
-            background-color: rgba($button-raised-background, 0.5);
+        &:not(.as-badge) {
+            &:hover {
+                background-color: rgba($button-raised-background, 0.3);
+            }
+            &:focus,
+            &:active {
+                color: lighten($button-raised-background, 25%);
+                background-color: rgba($button-raised-background, 0.5);
+            }
         }
         &.primary {
             border-color: lighten($primary-color, 10%);
             color: lighten($primary-color, 10%);
-            &:hover {
-                background-color: rgba($primary-color, 0.3);
-            }
-            &:focus,
-            &:active {
-                color: lighten($primary-color, 25%);
-                background-color: rgba($primary-color, 0.5);
+            &:not(.as-badge) {
+                &:hover {
+                    background-color: rgba($primary-color, 0.3);
+                }
+                &:focus,
+                &:active {
+                    color: lighten($primary-color, 25%);
+                    background-color: rgba($primary-color, 0.5);
+                }
             }
         }
         &.info {
             border-color: lighten($info-color, 10%);
             color: lighten($info-color, 10%);
-            &:hover {
-                background-color: rgba($info-color, 0.3);
-            }
-            &:focus,
-            &:active {
-                color: lighten($info-color, 25%);
-                background-color: rgba($info-color, 0.5);
+            &:not(.as-badge) {
+                &:hover {
+                    background-color: rgba($info-color, 0.3);
+                }
+                &:focus,
+                &:active {
+                    color: lighten($info-color, 25%);
+                    background-color: rgba($info-color, 0.5);
+                }
             }
         }
         &.success {
             border-color: lighten($success-color, 10%);
             color: lighten($success-color, 10%);
-            &:hover {
-                background-color: rgba($success-color, 0.3);
-            }
-            &:focus,
-            &:active {
-                color: lighten($success-color, 25%);
-                background-color: rgba($success-color, 0.5);
+            &:not(.as-badge) {
+                &:hover {
+                    background-color: rgba($success-color, 0.3);
+                }
+                &:focus,
+                &:active {
+                    color: lighten($success-color, 25%);
+                    background-color: rgba($success-color, 0.5);
+                }
             }
         }
         &.warning {
             border-color: lighten($warning-color, 10%);
             color: lighten($warning-color, 10%);
-            &:hover {
-                background-color: rgba($warning-color, 0.3);
-            }
-            &:focus,
-            &:active {
-                color: lighten($warning-color, 25%);
-                background-color: rgba($warning-color, 0.5);
+            &:not(.as-badge) {
+                &:hover {
+                    background-color: rgba($warning-color, 0.3);
+                }
+                &:focus,
+                &:active {
+                    color: lighten($warning-color, 25%);
+                    background-color: rgba($warning-color, 0.5);
+                }
             }
         }
         &.danger {
             border-color: lighten($danger-color, 10%);
             color: lighten($danger-color, 10%);
-            &:hover {
-                background-color: rgba($danger-color, 0.3);
-            }
-            &:focus,
-            &:active {
-                color: lighten($danger-color, 25%);
-                background-color: rgba($danger-color, 0.5);
+            &:not(.as-badge) {
+                &:hover {
+                    background-color: rgba($danger-color, 0.3);
+                }
+                &:focus,
+                &:active {
+                    color: lighten($danger-color, 25%);
+                    background-color: rgba($danger-color, 0.5);
+                }
             }
         }
     }

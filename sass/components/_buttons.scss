@@ -495,7 +495,6 @@ button.btn-floating {
     text-decoration: none;
     text-align: center;
     letter-spacing: .5px;
-    cursor: pointer;
     margin: 2px 0;
     line-height: 32px;
     padding: 0 14px;
@@ -505,13 +504,16 @@ button.btn-floating {
     user-select: none;
     -webkit-tap-highlight-color: transparent;
     transition: all .2s ease-out;
-    &:hover {
-        background-color: rgba($button-raised-background, 0.1);
-        box-shadow: unset;
-    }
-    &:focus,
-    &:active {
-        background-color: rgba($button-raised-background, 0.3);
+    &:not(.as-badge) {
+        cursor: pointer;
+        &:hover {
+            background-color: rgba($button-raised-background, 0.1);
+            box-shadow: unset;
+        }
+        &:focus,
+        &:active {
+            background-color: rgba($button-raised-background, 0.3);
+        }
     }
     &.thin {
         border-width: 1px;
@@ -522,78 +524,92 @@ button.btn-floating {
     &.primary {
         color: $primary-color;
         border-color: $primary-color;
-        &:hover {
-            background-color: rgba($primary-color, 0.1);
-        }
-        &:focus,
-        &:active {
-            background-color: rgba($primary-color, 0.3);
+        &:not(.as-badge) {
+            &:hover {
+                background-color: rgba($primary-color, 0.1);
+            }
+            &:focus,
+            &:active {
+                background-color: rgba($primary-color, 0.3);
+            }
         }
     }
     &.info {
         color: $info-color;
         border-color: $info-color;
-        &:hover {
-            background-color: rgba($info-color, 0.1);
-        }
-        &:focus,
-        &:active {
-            background-color: rgba($info-color, 0.3);
+        &:not(.as-badge) {
+            &:hover {
+                background-color: rgba($info-color, 0.1);
+            }
+            &:focus,
+            &:active {
+                background-color: rgba($info-color, 0.3);
+            }
         }
     }
     &.success {
         color: $success-color;
         border-color: $success-color;
-        &:hover {
-            background-color: rgba($success-color, 0.1);
-        }
-        &:focus,
-        &:active {
-            background-color: rgba($success-color, 0.3);
+        &:not(.as-badge) {
+            &:hover {
+                background-color: rgba($success-color, 0.1);
+            }
+            &:focus,
+            &:active {
+                background-color: rgba($success-color, 0.3);
+            }
         }
     }
     &.warning {
         color: $warning-color;
         border-color: $warning-color;
-        &:hover {
-            background-color: rgba($warning-color, 0.1);
-        }
-        &:focus,
-        &:active {
-            background-color: rgba($warning-color, 0.3);
+        &:not(.as-badge) {
+            &:hover {
+                background-color: rgba($warning-color, 0.1);
+            }
+            &:focus,
+            &:active {
+                background-color: rgba($warning-color, 0.3);
+            }
         }
     }
     &.danger {
         color: $danger-color;
         border-color: $danger-color;
-        &:hover {
-            background-color: rgba($danger-color, 0.1);
-        }
-        &:focus,
-        &:active {
-            background-color: rgba($danger-color, 0.3);
+        &:not(.as-badge) {
+            &:hover {
+                background-color: rgba($danger-color, 0.1);
+            }
+            &:focus,
+            &:active {
+                background-color: rgba($danger-color, 0.3);
+            }
         }
     }
     &.light {
         color: #FFF;
         border-color: #FFF;
-        &:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-        &:focus,
-        &:active {
-            background-color: rgba(255, 255, 255, 0.3);
+        &:not(.as-badge) {
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+            &:focus,
+            &:active {
+                background-color: rgba(255, 255, 255, 0.3);
+            }
         }
     }
     &.dark {
         color: #141414;
         border-color: #141414;
-        &:hover {
-            background-color: rgba(20, 20, 20, 0.1);
-        }
-        &:focus,
-        &:active {
-            background-color: rgba(20, 20, 20, 0.3);
+        &:not(.as-badge) {
+            &:hover {
+                background-color: rgba(20, 20, 20, 0.1);
+            }
+            &:focus,
+            &:active {
+                background-color: rgba(20, 20, 20, 0.3);
+            }
         }
     }
 }

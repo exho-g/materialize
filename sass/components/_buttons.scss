@@ -515,7 +515,9 @@ button.btn-floating {
     }
     &.thin {
         border-width: 1px;
-        line-height: 34px;
+        &:not(.small):not(.tiny):not(.large) {
+            line-height: 34px;
+        }
     }
     &.primary {
         color: $primary-color;

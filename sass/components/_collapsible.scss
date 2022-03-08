@@ -24,6 +24,14 @@
             }
         }
     }
+    li {
+        >.collapsible-header .material-icons.rotate {
+            transition: transform .2s;
+        }
+        &.active>.collapsible-header .material-icons.rotate {
+            transform: rotate(90deg);
+        }
+    }
 }
 
 .collapsible-header {

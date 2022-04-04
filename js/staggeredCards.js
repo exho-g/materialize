@@ -1,7 +1,7 @@
 (function ($) {
   // Function to update labels of text fields
-  M.resizeStaggeredGrid = function () {
-    if (grids = document.querySelectorAll('.staggered-grid')) {
+  M.resizeStaggeredCards = function () {
+    if (grids = document.querySelectorAll('.staggered-cards')) {
       grids.forEach(function (grid) {
         if (items = grid.querySelectorAll('.item')) {
           items.forEach(function (item) {
@@ -20,15 +20,15 @@
   $(document).ready(function () {
     // Add active if input element has been pre-populated on document ready
     $(document).ready(function () {
-      M.resizeStaggeredGrid();
+      M.resizeStaggeredCards();
     });
 
-    document.addEventListener("resize", M.resizeStaggeredGrid());
+    document.addEventListener("resize", M.resizeStaggeredCards());
 
     // Add listener to onload of images when using LazyLoad
     try {
       new LazyLoad({
-        callback_enter: M.resizeAllGridItems
+        callback_enter: M.resizeStaggeredCards
       });
     } catch (e) {
     }

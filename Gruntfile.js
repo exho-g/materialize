@@ -31,7 +31,7 @@ module.exports = function (grunt) {
         'js/carousel.js',
         'js/tapTarget.js',
         'js/select.js',
-        'js/staggeredGrid.js',
+        'js/staggeredCards.js',
         'js/range.js'
     ];
 
@@ -306,7 +306,7 @@ module.exports = function (grunt) {
                             'carousel.js',
                             'tapTarget.js',
                             'select.js',
-                            'staggeredGrid.js',
+                            'staggeredCards.js',
                             'range.js'
                         ],
                         dest: 'materialize-src/js/'
@@ -422,7 +422,7 @@ module.exports = function (grunt) {
                     'docs/tooltips.html': 'pug/tooltips.pug',
                     'docs/sidenav.html': 'pug/sidenav.pug',
                     'docs/stepper.html': 'pug/stepper.pug',
-                    'docs/staggered-grid.html': 'pug/staggered-grid.pug',
+                    'docs/staggered-cards.html': 'pug/staggered-cards.pug',
                     'docs/pushpin.html': 'pug/pushpin.pug',
                     'docs/waves.html': 'pug/waves.pug',
                     'docs/media.html': 'pug/media.pug',

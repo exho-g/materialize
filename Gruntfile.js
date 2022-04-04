@@ -248,6 +248,7 @@ module.exports = function (grunt) {
             },
             extras: {
                 files: {
+                    'extras/mstepper/mstepper.min.js': ['extras/mstepper/mstepper.min.js'],
                     'extras/noUiSlider/nouislider.min.js': ['extras/noUiSlider/nouislider.js']
                 }
             }

@@ -66,6 +66,7 @@
                   <li><a href="pulse.html">Pulse</a></li>
                   <li><a href="sass.html">Sass</a></li>
                   <li><a href="shadow.html">Shadow</a></li>
+                  <li><a href="staggered-cards.html">Staggered Cards</a></li>
                   <li><a href="table.html">Table</a></li>
                   <li><a href="css-transitions.html">Transitions</a></li>
                   <li><a href="typography.html">Typography</a></li>
@@ -91,7 +92,7 @@
                 </ul>
               </div>
             </li>
-            <li class="bold active"><a class="collapsible-header waves-effect">JavaScript</a>
+            <li class="bold"><a class="collapsible-header waves-effect">JavaScript</a>
               <div class="collapsible-body">
                 <ul>
                   <li><a href="auto-init.html">Auto Init</a></li>
@@ -105,7 +106,6 @@
                   <li><a href="pushpin.html">Pushpin</a></li>
                   <li><a href="scrollspy.html">Scrollspy</a></li>
                   <li><a href="sidenav.html">Sidenav</a></li>
-                  <li class="active"><a href="staggered-grid.html">Staggered Grid</a></li>
                   <li><a href="stepper.html">Stepper</a></li>
                   <li><a href="tabs.html">Tabs</a></li>
                   <li><a href="toasts.html">Toasts</a></li>
@@ -144,13 +144,15 @@
 
         <div class="row">
           <div class="col s12">
-            <p class="caption">Staggered Grid makes a Pinterest like layout.</p>
+            <p class="caption">Staggered Cards makes a Pinterest like layout.</p>
 
             <h3 class="header">Basic</h3>
             <p>To get started, just enclose your cards with <code class="language-markup">.staggered-grid</code> class
-              and each cards enclosed with <code class="language-markup">.item</code> class. </p>
+              and each cards enclosed with <code class="language-markup">.item</code> class. It is recommended to use
+              <code class="language-markup">.card</code> or <code class="language-markup">.card-panel</code> as root
+              elements inside <code class="language-markup">.item</code></p>
 
-            <div class="staggered-grid">
+            <div class="staggered-cards">
               <div class="item">
                 <div class="card-panel">
                   <h3>Card</h3>
@@ -186,7 +188,7 @@
 
             <br>
             <pre><code class="language-markup">
-  &lt;div class="staggered-grid">
+  &lt;div class="staggered-cards">
     &lt;div class="item">
       &lt;div class="card-panel">
         &lt;h3>Card&lt;/h3>
@@ -232,7 +234,7 @@
             <h3 class="header">Initialization</h3>
             <p class="caption">If you use LazyLoad, it automatically initialize that also</a>.</p>
             <pre><code class="language-javascript">
-  M.resizeStaggeredGrid();
+  M.resizeStaggeredCards();
             </code></pre>
             <br>
           </div>

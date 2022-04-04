@@ -166,7 +166,7 @@
   grid-auto-rows: 20px;
 
   .item> {
-    &.card-panel, &.card {
+    .card-panel, .card {
       margin: unset;
     }
   }

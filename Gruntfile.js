@@ -248,7 +248,6 @@ module.exports = function (grunt) {
             },
             extras: {
                 files: {
-                    'extras/mstepper/mstepper.min.js': ['extras/mstepper/mstepper.min.js'],
                     'extras/noUiSlider/nouislider.min.js': ['extras/noUiSlider/nouislider.js']
                 }
             }
@@ -640,6 +639,10 @@ module.exports = function (grunt) {
             docs: {
                 src: 'bin/materialize.js',
                 dest: 'docs/js/materialize.js'
+            },
+            extras: {
+                src: 'extras',
+                dest: 'docs'
             }
         }
 
@@ -717,5 +720,5 @@ module.exports = function (grunt) {
         grunt.task.run(tasks);
 
     });
-    grunt.registerTask('docs', ['js_compile', 'uglify:min_docs', 'copy:docs', 'sass:gh', 'sass:min_docs', 'postcss:gh', 'pug', 'replace:docs']);
+    grunt.registerTask('docs', ['js_compile', 'uglify:min_docs', 'copy:docs', 'copy:extras', 'sass:gh', 'sass:min_docs', 'postcss:gh', 'pug', 'replace:docs']);
 };

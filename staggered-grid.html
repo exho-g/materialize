@@ -147,96 +147,77 @@
             <p class="caption">Staggered Grid makes a Pinterest like layout.</p>
 
             <h3 class="header">Basic</h3>
-            <p>This example uses <code class="language-markup">.linear</code> class which prevents you from proceeding
-              to the next step until the current form is filled. To allow skipping sections, remove the <code
-                class="language-markup">.linear</code> class. </p>
+            <p>To get started, just enclose your cards with <code class="language-markup">.staggered-grid</code> class
+              and each cards enclosed with <code class="language-markup">.item</code> class. </p>
 
-            <div class="card-panel">
-              <ul class="stepper linear">
-                <li class="step active">
-                  <div data-step-label="Some label" class="step-title waves-effect">Step 1</div>
-                  <div class="step-content">
-                    <div class="row">
-                      <div class="input-field col s12">
-                        <input id="linear_email" name="linear_email" type="email" class="validate" required="">
-                        <label for="linear_email">Your e-mail</label>
-                      </div>
-                    </div>
-                    <div class="step-actions">
-                      <button class="waves-effect btn next-step">CONTINUE</button>
-                    </div>
-                  </div>
-                </li>
-                <li class="step">
-                  <div class="step-title waves-effect">Step 2</div>
-                  <div class="step-content">
-                    <div class="row">
-                      <div class="input-field col s12">
-                        <input id="linear_password" name="linear_password" type="password" class="validate" required>
-                        <label for="linear_password">Your password</label>
-                      </div>
-                    </div>
-                    <div class="step-actions">
-                      <button class="waves-effect btn next-step">CONTINUE</button>
-                      <button class="waves-effect btn-flat ondark-white-text previous-step">BACK</button>
-                    </div>
-                  </div>
-                </li>
-                <li class="step">
-                  <div class="step-title waves-effect">Step 3</div>
-                  <div class="step-content">
-                    Finish!
-                    <div class="step-actions">
-                      <button class="waves-effect btn" type="submit">SUBMIT</button>
-                    </div>
-                  </div>
-                </li>
-              </ul>
+            <div class="staggered-grid">
+              <div class="item">
+                <div class="card-panel">
+                  <h3>Card</h3>
+                  <p>This is a panel in a staggered grid</p>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="card-panel">
+                  <h3>Card</h3>
+                  <p>This is a panel in a staggered grid. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Quibusdam dicta aliquid sint. Fugiat mollitia placeat delectus recusandae dolor minus commodi
+                    sapiente soluta, tempore nam voluptatem corrupti consequatur vel voluptatum illum?</p>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="card-panel">
+                  <h3>Card</h3>
+                  <p>This is a panel in a staggered grid. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Quibusdam dicta aliquid sint. Fugiat mollitia placeat delectus recusandae dolor minus commodi
+                    sapiente soluta, tempore nam voluptatem corrupti consequatur vel voluptatum illum?</p>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="card-panel">
+                  <h3>Card</h3>
+                  <p>This is a panel in a staggered grid</p>
+                </div>
+              </div>
             </div>
 
             <br>
             <pre><code class="language-markup">
-  &lt;div class="card-panel">
-    &lt;ul class="stepper linear">
-      &lt;li class="step active">
-        &lt;div data-step-label="Some label" class="step-title waves-effect">Step 1&lt;/div>
-        &lt;div class="step-content">
-          &lt;div class="row">
-            &lt;div class="input-field col s12">
-              &lt;input id="linear_email" name="linear_email" type="email" class="validate" required="">
-              &lt;label for="linear_email">Your e-mail&lt;/label>
-            &lt;/div>
-          &lt;/div>
-          &lt;div class="step-actions">
-            &lt;button class="waves-effect btn next-step">CONTINUE&lt;/button>
-          &lt;/div>
-        &lt;/div>
-      &lt;/li>
-      &lt;li class="step">
-        &lt;div class="step-title waves-effect">Step 2&lt;/div>
-        &lt;div class="step-content">
-          &lt;div class="row">
-            &lt;div class="input-field col s12">
-              &lt;input id="linear_password" name="linear_password" type="password" class="validate" required>
-              &lt;label for="linear_password">Your password&lt;/label>
-            &lt;/div>
-          &lt;/div>
-          &lt;div class="step-actions">
-            &lt;button class="waves-effect btn next-step">CONTINUE&lt;/button>
-            &lt;button class="waves-effect btn-flat ondark-white-text previous-step">BACK&lt;/button>
-          &lt;/div>
-        &lt;/div>
-      &lt;/li>
-      &lt;li class="step">
-        &lt;div class="step-title waves-effect">Step 3&lt;/div>
-          &lt;div class="step-content">
-          Finish!
-            &lt;div class="step-actions">
-              &lt;button class="waves-effect btn" type="submit">SUBMIT&lt;/button>
-            &lt;/div>
-          &lt;/div>
-      &lt;/li>
-    &lt;/ul>
+  &lt;div class="staggered-grid">
+    &lt;div class="item">
+      &lt;div class="card-panel">
+        &lt;h3>Card&lt;/h3>
+        &lt;p>This is a panel in a staggered grid&lt;/p>
+      &lt;/div>
+    &lt;/div>
+
+    &lt;div class="item">
+      &lt;div class="card-panel">
+        &lt;h3>Card&lt;/h3>
+        &lt;p>This is a panel in a staggered grid. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          Quibusdam dicta aliquid sint. Fugiat mollitia placeat delectus recusandae dolor minus commodi
+          sapiente soluta, tempore nam voluptatem corrupti consequatur vel voluptatum illum?&lt;/p>
+      &lt;/div>
+    &lt;/div>
+
+    &lt;div class="item">
+      &lt;div class="card-panel">
+        &lt;h3>Card&lt;/h3>
+        &lt;p>This is a panel in a staggered grid. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          Quibusdam dicta aliquid sint. Fugiat mollitia placeat delectus recusandae dolor minus commodi
+          sapiente soluta, tempore nam voluptatem corrupti consequatur vel voluptatum illum?&lt;/p>
+      &lt;/div>
+    &lt;/div>
+
+    &lt;div class="item">
+      &lt;div class="card-panel">
+        &lt;h3>Card&lt;/h3>
+        &lt;p>This is a panel in a staggered grid&lt;/p>
+      &lt;/div>
+    &lt;/div>
   &lt;/div>
             </code></pre>
             <br>
@@ -249,121 +230,15 @@
         <div class="row">
           <div class="col s12">
             <h3 class="header">Initialization</h3>
-            <p class="caption">To check all the available options, checkout the documentation <a
-                href="https://kinark.github.io/Materialize-stepper/" target="_blank" rel="noreferrer">here</a>.</p>
+            <p class="caption">If you use LazyLoad, it automatically initialize that also</a>.</p>
             <pre><code class="language-javascript">
-  var stepper = document.querySelector('.stepper');
-  var stepperInstace = new MStepper(stepper, {
-    // options
-    firstActive: 0 // this is the default
-  });
+  M.resizeStaggeredGridItems();
             </code></pre>
             <br>
           </div>
         </div>
       </div>
 
-      <div id="horizontal" class="section scrollspy">
-        <div class="row">
-          <div class="col s12">
-            <h3 class="header">Horizontal</h3>
-            <p class="caption">You can also make the stepper horizontal by adding the <code
-                class="language-markup">.horizontal</code> class to the <code class="language-markup">.stepper</code>
-              element. This will also turn to vertical automatically on medium to small devices. </p>
-
-            <div class="card-panel">
-              <ul class="stepper horizontal">
-                <li class="step active">
-                  <div class="step-title waves-effect">Step 1</div>
-                  <div class="step-content">
-                    <div class="row">
-                      <div class="input-field col s12">
-                        <input id="linear_email2" name="linear_email" type="email" class="validate" required="">
-                        <label for="linear_email2">Your e-mail</label>
-                      </div>
-                    </div>
-                    <div class="step-actions">
-                      <button class="waves-effect btn next-step">CONTINUE</button>
-                    </div>
-                  </div>
-                </li>
-                <li class="step">
-                  <div class="step-title waves-effect">Step 2</div>
-                  <div class="step-content">
-                    <div class="row">
-                      <div class="input-field col s12">
-                        <input id="linear_password2" name="linear_password" type="password" class="validate" required>
-                        <label for="linear_password2">Your password</label>
-                      </div>
-                    </div>
-                    <div class="step-actions">
-                      <button class="waves-effect btn next-step">CONTINUE</button>
-                      <button class="waves-effect btn-flat ondark-white-text previous-step">BACK</button>
-                    </div>
-                  </div>
-                </li>
-                <li class="step">
-                  <div class="step-title waves-effect">Step 3</div>
-                  <div class="step-content">
-                    Finish!
-                    <div class="step-actions">
-                      <button class="waves-effect btn" type="submit">SUBMIT</button>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <br>
-            <pre><code class="language-markup">
-  &lt;div class="card-panel">
-    &lt;ul class="stepper horizontal">
-      &lt;li class="step active">
-        &lt;div class="step-title waves-effect">Step 1&lt;/div>
-         &lt;div class="step-content">
-            &lt;div class="row">
-              &lt;div class="input-field col s12">
-                &lt;input id="linear_email2" name="linear_email" type="email" class="validate" required="">
-                &lt;label for="linear_email2">Your e-mail&lt;/label>
-              &lt;/div>
-            &lt;/div>
-            &lt;div class="step-actions">
-              &lt;button class="waves-effect btn next-step">CONTINUE&lt;/button>
-            &lt;/div>
-          &lt;/div>
-      &lt;/li>
-      &lt;li class="step">
-        &lt;div class="step-title waves-effect">Step 2&lt;/div>
-          &lt;div class="step-content">
-          &lt;div class="row">
-            &lt;div class="input-field col s12">
-              &lt;input id="linear_password2" name="linear_password" type="password" class="validate" required>
-              &lt;label for="linear_password2">Your password&lt;/label>
-            &lt;/div>
-          &lt;/div>
-          &lt;div class="step-actions">
-            &lt;button class="waves-effect btn next-step">CONTINUE&lt;/button>
-            &lt;button class="waves-effect btn-flat ondark-white-text previous-step">BACK&lt;/button>
-          &lt;/div>
-        &lt;/div>
-      &lt;/li>
-      &lt;li class="step">
-        &lt;div class="step-title waves-effect">Step 3&lt;/div>
-        &lt;div class="step-content">
-        Finish!
-          &lt;div class="step-actions">
-            &lt;button class="waves-effect btn" type="submit">SUBMIT&lt;/button>
-          &lt;/div>
-        &lt;/div>
-      &lt;/li>
-    &lt;/ul>
-  &lt;/div>
-            </code></pre>
-            <br>
-          </div>
-        </div>
-      </div>
-      <!-- End collections -->
     </div>
 
     <div class="col hide-on-small-only m3 xl3 offset-xl1">
@@ -372,26 +247,10 @@
           <ul class="section table-of-contents">
             <li><a href="#basic">Basic</a></li>
             <li><a href="#initialization">Initialization</a></li>
-            <li><a href="#horizontal">Horizontal</a></li>
           </ul>
         </div>
       </div>
     </div>
-
-    <script src="extras/mstepper/mstepper.min.js"></script>
-    <script>
-      var stepper = document.querySelector('.stepper.linear');
-      var stepperInstace = new MStepper(stepper, {
-        // options
-        firstActive: 0 // this is the default
-      });
-
-      var stepper = document.querySelector('.stepper.horizontal');
-      var stepperInstace = new MStepper(stepper, {
-        // options
-        firstActive: 0 // this is the default
-      })
-    </script>
 
   </div>
 </div>

@@ -8,13 +8,16 @@ $left: -($ident);
 .tree {
     padding: 1rem;
 
-    ul {
+    ul.branch,
+    ul.branches {
         margin-left: $ident;
     }
 
-    .root,
-    li span,
-    li a {
+    >.root,
+    .branch>li span,
+    .branches>li span,
+    .branch>li a,
+    .branches>li a {
         display: inline-block;
         padding: 7px 16px;
         text-decoration: none;
@@ -32,7 +35,8 @@ $left: -($ident);
         }
     }
 
-    li a {
+    .branch>li a,
+    .branches>li a  {
 
         &.active,
         &.disabled {
@@ -42,18 +46,22 @@ $left: -($ident);
 
     &.block {
 
-        .root,
-        li span,
-        li a {
+        >.root,
+        .branch>li span,
+        .branches>li span,
+        .branch>li a,
+        .branches>li a {
             display: block;
         }
     }
 
     &.outlined {
 
-        .root,
-        li span,
-        li a {
+        >.root,
+        .branch>li span,
+        .branches>li span,
+        .branch>li a,
+        .branches>li a {
             background-color: unset;
             border: 2px solid $tree-line;
 
@@ -69,7 +77,8 @@ $left: -($ident);
         }
     }
 
-    li {
+    .branch>li,
+    .branches>li {
         list-style-type: none;
         margin: 10px 0 10px 10px;
         position: relative;
@@ -105,14 +114,11 @@ $left: -($ident);
         }
     }
 
-    .branches {
+    .branches,
+    .branch {
         margin-top: 0;
 
-        ul li:first-child {
-            margin-top: 5px;
-        }
-
-        li {
+        >li {
             list-style-type: none;
             margin: 10px 0 10px 10px;
             position: relative;
@@ -149,9 +155,15 @@ $left: -($ident);
         }
     }
 
-    .branches li span,
-    .branches li a,
-    .root {
+    .branches .branch>li:first-child {
+        margin-top: 5px;
+    }
+
+    .branch>li span,
+    .branches>li span,
+    .branch>li a,
+    .branches>li a,
+    >.root {
 
         &:not(.active):not(.disabled) {
 
@@ -159,10 +171,9 @@ $left: -($ident);
             &:focus {
                 background-color: $tree-span-hover;
 
-                &+ul {
-
-                    li span,
-                    li a {
+                &+.branch {
+                    >li span,
+                    >li a {
                         &:not(.active):not(.disabled) {
                             background-color: $tree-span-child-hover;
                         }
@@ -171,10 +182,9 @@ $left: -($ident);
             }
         }
 
-        &:hover+ul,
-        &:focus+ul {
-            li {
-
+        &:hover+.branch,
+        &:focus+.branch {
+            >li {
                 &:after,
                 &:before {
                     border-color: $tree-line-hover;
@@ -185,20 +195,20 @@ $left: -($ident);
 
     &.outlined {
 
-        .root,
-        li span,
-        li a {
+        >.root,
+        .branch>li span,
+        .branches>li span,
+        .branch>li a,
+        .branches>li a {
             &:not(.active):not(.disabled) {
-
                 &:hover,
                 &:focus {
                     background-color: unset;
                     border-color: $tree-line-hover;
 
-                    &+ul {
-
-                        li span,
-                        li a {
+                    &+.branch {
+                        >li span,
+                        >li a {
                             &:not(.active):not(.disabled) {
                                 background-color: unset;
                                 border-color: $tree-line-hover;

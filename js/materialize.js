@@ -12554,7 +12554,7 @@ $jscomp.polyfill = function (e, r, p, m) {
             rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
             rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
             if (item.querySelector('.card-panel, .card')) {
-              rowSpan = Math.ceil((item.querySelector('.card-panel, .card').getBoundingClientRect().height + rowGap) / (rowHeight + rowGap)) + 1;
+              rowSpan = Math.ceil((item.querySelector('.card-panel, .card').getBoundingClientRect().height + rowGap) / (rowHeight + rowGap));
             }
             item.style.gridRowEnd = "span " + rowSpan;
           });

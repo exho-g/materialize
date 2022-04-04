@@ -1,6 +1,6 @@
 const sass = require('sass');
 
-module.exports = function(grunt) {
+module.exports = function (grunt) {
     const concatFile = 'temp/js/materialize_concat.js.map';
     const jsFiles = [
         'js/cash.js',
@@ -31,6 +31,7 @@ module.exports = function(grunt) {
         'js/carousel.js',
         'js/tapTarget.js',
         'js/select.js',
+        'hs/staggeredGrid.js',
         'js/range.js'
     ];
 
@@ -420,6 +421,7 @@ module.exports = function(grunt) {
                     'docs/tooltips.html': 'pug/tooltips.pug',
                     'docs/sidenav.html': 'pug/sidenav.pug',
                     'docs/stepper.html': 'pug/stepper.pug',
+                    'docs/staggered-grid.html': 'pug/staggered-grid.pug',
                     'docs/pushpin.html': 'pug/pushpin.pug',
                     'docs/waves.html': 'pug/waves.pug',
                     'docs/media.html': 'pug/media.pug',
@@ -619,8 +621,8 @@ module.exports = function(grunt) {
                 options: {
                     port: 9001,
                     protocol: 'http',
-                    middleware: function(connect, options, middlewares) {
-                        middlewares.unshift(function(req, res, next) {
+                    middleware: function (connect, options, middlewares) {
+                        middlewares.unshift(function (req, res, next) {
                             res.setHeader('Access-Control-Allow-Origin', '*');
                             res.setHeader('Access-Control-Allow-Credentials', true);
                             res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -687,7 +689,7 @@ module.exports = function(grunt) {
         'clean:temp'
     ]);
 
-    grunt.task.registerTask('configureBabel', 'configures babel options', function() {
+    grunt.task.registerTask('configureBabel', 'configures babel options', function () {
         config.babel.bin.options.inputSourceMap = grunt.file.readJSON(concatFile);
     });
 
@@ -704,7 +706,7 @@ module.exports = function(grunt) {
     grunt.registerTask('monitor', ['concurrent:monitor']);
     grunt.registerTask('travis', ['js_compile', 'sass_compile', 'connect', 'jasmine']);
     grunt.registerTask('jas_test', ['connect', 'jasmine']);
-    grunt.registerTask('test_repeat', function() {
+    grunt.registerTask('test_repeat', function () {
         const tasks = ['connect'];
         const n = 30;
         for (let i = 0; i < n; i++) {

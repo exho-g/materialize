@@ -93,7 +93,7 @@ header
                 a(href='preloader.html') Preloader
               li(class=(page == "Tree View" ? "active" : ""))
                 a(href='tree.html') Tree View
-        li.bold(class=(page == "Auto Init" || page == "Tooltips" || page == "Toasts" || page == "Modals" || page == "Dropdown" || page == "FeatureDiscovery" || page == "Tabs" || page == "Scrollspy" || page == "Sidenav" || page == "Stepper" || page == "Pushpin" || page == "Waves" || page == "Media" || page == "Parallax" || page == "Collapsible" || page == "Carousel" ? "active" : ""))
+        li.bold(class=(page == "Auto Init" || page == "Tooltips" || page == "Toasts" || page == "Modals" || page == "Dropdown" || page == "FeatureDiscovery" || page == "Tabs" || page == "Scrollspy" || page == "Sidenav" || page == "Stepper" || page == "Pushpin" || page == "Waves" || page == "Media" || page == "Parallax" || page == "Collapsible" || page == "Carousel" ? "active" : "" || page == "Staggered Grid" ? "active" : ""))
           a.collapsible-header(class="waves-effect")
             | JavaScript
           .collapsible-body
@@ -120,6 +120,8 @@ header
                 a(href='scrollspy.html') Scrollspy
               li(class=(page == "Sidenav" ? "active" : ""))
                 a(href='sidenav.html') Sidenav
+              li(class=(page == "Staggered Grid" ? "active" : ""))
+                a(href='staggered-grid.html') Staggered Grid
               li(class=(page == "Stepper" ? "active" : ""))
                 a(href='stepper.html') Stepper
               li(class=(page == "Tabs" ? "active" : ""))

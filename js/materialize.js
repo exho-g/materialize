@@ -12553,7 +12553,9 @@ $jscomp.polyfill = function (e, r, p, m) {
           items.forEach(function (item) {
             rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
             rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
-            rowSpan = Math.ceil((item.querySelector('.content').getBoundingClientRect().height + rowGap) / (rowHeight + rowGap)) + 1;
+            if (item.querySelector('.card-panel, .card')) {
+              rowSpan = Math.ceil((item.querySelector('.card-panel, .card').getBoundingClientRect().height + rowGap) / (rowHeight + rowGap)) + 1;
+            }
             item.style.gridRowEnd = "span " + rowSpan;
           });
         }

@@ -31,7 +31,7 @@ module.exports = function (grunt) {
         'js/carousel.js',
         'js/tapTarget.js',
         'js/select.js',
-        'hs/staggeredGrid.js',
+        'js/staggeredGrid.js',
         'js/range.js'
     ];
 
@@ -306,6 +306,7 @@ module.exports = function (grunt) {
                             'carousel.js',
                             'tapTarget.js',
                             'select.js',
+                            'staggeredGrid.js',
                             'range.js'
                         ],
                         dest: 'materialize-src/js/'

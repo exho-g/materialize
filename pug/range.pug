@@ -5,14 +5,14 @@ doctype html
 html(lang="en")
   head
     include _head.pug
-    link(href='/materialize/extras/noUiSlider/nouislider.css', rel='stylesheet')
+    link(href='extras/noUiSlider/nouislider.css', rel='stylesheet')
   body
     include _navbar.pug
     main
       include page-contents/range_content.html
     include _footer.html
     include _scripts.html
-    script(src="/materialize/extras/noUiSlider/nouislider.js")
+    script(src="extras/noUiSlider/nouislider.js")
     script(type='text/javascript').
       var slider = document.getElementById('range-input');
       noUiSlider.create(slider, {

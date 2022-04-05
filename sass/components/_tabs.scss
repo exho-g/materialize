@@ -47,7 +47,8 @@
     a {
       &:focus,
       &:focus.active {
-        background-color: transparentize($tabs-underline-color, .8);
+        //background-color: transparentize($tabs-underline-color, .8);
+        background-color: rgba(var(--primary-color-rgb), .1);
         outline: none;
       }
 

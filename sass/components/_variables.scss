@@ -31,9 +31,32 @@
 // 1. Colors
 // ==========================================================================
 @use "sass:math";
-$primary-color: color("blue", "darken-2") !default;
-$primary-color-light: lighten($primary-color, 15%) !default;
-$primary-color-dark: darken($primary-color, 15%) !default;
+
+:root {
+    --primary-color-rgb: 25, 118, 210;
+    --primary-color-hs: 210deg, 79%;
+    --primary-color-l: 46%;
+
+    --primary-color: rgb(var(--primary-color-rgb));
+    --primary-color-light: hsl(var(--primary-color-hs), calc(var(--primary-color-l) + 15%)); 
+    --primary-color-dark: hsl(var(--primary-color-hs), calc(var(--primary-color-l) - 15%));
+
+    --primary-btn-focus: hsl(var(--primary-color-hs), calc(var(--primary-color-l) + 4%));
+    
+    --primary-color-lighten-30: hsl(var(--primary-color-hs), calc(var(--primary-color-l) + 30%));
+    --primary-color-lighten-25: hsl(var(--primary-color-hs), calc(var(--primary-color-l) + 25%));
+    --primary-color-lighten-20: hsl(var(--primary-color-hs), calc(var(--primary-color-l) + 20%));
+    --primary-color-lighten-10: hsl(var(--primary-color-hs), calc(var(--primary-color-l) + 10%));
+
+    --primary-color-darken-5: hsl(var(--primary-color-hs), calc(var(--primary-color-l) - 5%));
+    --primary-color-darken-10: hsl(var(--primary-color-hs), calc(var(--primary-color-l) - 10%));
+    --primary-color-darken-20: hsl(var(--primary-color-hs), calc(var(--primary-color-l) - 20%));
+    --primary-color-darken-30: hsl(var(--primary-color-hs), calc(var(--primary-color-l) - 30%));
+}
+
+$primary-color: var(--primary-color) !default;
+$primary-color-light: var(--primary-color-light) !default;
+$primary-color-dark: var(--primary-color-dark) !default;
 $secondary-color: color("blue-grey", "darken-2") !default;
 $success-color: color("green", "base") !default;
 $error-color: color("red", "base") !default;
@@ -49,7 +72,7 @@ $badge-height: 22px !default;
 // ==========================================================================
 // Shared styles
 $button-border: none !default;
-$button-background-focus: lighten($primary-color, 4%) !default;
+$button-background-focus: var(--primary-btn-focus) !default;
 $button-font-size: 14px !default;
 $button-icon-font-size: 1.3rem !default;
 $button-height: 36px !default;
@@ -219,7 +242,7 @@ $slider-indicator-color: color('green', 'base') !default;
 $spinner-default-color: $secondary-color !default;
 // 17. Tabs
 // ==========================================================================
-$tabs-underline-color: $primary-color-light !default;
+$tabs-underline-color: $primary-color !default;
 $tabs-text-color: $primary-color !default;
 $tabs-bg-color: #fff !default;
 // 18. Tables

@@ -51,7 +51,7 @@
     }
 
     &.primary {
-        background-color: $primary-color;
+        background-color: var(--primary-color);
         color: #FFF;
 
         .content {
@@ -107,8 +107,8 @@
         }
 
         &.primary {
-            border-color: $primary-color;
-            color: darken($primary-color, 10%);
+            border-color: var(--primary-color);
+            color: var(--primary-color-darken-10);
         }
 
         &.info {

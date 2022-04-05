@@ -42,7 +42,7 @@ nav {
     }
     ul li a:hover,
     ul li.active {
-        background-color: $primary-color-light;
+        background-color: var(--primary-color-light);
     }
 }
 
@@ -52,7 +52,7 @@ th {
 }
 
 .header {
-    color: $primary-color;
+    color: var(--primary-color);
     font-weight: 300;
 }
 
@@ -188,7 +188,7 @@ a.sidenav-trigger.top-nav {
     top: 28px;
     float: none;
     margin-left: 1.5rem;
-    color: $primary-color-light;
+    color: var(--primary-color-light);
     font-size: 36px;
     z-index: 2;
     i {
@@ -313,9 +313,9 @@ a.sidenav-trigger.top-nav {
 #download-button,
 #upgrade-button {
     &:hover {
-        background-color: lighten($primary-color, 30%);
+        background-color: var(--primary-color-lighten-30);
     }
-    background-color: $primary-color;
+    background-color: var(--primary-color);
     width: 260px;
     height: 70px;
     margin: 4px;
@@ -329,7 +329,7 @@ a.sidenav-trigger.top-nav {
     width: 100%;
     i {
         margin: 40px 0;
-        color: $primary-color;
+        color: var(--primary-color);
         font-size: 7rem;
         display: block;
     }
@@ -346,14 +346,14 @@ a.sidenav-trigger.top-nav {
     background-color: #FFF;
     position: relative;
     a {
-        color: $primary-color;
+        color: var(--primary-color);
     }
     li {
         &:hover {
-            background-color: $primary-color-light;
+            background-color: var(--primary-color-light);
         }
         &.active {
-            background-color: $primary-color-light;
+            background-color: var(--primary-color-light);
         }
     }
     .container {
@@ -813,12 +813,12 @@ body.parallax-demo footer {
             color: $off-black;
             &:hover {
                 color: inherit;
-                background-color: $primary-color-light;
+                background-color: var(--primary-color-light);
             }
         }
     }
     .txlive-langselector-toggle {
-        border-bottom: 2px solid $primary-color;
+        border-bottom: 2px solid var(--primary-color);
     }
     .txlive-langselector-current {
         color: $off-black;

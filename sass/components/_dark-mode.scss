@@ -68,10 +68,10 @@
         }
     }
     a {
-        color: lighten($primary-color, 10%);
+        color: var(--primary-color-lighten-10);
     }
     .secondary-content {
-        color: $primary-color;
+        color: var(--primary-color);
     }
     //error notes
     .error-notes {
@@ -86,7 +86,7 @@
     nav {
         background-color: darken(color('grey', 'darken-4'), 1%);
         li a:not(.brand-logo) {
-            color: $primary-color;
+            color: var(--primary-color);
             &:not(.brand-logo):not(.breadcrumb) {
                 color: #FFF;
                 &:hover {
@@ -99,7 +99,7 @@
                     color: rgba(255, 255, 255, 0.5);
                 }
                 &:last-child {
-                    color: lighten($primary-color, 10%);
+                    color: var(--primary-color-lighten-10);
                 }
             }
         }
@@ -116,7 +116,7 @@
                     color: rgba(255, 255, 255, .5);
                 }
                 &:last-child:before {
-                    color: lighten($primary-color, 10%);
+                    color: var(--primary-color-lighten-10);
                 }
             }
         }
@@ -186,10 +186,10 @@
     }
     //fabs
     .btn-floating {
-        background-color: $primary-color;
-        &:hover {
-            background-color: darken($primary-color, 5%);
-        }
+        // background-color: var(--primary-color);
+        // &:hover {
+        //     background-color: var(--primary-color-darken-5);
+        // }
         i {
             color: #FFF;
         }
@@ -209,7 +209,7 @@
         &:not(.light):not(.dark):not(.dark-light) {
             background-color: darken($button-raised-background, 20%);
             &.primary {
-                background-color: darken($primary-color, 20%);
+                background-color: var(--primary-color-darken-20);
             }
             &.info {
                 background-color: darken($info-color, 20%);
@@ -258,10 +258,10 @@
             }
         }
         &.primary {
-            color: lighten($primary-color, 25%);
-            background-color: darken($primary-color, 30%);
+            color: var(--primary-color-lighten-25);
+            background-color: var(--primary-color-darken-30);
             &:hover {
-                background-color: rgba(darken($primary-color, 30%), 0.7);
+                background-color: rgba(var(--primary-color-darken-30), 0.7);
             }
         }
         &.info {
@@ -307,16 +307,16 @@
             }
         }
         &.primary {
-            border-color: lighten($primary-color, 10%);
-            color: lighten($primary-color, 10%);
+            border-color: var(--primary-color-lighten-10);
+            color: var(--primary-color-lighten-10);
             &:not(.as-badge) {
                 &:hover {
-                    background-color: rgba($primary-color, 0.3);
+                    background-color: rgba(var(--primary-color-rgb), 0.3);
                 }
                 &:focus,
                 &:active {
-                    color: lighten($primary-color, 25%);
-                    background-color: rgba($primary-color, 0.5);
+                    color: var(--primary-color-lighten-25);
+                    background-color: rgba(var(--primary-color-rgb), 0.5);
                 }
             }
         }
@@ -452,7 +452,7 @@
             }
         }
         .indicator {
-            background-color: $primary-color;
+            background-color: var(--primary-color);
         }
     }
     //slider
@@ -603,13 +603,13 @@
         }
         a {
             &:not(.secondary-content) {
-                color: $primary-color-light;
+                color: var(--primary-color-light);
             }
             &.collection-item:not(.active):hover {
                 background-color: color('grey', 'darken-3');
             }
             &.active {
-                background-color: $primary-color;
+                background-color: var(--primary-color);
                 color: #FFF;
             }
         }
@@ -958,7 +958,7 @@
         &:not(.outlined) {
             background-color: color('grey', 'darken-4');
             &.primary {
-                background-color: darken($primary-color, 20%);
+                background-color: var(--primary-color-darken-20);
             }
             &.info {
                 background-color: darken($info-color, 20%);
@@ -976,8 +976,8 @@
         &.outlined {
             border-color: color('grey', 'lighten-2');
             &.primary {
-                border-color: $primary-color;
-                color: lighten($primary-color, 20%);
+                border-color: var(--primary-color);
+                color: var(--primary-color-lighten-20);
             }
             &.info {
                 border-color: $info-color;

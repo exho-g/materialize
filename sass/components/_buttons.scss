@@ -155,9 +155,9 @@
         @extend .z-depth-1-half;
     }
     &.primary {
-        background-color: $primary-color;
+        background-color: var(--primary-color);
         &:focus {
-            background-color: darken($primary-color, 10%);
+            background-color: var(--primary-color-darken-10);
         }
     }
     &.info {
@@ -432,13 +432,13 @@ button.btn-floating {
         background-color: rgba($button-raised-background, 0.5);
     }
     &.primary {
-        color: darken($primary-color, 5%);
-        background-color: rgba($primary-color, 0.2);
+        color: var(--primary-color-darken-5);
+        background-color: rgba(var(--primary-color-rgb), 0.2);
         &:hover {
-            background-color: rgba($primary-color, 0.3);
+            background-color: rgba(var(--primary-color-rgb), 0.3);
         }
         &:focus {
-            background-color: rgba($primary-color, 0.5);
+            background-color: rgba(var(--primary-color-rgb), 0.5);
         }
     }
     &.info {
@@ -538,15 +538,15 @@ button.btn-floating {
         }
     }
     &.primary {
-        color: $primary-color;
-        border-color: $primary-color;
+        color: var(--primary-color);
+        border-color: var(--primary-color);
         &:not(.as-badge) {
             &:hover {
-                background-color: rgba($primary-color, 0.1);
+                background-color: rgba(var(--primary-color-rgb), 0.1);
             }
             &:focus,
             &:active {
-                background-color: rgba($primary-color, 0.3);
+                background-color: rgba(var(--primary-color-rgb), 0.3);
             }
         }
     }

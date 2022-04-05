@@ -3,25 +3,6 @@
 
     <div class="col s12 m8 offset-m1 xl7 offset-xl1">
 
-      <!--  Primary Color Section  -->
-      <div id="primary" class="section scrollspy">
-        <h3 class="header">Primary Color</h3>
-        <p class="caption">
-          If you want to change the primary color on your custom CSS file, you just need to update the following CSS
-          variables. Please note that this does not require you to recompile the SASS files.
-        </p>
-        <pre><code class="language-css">
-  :root {
-    /** Provide the RGB values **/
-    --primary-color: 25, 118, 210;
-
-    /** Provide the HSL values **/
-    --primary-color-hs: 210deg, 79%;
-    --primary-color-l: 46%;
-  }
-        </code></pre>
-      </div>
-
       <!--  Variables Section  -->
       <div id="variables" class="section scrollspy">
         <h3 class="header">Variables</h3>
@@ -47,6 +28,26 @@
   $link-color: color("light-blue", "darken-1") !default;
 
   /*** More variables not shown here.. ***/
+        </code></pre>
+      </div>
+
+      <!--  Primary Color Section  -->
+      <div id="primary" class="section scrollspy">
+        <h3 class="header">Primary Color</h3>
+        <p class="caption">
+          If you only need to change the primary color, on your custom CSS file, you just need to update the following
+          CSS
+          variables. Please note that this does not require you to recompile the SASS files.
+        </p>
+        <pre><code class="language-css">
+  :root {
+    /** Provide the RGB values **/
+    --primary-color: 25, 118, 210;
+
+    /** Provide the HSL values **/
+    --primary-color-hs: 210deg, 79%;
+    --primary-color-l: 46%;
+  }
         </code></pre>
       </div>
 
@@ -113,6 +114,7 @@
         <div style="height: 1px;">
           <ul class="section table-of-contents">
             <li><a href="#variables">Variables</a></li>
+            <li><a href="#primary">Primary Color</a></li>
             <li><a href="#media">Media Queries</a></li>
           </ul>
         </div>

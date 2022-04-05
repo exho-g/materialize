@@ -40,13 +40,13 @@
                 }
             }
             @else if $color_name !="shades" {
-                // if same color as light mode
-                .#{$color_name}.ondark-#{$color_type} {
-                    background-color: $color_value !important;
-                }
-                .#{$color_name}-text.ondark-text-#{$color_type} {
-                    color: $color_value !important;
-                }
+                // // if same color as light mode
+                // .#{$color_name}.ondark-#{$color_type} {
+                //     background-color: $color_value !important;
+                // }
+                // .#{$color_name}-text.ondark-text-#{$color_type} {
+                //     color: $color_value !important;
+                // }
                 //if not the same color as light mode
                 .ondark-#{$color_name}.ondark-#{$color_type} {
                     background-color: $color_value !important;
@@ -80,7 +80,7 @@
     }
     //check if allow dark mode
     body {
-        background-color: #000;
+        background-color: #101010;
     }
     // Navigations
     nav {
@@ -192,14 +192,18 @@
         }
     }
     //buttons
-    .btn,
-    .btn-large,
-    .btn-small {
+    .btn {
         color: #FFF;
         &.light {
             color: #000;
         }
-        &:not(.light):not(.dark) {
+        &.dark-light {
+            background-color: #efefef;
+            &:focus {
+                background-color: #dedede;
+            }
+        }
+        &:not(.light):not(.dark):not(.dark-light) {
             background-color: darken($button-raised-background, 20%);
             &.primary {
                 background-color: darken($primary-color, 20%);
@@ -238,6 +242,16 @@
             background-color: rgb(200, 200, 200);
             &:hover {
                 background-color: rgba(200, 200, 200, 0.7);
+            }
+        }
+        &.dark-light {
+            color: #000;
+            background-color: rgba(255, 255, 255, 0.8);
+            &:hover {
+                background-color: rgba(240, 240, 240, 0.8);
+            }
+            &:focus {
+                background-color: rgba(220, 220, 220, 0.7);
             }
         }
         &.primary {
@@ -356,6 +370,19 @@
                 &:active {
                     color: lighten($danger-color, 25%);
                     background-color: rgba($danger-color, 0.5);
+                }
+            }
+        }
+        &.dark-light {
+            color: #FFF;
+            border-color: #FFF;
+            &:not(.as-badge) {
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.1);
+                }
+                &:focus,
+                &:active {
+                    background-color: rgba(255, 255, 255, 0.3);
                 }
             }
         }
@@ -1027,14 +1054,14 @@
             }
         }
         //for light buttons
-        &.waves-light .waves-ripple {
-            background: rgba(0, 0, 0, 0.2);
-            $gradient: rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, .3) 40%, rgba(0, 0, 0, .4) 50%, rgba(0, 0, 0, .5) 60%, rgba(255, 255, 255, 0) 70%;
-            background: -webkit-radial-gradient($gradient);
-            background: -o-radial-gradient($gradient);
-            background: -moz-radial-gradient($gradient);
-            background: radial-gradient($gradient);
-        }
+        // &.waves-light .waves-ripple {
+        //     background: rgba(0, 0, 0, 0.2);
+        //     $gradient: rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, .3) 40%, rgba(0, 0, 0, .4) 50%, rgba(0, 0, 0, .5) 60%, rgba(255, 255, 255, 0) 70%;
+        //     background: -webkit-radial-gradient($gradient);
+        //     background: -o-radial-gradient($gradient);
+        //     background: -moz-radial-gradient($gradient);
+        //     background: radial-gradient($gradient);
+        // }
     }
     //feature discovery
     .tap-target-wave::before,

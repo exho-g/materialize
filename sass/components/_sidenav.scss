@@ -112,6 +112,9 @@
             bottom: 0;
             left: 0;
             z-index: -1;
+            img {
+                border-radius: unset;
+            }
         }
         .circle,
         .name,

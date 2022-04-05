@@ -19,8 +19,13 @@
         font-size: 12px;
         padding: 0 12px;
         i {
-            margin-right: 7px;
             font-size: .8rem;
+            &.right {
+                margin-left: 10px;
+            }
+            &.left {
+                margin-right: 10px;
+            }
         }
     }
     &.small {
@@ -40,25 +45,36 @@
             font-size: $button-large-icon-font-size;
         }
     }
+
+    // Rounded Buttons
+    &.rounded,&.rounded.small {
+        border-radius: 35px;
+        padding: 0 18px;
+
+        &.large {
+            border-radius: 35px;
+            padding: 0 30px;
+        }
+    }
 }
 
 // Disabled shared style
 .btn.disabled,
 .btn-floating.disabled,
-.btn-large.disabled,
-.btn-small.disabled,
+//.btn-large.disabled,
+//.btn-small.disabled,
 .btn-flat.disabled,
 .btn-soft.disabled,
 .btn:disabled,
 .btn-floating:disabled,
-.btn-large:disabled,
-.btn-small:disabled,
+//.btn-large:disabled,
+//.btn-small:disabled,
 .btn-flat:disabled,
 .btn-soft:disabled,
 .btn[disabled],
 .btn-floating[disabled],
-.btn-large[disabled],
-.btn-small[disabled],
+//.btn-large[disabled],
+//.btn-small[disabled],
 .btn-flat[disabled],
 .btn-soft[disabled] {
     pointer-events: none;
@@ -72,20 +88,37 @@
     }
 }
 
-.btn-outlined.disabled,
-.btn-outlined:disabled,
-.btn-outlined[disabled] {
-    pointer-events: none;
-    cursor: default;
-    background-color: transparent !important;
-    color: $button-disabled-color !important;
-    border-color: $button-disabled-background !important;
+
+
+.btn-outlined{
+    &.tiny {
+        line-height: 22px;
+    }
+    &.small {
+        line-height: 28.4px;
+        &.thin {
+            line-height: 30.4px;
+        }
+    }
+    &.large {
+        line-height: 50px;
+        &.thin {
+            line-height: 52px;
+        }
+    }
+    &.disabled,&:disabled,&[disabled] {
+        pointer-events: none;
+        cursor: default;
+        background-color: transparent !important;
+        color: $button-disabled-color !important;
+        border-color: $button-disabled-background !important;
+    }
 }
 
 // Shared icon styles
 .btn,
 .btn-floating,
-.btn-large,
+//.btn-large,
 .btn-small,
 .btn-flat,
 .btn-soft,
@@ -95,23 +128,6 @@
     i {
         font-size: $button-icon-font-size;
         line-height: inherit;
-    }
-}
-
-// Rounded buttons
-.rounded {
-    &.btn,
-    &.btn-floating,
-    &.btn-flat,
-    &.btn-soft,
-    &.btn-outlined,
-    &.btn-small {
-        border-radius: 35px;
-        padding: 0 18px;
-    }
-    &.btn-large {
-        border-radius: 35px;
-        padding: 0 30px;
     }
 }
 
@@ -175,7 +191,7 @@
             background-color: #dedede;
         }
     }
-    &.dark {
+    &.dark,&.dark-light {
         background-color: #222;
         &:focus {
             background-color: #444;
@@ -192,7 +208,7 @@
     &:before {
         border-radius: 0;
     }
-    &.btn-large {
+    &.large {
         &.halfway-fab {
             bottom: -$button-floating-large-size * 0.5;
         }
@@ -203,7 +219,7 @@
             line-height: $button-floating-large-size;
         }
     }
-    &.btn-small {
+    &.small {
         &.halfway-fab {
             bottom: -$button-floating-small-size * 0.5;
         }
@@ -243,7 +259,7 @@
         text-align: center;
         color: $button-floating-color;
         font-size: $button-large-icon-font-size;
-        line-height: $button-floating-size;
+        //line-height: $button-floating-size;
     }
 }
 
@@ -475,7 +491,7 @@ button.btn-floating {
             background-color: rgba(220, 220, 220, 0.7);
         }
     }
-    &.dark {
+    &.dark,&.dark-light {
         color: #FFF;
         background-color: rgba(20, 20, 20, 0.8);
         &:hover {
@@ -599,7 +615,7 @@ button.btn-floating {
             }
         }
     }
-    &.dark {
+    &.dark,&.dark-light {
         color: #141414;
         border-color: #141414;
         &:not(.as-badge) {
@@ -614,30 +630,30 @@ button.btn-floating {
     }
 }
 
-// Large button
-.btn-large {
-    @extend .btn;
-    height: $button-large-height;
-    line-height: $button-large-height;
-    font-size: $button-large-font-size;
-    padding: 0 28px;
-    i {
-        font-size: $button-large-icon-font-size;
-    }
-}
+// // Large button
+// .btn-large {
+//     @extend .btn;
+//     height: $button-large-height;
+//     line-height: $button-large-height;
+//     font-size: $button-large-font-size;
+//     padding: 0 28px;
+//     i {
+//         font-size: $button-large-icon-font-size;
+//     }
+// }
 
-// Small button
-.btn-small {
-    @extend .btn;
-    height: $button-small-height;
-    line-height: $button-small-height;
-    font-size: $button-small-font-size;
-    i {
-        font-size: $button-small-icon-font-size;
-    }
-}
+// // Small button
+// .btn-small {
+//     @extend .btn;
+//     height: $button-small-height;
+//     line-height: $button-small-height;
+//     font-size: $button-small-font-size;
+//     i {
+//         font-size: $button-small-icon-font-size;
+//     }
+// }
 
 // Block button
-.btn-block {
-    display: block;
+.block {
+    display: block !important;
 }

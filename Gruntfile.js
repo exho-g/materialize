@@ -579,6 +579,14 @@ module.exports = function (grunt) {
                 replacements: [{
                     from: '/docs/*.html',
                     to: ''
+                },
+                {
+                    from: '/docs/extras',
+                    to: ''
+                },
+                {
+                    from: '/docs/dist',
+                    to: ''
                 }]
             }
         },
@@ -643,6 +651,10 @@ module.exports = function (grunt) {
             },
             extras: {
                 src: 'extras',
+                dest: 'docs'
+            },
+            dist: {
+                src: 'dist',
                 dest: 'docs'
             }
         }
@@ -721,5 +733,5 @@ module.exports = function (grunt) {
         grunt.task.run(tasks);
 
     });
-    grunt.registerTask('docs', ['js_compile', 'uglify:min_docs', 'copy:docs', 'copy:extras', 'sass:gh', 'sass:min_docs', 'postcss:gh', 'pug', 'replace:docs']);
+    grunt.registerTask('docs', ['js_compile', 'uglify:min_docs', 'copy:docs', 'copy:extras', 'copy:dist', 'sass:gh', 'sass:min_docs', 'postcss:gh', 'pug', 'replace:docs']);
 };

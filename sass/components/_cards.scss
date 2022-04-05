@@ -195,34 +195,46 @@
     break-inside: avoid;
     page-break-inside: avoid;
     -webkit-column-break-inside: avoid;
+    
     .card,
     .card-panel {
         display: inline-block;
         overflow: visible;
         margin: 0.5rem 0;
     }
-}
 
-@media only screen and (max-width: 600px) {
-    .masonry-cards {
+    @media #{$small-and-down} {
         -webkit-column-count: 1;
         -moz-column-count: 1;
         column-count: 1;
     }
-}
-
-@media only screen and (min-width: 601px) {
-    .masonry-cards {
+    
+    @media #{$medium-and-up} {
         -webkit-column-count: 2;
         -moz-column-count: 2;
         column-count: 2;
     }
-}
-
-@media only screen and (min-width: 993px) {
-    .masonry-cards {
+    
+    @media #{$large-and-up} {
         -webkit-column-count: 3;
         -moz-column-count: 3;
         column-count: 3;
     }
 }
+
+.staggered-cards {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: 20px;
+  
+    .item> {
+      .card-panel, .card {
+        margin: unset;
+      }
+    }
+  
+    * {
+      width: 100%;
+    }
+  }

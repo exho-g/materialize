@@ -579,14 +579,6 @@ module.exports = function (grunt) {
                 replacements: [{
                     from: '/docs/*.html',
                     to: ''
-                },
-                {
-                    from: '/docs/extras',
-                    to: ''
-                },
-                {
-                    from: '/docs/dist',
-                    to: ''
                 }]
             }
         },
@@ -649,13 +641,13 @@ module.exports = function (grunt) {
                 src: 'bin/materialize.js',
                 dest: 'docs/js/materialize.js'
             },
-            extras: {
-                src: 'extras',
-                dest: 'docs'
+            distCSS: {
+                src: 'dist/css/materialize.min.css',
+                dest: 'docs/dist/css/materialize.min.css'
             },
-            dist: {
-                src: 'dist',
-                dest: 'docs'
+            distJS: {
+                src: 'dist/js/materialize.min.js',
+                dest: 'docs/dist/js/materialize.min.js'
             }
         }
 
@@ -733,5 +725,5 @@ module.exports = function (grunt) {
         grunt.task.run(tasks);
 
     });
-    grunt.registerTask('docs', ['js_compile', 'uglify:min_docs', 'copy:docs', 'copy:extras', 'copy:dist', 'sass:gh', 'sass:min_docs', 'postcss:gh', 'pug', 'replace:docs']);
+    grunt.registerTask('docs', ['js_compile', 'uglify:min_docs', 'concat:dist', 'uglify:dist', 'copy:distJS', 'sass:gh', 'sass:min', 'copy:distCSS', 'copy:docs', 'clean: temp', 'sass:min_docs', 'postcss:gh', 'pug', 'replace:docs']);
 };

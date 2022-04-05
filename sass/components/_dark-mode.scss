@@ -110,10 +110,13 @@
         }
         &.flat {
             background-color: transparent;
-            .breadcrumb:not(:last-child) {
+            .breadcrumb {
                 color: rgba(255, 255, 255, .5);
                 &:before {
                     color: rgba(255, 255, 255, .5);
+                }
+                &:last-child:before {
+                    color: lighten($primary-color, 10%);
                 }
             }
         }

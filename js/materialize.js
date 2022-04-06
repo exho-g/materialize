@@ -2074,7 +2074,7 @@ M.resizeStaggeredCards = function () {
         });
       }
     });
-    window.addEventListener('resize', M.resizeStaggeredCards());
+    //window.addEventListener('resize', M.resizeStaggeredCards());
   }
 };
 

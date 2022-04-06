@@ -2060,10 +2060,28 @@ M.throttle = function (func, wait, options) {
   };
 };
 
+M.resizeStaggeredCards = function () {
+  console.log('resizing');
+  if (grids = document.querySelectorAll('.staggered-cards')) {
+    grids.forEach(function (grid) {
+      if (items = grid.querySelectorAll('.item')) {
+        items.forEach(function (item) {
+          rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+          rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
+          if (item.querySelector('.card-panel, .card')) {
+            rowSpan = Math.ceil((item.querySelector('.card-panel, .card').getBoundingClientRect().height + rowGap) / (rowHeight + rowGap));
+          }
+          item.style.gridRowEnd = 'span ' + rowSpan;
+        });
+      }
+    });
+  }
+};
+
 /* Feature detection */
 var passiveIfSupported = false;
 try {
-  window.addEventListener("test", null, Object.defineProperty({}, "passive", {
+  window.addEventListener('test', null, Object.defineProperty({}, 'passive', {
     get: function () {
       passiveIfSupported = { passive: false };
     }
@@ -12547,6 +12565,7 @@ $jscomp.polyfill = function (e, r, p, m) {
 ;(function ($) {
   // Function to update the cards' height
   M.resizeStaggeredCards = function () {
+    console.log('resizing');
     if (grids = document.querySelectorAll('.staggered-cards')) {
       grids.forEach(function (grid) {
         if (items = grid.querySelectorAll('.item')) {
@@ -12565,17 +12584,13 @@ $jscomp.polyfill = function (e, r, p, m) {
 
   $(document).ready(function () {
     // Add active if input element has been pre-populated on document ready
+    alert(2);
 
-    M.resizeStaggeredCards();
+    $(document).ready(function () {
+      M.resizeStaggeredCards();
+    });
 
     document.addEventListener('resize', M.resizeStaggeredCards());
-
-    // Add listener to onload of images when using LazyLoad
-    try {
-      new LazyLoad({
-        callback_enter: M.resizeStaggeredCards
-      });
-    } catch (e) {}
   }); // End of $(document).ready
 })(cash);
 ;(function ($, anim) {

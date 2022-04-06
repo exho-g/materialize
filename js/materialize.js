@@ -2078,6 +2078,20 @@ M.resizeStaggeredCards = function () {
   }
 };
 
+var closeAlert = function (alertComp) {
+  alertComp.style.height = alertComp.offsetHeight + 'px';
+  alertComp.style.transition = 'transform .2s, height .2s, margin .2s, padding .2s';
+  setTimeout(function () {
+    alertComp.style.height = 0;
+    alertComp.style.margin = 0;
+    alertComp.style.padding = 0;
+    alertComp.style.transform = 'scale(0)';
+    setTimeout(function () {
+      alertComp.remove();
+    }, 200);
+  }, 1);
+};
+
 M.initAlertClose = function () {
   if (closeTriggers = document.querySelectorAll('.alert-close')) {
     closeTriggers.forEach(function (curTrigger) {
@@ -2085,18 +2099,16 @@ M.initAlertClose = function () {
       if (alertComp.classList.contains('alert')) {
         curTrigger.addEventListener('click', function () {
           alertComp = this.parentNode;
-          alertComp.style.height = alertComp.offsetHeight + 'px';
-          alertComp.style.transition = 'transform .2s, height .2s, margin .2s, padding .2s';
-          setTimeout(function () {
-            alertComp.style.height = 0;
-            alertComp.style.margin = 0;
-            alertComp.style.padding = 0;
-            alertComp.style.transform = 'scale(0)';
-            setTimeout(function () {
-              alertComp.remove();
-            }, 200);
-          }, 1);
+          closeAlert(alertComp);
         });
+      } else {
+        if (alertComp.classList.contains('actions') && alertComp.parentNode.classList.contains('alert')) {
+          curTrigger.addEventListener('click', function () {
+            actionContainer = this.parentNode;
+            alertComp = actionContainer.parentNode;
+            closeAlert(alertComp);
+          });
+        }
       }
     });
   }

@@ -440,6 +440,7 @@ M.initAlertClose = function() {
       alertComp = curTrigger.parentNode;
       if (alertComp.classList.contains('alert')) {
         curTrigger.addEventListener('click', function() {
+          alertComp = this.parentNode;
           alertComp.style.height = alertComp.offsetHeight + 'px';
           alertComp.style.transition = 'transform .2s, height .2s, margin .2s, padding .2s';
           setTimeout(function() {

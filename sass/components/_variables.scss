@@ -185,7 +185,7 @@ $select-option-hover: rgba(0, 0, 0, .08) !default;
 $select-option-focus: rgba(0, 0, 0, .08) !default;
 $select-option-selected: rgba(0, 0, 0, .03) !default;
 $select-padding: 5px !default;
-$select-radius: 2px !default;
+$select-radius: 5px !default;
 $select-disabled-color: rgba(0, 0, 0, .3) !default;
 // Switches
 $switch-bg-color: $secondary-color !default;
@@ -294,7 +294,7 @@ $collection-active-color: lighten($secondary-color, 55%) !default;
 $collection-hover-bg-color: #ddd !default;
 $collection-link-color: $secondary-color !default;
 $collection-line-height: 1.5rem !default;
-$collection-border-radius: 2px !default;
+$collection-border-radius: 10px !default;
 // 24. Progress Bar
 // ==========================================================================
 $progress-bar-color: $secondary-color !default;

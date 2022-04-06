@@ -1,36 +1,31 @@
-(function ($) {
-  // Function to update labels of text fields
-  M.resizeStaggeredCards = function () {
-    if (grids = document.querySelectorAll('.staggered-cards')) {
-      grids.forEach(function (grid) {
-        if (items = grid.querySelectorAll('.item')) {
-          items.forEach(function (item) {
+(function($) {
+  // Function to update the cards' height
+  M.resizeStaggeredCards = function() {
+    if ((grids = document.querySelectorAll('.staggered-cards'))) {
+      grids.forEach(function(grid) {
+        if ((items = grid.querySelectorAll('.item'))) {
+          items.forEach(function(item) {
             rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
             rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
             if (item.querySelector('.card-panel, .card')) {
-              rowSpan = Math.ceil((item.querySelector('.card-panel, .card').getBoundingClientRect().height + rowGap) / (rowHeight + rowGap));
+              rowSpan = Math.ceil(
+                (item.querySelector('.card-panel, .card').getBoundingClientRect().height + rowGap) /
+                  (rowHeight + rowGap)
+              );
             }
-            item.style.gridRowEnd = "span " + rowSpan;
+            item.style.gridRowEnd = 'span ' + rowSpan;
           });
         }
       });
     }
-  };
 
-  $(document).ready(function () {
-    // Add active if input element has been pre-populated on document ready
-    $(document).ready(function () {
-      M.resizeStaggeredCards();
-    });
-
-    document.addEventListener("resize", M.resizeStaggeredCards());
+    document.addEventListener('resize', M.resizeStaggeredCards());
 
     // Add listener to onload of images when using LazyLoad
     try {
       new LazyLoad({
         callback_enter: M.resizeStaggeredCards
       });
-    } catch (e) {
-    }
-  }); // End of $(document).ready
+    } catch (e) {}
+  };
 })(cash);

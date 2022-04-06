@@ -1,6 +1,7 @@
 (function($) {
   // Function to update the cards' height
   M.resizeStaggeredCards = function() {
+    console.log('resizing');
     if ((grids = document.querySelectorAll('.staggered-cards'))) {
       grids.forEach(function(grid) {
         if ((items = grid.querySelectorAll('.item'))) {
@@ -22,16 +23,12 @@
 
   $(document).ready(function() {
     // Add active if input element has been pre-populated on document ready
+    alert(2);
 
-    M.resizeStaggeredCards();
+    $(document).ready(function() {
+      M.resizeStaggeredCards();
+    });
 
     document.addEventListener('resize', M.resizeStaggeredCards());
-
-    // Add listener to onload of images when using LazyLoad
-    try {
-      new LazyLoad({
-        callback_enter: M.resizeStaggeredCards
-      });
-    } catch (e) {}
   }); // End of $(document).ready
 })(cash);

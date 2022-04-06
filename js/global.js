@@ -413,12 +413,37 @@ M.throttle = function(func, wait, options) {
   };
 };
 
+M.resizeStaggeredCards = function() {
+  console.log('resizing');
+  if ((grids = document.querySelectorAll('.staggered-cards'))) {
+    grids.forEach(function(grid) {
+      if ((items = grid.querySelectorAll('.item'))) {
+        items.forEach(function(item) {
+          rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+          rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
+          if (item.querySelector('.card-panel, .card')) {
+            rowSpan = Math.ceil(
+              (item.querySelector('.card-panel, .card').getBoundingClientRect().height + rowGap) /
+                (rowHeight + rowGap)
+            );
+          }
+          item.style.gridRowEnd = 'span ' + rowSpan;
+        });
+      }
+    });
+  }
+};
+
 /* Feature detection */
 var passiveIfSupported = false;
 try {
-    window.addEventListener("test", null, 
-        Object.defineProperty({}, "passive", {
-            get: function() { passiveIfSupported = { passive: false }; }
-        }
-    ));
-} catch(err) {}
+  window.addEventListener(
+    'test',
+    null,
+    Object.defineProperty({}, 'passive', {
+      get: function() {
+        passiveIfSupported = { passive: false };
+      }
+    })
+  );
+} catch (err) {}

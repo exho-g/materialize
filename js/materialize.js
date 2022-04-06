@@ -12561,6 +12561,12 @@ $jscomp.polyfill = function (e, r, p, m) {
         }
       });
     }
+  };
+
+  $(document).ready(function () {
+    // Add active if input element has been pre-populated on document ready
+
+    M.resizeStaggeredCards();
 
     document.addEventListener('resize', M.resizeStaggeredCards());
 
@@ -12570,7 +12576,7 @@ $jscomp.polyfill = function (e, r, p, m) {
         callback_enter: M.resizeStaggeredCards
       });
     } catch (e) {}
-  };
+  }); // End of $(document).ready
 })(cash);
 ;(function ($, anim) {
   'use strict';

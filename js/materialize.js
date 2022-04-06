@@ -12545,7 +12545,7 @@ $jscomp.polyfill = function (e, r, p, m) {
   }
 })(cash);
 ;(function ($) {
-  // Function to update labels of text fields
+  // Function to update the cards' height
   M.resizeStaggeredCards = function () {
     if (grids = document.querySelectorAll('.staggered-cards')) {
       grids.forEach(function (grid) {
@@ -12556,20 +12556,13 @@ $jscomp.polyfill = function (e, r, p, m) {
             if (item.querySelector('.card-panel, .card')) {
               rowSpan = Math.ceil((item.querySelector('.card-panel, .card').getBoundingClientRect().height + rowGap) / (rowHeight + rowGap));
             }
-            item.style.gridRowEnd = "span " + rowSpan;
+            item.style.gridRowEnd = 'span ' + rowSpan;
           });
         }
       });
     }
-  };
 
-  $(document).ready(function () {
-    // Add active if input element has been pre-populated on document ready
-    $(document).ready(function () {
-      M.resizeStaggeredCards();
-    });
-
-    document.addEventListener("resize", M.resizeStaggeredCards());
+    document.addEventListener('resize', M.resizeStaggeredCards());
 
     // Add listener to onload of images when using LazyLoad
     try {
@@ -12577,7 +12570,7 @@ $jscomp.polyfill = function (e, r, p, m) {
         callback_enter: M.resizeStaggeredCards
       });
     } catch (e) {}
-  }); // End of $(document).ready
+  };
 })(cash);
 ;(function ($, anim) {
   'use strict';

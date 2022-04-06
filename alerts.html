@@ -157,6 +157,14 @@
                 <i class="material-icons">check_circle</i>
                 <span>Oh! What a beautiful primary colored alert</span>
               </div>
+              <div class="alert outlined thin danger scale-transition" id="alert-with-action">
+                <i class="material-icons">warning</i>
+                <span>Oh! What a beautiful danger colored alert</span>
+                <a class="waves-effect btn-soft danger tooltipped" data-position="bottom" data-tooltip="Close"
+                  onclick="$('#alert-with-action').addClass('scale-out');setTimeout(function(){$('#alert-with-action').remove()},200);">
+                  <i class="material-icons">close</i>
+                </a>
+              </div>
             </div>
 
             <pre style="padding-top: 0px;">
@@ -168,10 +176,20 @@
         &lt;i class="material-icons">check_circle&lt;/i>
         &lt;span>Oh! What a beautiful default alert&lt;/span>
     &lt;/div>
+
     &lt;div class="alert primary">
         &lt;i class="material-icons">check_circle&lt;/i>
         &lt;span>Oh! What a beautiful primary colored alert&lt;/span>
     &lt;/div>
+
+    &lt;div class="alert outlined thin danger scale-transition" id="alert-with-action">
+      &lt;i class="material-icons">warning&lt;/i>
+      &lt;span>Oh! What a beautiful danger colored alert with close button&lt;/span>
+      &lt;a class="waves-effect btn-soft danger tooltipped" data-position="bottom" data-tooltip="Close"
+        onclick="$('#alert-with-action').addClass('scale-out');setTimeout(function(){$('#alert-with-action').remove()},200);">
+        &lt;i class="material-icons">close&lt;/i>
+      &lt;/a>
+  &lt;/div>
 &lt;/div>
               </code>
             </pre>

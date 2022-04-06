@@ -434,6 +434,29 @@ M.resizeStaggeredCards = function() {
   }
 };
 
+M.initAlertClose = function() {
+  if ((closeTriggers = document.querySelectorAll('.alert-close'))) {
+    closeTriggers.forEach(function(curTrigger) {
+      alertComp = curTrigger.parentNode;
+      if (alertComp.classList.contains('alert')) {
+        curTrigger.addEventListener('click', function() {
+          alertComp.style.height = alertComp.offsetHeight + 'px';
+          alertComp.style.transition = 'transform .2s, height .2s, margin .2s, padding .2s';
+          setTimeout(function() {
+            alertComp.style.height = 0;
+            alertComp.style.margin = 0;
+            alertComp.style.padding = 0;
+            alertComp.style.transform = 'scale(0)';
+            setTimeout(function() {
+              alertComp.remove();
+            }, 200);
+          }, 1);
+        });
+      }
+    });
+  }
+};
+
 /* Feature detection */
 var passiveIfSupported = false;
 try {

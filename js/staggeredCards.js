@@ -18,6 +18,12 @@
         }
       });
     }
+  };
+
+  $(document).ready(function() {
+    // Add active if input element has been pre-populated on document ready
+
+    M.resizeStaggeredCards();
 
     document.addEventListener('resize', M.resizeStaggeredCards());
 
@@ -27,5 +33,5 @@
         callback_enter: M.resizeStaggeredCards
       });
     } catch (e) {}
-  };
+  }); // End of $(document).ready
 })(cash);

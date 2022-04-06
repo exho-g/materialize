@@ -414,7 +414,6 @@ M.throttle = function(func, wait, options) {
 };
 
 M.resizeStaggeredCards = function() {
-  console.log('resizing');
   if ((grids = document.querySelectorAll('.staggered-cards'))) {
     grids.forEach(function(grid) {
       if ((items = grid.querySelectorAll('.item'))) {
@@ -431,6 +430,7 @@ M.resizeStaggeredCards = function() {
         });
       }
     });
+    window.addEventListener('resize', M.resizeStaggeredCards());
   }
 };
 

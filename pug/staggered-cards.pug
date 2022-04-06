@@ -12,4 +12,6 @@ html(lang="en")
     include _footer.html
     include _scripts.html
     script(type='text/javascript').
-      M.resizeStaggeredCards();
+      window.onload = function(){
+        M.resizeStaggeredCards();
+      };

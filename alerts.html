@@ -157,11 +157,11 @@
                 <i class="material-icons">check_circle</i>
                 <span>Oh! What a beautiful primary colored alert</span>
               </div>
-              <div class="alert outlined thin danger scale-transition" id="alert-with-action">
+              <div class="alert outlined thin danger">
                 <i class="material-icons">warning</i>
                 <span>Oh! What a beautiful danger colored alert</span>
-                <a class="waves-effect btn-soft danger tooltipped" data-position="bottom" data-tooltip="Close"
-                  onclick="$('#alert-with-action').addClass('scale-out');setTimeout(function(){$('#alert-with-action').remove()},200);">
+                <a href="#!" class="waves-effect btn-soft danger alert-close tooltipped" data-position="bottom"
+                  data-tooltip="Close">
                   <i class="material-icons">close</i>
                 </a>
               </div>
@@ -182,14 +182,14 @@
         &lt;span>Oh! What a beautiful primary colored alert&lt;/span>
     &lt;/div>
 
-    &lt;div class="alert outlined thin danger scale-transition" id="alert-with-action">
+    &lt;div class="alert outlined thin danger">
       &lt;i class="material-icons">warning&lt;/i>
-      &lt;span>Oh! What a beautiful danger colored alert with close button&lt;/span>
-      &lt;a class="waves-effect btn-soft danger tooltipped" data-position="bottom" data-tooltip="Close"
-        onclick="$('#alert-with-action').addClass('scale-out');setTimeout(function(){$('#alert-with-action').remove()},200);">
+      &lt;span>Oh! What a beautiful danger colored alert&lt;/span>
+      &lt;a href="#!" class="waves-effect btn-soft danger alert-close tooltipped" data-position="bottom"
+        data-tooltip="Close">
         &lt;i class="material-icons">close&lt;/i>
       &lt;/a>
-  &lt;/div>
+    &lt;/div>
 &lt;/div>
               </code>
             </pre>
@@ -398,10 +398,20 @@
                 <span>Oh! What a beautiful alert with action</span>
                 <a href="#!" class="btn-flat waves-effect">Click Here</a>
               </div>
+
               <div class="alert primary">
                 <i class="material-icons">check_circle</i>
                 <span>Oh! What a beautiful primary colored alert</span>
                 <a href="#!" class="btn-flat waves-effect">Click Here</a>
+              </div>
+
+              <div class="alert warning">
+                <i class="material-icons">warning</i>
+                <span>Oh! What a beautiful danger colored warning with close trigger</span>
+                <a href="#!" class="waves-effect btn-flat red-text alert-close tooltipped" data-position="bottom"
+                  data-tooltip="Close">
+                  <i class="material-icons">close</i>
+                </a>
               </div>
             </div>
 
@@ -419,6 +429,14 @@
         &lt;i class="material-icons">check_circle&lt;/i>
         &lt;span>Oh! What a beautiful primary colored alert&lt;/span>
         &lt;a href="#!" class="btn-flat waves-effect">Click Here&lt;/a>
+    &lt;/div>
+    &lt;div class="alert warning">
+      &lt;i class="material-icons">warning&lt;/i>
+      &lt;span>Oh! What a beautiful danger colored warning with close trigger&lt;/span>
+      &lt;a href="#!" class="waves-effect btn-flat red-text alert-close tooltipped" data-position="bottom"
+        data-tooltip="Close">
+        &lt;i class="material-icons">close&lt;/i>
+      &lt;/a>
     &lt;/div>
 &lt;/div>
               </code>
@@ -618,5 +636,6 @@
 <script src="js/search.js"></script>
 <script src="js/materialize.js"></script>
 <script src="js/init.js"></script>
+    <script type="text/javascript">M.initAlertClose();</script>
   </body>
 </html>

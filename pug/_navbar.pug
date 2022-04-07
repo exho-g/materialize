@@ -62,7 +62,7 @@ header
                 a(href='css-transitions.html') Transitions
               li(class=(page == "Typography" ? "active" : ""))
                 a(href='typography.html') Typography
-        li.bold(class=(page == "Buttons" || page == "Floating Action Button" || page == "Navbar" || page == "Cards" || page == "Preloader" || page == "Tree View" || page == "Pagination" || page == "Collections" || page == "Badges" || page == "Breadcrumbs" || page == "Footer" || page == "Alerts" || page == "Icons" ? "active" : ""))
+        li.bold(class=(page == "Buttons" || page == "Floating Action Button" || page == "Navbar" || page == "Cards" || page == "Preloader" || page == "Tree View" || page == "Pagination" || page == "Collections" || page == "Badges" || page == "Breadcrumbs" || page == "Footer" || page == "Alerts" || page == "Icons" ? "active" : "" || page == "Staggered Cards" ? "active" : ""))
           a.collapsible-header(class="waves-effect")
             | Components
           .collapsible-body
@@ -91,9 +91,11 @@ header
                 a(href='pagination.html') Pagination
               li(class=(page == "Preloader" ? "active" : ""))
                 a(href='preloader.html') Preloader
+              li(class=(page == "Staggered Cards" ? "active" : ""))
+                a(href='staggered-cards.html') Staggered Cards
               li(class=(page == "Tree View" ? "active" : ""))
                 a(href='tree.html') Tree View
-        li.bold(class=(page == "Auto Init" || page == "Tooltips" || page == "Toasts" || page == "Modals" || page == "Dropdown" || page == "Feature Discovery" || page == "Tabs" || page == "Scrollspy" || page == "Sidenav" || page == "Stepper" || page == "Pushpin" || page == "Waves" || page == "Media" || page == "Parallax" || page == "Collapsible" || page == "Carousel" ? "active" : "" || page == "Staggered Cards" ? "active" : ""))
+        li.bold(class=(page == "Auto Init" || page == "Tooltips" || page == "Toasts" || page == "Modals" || page == "Dropdown" || page == "Feature Discovery" || page == "Tabs" || page == "Scrollspy" || page == "Sidenav" || page == "Stepper" || page == "Pushpin" || page == "Waves" || page == "Media" || page == "Parallax" || page == "Collapsible" || page == "Carousel" ? "active" : ""))
           a.collapsible-header(class="waves-effect")
             | JavaScript
           .collapsible-body
@@ -120,8 +122,6 @@ header
                 a(href='scrollspy.html') Scrollspy
               li(class=(page == "Sidenav" ? "active" : ""))
                 a(href='sidenav.html') Sidenav
-              li(class=(page == "Staggered Cards" ? "active" : ""))
-                a(href='staggered-cards.html') Staggered Cards
               li(class=(page == "Stepper" ? "active" : ""))
                 a(href='stepper.html') Stepper
               li(class=(page == "Tabs" ? "active" : ""))

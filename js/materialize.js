@@ -2093,25 +2093,52 @@ var closeAlert = function (alertComp) {
 };
 
 M.initAlertClose = function () {
-  if (closeTriggers = document.querySelectorAll('.alert-close')) {
-    closeTriggers.forEach(function (curTrigger) {
-      alertComp = curTrigger.parentNode;
-      if (alertComp.classList.contains('alert')) {
-        curTrigger.addEventListener('click', function () {
-          alertComp = this.parentNode;
-          closeAlert(alertComp);
+  if (alertComps = document.querySelectorAll('.alert')) {
+    alertComps.forEach(function (ac) {
+      if (alertCloser = ac.querySelectorAll('.alert-close')) {
+        alertCloser.forEach(function (closeTrigger) {
+          var hasParentAlert = false;
+          var currentParentNode = closeTrigger.parentNode;
+
+          while (!hasParentAlert) {
+            if (currentParentNode.classList.contains('alert')) {
+              hasParentAlert = true;
+            } else if (currentParentNode === document.body) {
+              break;
+            }
+          }
+
+          if (hasParentAlert) {
+            closeTrigger.addEventListener('click', function () {
+              closeAlert(currentParentNode);
+            });
+          }
         });
-      } else {
-        if (alertComp.classList.contains('actions') && alertComp.parentNode.classList.contains('alert')) {
-          curTrigger.addEventListener('click', function () {
-            actionContainer = this.parentNode;
-            alertComp = actionContainer.parentNode;
-            closeAlert(alertComp);
-          });
-        }
       }
     });
   }
+  // if ((closeTriggers = document.querySelectorAll('.alert-close'))) {
+  //   closeTriggers.forEach(function (curTrigger) {
+  //     alertComp = curTrigger.parentNode;
+  //     if (alertComp.classList.contains('alert')) {
+  //       curTrigger.addEventListener('click', function () {
+  //         alertComp = this.parentNode;
+  //         closeAlert(alertComp);
+  //       });
+  //     } else {
+  //       if (
+  //         alertComp.classList.contains('actions') &&
+  //         alertComp.parentNode.classList.contains('alert')
+  //       ) {
+  //         curTrigger.addEventListener('click', function () {
+  //           actionContainer = this.parentNode;
+  //           alertComp = actionContainer.parentNode;
+  //           closeAlert(alertComp);
+  //         });
+  //       }
+  //     }
+  //   });
+  // }
 };
 
 /* Feature detection */

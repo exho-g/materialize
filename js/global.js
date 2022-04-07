@@ -460,11 +460,14 @@ M.initAlertClose = function() {
             if (currentParentNode.classList.contains('alert')) {
               hasParentAlert = true;
             } else if (currentParentNode === document.body) {
-              break;
+              currentParentNode = null;
+              hasParentAlert = true;
+            } else {
+              currentParentNode = currentParentNode.parentNode;
             }
           }
 
-          if (hasParentAlert) {
+          if (hasParentAlert && currentParentNode) {
             closeTrigger.addEventListener('click', function() {
               closeAlert(currentParentNode);
             });

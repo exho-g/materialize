@@ -1,6 +1,6 @@
-(function($) {
-    $(document).ready(function() {
-        window.index = lunr(function() {
+(function ($) {
+    $(document).ready(function () {
+        window.index = lunr(function () {
             this.field('tags', { boost: 10 });
             this.field('body');
             this.ref('id');
@@ -72,6 +72,11 @@
             title: 'Components > Preloader',
             tags: 'preloader components progress bar circle',
             body: 'If you have content that will take a long time to load, you should give the user feedback. For this reason we provide a number activity + progress indicators.'
+        }, {
+            href: 'staggered-cards.html',
+            title: 'Components > Staggered Cards',
+            tags: 'staggered cards components masonry pinterest layout',
+            body: 'If you want to have a pinterest like layout of cards.'
         }, {
             href: 'tree.html',
             title: 'Components > Tree View',
@@ -274,13 +279,13 @@
             body: 'Mobile only interactive components.'
         }];
 
-        window.indexStore.forEach(function(index, id) {
+        window.indexStore.forEach(function (index, id) {
             index.id = id;
             window.index.add(index);
         });
 
         // icon click
-        $('ul#nav-mobile li.search .search-wrapper i.material-icons').click(function() {
+        $('ul#nav-mobile li.search .search-wrapper i.material-icons').click(function () {
             if ($('.search-results .focused').length) {
                 $('.search-results .focused').first()[0].click();
             } else if ($('.search-results').children().length) {
@@ -288,36 +293,36 @@
             }
         });
 
-        var renderResults = function(results) {
+        var renderResults = function (results) {
             var resultsContainer = $('.search-results');
             resultsContainer.empty();
-            Array.prototype.forEach.call(results, function(result) {
+            Array.prototype.forEach.call(results, function (result) {
                 var resultDiv = $('<a href=' + result[1] + '>' + result[0] + '</a>');
                 resultsContainer.append(resultDiv);
             });
         };
 
-        var debounce = function(fn) {
+        var debounce = function (fn) {
             var timeout;
-            return function() {
+            return function () {
                 var args = Array.prototype.slice.call(arguments),
                     ctx = this;
 
                 clearTimeout(timeout);
-                timeout = setTimeout(function() {
+                timeout = setTimeout(function () {
                     fn.apply(ctx, args);
                 }, 100);
             };
         };
 
-        $('input#search').focus(function() { $(this).parent().addClass('focused'); });
-        $('input#search').blur(function() {
+        $('input#search').focus(function () { $(this).parent().addClass('focused'); });
+        $('input#search').blur(function () {
             if (!$(this).val()) {
                 $(this).parent().removeClass('focused');
             }
         });
 
-        $('input#search').on('keyup', debounce(function(e) {
+        $('input#search').on('keyup', debounce(function (e) {
             if ($(this).val() < 2) {
                 renderResults([]);
                 return;
@@ -326,7 +331,7 @@
             if (e.which === 38 || e.which === 40 || e.keyCode === 13) return;
 
             var query = $(this).val();
-            var results = window.index.search(query).slice(0, 6).map(function(result) {
+            var results = window.index.search(query).slice(0, 6).map(function (result) {
                 result = window.indexStore[result.ref];
                 return [result.title, result.href];
             });
@@ -334,7 +339,7 @@
         }));
 
 
-        $('input#search').on('keydown', debounce(function(e) {
+        $('input#search').on('keydown', debounce(function (e) {
             // Escape.
             if (e.keyCode === 27) {
                 $(this).val('');

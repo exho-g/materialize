@@ -13,41 +13,50 @@
     margin: 3px 0;
     vertical-align: middle;
     -webkit-tap-highlight-color: transparent; // Gets rid of tap active state
+
     &.tiny {
         height: 26px;
         line-height: 26px;
         font-size: 12px;
         padding: 0 12px;
+
         i {
             font-size: .8rem;
+
             &.right {
                 margin-left: 10px;
             }
+
             &.left {
                 margin-right: 10px;
             }
         }
     }
+
     &.small {
         height: $button-small-height;
         line-height: $button-small-height;
         font-size: $button-small-font-size;
+
         i {
             font-size: $button-small-icon-font-size;
         }
     }
+
     &.large {
         height: $button-large-height;
         line-height: $button-large-height;
         font-size: $button-large-font-size;
         padding: 0 28px;
+
         i {
             font-size: $button-large-icon-font-size;
         }
     }
 
     // Rounded Buttons
-    &.rounded,&.rounded.small {
+    &.rounded,
+    &.rounded.small {
         border-radius: 35px;
         padding: 0 18px;
 
@@ -82,6 +91,7 @@
     box-shadow: none;
     color: $button-disabled-color !important;
     cursor: default;
+
     &:hover {
         background-color: $button-disabled-background !important;
         color: $button-disabled-color !important;
@@ -90,23 +100,30 @@
 
 
 
-.btn-outlined{
+.btn-outlined {
     &.tiny {
-        line-height: 22px;
+        line-height: 24px;
     }
+
     &.small {
         line-height: 28.4px;
+
         &.thin {
             line-height: 30.4px;
         }
     }
+
     &.large {
         line-height: 50px;
+
         &.thin {
             line-height: 52px;
         }
     }
-    &.disabled,&:disabled,&[disabled] {
+
+    &.disabled,
+    &:disabled,
+    &[disabled] {
         pointer-events: none;
         cursor: default;
         background-color: transparent !important;
@@ -125,6 +142,7 @@
 .btn-outlined {
     font-size: $button-font-size;
     outline: 0;
+
     i {
         font-size: $button-icon-font-size;
         line-height: inherit;
@@ -150,49 +168,65 @@
     @extend .z-depth-1;
     transition: background-color .2s ease-out;
     cursor: pointer;
+
     &:hover {
         background-color: $button-raised-background-hover;
         @extend .z-depth-1-half;
     }
+
     &.primary {
         background-color: var(--primary-color);
+
         &:focus {
             background-color: var(--primary-color-darken-10);
         }
     }
+
     &.info {
         background-color: $info-color;
+
         &:focus {
             background-color: darken($info-color, 10%);
         }
     }
+
     &.success {
         background-color: $success-color;
+
         &:focus {
             background-color: darken($success-color, 10%);
         }
     }
+
     &.warning {
         background-color: $warning-color;
+
         &:focus {
             background-color: darken($warning-color, 10%);
         }
     }
+
     &.danger {
         background-color: $danger-color;
+
         &:focus {
             background-color: darken($danger-color, 10%);
         }
     }
+
     &.light {
         color: #222;
         background-color: #efefef;
+
         &:focus {
             background-color: #dedede;
         }
     }
-    &.dark,&.dark-light {
+
+    &.dark,
+    &.dark-light {
         background-color: #222;
+
         &:focus {
             background-color: #444;
         }
@@ -205,39 +239,49 @@
         background-color: $button-floating-background-hover;
         @extend .z-depth-1-half;
     }
+
     &:before {
         border-radius: 0;
     }
+
     &.large {
         &.halfway-fab {
             bottom: -$button-floating-large-size * 0.5;
         }
+
         width: $button-floating-large-size;
         height: $button-floating-large-size;
         padding: 0;
+
         i {
             line-height: $button-floating-large-size;
         }
     }
+
     &.small {
         &.halfway-fab {
             bottom: -$button-floating-small-size * 0.5;
         }
+
         width: $button-floating-small-size;
         height: $button-floating-small-size;
+
         i {
             line-height: $button-floating-small-size;
         }
     }
+
     &.halfway-fab {
         &.left {
             right: auto;
             left: 24px;
         }
+
         position: absolute;
         right: 24px;
         bottom: -$button-floating-size * 0.5;
     }
+
     display: inline-block;
     color: $button-floating-color;
     position: relative;
@@ -253,6 +297,7 @@
     transition: background-color .3s;
     cursor: pointer;
     vertical-align: middle;
+
     i {
         width: inherit;
         display: inline-block;
@@ -275,10 +320,12 @@ button.btn-floating {
             visibility: visible;
         }
     }
+
     // Directions
     &.direction-left,
     &.direction-right {
         padding: 0 0 0 15px;
+
         ul {
             text-align: right;
             right: 64px;
@@ -288,55 +335,67 @@ button.btn-floating {
             left: auto;
             /*width 100% only goes to width of button container */
             width: 500px;
+
             li {
                 display: inline-block;
                 margin: 7.5px 15px 0 0;
             }
         }
     }
+
     &.direction-right {
         padding: 0 15px 0 0;
+
         ul {
             text-align: left;
             direction: rtl;
             left: 64px;
             right: auto;
+
             li {
                 margin: 7.5px 0 0 15px;
             }
         }
     }
+
     &.direction-bottom {
         padding: 0 0 15px 0;
+
         ul {
             top: 64px;
             bottom: auto;
             display: flex;
             flex-direction: column-reverse;
+
             li {
                 margin: 15px 0 0 0;
             }
         }
     }
+
     &.toolbar {
         &.active {
             &>a i {
                 opacity: 0;
             }
         }
+
         padding: 0;
         height: $button-floating-large-size;
+
         ul {
             display: flex;
             top: 0;
             bottom: 0;
             z-index: 1;
+
             li {
                 flex: 1;
                 display: inline-block;
                 margin: 0;
                 height: 100%;
                 transition: none;
+
                 a {
                     display: block;
                     overflow: hidden;
@@ -348,6 +407,7 @@ button.btn-floating {
                     color: #fff;
                     line-height: $button-floating-large-size;
                     z-index: 1;
+
                     i {
                         line-height: inherit;
                     }
@@ -355,12 +415,14 @@ button.btn-floating {
             }
         }
     }
+
     position: fixed;
     right: 23px;
     bottom: 23px;
     padding-top: 15px;
     margin-bottom: 0;
     z-index: 997;
+
     ul {
         left: 0;
         right: 0;
@@ -369,13 +431,16 @@ button.btn-floating {
         bottom: 64px;
         margin: 0;
         visibility: hidden;
+
         li {
             margin-bottom: 15px;
         }
+
         a.btn-floating {
             opacity: 0;
         }
     }
+
     .fab-backdrop {
         position: absolute;
         top: 0;
@@ -397,13 +462,16 @@ button.btn-floating {
     cursor: pointer;
     margin: 2px 0;
     transition: background-color .2s;
+
     &:focus,
     &:hover {
         box-shadow: none;
     }
+
     &:focus {
         background-color: rgba(0, 0, 0, .1);
     }
+
     &.disabled,
     &.btn-flat[disabled] {
         background-color: transparent !important;
@@ -424,79 +492,103 @@ button.btn-floating {
     font-weight: 500;
     margin: 2px 0;
     transition: background-color .2s ease-out;
+
     &:hover {
         background-color: rgba($button-raised-background, 0.3);
         box-shadow: unset;
     }
+
     &:focus {
         background-color: rgba($button-raised-background, 0.5);
     }
+
     &.primary {
         color: var(--primary-color-darken-5);
         background-color: rgba(var(--primary-color-rgb), 0.2);
+
         &:hover {
             background-color: rgba(var(--primary-color-rgb), 0.3);
         }
+
         &:focus {
             background-color: rgba(var(--primary-color-rgb), 0.5);
         }
     }
+
     &.info {
         color: darken($info-color, 5%);
         background-color: rgba($info-color, 0.2);
+
         &:hover {
             background-color: rgba($info-color, 0.3);
         }
+
         &:focus {
             background-color: rgba($info-color, 0.5);
         }
     }
+
     &.success {
         color: darken($success-color, 5%);
         background-color: rgba($success-color, 0.2);
+
         &:hover {
             background-color: rgba($success-color, 0.3);
         }
+
         &:focus {
             background-color: rgba($success-color, 0.5);
         }
     }
+
     &.warning {
         color: darken($warning-color, 5%);
         background-color: rgba($warning-color, 0.2);
+
         &:hover {
             background-color: rgba($warning-color, 0.3);
         }
+
         &:focus {
             background-color: rgba($warning-color, 0.5);
         }
     }
+
     &.danger {
         color: darken($danger-color, 5%);
         background-color: rgba($danger-color, 0.2);
+
         &:hover {
             background-color: rgba($danger-color, 0.3);
         }
+
         &:focus {
             background-color: rgba($danger-color, 0.5);
         }
     }
+
     &.light {
         color: initial;
         background-color: rgba(255, 255, 255, 0.8);
+
         &:hover {
             background-color: rgba(240, 240, 240, 0.8);
         }
+
         &:focus {
             background-color: rgba(220, 220, 220, 0.7);
         }
     }
-    &.dark,&.dark-light {
+
+    &.dark,
+    &.dark-light {
         color: #FFF;
         background-color: rgba(20, 20, 20, 0.8);
+
         &:hover {
             background-color: rgba(40, 40, 40, 0.8);
         }
+
         &:focus {
             background-color: rgba(70, 70, 70, 0.7);
         }
@@ -520,108 +612,135 @@ button.btn-floating {
     user-select: none;
     -webkit-tap-highlight-color: transparent;
     transition: all .2s ease-out;
+
     &:not(.as-badge) {
         cursor: pointer;
+
         &:hover {
             background-color: rgba($button-raised-background, 0.1);
             box-shadow: unset;
         }
+
         &:focus,
         &:active {
             background-color: rgba($button-raised-background, 0.3);
         }
     }
+
     &.thin {
         border-width: 1px;
+
         &:not(.small):not(.tiny):not(.large) {
             line-height: 34px;
         }
     }
+
     &.primary {
         color: var(--primary-color);
         border-color: var(--primary-color);
+
         &:not(.as-badge) {
             &:hover {
                 background-color: rgba(var(--primary-color-rgb), 0.1);
             }
+
             &:focus,
             &:active {
                 background-color: rgba(var(--primary-color-rgb), 0.3);
             }
         }
     }
+
     &.info {
         color: $info-color;
         border-color: $info-color;
+
         &:not(.as-badge) {
             &:hover {
                 background-color: rgba($info-color, 0.1);
             }
+
             &:focus,
             &:active {
                 background-color: rgba($info-color, 0.3);
             }
         }
     }
+
     &.success {
         color: $success-color;
         border-color: $success-color;
+
         &:not(.as-badge) {
             &:hover {
                 background-color: rgba($success-color, 0.1);
             }
+
             &:focus,
             &:active {
                 background-color: rgba($success-color, 0.3);
             }
         }
     }
+
     &.warning {
         color: $warning-color;
         border-color: $warning-color;
+
         &:not(.as-badge) {
             &:hover {
                 background-color: rgba($warning-color, 0.1);
             }
+
             &:focus,
             &:active {
                 background-color: rgba($warning-color, 0.3);
             }
         }
     }
+
     &.danger {
         color: $danger-color;
         border-color: $danger-color;
+
         &:not(.as-badge) {
             &:hover {
                 background-color: rgba($danger-color, 0.1);
             }
+
             &:focus,
             &:active {
                 background-color: rgba($danger-color, 0.3);
             }
         }
     }
+
     &.light {
         color: #FFF;
         border-color: #FFF;
+
         &:not(.as-badge) {
             &:hover {
                 background-color: rgba(255, 255, 255, 0.1);
             }
+
             &:focus,
             &:active {
                 background-color: rgba(255, 255, 255, 0.3);
             }
         }
     }
-    &.dark,&.dark-light {
+
+    &.dark,
+    &.dark-light {
         color: #141414;
         border-color: #141414;
+
         &:not(.as-badge) {
             &:hover {
                 background-color: rgba(20, 20, 20, 0.1);
             }
+
             &:focus,
             &:active {
                 background-color: rgba(20, 20, 20, 0.3);

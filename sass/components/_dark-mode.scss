@@ -40,15 +40,15 @@
         $color_value in $color {
             @if $color_type=="base" {
                 .ondark-#{$color_name} {
-                    background-color: $color_value !important;
+                    background-color: $color_value  !important;
                 }
 
                 .ondark-#{$color_name}-text {
-                    color: $color_value !important;
+                    color: $color_value  !important;
                 }
             }
 
-            @else if $color_name !="shades" {
+            @else if $color_name  !="shades" {
 
                 // // if same color as light mode
                 // .#{$color_name}.ondark-#{$color_type} {
@@ -59,11 +59,11 @@
                 // }
                 //if not the same color as light mode
                 .ondark-#{$color_name}.ondark-#{$color_type} {
-                    background-color: $color_value !important;
+                    background-color: $color_value  !important;
                 }
 
                 .ondark-#{$color_name}-text.ondark-text-#{$color_type} {
-                    color: $color_value !important;
+                    color: $color_value  !important;
                 }
             }
         }
@@ -73,11 +73,11 @@
     @each $color,
     $color_value in $shades {
         .ondark-#{$color} {
-            background-color: $color_value !important;
+            background-color: $color_value  !important;
         }
 
         .ondark-#{$color}-text {
-            color: $color_value !important;
+            color: $color_value  !important;
         }
     }
 
@@ -1304,7 +1304,11 @@
         &:not(.waves-teal) {
             &.waves-ripple {
                 background: rgba(255, 255, 255, 0.4);
-                $gradient: rgba(255, 255, 255, 0.2) 0, rgba(255, 255, 255, .3) 40%, rgba(255, 255, 255, .4) 50%, rgba(255, 255, 255, .5) 60%, rgba(255, 255, 255, 0) 70%;
+                $gradient: rgba(255, 255, 255, 0.2) 0,
+                rgba(255, 255, 255, .3) 40%,
+                rgba(255, 255, 255, .4) 50%,
+                rgba(255, 255, 255, .5) 60%,
+                rgba(255, 255, 255, 0) 70%;
                 background: -webkit-radial-gradient($gradient);
                 background: -o-radial-gradient($gradient);
                 background: -moz-radial-gradient($gradient);
@@ -1473,7 +1477,7 @@
         display: none;
     }
 
-    div.ondark-show {
+    .ondark-show {
         display: block;
     }
 
@@ -1541,7 +1545,18 @@
 
 //init helper
 .ondark-show {
-    display: none;
+    display: block;
+}
+
+.btn,
+.btn-small,
+.btn-large,
+.btn-soft,
+.btn-outlined,
+.btn-flat {
+    &.ondark-show {
+        display: inline-block;
+    }
 }
 
 //auto dark mode - using system preferred if html tag doesn't have .no-dark-mode class

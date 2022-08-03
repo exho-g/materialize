@@ -87,14 +87,14 @@
 .btn-flat[disabled],
 .btn-soft[disabled] {
     pointer-events: none;
-    background-color: $button-disabled-background !important;
+    background-color: $button-disabled-background  !important;
     box-shadow: none;
-    color: $button-disabled-color !important;
+    color: $button-disabled-color  !important;
     cursor: default;
 
     &:hover {
-        background-color: $button-disabled-background !important;
-        color: $button-disabled-color !important;
+        background-color: $button-disabled-background  !important;
+        color: $button-disabled-color  !important;
     }
 }
 
@@ -102,7 +102,7 @@
 
 .btn-outlined {
     &.tiny {
-        line-height: 24px;
+        line-height: 22px;
     }
 
     &.small {
@@ -127,8 +127,8 @@
         pointer-events: none;
         cursor: default;
         background-color: transparent !important;
-        color: $button-disabled-color !important;
-        border-color: $button-disabled-background !important;
+        color: $button-disabled-color  !important;
+        border-color: $button-disabled-background  !important;
     }
 }
 
@@ -475,7 +475,7 @@ button.btn-floating {
     &.disabled,
     &.btn-flat[disabled] {
         background-color: transparent !important;
-        color: $button-flat-disabled-color !important;
+        color: $button-flat-disabled-color  !important;
         cursor: default;
     }
 }

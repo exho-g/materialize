@@ -276,7 +276,8 @@
                 <h5>Truncation</h5>
                 <p>To truncate long lines of text in an ellipsis, add the class <code
                         class="language-markup">truncate</code> to the tag which contains the text. See an example below
-                    of a header being truncated inside a card.</p>
+                    of a header being truncated inside a card. You can also adjust the number of lines until the
+                    ellipses show by using this class <code class="language-markup">truncate-&lt;2|3|4|5></code>.</p>
 
                 <div class="row">
                     <div class="col s6 offset-s3 m6 offset-m3">
@@ -292,7 +293,8 @@
 
                 <h5>Hover</h5>
                 <p>The <code class="language-markup">hoverable</code> is a hover class that adds an animation for box
-                    shadow as seen below. It can be used on most elements, but meant for use on cards.</p>
+                    shadow as seen below. It can be used on most elements, but meant for use on cards. Please note that
+                    shadows are not that visible on dark mode.</p>
                 <div class="card hoverable small">
                     <div class="card-image">
                         <img src="images/sample-1.jpg">
@@ -449,6 +451,21 @@
                                 </td>
                             </tr>
                             <tr>
+                                <td><code class="language-markup">.no-padding-&lt;t|r|b|l></code></td>
+                                <td>Remove specific padding (top, right, bottom, left)</td>
+                                <td>
+                                    <pre style="padding-top: 0px;">
+                    <span class="copyMessage">Copied!</span>
+                    <i class="material-icons copyButton">content_copy</i>
+                    <code class="language-markup copiedText">
+&lt;h1 class="no-padding-t">
+  Some content
+&lt;/h1>
+                    </code>
+                  </pre>
+                                </td>
+                            </tr>
+                            <tr>
                                 <td><code class="language-markup">.no-margin</code></td>
                                 <td>Remove all margin</td>
                                 <td>
@@ -464,6 +481,21 @@
                                 </td>
                             </tr>
                             <tr>
+                                <td><code class="language-markup">.no-margin-&lt;t|r|b|l></code></td>
+                                <td>Remove specific margin (top, right, bottom, left)</td>
+                                <td>
+                                    <pre style="padding-top: 0px;">
+                    <span class="copyMessage">Copied!</span>
+                    <i class="material-icons copyButton">content_copy</i>
+                    <code class="language-markup copiedText">
+&lt;h1 class="no-margin-r">
+  Some content
+&lt;/h1>
+                    </code>
+                  </pre>
+                                </td>
+                            </tr>
+                            <tr>
                                 <td><code class="language-markup">.no-br</code></td>
                                 <td>Remove all border radius</td>
                                 <td>
@@ -472,6 +504,21 @@
                     <i class="material-icons copyButton">content_copy</i>
                     <code class="language-markup copiedText">
 &lt;div class="no-br">
+  Some content
+&lt;/div>
+                    </code>
+                  </pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code class="language-markup">.no-br-&lt;tl|tr|bl|br></code></td>
+                                <td>Remove specific border radius (top-left, top-right, bottom-left, bottom-right)</td>
+                                <td>
+                                    <pre style="padding-top: 0px;">
+                    <span class="copyMessage">Copied!</span>
+                    <i class="material-icons copyButton">content_copy</i>
+                    <code class="language-markup copiedText">
+&lt;div class="no-br-tl">
   Some content
 &lt;/div>
                     </code>

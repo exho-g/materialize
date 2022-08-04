@@ -792,7 +792,7 @@
 
     //progress
     .progress {
-        background-color: darken($progress-bar-color, 30%);
+        background-color: var(--secondary-color-darken-30);
     }
 
     //pagination

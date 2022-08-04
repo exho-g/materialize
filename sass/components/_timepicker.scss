@@ -3,6 +3,7 @@
 .timepicker-modal {
     max-width: 325px;
     max-height: none;
+
     &.blur-bg {
         background-color: transparent;
         backdrop-filter: blur(10px);
@@ -70,8 +71,9 @@
 
 .timepicker-modal.blur-bg {
     .timepicker-digital-display {
-        background-color: rgba(darken($secondary-color, 10%), .5);
+        background-color: rgba(var(--secondary-color-rgb), 0.50);
     }
+
     .timepicker-analog-display {
         background-color: #FFF;
     }
@@ -117,7 +119,7 @@
 
 .timepicker-tick.active,
 .timepicker-tick:hover {
-    background-color: transparentize($secondary-color, .75);
+    background-color: transparentize(var(--secondary-color-rgb), 0.75);
 }
 
 .timepicker-dial {
@@ -128,14 +130,17 @@
     &.timepicker-hours {
         transform: scale(1.1, 1.1);
     }
+
     &.timepicker-minutes {
         transform: scale(.8, .8);
     }
+
     opacity: 0;
 }
 
 .timepicker-canvas {
     transition: opacity 175ms;
+
     line {
         stroke: $secondary-color;
         stroke-width: 4;
@@ -187,12 +192,15 @@
     .timepicker-modal {
         max-width: 600px;
     }
+
     .timepicker-container.modal-content {
         flex-direction: row;
     }
+
     .timepicker-text-container {
         top: 32%;
     }
+
     .timepicker-display-am-pm {
         position: relative;
         right: auto;

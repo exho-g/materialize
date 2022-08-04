@@ -823,12 +823,12 @@
 
         &:checked+span:after,
         &.with-gap:checked+span:after {
-            background-color: lighten($secondary-color, 20%);
-            border-color: lighten($secondary-color, 20%);
+            background-color: var(--secondary-color-lighten-20);
+            border-color: var(--secondary-color-lighten-20);
         }
 
         &.with-gap:checked+span:before {
-            border-color: lighten($secondary-color, 20%);
+            border-color: var(--secondary-color-lighten-20);
         }
 
         &:disabled {
@@ -885,8 +885,8 @@
 
         &:checked+span:before {
             border: unset;
-            border-right: 2px solid lighten($secondary-color, 20%);
-            border-bottom: 2px solid lighten($secondary-color, 20%);
+            border-right: 2px solid var(--secondary-color-lighten-20);
+            border-bottom: 2px solid var(--secondary-color-lighten-20);
         }
 
         &:disabled+span {
@@ -906,7 +906,7 @@
         &:indeterminate {
             +span:not(.lever):before {
                 border: unset;
-                border-right: 2px solid lighten($secondary-color, 20%);
+                border-right: 2px solid var(--secondary-color-lighten-20);
             }
 
             &:disabled,
@@ -928,7 +928,7 @@
         color: color('grey', 'lighten-3');
 
         &:focus {
-            background-color: lighten($secondary-color, 10%);
+            background-color: var(--secondary-color-lighten-10);
         }
     }
 
@@ -940,12 +940,12 @@
                 }
 
                 +.lever:after {
-                    background-color: lighten($secondary-color, 20%);
+                    background-color: var(--secondary-color-lighten-20);
                 }
             }
 
             &:not(:disabled)~.lever:active:before {
-                background-color: rgba(lighten($secondary-color, 20%), .3);
+                background-color: rgba(var(--secondary-color-rgb), 0.30);
             }
         }
 
@@ -978,7 +978,7 @@
 
             td {
                 &.is-today {
-                    color: lighten($secondary-color, 30%);
+                    color: var(--secondary-color-lighten-30);
                 }
 
                 &.is-selected {
@@ -991,7 +991,7 @@
         .datepicker-clear,
         .datepicker-today,
         .datepicker-done {
-            color: lighten($secondary-color, 40%);
+            color: var(--secondary-color-lighten-40);
             font-weight: 500;
         }
 
@@ -999,7 +999,7 @@
             background-color: transparent;
 
             .datepicker-date-display {
-                background-color: rgba($secondary-color, .3);
+                background-color: rgba(var(--secondary-color-rgb), 0.30);
             }
 
             .datepicker-calendar-container {
@@ -1018,7 +1018,7 @@
         }
 
         .timepicker-close {
-            color: lighten($secondary-color, 40%);
+            color: var(--secondary-color-lighten-40);
             font-weight: 500;
         }
 
@@ -1026,7 +1026,7 @@
             background-color: transparent;
 
             .timepicker-digital-display {
-                background-color: rgba($secondary-color, .3);
+                background-color: rgba(var(--secondary-color-rgb), .3);
             }
 
             .timepicker-analog-display {
@@ -1051,13 +1051,13 @@
             }
 
             &::before {
-                background-color: darken($secondary-color, 10%);
+                background-color: var(--secondary-color-darken-10);
                 font-weight: 500;
                 color: color('grey', 'base');
             }
 
             &.active::before {
-                background-color: lighten($secondary-color, 10%);
+                background-color: var(--secondary-color-lighten-10);
                 color: color('grey', 'lighten-4');
             }
 
@@ -1091,14 +1091,14 @@
                     }
 
                     &::before {
-                        background-color: darken($secondary-color, 10%);
+                        background-color: var(--secondary-color-darken-10);
                         font-weight: 500;
                         color: color('grey', 'base');
                     }
                 }
 
                 &.active .step-title::before {
-                    background-color: lighten($secondary-color, 10%);
+                    background-color: var(--secondary-color-lighten-10);
                     color: color('grey', 'lighten-4');
                 }
 
@@ -1271,11 +1271,11 @@
         color: #FFF;
 
         &:focus {
-            border-color: lighten($secondary-color, 20%);
-            box-shadow: 0 1px 0 0 lighten($secondary-color, 20%);
+            border-color: var(--secondary-color-lighten-20);
+            box-shadow: 0 1px 0 0 var(--secondary-color-lighten-20);
 
             +label {
-                color: lighten($secondary-color, 20%);
+                color: var(--secondary-color-lighten-20);
             }
         }
 
@@ -1347,7 +1347,7 @@
             background-color: rgba(255, 255, 255, .1);
 
             &.active {
-                background-color: $secondary-color;
+                background-color: var(--secondary-color);
             }
 
             &.disabled {
@@ -1365,8 +1365,8 @@
                 border: 2px solid $tree-line;
 
                 &.active {
-                    border-color: lighten($secondary-color, 10%);
-                    color: lighten($secondary-color, 15%);
+                    border-color: var(--secondary-color-lighten-10);
+                    color: var(--secondary-color-light);
                 }
 
                 &.disabled {

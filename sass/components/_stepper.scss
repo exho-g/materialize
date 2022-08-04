@@ -96,7 +96,7 @@ ul.stepper {
             height: 26px;
             width: 26px;
             color: #fff;
-            background-color: lighten($secondary-color, 20%);
+            background-color: var(--secondary-color-lighten-20);
             border-radius: 50%;
             text-align: center;
             line-height: 26px;

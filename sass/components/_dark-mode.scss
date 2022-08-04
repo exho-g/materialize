@@ -263,6 +263,10 @@
         &:not(.light):not(.dark):not(.dark-light) {
             background-color: var(--secondary-color-darken-20);
 
+            &:hover {
+                background-color: var(--secondary-color-dark);
+            }
+
             &.primary {
                 background-color: var(--primary-color-darken-20);
             }

@@ -154,7 +154,7 @@
 .btn-floating,
 .btn-soft {
     &:focus {
-        background-color: darken($button-raised-background, 10%);
+        background-color: var(--secondary-color-darken-10);
     }
 }
 
@@ -483,9 +483,9 @@ button.btn-floating {
 // Soft button
 .btn-soft {
     box-shadow: none;
-    color: darken($button-raised-background, 5%);
+    color: var(--secondary-color-darken-5);
     text-decoration: none;
-    background-color: rgba($button-raised-background, 0.2);
+    background-color: rgba(var(--secondary-color-rgb), 0.2);
     text-align: center;
     letter-spacing: .5px;
     cursor: pointer;
@@ -494,12 +494,12 @@ button.btn-floating {
     transition: background-color .2s ease-out;
 
     &:hover {
-        background-color: rgba($button-raised-background, 0.3);
+        background-color: rgba(var(--secondary-color-rgb), 0.3);
         box-shadow: unset;
     }
 
     &:focus {
-        background-color: rgba($button-raised-background, 0.5);
+        background-color: rgba(var(--secondary-color-rgb), 0.5);
     }
 
     &.primary {
@@ -617,13 +617,13 @@ button.btn-floating {
         cursor: pointer;
 
         &:hover {
-            background-color: rgba($button-raised-background, 0.1);
+            background-color: rgba(var(--secondary-color-rgb), 0.1);
             box-shadow: unset;
         }
 
         &:focus,
         &:active {
-            background-color: rgba($button-raised-background, 0.3);
+            background-color: rgba(var(--secondary-color-rgb), 0.3);
         }
     }
 

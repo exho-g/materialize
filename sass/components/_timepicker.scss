@@ -119,7 +119,7 @@
 
 .timepicker-tick.active,
 .timepicker-tick:hover {
-    background-color: transparentize(var(--secondary-color-rgb), 0.75);
+    background-color: rgba(var(--secondary-color-rgb), 0.75);
 }
 
 .timepicker-dial {

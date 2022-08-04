@@ -37,9 +37,9 @@
     --primary-color-hs: 210deg, 79%;
     --primary-color-l: 46%;
 
-    --secondary-color-rgb: 114, 143, 157;
+    --secondary-color-rgb: 96, 125, 139;
     --secondary-color-hs: 200deg, 18%;
-    --secondary-color-l: 53%;
+    --secondary-color-l: 46%;
 
     --primary-color: rgb(var(--primary-color-rgb));
     --primary-color-light: hsl(var(--primary-color-hs), calc(var(--primary-color-l) + 15%));

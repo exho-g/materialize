@@ -2,49 +2,104 @@
   <div class="row">
     <div class="col s12 m8 offset-m1 xl7 offset-xl1">
 
-    <div id="usage" class="scrollspy">
-            <p class="caption">We use Google Material Icons by Google. They provide a searchable list (which we do not include in the documentation here), which will also show you the relevant icon names for the CSS classes. You can download the icons directly from the <a href="https://google.github.io/material-design-icons/#icon-font-for-the-web">Material Design specs</a>.</p>
-            <h3 class="header">Usage</h3>
-            <p>To be able to use these icons, you must include this line in the <code class="language-markup">&lt;head></code>portion of your HTML code</p>
-            <pre><code class="language-markup">
+      <p class="caption">We use Google Material Icons by Google. They provide a searchable list (which we do not include
+        in the documentation here), which will also show you the relevant icon names for the CSS classes. You can
+        download the icons directly from the <a
+          href="https://google.github.io/material-design-icons/#icon-font-for-the-web">Material Design specs</a>.</p>
+      <div id="usage" class="scrollspy">
+        <h3 class="header">Usage</h3>
+        <p>To be able to use these icons, you must include this line in the <code
+            class="language-markup">&lt;head></code>portion of your HTML code</p>
+        <pre><code class="language-markup">
   &lt;link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></code></pre>
-            <p>To use these icons, use the material-icons class on an element and provide the ligature as the text content.</p>
-            <pre><code class="language-markup">
+        <p>For Material Symbols, you can use the following links:</p>
+        <pre><code class="language-markup">
+  &lt;link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" rel="stylesheet">
+  &lt;link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
+  &lt;link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</code></pre>
+        <p>To use these icons, use the material-icons class on an element and provide the ligature as the text content.
+        </p>
+        <pre><code class="language-markup">
   &lt;i class="material-icons">add&lt;/i>
-            </code></pre>
+  
+  &lt;!-- Other Variant -->
+  &lt;i class="material-icons-outlined">add&lt;/i>
+  &lt;i class="material-icons-round">add&lt;/i>
+  &lt;i class="material-icons-sharp">add&lt;/i>
+  &lt;i class="material-icons-two-tone">add&lt;/i>
 
-            <h5>Sizes</h5>
-            <p>To control the size of the icon, change the <code class="language-css">font-size: 30px</code> property of your icon. Optionally you can use preset classes as shown below.</p>
-            <div class="row">
-              <div class="center-align">
-                <div class="col s3"><i class="material-icons tiny icon-demo">insert_chart</i><br><p>Tiny</p></div>
-                <div class="col s3"><i class="material-icons small icon-demo">insert_chart</i><br><p>Small</p></div>
-                <div class="col s3"><i class="material-icons medium icon-demo">insert_chart</i><br><p>Medium</p></div>
-                <div class="col s3"><i class="material-icons large icon-demo">insert_chart</i><br><p>Large</p></div>
-              </div>
+  &lt;!-- Material Symbols -->
+  &lt;i class="material-icons-sharp">add&lt;/i>
+  &lt;i class="material-icons-rounded">add&lt;/i>
+  &lt;i class="material-icons-outlined">add&lt;/i>
+            </code></pre>
+      </div>
+
+      <div id="sizes" class="scrollspy">
+        <h3 class="sizes">Sizes</h3>
+        <p>To control the size of the icon, change the <code class="language-css">font-size: 30px</code> property of
+          your icon. Optionally you can use preset classes as shown below.</p>
+        <div class="row">
+          <div class="center-align">
+            <div class="col s3"><i class="material-icons tiny icon-demo">insert_chart</i><br>
+              <p>Tiny</p>
             </div>
-            <pre><code class="language-markup">
+            <div class="col s3"><i class="material-icons small icon-demo">insert_chart</i><br>
+              <p>Small</p>
+            </div>
+            <div class="col s3"><i class="material-icons medium icon-demo">insert_chart</i><br>
+              <p>Medium</p>
+            </div>
+            <div class="col s3"><i class="material-icons large icon-demo">insert_chart</i><br>
+              <p>Large</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="center-align">
+            <div class="col s3"><i class="material-icons s18 icon-demo">favorite</i><br>
+              <p>s18</p>
+            </div>
+            <div class="col s3"><i class="material-icons s24 icon-demo">favorite</i><br>
+              <p>s24</p>
+            </div>
+            <div class="col s3"><i class="material-icons s36 icon-demo">favorite</i><br>
+              <p>s36</p>
+            </div>
+            <div class="col s3"><i class="material-icons s48 icon-demo">favorite</i><br>
+              <p>s48</p>
+            </div>
+          </div>
+        </div>
+        <pre><code class="language-markup">
   &lt;!--
   Sizes:
   tiny: 1rem
-  small: 2rem
+  small: 2rem - default
   medium: 4rem
   large: 6rem
+
+  s18: 18px
+  s24: 24px - default
+  s36: 36px
+  s48: 48px
   -->
   &lt;i class="large material-icons">insert_chart&lt;/i>
             </code></pre>
-        </div>
+      </div>
     </div>
 
 
     <div class="col hide-on-small-only m3 xl3 offset-xl1">
       <div class="toc-wrapper">
 
-        
+
         <div style="height: 1px;">
           <ul class="section table-of-contents">
             <li><a href="#usage">Usage</a></li>
-            <li><a href="https://jossef.github.io/material-design-icons-iconfont/">Search Google's Icons</a></li>
+            <li><a href="#sizes">Sizes</a></li>
+            <li><a href="https://fonts.google.com/icons" target="_blank" rel="noreferrer">Search Google's Icons</a></li>
           </ul>
         </div>
       </div>

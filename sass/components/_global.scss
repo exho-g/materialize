@@ -643,7 +643,7 @@ th {
     height: 4px;
     display: block;
     width: 100%;
-    background-color: lighten($progress-bar-color, 40%);
+    background-color: var(--secondary-color-lighten-30);
     border-radius: 2px;
     margin: $element-top-margin 0 $element-bottom-margin 0;
     overflow: hidden;
@@ -653,12 +653,12 @@ th {
         top: 0;
         left: 0;
         bottom: 0;
-        background-color: $progress-bar-color;
+        background-color: var(--secondary-color);
         transition: width .3s linear;
     }
 
     .indeterminate {
-        background-color: $progress-bar-color;
+        background-color: var(--secondary-color);
 
         &:before {
             content: '';
@@ -724,15 +724,15 @@ th {
 // noUiSlider
 .noUi-target .noUi-base {
     .noUi-origin .noUi-handle {
-        background-color: $secondary-color;
+        background-color: var(--secondary-color);
 
         .noUi-tooltip {
-            background-color: $secondary-color;
+            background-color: var(--secondary-color);
         }
     }
 
     .noUi-connect {
-        background: $secondary-color;
+        background: var(--secondary-color);
     }
 }
 

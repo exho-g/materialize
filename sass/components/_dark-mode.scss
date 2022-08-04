@@ -261,7 +261,7 @@
         }
 
         &:not(.light):not(.dark):not(.dark-light) {
-            background-color: darken($button-raised-background, 20%);
+            background-color: var(--secondary-color-darken-20);
 
             &.primary {
                 background-color: var(--primary-color-darken-20);
@@ -290,11 +290,11 @@
     }
 
     .btn-soft {
-        background-color: darken($button-raised-background, 30%);
-        color: lighten($button-raised-background, 20%);
+        background-color: var(--secondary-color-darken-30);
+        color: var(--secondary-color-lighten-20);
 
         &:hover {
-            background-color: rgba(darken($button-raised-background, 30%), 0.7);
+            background-color: rgba(var(--secondary-color-rgb), 0.70);
         }
 
         &.dark {
@@ -372,18 +372,18 @@
     }
 
     .btn-outlined:not(.light):not(.dark) {
-        border-color: lighten($button-raised-background, 10%);
-        color: lighten($button-raised-background, 10%);
+        border-color: var(--secondary-color-lighten-10);
+        color: var(--secondary-color-lighten-10);
 
         &:not(.as-badge) {
             &:hover {
-                background-color: rgba($button-raised-background, 0.3);
+                background-color: rgba(var(--secondary-color-rgb), 0.30);
             }
 
             &:focus,
             &:active {
-                color: lighten($button-raised-background, 25%);
-                background-color: rgba($button-raised-background, 0.5);
+                color: var(--secondary-color-lighten-25);
+                background-color: rgba(var(--secondary-color-rgb), 0.50);
             }
         }
 

@@ -1445,7 +1445,7 @@
             }
 
             &.disabled {
-                background-color: rgba(255, 255, 255, .03);
+                background-color: rgba(255, 255, 255, .05);
                 color: rgba(255, 255, 255, .5);
             }
         }
@@ -1465,6 +1465,7 @@
 
                 &.disabled {
                     border-color: rgba(255, 255, 255, .03);
+                    color: rgba(255, 255, 255, .5);
                 }
             }
         }

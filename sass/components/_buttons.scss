@@ -177,6 +177,10 @@
     &.primary {
         background-color: var(--primary-color);
 
+        &:hover {
+            background-color: var(--primary-color-lighten-5);
+        }
+
         &:focus {
             background-color: var(--primary-color-darken-10);
         }
@@ -184,6 +188,10 @@
 
     &.info {
         background-color: $info-color;
+
+        &:hover {
+            background-color: lighten($info-color, 5%);
+        }
 
         &:focus {
             background-color: darken($info-color, 10%);
@@ -193,6 +201,10 @@
     &.success {
         background-color: $success-color;
 
+        &:hover {
+            background-color: lighten($success-color, 5%);
+        }
+
         &:focus {
             background-color: darken($success-color, 10%);
         }
@@ -201,6 +213,10 @@
     &.warning {
         background-color: $warning-color;
 
+        &:hover {
+            background-color: lighten($warning-color, 5%);
+        }
+
         &:focus {
             background-color: darken($warning-color, 10%);
         }
@@ -208,6 +224,10 @@
 
     &.danger {
         background-color: $danger-color;
+
+        &:hover {
+            background-color: lighten($danger-color, 5%);
+        }
 
         &:focus {
             background-color: darken($danger-color, 10%);
@@ -218,6 +238,10 @@
         color: #222;
         background-color: #efefef;
 
+        &:hover {
+            background-color: darken(#efefef, 5%);
+        }
+
         &:focus {
             background-color: #dedede;
         }
@@ -226,6 +250,10 @@
     &.dark,
     &.dark-light {
         background-color: #222;
+
+        &:hover {
+            background-color: lighten(#222, 5%);
+        }
 
         &:focus {
             background-color: #444;

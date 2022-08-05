@@ -117,7 +117,7 @@ $button-disabled-background: #DFDFDF !default;
 $button-disabled-color: #9F9F9F !default;
 // Raised buttons
 $button-raised-background: var(--secondary-color) !default;
-$button-raised-background-hover: var(--secondary-color-lighten-10) !default;
+$button-raised-background-hover: var(--secondary-color-lighten-5) !default;
 $button-raised-color: #fff !default;
 // Large buttons
 $button-large-font-size: 15px !default;
@@ -134,7 +134,7 @@ $button-flat-color: #343434 !default;
 $button-flat-disabled-color: lighten(#999, 10%) !default;
 // Floating buttons
 $button-floating-background: var(--secondary-color) !default;
-$button-floating-background-hover: var(--secondary-color-lighten-10) !default;
+$button-floating-background-hover: var(--secondary-color-lighten-5) !default;
 $button-floating-color: #fff !default;
 $button-floating-size: 40px !default;
 $button-floating-radius: 50% !default;

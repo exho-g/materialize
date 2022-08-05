@@ -281,22 +281,42 @@
 
             &.primary {
                 background-color: var(--primary-color-darken-20);
+
+                &:hover {
+                    background-color: var(--primary-color-dark);
+                }
             }
 
             &.info {
                 background-color: darken($info-color, 20%);
+
+                &:hover {
+                    background-color: darken($info-color, 15%);
+                }
             }
 
             &.success {
                 background-color: darken($success-color, 20%);
+
+                &:hover {
+                    background-color: darken($success-color, 15%);
+                }
             }
 
             &.warning {
                 background-color: darken($warning-color, 20%);
+
+                &:hover {
+                    background-color: darken($warning-color, 15%);
+                }
             }
 
             &.danger {
                 background-color: darken($danger-color, 20%);
+
+                &:hover {
+                    background-color: darken($danger-color, 15%);
+                }
             }
         }
     }
@@ -1619,7 +1639,7 @@
 
 //init helper
 .ondark-show {
-    display: block;
+    display: none;
 }
 
 .btn,

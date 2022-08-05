@@ -141,14 +141,21 @@
 
       <!--  Parallax Section  -->
       <div id="introduction" class="scrollspy section">
-        <p class="caption">Parallax is an effect where the background content or image in this case, is moved at a different speed than the
+        <p class="caption">Parallax is an effect where the background content or image in this case, is moved at a
+          different speed than the
           foreground content while scrolling. Check out the demo to get a better idea of it.</p>
-        <a href="parallax-demo.html" target="_blank" class="btn-large waves-effect waves-light">Open Demo</a>
+        <a href="parallax-demo.html" target="_blank" class="btn large waves-effect waves-light">Open Demo</a>
+        <p>Please note that you can also use <code class="language-markup">video</code> element instead of <code
+            class="language-markup">img</code> if you want videos to parallax.</p>
       </div>
 
       <pre><code class="language-markup">
     &lt;div class="parallax-container">
       &lt;div class="parallax">&lt;img src="images/parallax1.jpg">&lt;/div>
+    &lt;/div>
+
+    &lt;div class="parallax-container">
+      &lt;div class="parallax">&lt;video src="videos/parallax.mp4">&lt;/video>&lt;/div>
     &lt;/div>
         </code></pre>
 
@@ -202,7 +209,8 @@
       <div id="methods" class="scrollspy section">
         <h3 class="header">Methods</h3>
         <blockquote>
-          <p>Because jQuery is no longer a dependency, all the methods are called on the plugin instance. You can get the plugin
+          <p>Because jQuery is no longer a dependency, all the methods are called on the plugin instance. You can get
+            the plugin
             instance like this: </p>
           <pre><code class="language-javascript col s12">
   var instance = M.Parallax.getInstance(elem);
@@ -258,7 +266,8 @@ instance.destroy();
 
       <div id="customization" class="scrollspy section">
         <h3 class="header">Parallax Customization</h3>
-        <p>The parallax container height is what defines how much of the image can be seen. This is set to a default of 500px.
+        <p>The parallax container height is what defines how much of the image can be seen. This is set to a default of
+          500px.
           You can add your own style to override this.</p>
         <pre><code class="language-css">
     .parallax-container {
@@ -301,7 +310,6 @@ instance.destroy();
 
   </div>
 </div>
-
     </main><footer class="page-footer docs-footer">
     <div class="container">
         <div class="row" style="margin-bottom: 0;">

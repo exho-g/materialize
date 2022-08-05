@@ -1568,21 +1568,20 @@
 
     //helpers
     .ondark-hide {
-        display: none;
+        display: none !important;
     }
 
     .ondark-show {
-        display: block;
+        display: block !important;
     }
 
     .btn,
-    .btn-small,
-    .btn-large,
+    .btn-floating,
     .btn-soft,
     .btn-outlined,
     .btn-flat {
         &.ondark-show {
-            display: inline-block;
+            display: inline-block !important;
         }
     }
 
@@ -1639,7 +1638,7 @@
 
 //init helper
 .ondark-show {
-    display: none;
+    display: none !important;
 }
 
 .btn,

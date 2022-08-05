@@ -772,19 +772,19 @@
             }
 
             &.success {
-                border-color: lighten($success-color, 20%);
+                border-color: lighten($success-color, 15%);
             }
 
             &.info {
-                border-color: lighten($info-color, 20%);
+                border-color: lighten($info-color, 15%);
             }
 
             &.danger {
-                border-color: lighten($danger-color, 20%);
+                border-color: lighten($danger-color, 15%);
             }
 
             &.warning {
-                border-color: lighten($warning-color, 20%);
+                border-color: lighten($warning-color, 15%);
             }
         }
     }

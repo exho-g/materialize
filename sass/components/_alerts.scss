@@ -93,13 +93,13 @@
 
     &.outlined {
         background-color: transparent;
-        border: 3px solid rgba(0, 0, 0, .87);
+        border: 2px solid rgba(0, 0, 0, .87);
         box-shadow: unset;
-        font-weight: 500;
+        font-weight: normal;
 
-        &.thin {
-            border-width: 2px;
-            font-weight: normal;
+        &.thick {
+            border-width: 3px;
+            font-weight: 500;
         }
 
         &.primary {

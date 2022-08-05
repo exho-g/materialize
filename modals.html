@@ -148,11 +148,19 @@
                     just add <code class="language-markup">blur-bg</code> to the modal element and <code
                         class="language-markup">blur-bg acrylic</code> if you want the acrylic effect also.
                 </p>
+                <p>For <code class="language-markup">outlined primary</code> modals, the outline color follows the
+                    semantic colors just like in buttons. You can
+                    change the primary to success, info, warning or danger. If you just use the <code
+                        class="language-markup">outlined</code> class, the
+                    border color will fallback to secondary color. Please note that outline on bottom-sheet is a bit
+                    different.</p>
                 <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
                 <a class="waves-effect waves-light btn modal-trigger" href="#modal11">Modal (Blurred Overlay)</a>
                 <a class="waves-effect waves-light btn modal-trigger" href="#modal111">Modal (Blurred Background)</a>
                 <a class="waves-effect waves-light btn modal-trigger" href="#modal1111">Modal (Blurred Background,
                     Acrylic)</a>
+                <a class="waves-effect waves-light btn modal-trigger" href="#modal11111">Modal (Outlined, Semantic
+                    Colors)</a>
                 <div id="modal1" class="modal">
                     <div class="modal-content">
                         <h4>Modal Header</h4>
@@ -214,6 +222,18 @@
                     <div class="modal-footer">
                         <a href="#!" class="modal-close waves-effect waves-red btn-flat">Disagree</a>
                         <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                    </div>
+                </div>
+                <div id="modal11111" class="modal outlined primary">
+                    <div class="modal-content">
+                        <h4>Outlined Modal</h4>
+                        <p>The outline color follows the semantic colors just like in buttons. You can change the
+                            primary to success, info, warning or danger. If you just use the outline class, the border
+                            color will be default to secondary color.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-close waves-effect btn-flat">Nice</a>
                     </div>
                 </div>
 

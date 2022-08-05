@@ -776,15 +776,15 @@
             }
 
             &.info {
-                border-color: lighten($info-colorm, 20%);
+                border-color: lighten($info-color, 20%);
             }
 
             &.danger {
-                border-color: lighten($danger-colorm, 20%);
+                border-color: lighten($danger-color, 20%);
             }
 
             &.warning {
-                border-color: lighten($warning-colorm, 20%);
+                border-color: lighten($warning-color, 20%);
             }
         }
     }

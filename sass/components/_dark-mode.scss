@@ -104,6 +104,14 @@
     nav {
         background-color: darken(color('grey', 'darken-4'), 1%);
 
+        &.blur-bg {
+            background-color: rgba(#000000, 0.7);
+
+            &.acrylic {
+                background-image: $acrylic-background-ondark;
+            }
+        }
+
         li a:not(.brand-logo) {
             color: var(--primary-color);
 
@@ -180,6 +188,10 @@
 
         &.blur-bg {
             background-color: rgba(color('grey', 'darken-4'), .5);
+
+            &.acrylic {
+                background-image: $acrylic-background-ondark;
+            }
         }
 
         li {
@@ -666,6 +678,10 @@
             &.blur-bg {
                 background-color: rgba(50, 50, 50, 0.8);
 
+                &.acrylic {
+                    background-image: $acrylic-background-ondark;
+                }
+
                 li {
                     &.disabled {
                         background-color: rgba(255, 255, 255, 0.05);
@@ -701,6 +717,10 @@
 
             &.blur-bg {
                 background-color: rgba(50, 50, 50, 0.8);
+
+                &.acrylic {
+                    background-image: $acrylic-background-ondark;
+                }
 
                 li {
                     &.disabled {
@@ -738,6 +758,10 @@
 
         &.blur-bg {
             background-color: rgba(color('grey', 'darken-4'), .5);
+
+            &.acrylic {
+                background-image: $acrylic-background-ondark;
+            }
         }
     }
 
@@ -1006,6 +1030,10 @@
                 background-color: rgba(var(--secondary-color-rgb), 0.30);
             }
 
+            &.acrylic .datepicker-date-display {
+                background-image: $acrylic-background-ondark;
+            }
+
             .datepicker-calendar-container {
                 background-color: color('grey', 'darken-4');
             }
@@ -1031,6 +1059,10 @@
 
             .timepicker-digital-display {
                 background-color: rgba(var(--secondary-color-rgb), .3);
+            }
+
+            &.acrylic .timepicker-digital-display {
+                background-image: $acrylic-background-ondark;
             }
 
             .timepicker-analog-display {
@@ -1155,6 +1187,10 @@
                     th {
                         background-color: rgba(color('grey', 'darken-4'), 0.8);
                     }
+
+                    &.acrylic th {
+                        background-image: $acrylic-background-ondark;
+                    }
                 }
             }
         }
@@ -1168,6 +1204,10 @@
 
         &.blur-bg {
             background-color: rgba(255, 255, 255, 0.6);
+
+            &.acrylic {
+                background-image: $acrylic-background-ondark;
+            }
         }
     }
 
@@ -1332,6 +1372,12 @@
     }
 
     //feature discovery
+    .tap-target {
+        &.blur-bg.acrylic {
+            background-image: $acrylic-background-ondark;
+        }
+    }
+
     .tap-target-wave::before,
     .tap-target-wave::after {
         background-color: #000;

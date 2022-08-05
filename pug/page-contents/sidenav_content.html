@@ -5,17 +5,24 @@
 
             <div id="structure" class="section scrollspy">
                 <p class="caption">
-                    This is a slide out menu. You can add a dropdown to your sidebar by using our collapsible component. If you want to see a demo, our sidebar will use this on smaller screens. To use this in conjunction with a fullscreen navigation, you have to use two
+                    This is a slide out menu. You can add a dropdown to your sidebar by using our collapsible component.
+                    If you want to see a demo, our sidebar will use this on smaller screens. To use this in conjunction
+                    with a fullscreen navigation, you have to use two
                     copies of the same UL.
                 </p>
-                <p class="caption">To add a blur effect to the overlay, just add <code class="language-markup">blur-overlay</code> to the <code class="language-markup">sidenav</code> element. Or use <code class="language-markup">blur-bg</code> instead if you just want to
-                    blur the sidenav.</p>
+                <p class="caption">To add a blur effect to the overlay, just add <code
+                        class="language-markup">blur-overlay</code> to the <code class="language-markup">sidenav</code>
+                    element. Or use <code class="language-markup">blur-bg</code> instead if you just want to
+                    blur the sidenav or <code class="language-markup">blur-bg acrylic</code> if you want the acrylic
+                    effect.</p>
                 <p>
                     <strong>Please note that the sidenav HTML should not be contained within the navbar HTML.</strong>
                 </p>
 
                 <a href="#" data-target="slide-out" class="sidenav-trigger btn">Side nav demo</a>
                 <a href="#" data-target="slide-out-blur-bg" class="sidenav-trigger btn">Blurred Background</a>
+                <a href="#" data-target="slide-out-blur-bg-acrylic" class="sidenav-trigger btn">Blurred Background,
+                    Acrylic</a>
                 <a href="#" data-target="slide-out-blur-overlay" class="sidenav-trigger btn">Blurred Overlay</a>
 
                 <ul id="slide-out" class="sidenav">
@@ -86,6 +93,40 @@
                         <a class="waves-effect" href="#!">Third Link With Waves</a>
                     </li>
                 </ul>
+                <ul id="slide-out-blur-bg-acrylic" class="sidenav blur-bg acrylic">
+                    <li>
+                        <div class="user-view">
+                            <div class="background">
+                                <img src="images/office.jpg">
+                            </div>
+                            <a href="#user">
+                                <img class="circle" src="images/yuna.jpg">
+                            </a>
+                            <a href="#name">
+                                <span class="white-text name">John Doe</span>
+                            </a>
+                            <a href="#email">
+                                <span class="white-text email">jdoe@example.com</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#!">
+                            <i class="material-icons">cloud</i>First Link With Icon</a>
+                    </li>
+                    <li>
+                        <a href="#!">Second Link</a>
+                    </li>
+                    <li>
+                        <div class="divider"></div>
+                    </li>
+                    <li>
+                        <a class="subheader">Subheader</a>
+                    </li>
+                    <li>
+                        <a class="waves-effect" href="#!">Third Link With Waves</a>
+                    </li>
+                </ul>
                 <ul id="slide-out-blur-overlay" class="sidenav blur-overlay">
                     <li>
                         <div class="user-view">
@@ -121,7 +162,7 @@
                     </li>
                 </ul>
 
-                <br/>
+                <br />
 
                 <pre><code class="language-markup col s12">
 
@@ -255,7 +296,8 @@
             <div id="methods" class="scrollspy section">
                 <h3 class="header">Methods</h3>
                 <blockquote>
-                    <p>Because jQuery is no longer a dependency, all the methods are called on the plugin instance. You can get the plugin instance like this: </p>
+                    <p>Because jQuery is no longer a dependency, all the methods are called on the plugin instance. You
+                        can get the plugin instance like this: </p>
                     <pre><code class="language-javascript col s12">
   var instance = M.Sidenav.getInstance(elem);
 
@@ -341,7 +383,10 @@ instance.destroy();
             <div id="close-trigger" class="section scrollspy">
                 <h3 class="header">Close Trigger</h3>
                 <p>Add the class
-                    <code class="language-markup">.sidenav-close</code> to an element inside the sidenav and any click event on that element will cause the sidenav to close. This is useful in Single Page Apps where the page does not refresh on link clicks.</p>
+                    <code class="language-markup">.sidenav-close</code> to an element inside the sidenav and any click
+                    event on that element will cause the sidenav to close. This is useful in Single Page Apps where the
+                    page does not refresh on link clicks.
+                </p>
                 <pre><code class="language-markup col s12">
   &lt;ul id="slide-out" class="sidenav">
       &lt;li>&lt;a class="sidenav-close" href="#!">Clicking this will close Sidenav&lt;/a>&lt;/li>
@@ -397,7 +442,8 @@ instance.destroy();
                 <h4>Fullscreen HTML Structure</h4>
                 <p>If you want the menu to be accessible on all screensizes you just have to add a simple helper class
                     <code class="language-markup">show-on-large</code> to the
-                    <code class="language-markup">.sidenav-trigger</code>. </p>
+                    <code class="language-markup">.sidenav-trigger</code>.
+                </p>
 
                 <pre><code class="language-markup col s12">
     &lt;ul id="slide-out" class="sidenav">
@@ -410,7 +456,10 @@ instance.destroy();
 
                 <h4>Fixed HTML Structure</h4>
                 <p>Add the class
-                    <code class="language-markup">sidenav-fixed</code> to have the sidenav be fixed and open on large screens and hides to the regular functionality on smaller screens. Our sidenav on the left is an example of this.</p>
+                    <code class="language-markup">sidenav-fixed</code> to have the sidenav be fixed and open on large
+                    screens and hides to the regular functionality on smaller screens. Our sidenav on the left is an
+                    example of this.
+                </p>
                 <pre><code class="language-markup col s12">
     &lt;ul id="slide-out" class="sidenav sidenav-fixed">
       &lt;li>&lt;a href="#!">First Sidebar Link&lt;/a>&lt;/li>
@@ -418,7 +467,9 @@ instance.destroy();
     &lt;/ul>
     &lt;a href="#" data-target="slide-out" class="sidenav-trigger">&lt;i class="material-icons">menu&lt;/i>&lt;/a>
           </code></pre>
-                <p>If you are planning on using this you will have to offset your content by the width of the side menu. Also add the <code class="language-markup">.sidenav-fixed</code> class on where the offset content will be, which in our case is in header
+                <p>If you are planning on using this you will have to offset your content by the width of the side menu.
+                    Also add the <code class="language-markup">.sidenav-fixed</code> class on where the offset content
+                    will be, which in our case is in header
                     or nav, main and footer.</p>
                 <pre><code class="language-markup col s12">
     &lt;!-- If you use header to contain the nav -->

@@ -204,6 +204,10 @@
       //Add Blur background
       if (this.el.classList.contains('blur-bg')) {
         this.dropdown.dropdownEl.classList.add('blur-bg');
+
+        if (this.el.classList.contains('acrylic')) {
+          this.dropdown.dropdownEl.classList.add('acrylic');
+        }
       }
     }
     _addOptionToValues(realOption, virtualOption) {

@@ -47,6 +47,10 @@
     &.blur-bg {
         background-color: rgba(var(--primary-color-rgb), .8);
         backdrop-filter: blur(7px);
+
+        &.acrylic {
+            background-image: $acrylic-background;
+        }
     }
 }
 

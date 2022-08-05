@@ -802,6 +802,10 @@
 
       if (this.el.classList.contains('blur-bg')) {
         this.modalEl.classList.add('blur-bg');
+
+        if (this.el.classList.contains('acrylic')) {
+          this.modalEl.classList.add('acrylic');
+        }
       }
 
       if (this.el.classList.contains('blur-overlay')) {

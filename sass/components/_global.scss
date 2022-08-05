@@ -522,10 +522,16 @@ table {
                 background-color: #e0e0e0;
             }
 
-            &.blur-bg th {
-                background-color: rgba(224, 224, 224, 0.6);
-                -webkit-backdrop-filter: blur(3px);
-                backdrop-filter: blur(3px);
+            &.blur-bg {
+                th {
+                    background-color: rgba(224, 224, 224, 0.6);
+                    -webkit-backdrop-filter: blur(3px);
+                    backdrop-filter: blur(3px);
+                }
+
+                &.acrylic th {
+                    background-image: $acrylic-background;
+                }
             }
         }
     }

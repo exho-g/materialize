@@ -77,6 +77,10 @@
 
       if (this.el.classList.contains('blur-bg')) {
         this.tooltipEl.classList.add('blur-bg');
+
+        if (this.el.classList.contains('acrylic')) {
+          this.tooltipEl.classList.add('acrylic');
+        }
       }
     }
 

@@ -2,6 +2,7 @@
     &:focus {
         outline: none;
     }
+
     @extend .z-depth-5;
     display: none;
     position: fixed;
@@ -16,22 +17,27 @@
     border-radius: 10px;
     will-change: top,
     opacity;
+
     @media #{$medium-and-down} {
         width: 80%;
     }
+
     h1,
     h2,
     h3,
     h4 {
         margin-top: 0;
     }
+
     .modal-content {
         padding: 24px;
         overflow-y: hidden;
     }
+
     .modal-close {
         cursor: pointer;
     }
+
     .modal-footer {
         border-radius: 0 0 10px 10px;
         background-color: #fafafa;
@@ -39,11 +45,13 @@
         height: 56px;
         width: 100%;
         text-align: right;
+
         .btn,
         .btn-flat {
             margin: 6px 0;
         }
     }
+
     .modal-header {
         border-radius: 10px 10px 0 0;
         padding: 10px 24px;
@@ -53,9 +61,15 @@
         font-size: 2em;
         background-color: #fafafa;
     }
+
     &.blur-bg {
         background: rgba(255, 255, 255, .7);
         backdrop-filter: blur(7px);
+
+        &.acrylic {
+            background-image: $acrylic-background;
+        }
+
         .modal-header,
         .modal-footer {
             background: rgba(255, 255, 255, .5);
@@ -75,6 +89,7 @@
     background: rgba(0, 0, 0, .6);
     display: none;
     will-change: opacity;
+
     &.blur-overlay {
         background: rgba(0, 0, 0, .5);
         backdrop-filter: blur(2px);
@@ -85,6 +100,7 @@
 .modal.modal-fixed-footer {
     padding: 0;
     height: 70%;
+
     .modal-content {
         position: absolute;
         height: calc(100% - 56px);
@@ -92,6 +108,7 @@
         width: 100%;
         overflow-y: auto;
     }
+
     .modal-footer {
         border-top: 1px solid rgba(0, 0, 0, .1);
         position: absolute;
@@ -103,11 +120,13 @@
 .modal.modal-fixed-header {
     padding: 0;
     height: 70%;
+
     .modal-header {
         position: absolute;
         z-index: 1;
         border-bottom: 1px solid rgba(0, 0, 0, .1);
     }
+
     .modal-content {
         position: absolute;
         padding: 0 24px;
@@ -138,9 +157,11 @@
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     will-change: bottom, opacity;
+
     @media #{$medium-and-down} {
         width: 80%;
     }
+
     @media #{$small-and-down} {
         width: 100%;
     }

@@ -2,15 +2,18 @@
     display: block;
     position: fixed;
     z-index: 10000;
+
     @media #{$small-and-down} {
         min-width: 100%;
         bottom: 0%;
     }
+
     @media #{$medium-only} {
         left: 5%;
         bottom: 7%;
         max-width: 90%;
     }
+
     @media #{$large-and-up} {
         top: 10%;
         right: 7%;
@@ -38,19 +41,27 @@
     align-items: center;
     justify-content: space-between;
     cursor: default;
+
     .toast-action {
         color: $toast-action-color;
         font-weight: 500;
         margin-right: -25px;
         margin-left: 3rem;
     }
+
     &.rounded {
         border-radius: 24px;
     }
+
     &.blur-bg {
         background-color: rgba(0, 0, 0, 0.7);
         backdrop-filter: blur(3px);
+
+        &.acrylic {
+            background-image: $acrylic-background;
+        }
     }
+
     @media #{$small-and-down} {
         width: 100%;
         border-radius: 0;

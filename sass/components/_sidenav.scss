@@ -18,6 +18,10 @@
     &.blur-bg {
         background-color: rgba($sidenav-bg-color, .6);
         backdrop-filter: blur(15px);
+
+        &.acrylic {
+            background-image: $acrylic-background;
+        }
     }
 
     // Right Align

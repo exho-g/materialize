@@ -75,6 +75,30 @@
             background: rgba(255, 255, 255, .5);
         }
     }
+
+    &.outlined {
+        border: 2px solid var(--secondary-color);
+
+        &.primary {
+            border-color: var(--primary-color);
+        }
+
+        &.success {
+            border-color: $success-color;
+        }
+
+        &.info {
+            border-color: $info-color;
+        }
+
+        &.danger {
+            border-color: $danger-color;
+        }
+
+        &.warning {
+            border-color: $warning-color;
+        }
+    }
 }
 
 .modal-overlay {
@@ -158,11 +182,21 @@
     border-top-left-radius: 10px;
     will-change: bottom, opacity;
 
+    &.outlined {
+        border-bottom: unset;
+    }
+
     @media #{$medium-and-down} {
         width: 80%;
     }
 
     @media #{$small-and-down} {
         width: 100%;
+
+        &.outlined {
+            border-left: unset;
+            border-right: unset;
+        }
     }
+
 }

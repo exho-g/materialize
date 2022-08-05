@@ -763,6 +763,30 @@
                 background-image: $acrylic-background-ondark;
             }
         }
+
+        &.outlined {
+            border-color: var(--secondary-color-light);
+
+            &.primary {
+                border-color: var(--primary-color-light);
+            }
+
+            &.success {
+                border-color: lighten($success-color, 20%);
+            }
+
+            &.info {
+                border-color: lighten($info-colorm, 20%);
+            }
+
+            &.danger {
+                border-color: lighten($danger-colorm, 20%);
+            }
+
+            &.warning {
+                border-color: lighten($warning-colorm, 20%);
+            }
+        }
     }
 
     .modal-overlay {

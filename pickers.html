@@ -151,12 +151,17 @@
                     <label for="birthdate2">Birthdate (Blur Background)</label>
                 </div>
                 <div class="input-field">
+                    <input id="birthdate2" type="text" class="datepicker blur-bg acrylic">
+                    <label for="birthdate2">Birthdate (Blur Background)</label>
+                </div>
+                <div class="input-field">
                     <input id="birthdate3" type="text" class="datepicker blur-overlay">
                     <label for="birthdate3">Birthdate (Blur Overlay)</label>
                 </div>
                 <pre><code class="language-markup">
   &lt;input type="text" class="datepicker">
   &lt;input type="text" class="datepicker blur-bg">
+  &lt;input type="text" class="datepicker blur-bg acrylic">
   &lt;input type="text" class="datepicker blur-overlay">
         </code></pre>
 
@@ -205,7 +210,8 @@
                                 <td>format</td>
                                 <td>String || Function</td>
                                 <td>'mmm dd, yyyy'</td>
-                                <td>The date output format for the input field value or a function taking the date and outputting the formatted date string.</td>
+                                <td>The date output format for the input field value or a function taking the date and
+                                    outputting the formatted date string.</td>
                             </tr>
                             <tr>
                                 <td>parse</td>
@@ -289,7 +295,8 @@
                                 <td>container</td>
                                 <td>Element || String</td>
                                 <td>null</td>
-                                <td>Specify a DOM element OR selector for a DOM element to render the calendar in, by default it will be placed before the input.</td>
+                                <td>Specify a DOM element OR selector for a DOM element to render the calendar in, by
+                                    default it will be placed before the input.</td>
                             </tr>
                             <tr>
                                 <td>showClearBtn</td>
@@ -307,13 +314,15 @@
                                 <td>events</td>
                                 <td>Array</td>
                                 <td>[]</td>
-                                <td>An array of string returned by `Date.toDateString()`, indicating there are events in the specified days.</td>
+                                <td>An array of string returned by `Date.toDateString()`, indicating there are events in
+                                    the specified days.</td>
                             </tr>
                             <tr>
                                 <td>onSelect</td>
                                 <td>Function</td>
                                 <td>null</td>
-                                <td>Callback function when date is selected, first parameter is the newly selected date.</td>
+                                <td>Callback function when date is selected, first parameter is the newly selected date.
+                                </td>
                             </tr>
                             <tr>
                                 <td>onOpen</td>
@@ -562,7 +571,8 @@
                     <h5>Methods</h5>
 
                     <blockquote>
-                        <p>Because jQuery is no longer a dependency, all the methods are called on the plugin instance. You can get the plugin instance like this: </p>
+                        <p>Because jQuery is no longer a dependency, all the methods are called on the plugin instance.
+                            You can get the plugin instance like this: </p>
                         <pre><code class="language-javascript col s12">
   var instance = M.Datepicker.getInstance(elem);
 
@@ -608,7 +618,8 @@ instance.toString();
                     <p>Set a date on the datepicker</p>
                     <h6>Arguments</h6>
                     <p>
-                        <b>Date (optional):</b> Date to set on the datepicker.</p>
+                        <b>Date (optional):</b> Date to set on the datepicker.
+                    </p>
                     <pre><code class="language-javascript col s12">
 instance.setDate(new Date());
           </code></pre>
@@ -620,7 +631,8 @@ instance.setDate(new Date());
                     <p>Change date view to a specific date on the datepicker</p>
                     <h6>Arguments</h6>
                     <p>
-                        <b>Date:</b> Date to show on the datepicker.</p>
+                        <b>Date:</b> Date to show on the datepicker.
+                    </p>
                     <pre><code class="language-javascript col s12">
 instance.gotoDate(new Date());
           </code></pre>
@@ -648,12 +660,17 @@ instance.destroy();
                     <label for="lunchtime2">Lunchtime (Blur Background)</label>
                 </div>
                 <div class="input-field">
+                    <input id="lunchtime2" type="text" class="timepicker blur-bg acrylic">
+                    <label for="lunchtime2">Lunchtime (Blur Background)</label>
+                </div>
+                <div class="input-field">
                     <input id="lunchtime3" type="text" class="timepicker blur-overlay">
                     <label for="lunchtime3">Lunchtime (Blur Overlay)</label>
                 </div>
                 <pre><code class="language-markup">
   &lt;input type="text" class="timepicker">
   &lt;input type="text" class="timepicker blur-bg">
+  &lt;input type="text" class="timepicker blur-bg acrylic">
   &lt;input type="text" class="timepicker blur-overlay">
         </code></pre>
 
@@ -702,7 +719,8 @@ instance.destroy();
                                 <td>container</td>
                                 <td>Element || String</td>
                                 <td>null</td>
-                                <td>Specify a DOM element OR selector for a DOM element to render the time picker in, by default it will be placed before the input.</td>
+                                <td>Specify a DOM element OR selector for a DOM element to render the time picker in, by
+                                    default it will be placed before the input.</td>
                             </tr>
                             <tr>
                                 <td>showClearBtn</td>
@@ -774,7 +792,8 @@ instance.destroy();
                                 <td>onSelect</td>
                                 <td>Function</td>
                                 <td>null</td>
-                                <td>Callback function when a time is selected, first parameter is the hour and the second is the minute.</td>
+                                <td>Callback function when a time is selected, first parameter is the hour and the
+                                    second is the minute.</td>
                             </tr>
                         </tbody>
                     </table>
@@ -852,7 +871,8 @@ instance.destroy();
                     <h5>Methods</h5>
 
                     <blockquote>
-                        <p>Because jQuery is no longer a dependency, all the methods are called on the plugin instance. You can get the plugin instance like this: </p>
+                        <p>Because jQuery is no longer a dependency, all the methods are called on the plugin instance.
+                            You can get the plugin instance like this: </p>
                         <pre><code class="language-javascript col s12">
   var instance = M.Timepicker.getInstance(elem);
 
@@ -889,7 +909,8 @@ instance.close();
                     <p>Show hours or minutes view on timepicker</p>
                     <h6>Arguments</h6>
                     <p>
-                        <b>String:</b> The name of the view you want to switch to, 'hours' or 'minutes'.</p>
+                        <b>String:</b> The name of the view you want to switch to, 'hours' or 'minutes'.
+                    </p>
                     <pre><code class="language-javascript col s12">
 instance.showView('hours');
           </code></pre>

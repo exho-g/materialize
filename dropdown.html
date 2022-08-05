@@ -142,10 +142,13 @@
                 <p class="caption">Add a dropdown list to any button. Make sure that the
                     <code class="language-markup">data-target</code> attribute matches the id in the
                     <code class="language-markup">&lt;ul></code> tag. You can add a divider with the
-                    <code class="language-markup">&lt;li class="divider">&lt;/li></code> tag. You can also add icons. Just add the icon inside the
-                    <code class="language-markup">anchor</code> tag.</p>
+                    <code class="language-markup">&lt;li class="divider">&lt;/li></code> tag. You can also add icons.
+                    Just add the icon inside the
+                    <code class="language-markup">anchor</code> tag.
+                </p>
                 <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
                 <a class='dropdown-trigger btn' href='#' data-target='dropdown2'>Drop Me (Blur)!</a>
+                <a class='dropdown-trigger btn' href='#' data-target='dropdown3'>Drop Me (Blur, Acrylic)!</a>
                 <ul id='dropdown1' class='dropdown-content'>
                     <li>
                         <a href="#!">one</a>
@@ -186,6 +189,26 @@
                             <i class="material-icons">cloud</i>five</a>
                     </li>
                 </ul>
+                <ul id='dropdown3' class='dropdown-content blur-bg acrylic'>
+                    <li>
+                        <a href="#!">one</a>
+                    </li>
+                    <li>
+                        <a href="#!">two</a>
+                    </li>
+                    <li class="divider" tabindex="-1"></li>
+                    <li>
+                        <a href="#!">three</a>
+                    </li>
+                    <li>
+                        <a href="#!">
+                            <i class="material-icons">view_module</i>four</a>
+                    </li>
+                    <li>
+                        <a href="#!">
+                            <i class="material-icons">cloud</i>five</a>
+                    </li>
+                </ul>
                 <br>
                 <br>
                 <pre style="padding-top: 0px;">
@@ -204,11 +227,25 @@
     &lt;li>&lt;a href="#!">&lt;i class="material-icons">view_module&lt;/i>four&lt;/a>&lt;/li>
     &lt;li>&lt;a href="#!">&lt;i class="material-icons">cloud&lt;/i>five&lt;/a>&lt;/li>
   &lt;/ul>
+  
   &lt;!-- Dropdown Trigger -->
   &lt;a class='dropdown-trigger btn' href='#' data-target='dropdown2'>Drop Me (Blur)!&lt;/a>
 
   &lt;!-- Dropdown Structure -->
   &lt;ul id='dropdown2' class='dropdown-content blur-bg'>
+    &lt;li>&lt;a href="#!">one&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#!">two&lt;/a>&lt;/li>
+    &lt;li class="divider" tabindex="-1">&lt;/li>
+    &lt;li>&lt;a href="#!">three&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#!">&lt;i class="material-icons">view_module&lt;/i>four&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#!">&lt;i class="material-icons">cloud&lt;/i>five&lt;/a>&lt;/li>
+  &lt;/ul>
+
+  &lt;!-- Dropdown Trigger -->
+  &lt;a class='dropdown-trigger btn' href='#' data-target='dropdown3'>Drop Me (Blur, Acrylic)!&lt;/a>
+
+  &lt;!-- Dropdown Structure -->
+  &lt;ul id='dropdown3' class='dropdown-content blur-bg acrylic'>
     &lt;li>&lt;a href="#!">one&lt;/a>&lt;/li>
     &lt;li>&lt;a href="#!">two&lt;/a>&lt;/li>
     &lt;li class="divider" tabindex="-1">&lt;/li>
@@ -343,7 +380,8 @@
             <div id="methods" class="scrollspy section">
                 <h3 class="header">Methods</h3>
                 <blockquote>
-                    <p>Because jQuery is no longer a dependency, all the methods are called on the plugin instance. You can get the plugin instance like this: </p>
+                    <p>Because jQuery is no longer a dependency, all the methods are called on the plugin instance. You
+                        can get the plugin instance like this: </p>
                     <pre style="padding-top: 0px;">
               <span class="copyMessage">Copied!</span>
               <i class="material-icons copyButton">content_copy</i>

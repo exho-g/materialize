@@ -5228,6 +5228,10 @@ $jscomp.polyfill = function (e, r, p, m) {
 
         if (this.el.classList.contains('blur-bg')) {
           this.tooltipEl.classList.add('blur-bg');
+
+          if (this.el.classList.contains('acrylic')) {
+            this.tooltipEl.classList.add('acrylic');
+          }
         }
       }
     }, {
@@ -9885,6 +9889,10 @@ $jscomp.polyfill = function (e, r, p, m) {
 
         if (this.el.classList.contains('blur-bg')) {
           this.modalEl.classList.add('blur-bg');
+
+          if (this.el.classList.contains('acrylic')) {
+            this.modalEl.classList.add('acrylic');
+          }
         }
 
         if (this.el.classList.contains('blur-overlay')) {
@@ -10366,6 +10374,10 @@ $jscomp.polyfill = function (e, r, p, m) {
 
         if (this.el.classList.contains('blur-bg')) {
           this.modalEl.classList.add('blur-bg');
+
+          if (this.el.classList.contains('acrylic')) {
+            this.modalEl.classList.add('acrylic');
+          }
         }
 
         if (this.el.classList.contains('blur-overlay')) {
@@ -12305,6 +12317,10 @@ $jscomp.polyfill = function (e, r, p, m) {
         //Add Blur background
         if (this.el.classList.contains('blur-bg')) {
           this.dropdown.dropdownEl.classList.add('blur-bg');
+
+          if (this.el.classList.contains('acrylic')) {
+            this.dropdown.dropdownEl.classList.add('acrylic');
+          }
         }
       }
     }, {

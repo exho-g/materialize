@@ -141,118 +141,171 @@
 
             <div id="introduction" class="section scrollspy">
                 <p> Select allows user input through specified options. Make sure you wrap it in a
-                    <code class="language-markup">.input-field</code> for proper alignment with other text fields. Remember that this is a jQuery plugin so make sure you
-                    <a href="#initialization">initialize</a> this in your document ready. You can also add the <code class="language-markup">blur-bg</code> class to the <code class="language-markup">&lt;select></code> tag to make the background blurred.</p>
+                    <code class="language-markup">.input-field</code> for proper alignment with other text fields.
+                    Remember that this is a jQuery plugin so make sure you
+                    <a href="#initialization">initialize</a> this in your document ready. You can also add the <code
+                        class="language-markup">blur-bg</code> class to the <code
+                        class="language-markup">&lt;select></code> tag to make the background blurred or <code
+                        class="language-markup">blur-bg acrylic</code> if you want the acrylic effect.
+                </p>
                 <div class="row">
                     <form class="col s12">
                         <div class="row">
-                            <div class="input-field col s12 m6">
+                            <div class="input-field col s12 m4">
                                 <select>
-                  <option value="" disabled selected>Choose your option</option>
-                  <option value="1">Option 1</option>
-                  <option value="2">Option 2</option>
-                  <option value="3">Option 3</option>
-                </select>
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
                                 <label>Materialize Select</label>
                             </div>
-                            <div class="input-field col s12 m6">
+                            <div class="input-field col s12 m4">
                                 <select class="blur-bg">
-                  <option value="" disabled selected>Choose your option</option>
-                  <option value="1">Option 1</option>
-                  <option value="2">Option 2</option>
-                  <option value="3">Option 3</option>
-                </select>
-                                <label>Materialize Select (Blurred Background)</label>
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
+                                <label>Materialize Select (Blurred)</label>
                             </div>
+                            <div class="input-field col s12 m4">
+                                <select class="blur-bg acrylic">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
+                                <label>Materialize Select (Blurred, Acrylic)</label>
+                            </div>
+
                             <div class="col s12">
                                 <br>
                                 <p>You can add the property
-                                    <code class="language-markup">multiple</code> to get the multiple select and select several options.</p>
+                                    <code class="language-markup">multiple</code> to get the multiple select and select
+                                    several options.
+                                </p>
                             </div>
-                            <div class="input-field col s12 m6">
+                            <div class="input-field col s12 m4">
                                 <select multiple>
-                  <option value="" disabled selected>Choose your option</option>
-                  <option value="1">Option 1</option>
-                  <option value="2">Option 2</option>
-                  <option value="3">Option 3</option>
-                </select>
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
                                 <label>Materialize Multiple Select</label>
                             </div>
-                            <div class="input-field col s12 m6">
+                            <div class="input-field col s12 m4">
                                 <select multiple class="blur-bg">
-                  <option value="" disabled selected>Choose your option</option>
-                  <option value="1">Option 1</option>
-                  <option value="2">Option 2</option>
-                  <option value="3">Option 3</option>
-                </select>
-                                <label>Materialize Multiple Select (Blurred Background)</label>
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
+                                <label>Materialize Multiple Select (Blurred)</label>
                             </div>
+                            <div class="input-field col s12 m4">
+                                <select multiple class="blur-bg acrylic">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
+                                <label>Materialize Multiple Select (Blurred, Acrylic)</label>
+                            </div>
+
                             <div class="col s12">
                                 <br>
                                 <p>We also support optgroups in our selects.</p>
                             </div>
-                            <div class="input-field col s12 m6">
+                            <div class="input-field col s12 m4">
                                 <select>
-                  <optgroup label="team 1">
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                  </optgroup>
-                  <optgroup label="team 2">
-                    <option value="3">Option 3</option>
-                    <option value="4">Option 4</option>
-                  </optgroup>
-                </select>
+                                    <optgroup label="team 1">
+                                        <option value="1">Option 1</option>
+                                        <option value="2">Option 2</option>
+                                    </optgroup>
+                                    <optgroup label="team 2">
+                                        <option value="3">Option 3</option>
+                                        <option value="4">Option 4</option>
+                                    </optgroup>
+                                </select>
                                 <label>Optgroups</label>
                             </div>
-                            <div class="input-field col s12 m6">
+                            <div class="input-field col s12 m4">
                                 <select class="blur-bg">
-                  <optgroup label="team 1">
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                  </optgroup>
-                  <optgroup label="team 2">
-                    <option value="3">Option 3</option>
-                    <option value="4">Option 4</option>
-                  </optgroup>
-                </select>
-                                <label>Optgroups (Blurred Background)</label>
+                                    <optgroup label="team 1">
+                                        <option value="1">Option 1</option>
+                                        <option value="2">Option 2</option>
+                                    </optgroup>
+                                    <optgroup label="team 2">
+                                        <option value="3">Option 3</option>
+                                        <option value="4">Option 4</option>
+                                    </optgroup>
+                                </select>
+                                <label>Optgroups (Blurred)</label>
                             </div>
+                            <div class="input-field col s12 m4">
+                                <select class="blur-bg acrylic">
+                                    <optgroup label="team 1">
+                                        <option value="1">Option 1</option>
+                                        <option value="2">Option 2</option>
+                                    </optgroup>
+                                    <optgroup label="team 2">
+                                        <option value="3">Option 3</option>
+                                        <option value="4">Option 4</option>
+                                    </optgroup>
+                                </select>
+                                <label>Optgroups (Blurred, Acrylic)</label>
+                            </div>
+
                             <div class="col s12">
                                 <br>
-                                <p>You can add icons to your options in any type of select. In the option you add the image source with the
-                                    <code class="language-markup">data-icon</code> attribute.</p>
+                                <p>You can add icons to your options in any type of select. In the option you add the
+                                    image source with the
+                                    <code class="language-markup">data-icon</code> attribute.
+                                </p>
                             </div>
-                            <div class="input-field col s12 m6">
+                            <div class="input-field col s12 m4">
                                 <select class="icons">
-                  <option value="" disabled selected>Choose your option</option>
-                  <option value="" data-icon="images/sample-1.jpg">example 1</option>
-                  <option value="" data-icon="images/office.jpg">example 2</option>
-                  <option value="" data-icon="images/yuna.jpg">example 3</option>
-                </select>
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="" data-icon="images/sample-1.jpg">example 1</option>
+                                    <option value="" data-icon="images/office.jpg">example 2</option>
+                                    <option value="" data-icon="images/yuna.jpg">example 3</option>
+                                </select>
                                 <label>Images in select</label>
                             </div>
-                            <div class="input-field col s12 m6">
+                            <div class="input-field col s12 m4">
                                 <select class="icons blur-bg">
-                  <option value="" disabled selected>Choose your option</option>
-                  <option value="" data-icon="images/sample-1.jpg" class="left">example 1</option>
-                  <option value="" data-icon="images/office.jpg" class="left">example 2</option>
-                  <option value="" data-icon="images/yuna.jpg" class="left">example 3</option>
-                </select>
-                                <label>Images in select with Blurred Background</label>
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="" data-icon="images/sample-1.jpg" class="left">example 1</option>
+                                    <option value="" data-icon="images/office.jpg" class="left">example 2</option>
+                                    <option value="" data-icon="images/yuna.jpg" class="left">example 3</option>
+                                </select>
+                                <label>Images in select (Blurred)</label>
+                            </div>
+                            <div class="input-field col s12 m4">
+                                <select class="icons blur-bg acrylic">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="" data-icon="images/sample-1.jpg" class="left">example 1</option>
+                                    <option value="" data-icon="images/office.jpg" class="left">example 2</option>
+                                    <option value="" data-icon="images/yuna.jpg" class="left">example 3</option>
+                                </select>
+                                <label>Images in select with (Blurred, Acrylic)</label>
                             </div>
                             <div class="col s12">
                                 <br>
                                 <p>You can add the class
-                                    <code class="language-markup">browser-default</code> to get the browser default.</p>
+                                    <code class="language-markup">browser-default</code> to get the browser default.
+                                </p>
                             </div>
                             <div class="col s12 m6">
                                 <label>Browser Select</label>
                                 <select class="browser-default">
-                  <option value="" disabled selected>Choose your option</option>
-                  <option value="1">Option 1</option>
-                  <option value="2">Option 2</option>
-                  <option value="3">Option 3</option>
-                </select>
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
                             </div>
                         </div>
                     </form>
@@ -325,7 +378,8 @@
 
             <div id="initialization" class="scrollspy section">
                 <h3 class="header">Initialization</h3>
-                <p>You must initialize the select element as shown below. In addition, you will need a separate call to init() for any dynamically generated select or any changes to an existing select.</p>
+                <p>You must initialize the select element as shown below. In addition, you will need a separate call to
+                    init() for any dynamically generated select or any changes to an existing select.</p>
 
                 <pre><code class="language-javascript">
   document.addEventListener('DOMContentLoaded', function() {
@@ -379,7 +433,8 @@
             <div id="methods" class="scrollspy section">
                 <h3 class="header">Methods</h3>
                 <blockquote>
-                    <p>Because jQuery is no longer a dependency, all the methods are called on the plugin instance. You can get the plugin instance like this: </p>
+                    <p>Because jQuery is no longer a dependency, all the methods are called on the plugin instance. You
+                        can get the plugin instance like this: </p>
                     <pre><code class="language-javascript col s12">
   var instance = M.FormSelect.getInstance(elem);
 
@@ -399,7 +454,8 @@
                 <p>Get selected values in an array.</p>
                 <h6>Return Value</h6>
                 <p>
-                    <b>Array:</b> Array of selected values.</p>
+                    <b>Array:</b> Array of selected values.
+                </p>
                 <pre><code class="language-javascript col s12">
 instance.getSelectedValues();
       </code></pre>
@@ -472,18 +528,21 @@ instance.destroy();
                         <br>
                         <h3 class="header">Disabled Styles</h3>
                         <p>You can also add
-                            <code class="language-markup">disabled</code> to the select element to make the whole thing disabled. Or if you add
-                            <code class="language-markup">disabled</code> to the options, the individual options will be unselectable. </p>
+                            <code class="language-markup">disabled</code> to the select element to make the whole thing
+                            disabled. Or if you add
+                            <code class="language-markup">disabled</code> to the options, the individual options will be
+                            unselectable.
+                        </p>
                     </div>
                     <form class="col s12 m6">
                         <div class="row">
                             <div class="col s12 input-field">
                                 <select disabled>
-                  <option value="" disabled selected>Choose your option</option>
-                  <option value="1">Option 1</option>
-                  <option value="2">Option 2</option>
-                  <option value="3">Option 3</option>
-                </select>
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
                                 <label>Materialize Disabled</label>
                             </div>
                         </div>
@@ -491,11 +550,11 @@ instance.destroy();
                             <div class="col s12">
                                 <label>Browser Disabled</label>
                                 <select class="browser-default" disabled>
-                  <option value="" disabled selected>Choose your option</option>
-                  <option value="1">Option 1</option>
-                  <option value="2">Option 2</option>
-                  <option value="3">Option 3</option>
-                </select>
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
                             </div>
                         </div>
                     </form>

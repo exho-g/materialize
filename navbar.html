@@ -433,10 +433,43 @@
                     your nav fixed. You can adjust the height of this outer div to change how much offset is on your
                     content.
                 </p>
+                <p>
+                    You can also add <code class="language-markup">blur-bg</code> to the <code
+                        class="language-markup">nav</code> element to add blur effect and also <code
+                        class="language-markup">blur-bg acrylic</code> if you want the acrylic effect.
+                </p>
+                <p>
+                    Please note that blur effect is only advisable to be used on fixed navbar since contents will pass
+                    under it.
+                </p>
 
                 <pre><code class="language-markup">
   &lt;div class="navbar-fixed">
     &lt;nav>
+      &lt;div class="nav-wrapper">
+        &lt;a href="#!" class="brand-logo">Logo&lt;/a>
+        &lt;ul class="right hide-on-med-and-down">
+          &lt;li>&lt;a href="sass.html">Sass&lt;/a>&lt;/li>
+          &lt;li>&lt;a href="badges.html">Components&lt;/a>&lt;/li>
+        &lt;/ul>
+      &lt;/div>
+    &lt;/nav>
+  &lt;/div>
+
+  &lt;div class="navbar-fixed">
+    &lt;nav class="blur-bg">
+      &lt;div class="nav-wrapper">
+        &lt;a href="#!" class="brand-logo">Logo&lt;/a>
+        &lt;ul class="right hide-on-med-and-down">
+          &lt;li>&lt;a href="sass.html">Sass&lt;/a>&lt;/li>
+          &lt;li>&lt;a href="badges.html">Components&lt;/a>&lt;/li>
+        &lt;/ul>
+      &lt;/div>
+    &lt;/nav>
+  &lt;/div>
+
+  &lt;div class="navbar-fixed">
+    &lt;nav class="blur-bg acrylic">
       &lt;div class="nav-wrapper">
         &lt;a href="#!" class="brand-logo">Logo&lt;/a>
         &lt;ul class="right hide-on-med-and-down">
@@ -457,6 +490,11 @@
                     <code class="language-markup">ul</code> dropdown structure into the page. Then, add an element to
                     trigger the dropdown menu. Make sure to supply the id of the dropdown structure to the
                     <code class="language-markup">data-target</code> attribute of the dropdown trigger.
+                </p>
+                <p>
+                    Please note that if you are using blur effect on the nav bar, the blur effect (if used) on dropdown
+                    will be ignored and will cause transparency instead of translucent. You can change the container of
+                    the dropdown to prevent this.
                 </p>
 
                 <!-- Dropdown Structure -->

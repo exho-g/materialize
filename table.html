@@ -304,18 +304,20 @@
                                 class="language-markup">class="sticky-header"</code> to the <code
                                 class="language-markup">&lt;tr></code> tag to make it stick to the top. You can
                             also add <code class="language-markup">class="blur-bg"</code> to the <code
-                                class="language-markup">&lt;tr></code> tag to make the header translucent.</p>
+                                class="language-markup">&lt;tr></code> tag to make the header translucent and <code
+                                class="language-markup">class="blur-bg acrylic"</code> if you want the acrylic effect.
+                        </p>
                         <p>To adjust the top position on where to stick the header, just add an inline css <code
                                 class="language-css">--sticky-header-top: 1px;</code> to the <code
                                 class="language-markup">&lt;th></code> or <code class="language-markup">&lt;td></code>
                             inside the <code class="language-css">tr.sticky-header</code>. You can change the 1px value
                             on whatever you want.</p>
-                        <p>Please note that the header will only stick if the elements inside the <code
-                                class="language-markup">&lt;tr></code> tag are <code
-                                class="language-markup">&lt;th></code> instead of <code
-                                class="language-markup">&lt;td></code> and
-                            the container of the table must not have <code
-                                class="language-css">overflow: auto|scroll</code>.
+                        <p>Please note that the header will only stick if the elements inside the
+                            <code class="language-markup">&lt;tr></code> tag are
+                            <code class="language-markup">&lt;th></code> instead of
+                            <code class="language-markup">&lt;td></code> and
+                            the container of the table must not have
+                            <code class="language-css">overflow: auto|scroll</code>.
                         </p>
                         <table class="sticky">
                             <thead>
@@ -326,6 +328,31 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <tr>
+                                    <td>Alvin</td>
+                                    <td>Eclair</td>
+                                    <td>$0.87</td>
+                                </tr>
+                                <tr>
+                                    <td>Alan</td>
+                                    <td>Jellybean</td>
+                                    <td>$3.76</td>
+                                </tr>
+                                <tr>
+                                    <td>Jonathan</td>
+                                    <td>Lollipop</td>
+                                    <td>$7.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Shannon</td>
+                                    <td>KitKat</td>
+                                    <td>$9.99</td>
+                                </tr>
+                                <tr class="sticky-header blur-bg acrylic">
+                                    <th>Name</th>
+                                    <th>Item Name</th>
+                                    <th>Item Price</th>
+                                </tr>
                                 <tr>
                                     <td>Alvin</td>
                                     <td>Eclair</td>

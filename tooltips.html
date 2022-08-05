@@ -140,25 +140,47 @@
 
             <!-- Tooltip Section -->
             <div id="introduction" class="scrollspy section">
-                <p>Tooltips are small, interactive, textual hints for mainly graphical elements. When using icons for actions you can use a tooltip to give people clarification on its function.</p>
+                <p>Tooltips are small, interactive, textual hints for mainly graphical elements. When using icons for
+                    actions you can use a tooltip to give people clarification on its function.</p>
                 <div class="row">
-                    <a href="#!" class="btn tooltipped col s4 offset-s4 l2 offset-l1" data-html="true" data-position="bottom" data-tooltip="I am a tooltip">
-          Bottom</a>
-                    <a href="#!" class="btn tooltipped col s4 offset-s4 l2 offset-l1" data-position="top" data-tooltip="I am a tooltip"> Top</a>
-                    <a href="#!" class="btn tooltipped col s4 offset-s4 l2 offset-l1" data-position="left" data-tooltip="I am a tooltip"> Left</a>
-                    <a href="#!" class="btn tooltipped col s4 offset-s4 l2 offset-l1" data-position="right" data-tooltip="I am a tooltip"> Right</a>
+                    <a href="#!" class="btn tooltipped col s4 offset-s4 l2 offset-l1" data-html="true"
+                        data-position="bottom" data-tooltip="I am a tooltip">
+                        Bottom</a>
+                    <a href="#!" class="btn tooltipped col s4 offset-s4 l2 offset-l1" data-position="top"
+                        data-tooltip="I am a tooltip"> Top</a>
+                    <a href="#!" class="btn tooltipped col s4 offset-s4 l2 offset-l1" data-position="left"
+                        data-tooltip="I am a tooltip"> Left</a>
+                    <a href="#!" class="btn tooltipped col s4 offset-s4 l2 offset-l1" data-position="right"
+                        data-tooltip="I am a tooltip"> Right</a>
                 </div>
-                <p>You can also add the <code class="language-markup">.blur-bg</code> class to the <code class="language-markup">.tooltipped</code> element to add blur background.</p>
+                <p>You can also add the <code class="language-markup">blur-bg</code> class to the <code
+                        class="language-markup">.tooltipped</code> element to add blur background or <code
+                        class="language-markup">blur-bg acrylic</code> if you want the acrylic effect.</p>
                 <div class="row">
-                    <a href="#!" class="btn tooltipped col s4 offset-s4 l2 offset-l1 blur-bg" data-position="top" data-tooltip="I am a tooltip"> Top</a>
-                    <a href="#!" class="btn tooltipped col s4 offset-s4 l2 offset-l1 blur-bg" data-position="right" data-tooltip="I am a tooltip"> Right</a>
-                    <a href="#!" class="btn tooltipped col s4 offset-s4 l2 offset-l1 blur-bg" data-html="true" data-position="bottom" data-tooltip="I am a tooltip">
-          Bottom</a>
-                    <a href="#!" class="btn tooltipped col s4 offset-s4 l2 offset-l1 blur-bg" data-position="left" data-tooltip="I am a tooltip"> Left</a>
+                    <a href="#!" class="btn tooltipped col s4 offset-s4 l2 offset-l1 blur-bg" data-position="top"
+                        data-tooltip="I am a tooltip"> Top</a>
+                    <a href="#!" class="btn tooltipped col s4 offset-s4 l2 offset-l1 blur-bg" data-position="right"
+                        data-tooltip="I am a tooltip"> Right</a>
+                    <a href="#!" class="btn tooltipped col s4 offset-s4 l2 offset-l1 blur-bg" data-html="true"
+                        data-position="bottom" data-tooltip="I am a tooltip">
+                        Bottom</a>
+                    <a href="#!" class="btn tooltipped col s4 offset-s4 l2 offset-l1 blur-bg" data-position="left"
+                        data-tooltip="I am a tooltip"> Left</a>
+                    <p>Acrylic effect</p>
+                    <a href="#!" class="btn tooltipped col s4 offset-s4 l2 offset-l1 blur-bg acrylic"
+                        data-position="top" data-tooltip="I am a tooltip"> Top</a>
+                    <a href="#!" class="btn tooltipped col s4 offset-s4 l2 offset-l1 blur-bg acrylic"
+                        data-position="right" data-tooltip="I am a tooltip"> Right</a>
+                    <a href="#!" class="btn tooltipped col s4 offset-s4 l2 offset-l1 blur-bg acrylic" data-html="true"
+                        data-position="bottom" data-tooltip="I am a tooltip">
+                        Bottom</a>
+                    <a href="#!" class="btn tooltipped col s4 offset-s4 l2 offset-l1 blur-bg acrylic"
+                        data-position="left" data-tooltip="I am a tooltip"> Left</a>
                 </div>
 
 
-                <p>Add the Tooltipped class to your element and add either top, bottom, left, right on data-tooltip to control the position.</p>
+                <p>Add the Tooltipped class to your element and add either top, bottom, left, right on data-tooltip to
+                    control the position.</p>
                 <pre><code class="language-markup">
   &lt;!-- data-position can be : bottom, top, left, or right -->
   &lt;!-- data-tooltip defines the tooltip text -->
@@ -225,7 +247,9 @@
                             <td>unsafeHTML</td>
                             <td>String</td>
                             <td>null</td>
-                            <td>HTML content that will be appended to to <code class="language-javascript">text</code>. Only use properly sanitized or otherwise trusted data for <code class="language-javascript">unsafeHTML</code>.</td>
+                            <td>HTML content that will be appended to to <code class="language-javascript">text</code>.
+                                Only use properly sanitized or otherwise trusted data for <code
+                                    class="language-javascript">unsafeHTML</code>.</td>
                         </tr>
                         <tr>
                             <td>html</td>
@@ -236,7 +260,9 @@
                                     (DEPRECATED): will be removed in a later release.
                                 </p>
                                 <p>
-                                    HTML content that will be appended to <code class="language-javascript">text</code>. Only use properly sanitized or otherwise trusted data for <code class="language-javascript">html</code>.
+                                    HTML content that will be appended to <code class="language-javascript">text</code>.
+                                    Only use properly sanitized or otherwise trusted data for <code
+                                        class="language-javascript">html</code>.
                                 </p>
                                 <p>
                                     Will be ignored if <code class="language-javascript">unsafeHTML</code> is set.
@@ -287,7 +313,8 @@
             <div id="methods" class="section scrollspy">
                 <h3 class="header">Methods</h3>
                 <blockquote>
-                    <p>Because jQuery is no longer a dependency, all the methods are called on the plugin instance. You can get the plugin instance like this: </p>
+                    <p>Because jQuery is no longer a dependency, all the methods are called on the plugin instance. You
+                        can get the plugin instance like this: </p>
                     <pre><code class="language-javascript col s12">
   var instance = M.Tooltip.getInstance(elem);
 

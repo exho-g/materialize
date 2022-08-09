@@ -17,7 +17,8 @@
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    color: rgba(0, 0, 0, .87);
+    color: #FFF;
+    //color: rgba(0, 0, 0, .87);
     background-color: var(--secondary-color);
 
     >.material-icons {
@@ -108,9 +109,10 @@
 
     &.outlined {
         background-color: transparent;
-        border: 2px solid rgba(0, 0, 0, .87);
+        border: 2px solid var(--secondary-color);
         box-shadow: unset;
         font-weight: normal;
+        color: var(--secondary-color);
 
         &.thick {
             border-width: 3px;
@@ -144,11 +146,12 @@
 
         &.light {
             border-color: #FFF;
+            color: #FFF;
         }
 
         &.dark,
         &.dark-light {
-            color: #222;
+            color: rgba(0, 0, 0, .87);
         }
     }
 

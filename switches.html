@@ -143,8 +143,8 @@
       <div id="switches" class="section scrollspy">
         <p>Switches are special checkboxes used for binary states such as on / off</p>
         <form action="#">
-        <p>
-            <div class="switch">
+          <p>
+          <div class="switch">
             <label>
               Off
               <input checked type="checkbox">
@@ -152,20 +152,31 @@
               On
             </label>
           </div>
-        </p>
-
-          <p>
-            <div class="switch">
-              <label>
-                Off
-                <input disabled type="checkbox">
-                <span class="lever"></span>
-                On
-              </label>
-            </div>
           </p>
 
-        <br>
+          <p>
+          <div class="switch">
+            <label>
+              Off
+              <input disabled type="checkbox">
+              <span class="lever"></span>
+              On
+            </label>
+          </div>
+          </p>
+
+          <p>
+          <div class="switch gen3">
+            <label>
+              Off
+              <input checked type="checkbox">
+              <span class="lever"></span>
+              On
+            </label>
+          </div>
+          </p>
+
+          <br>
         </form>
         <pre><code class="language-markup">
   &lt;!-- Switch -->
@@ -183,6 +194,16 @@
     &lt;label>
       Off
       &lt;input disabled type="checkbox">
+      &lt;span class="lever">&lt;/span>
+      On
+    &lt;/label>
+  &lt;/div>
+
+  &lt;!-- Switch Material Design 3 -->
+  &lt;div class="switch gen3">
+    &lt;label>
+      Off
+      &lt;input type="checkbox">
       &lt;span class="lever">&lt;/span>
       On
     &lt;/label>
@@ -205,7 +226,6 @@
 
   </div>
 </div>
-
     </main><footer class="page-footer docs-footer">
     <div class="container">
         <div class="row" style="margin-bottom: 0;">

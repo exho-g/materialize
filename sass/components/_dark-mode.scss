@@ -1278,7 +1278,7 @@
             background-color: rgba(255, 255, 255, .1);
         }
 
-        &:not(.outlined):not(.light):not(.dark) {
+        &:not(.outlined):not(.dark) {
             background-color: var(--secondary-color-darken-20);
 
             &.primary {
@@ -1301,13 +1301,17 @@
                 background-color: darken($danger-color, 20%);
             }
 
+            &.light {
+                color: #222;
+            }
+
             &.dark-light {
                 background-color: #FFF;
                 color: #222;
             }
         }
 
-        &.outlined:not(.dark) {
+        &.outlined:not(.dark):not(.light) {
             border-color: var(--secondary-color);
             color: var(--secondary-color-lighten-20);
 

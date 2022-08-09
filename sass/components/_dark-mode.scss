@@ -1279,7 +1279,7 @@
         }
 
         &:not(.outlined):not(.light):not(.dark) {
-            background-color: color('grey', 'darken-4');
+            background-color: var(--secondary-color-darken-20);
 
             &.primary {
                 background-color: var(--primary-color-darken-20);
@@ -1303,11 +1303,13 @@
 
             &.dark-light {
                 background-color: #FFF;
+                color: #222;
             }
         }
 
-        &.outlined {
-            border-color: color('grey', 'lighten-2');
+        &.outlined:not(.dark) {
+            border-color: var(--secondary-color);
+            color: var(--secondary-color-lighten-20);
 
             &.primary {
                 border-color: var(--primary-color);

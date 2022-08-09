@@ -34,6 +34,7 @@
 
     .btn-flat {
         background-color: rgba(0, 0, 0, .1);
+        color: #FFF;
     }
 
     &.primary,
@@ -95,6 +96,7 @@
 
     &.light {
         background-color: #FFF;
+        color: rgba(0, 0, 0, .87)
     }
 
     &.dark,
@@ -113,6 +115,10 @@
         box-shadow: unset;
         font-weight: normal;
         color: var(--secondary-color);
+
+        .btn-flat {
+            color: rgba(0, 0, 0, .87);
+        }
 
         &.thick {
             border-width: 3px;
@@ -152,6 +158,7 @@
         &.dark,
         &.dark-light {
             color: rgba(0, 0, 0, .87);
+            border-color: rgba(0, 0, 0, .87);
         }
     }
 

@@ -18,14 +18,13 @@
     -ms-flex-align: center;
     align-items: center;
     color: rgba(0, 0, 0, .87);
+    background-color: var(--secondary-color);
 
     >.material-icons {
         margin-right: 10px;
     }
 
     .btn,
-    .btn-small,
-    .btn-large,
     .btn-flat,
     .btn-soft,
     .btn-outlined {
@@ -40,7 +39,9 @@
     &.info,
     &.success,
     &.danger,
-    &.warning {
+    &.warning,
+    &.dark,
+    &.dark-light {
         .btn-flat {
             color: #FFF;
         }
@@ -91,6 +92,20 @@
         }
     }
 
+    &.light {
+        background-color: #FFF;
+    }
+
+    &.dark,
+    &.dark-light {
+        background-color: #222;
+        color: #FFF;
+
+        .content {
+            color: #FFF;
+        }
+    }
+
     &.outlined {
         background-color: transparent;
         border: 2px solid rgba(0, 0, 0, .87);
@@ -125,6 +140,15 @@
         &.warning {
             border-color: $warning-color;
             color: darken($warning-color, 10%);
+        }
+
+        &.light {
+            border-color: #FFF;
+        }
+
+        &.dark,
+        &.dark-light {
+            color: #222;
         }
     }
 

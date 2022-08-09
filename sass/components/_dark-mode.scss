@@ -1278,7 +1278,7 @@
             background-color: rgba(255, 255, 255, .1);
         }
 
-        &:not(.outlined) {
+        &:not(.outlined):not(.light):not(.dark) {
             background-color: color('grey', 'darken-4');
 
             &.primary {
@@ -1299,6 +1299,10 @@
 
             &.danger {
                 background-color: darken($danger-color, 20%);
+            }
+
+            &.dark-light {
+                background-color: #FFF;
             }
         }
 
@@ -1328,6 +1332,11 @@
             &.danger {
                 border-color: $danger-color;
                 color: lighten($danger-color, 20%);
+            }
+
+            &.dark-light {
+                border-color: #FFF;
+                color: #FFF;
             }
         }
 

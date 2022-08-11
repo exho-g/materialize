@@ -91,10 +91,9 @@ $secondary-color-light: var(--secondary-color-light) !default;
 $secondary-color-dark: var(--secondary-color-dark) !default;
 
 $success-color: color("green", "base") !default;
-$error-color: color("red", "base") !default;
-$info-color: map-get($blue, 'base') !default;
-$danger-color: map-get($red, 'darken-2') !default;
-$warning-color: map-get($orange, 'darken-2') !default;
+$info-color: color("blue", "base") !default;
+$danger-color: color("red", "base") !default;
+$warning-color: color("orange", "darken-2") !default;
 
 $link-color: var(--primary-color) !default;
 
@@ -189,7 +188,7 @@ $input-height: 3rem !default;
 $input-border-color: color("grey", "base") !default;
 $input-border: 1px solid $input-border-color  !default;
 $input-background: #fff !default;
-$input-error-color: $error-color  !default;
+$input-error-color: $danger-color  !default;
 $input-success-color: $success-color  !default;
 $input-focus-color: var(--secondary-color) !default;
 $input-font-size: 16px !default;

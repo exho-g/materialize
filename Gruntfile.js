@@ -650,6 +650,14 @@ module.exports = function (grunt) {
             distTemplates: {
                 src: 'templates',
                 dest: 'docs/templates'
+            },
+            updateDistCSS: {
+                src: 'docs/dist/css/materialize.min.css',
+                dest: 'dist/css/materialize.min.css'
+            },
+            updateDistJS: {
+                src: 'docs/dist/js/materialize.min.js',
+                dest: 'dist/js/materialize.min.js'
             }
         }
 
@@ -688,6 +696,8 @@ module.exports = function (grunt) {
         'babel:dist',
         'uglify:dist',
         'uglify:extras',
+        'copy:updateDistCSS',
+        'copy:updateDistJS',
         'usebanner:release',
         'compress:main',
         'compress:src',

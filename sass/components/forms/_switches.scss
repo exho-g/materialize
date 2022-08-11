@@ -83,16 +83,27 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
 }
 
 // Disabled Styles
-.switch input[type=checkbox][disabled]+.lever {
-  cursor: default;
-  background-color: rgba(0, 0, 0, .12);
+.switch label input[type=checkbox][disabled] {
+  +.lever {
+    cursor: default;
+    background-color: rgba(0, 0, 0, .12);
+
+    &::before,
+    &::after {
+      background-color: color('grey', 'base');
+    }
+  }
+
+  &:checked+.lever {
+
+    &::before,
+    &::after {
+      background-color: color('grey', 'lighten-1');
+    }
+  }
 }
 
-.switch label input[type=checkbox][disabled]+.lever:after,
-.switch label input[type=checkbox][disabled]:checked+.lever:after {
-  background-color: $input-disabled-solid-color;
-}
-
+// Switch Material Design 3
 .switch.md3 {
   label {
     .lever {

@@ -1047,7 +1047,7 @@
         &.md3 {
             label {
                 .lever {
-                    background-color: transparent;
+                    background-color: rgba(var(--secondary-color-rgb), 0.30);
                     border-color: var(--secondary-color-lighten-10);
 
                     &::before,

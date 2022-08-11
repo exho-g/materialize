@@ -98,19 +98,20 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
     .lever {
       background-color: unset;
       border: 2px solid var(--secondary-color);
-      width: 42px;
-      height: 24px;
+      width: 38px;
+      height: 20px;
 
       &::before,
       &::after {
         background-color: var(--secondary-color);
-        top: 3px;
-        left: 4px;
-        width: 14px;
-        height: 14px;
+        top: 2px;
+        left: 2px;
+        width: 12px;
+        height: 12px;
       }
 
       &::after {
+        background-color: unset;
         box-shadow: unset;
       }
     }
@@ -118,24 +119,24 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
     input[type=checkbox]:checked+.lever {
       background-color: var(--secondary-color);
 
-      &::after {
+      &::before {
         background-color: #FFF;
-        left: 20px;
+        left: 18px;
         width: 16px;
         height: 16px;
-        top: 2px;
+        top: 0;
       }
     }
 
     input[type=checkbox]:checked:not(:disabled)~.lever:active::before,
     input[type=checkbox]:checked:not(:disabled).tabbed:focus~.lever::before {
-      transform: scale(1.1);
+      transform: unset;
       background-color: unset;
     }
 
     input[type=checkbox]:not(:disabled)~.lever:active:before,
     input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
-      transform: scale(1.1);
+      transform: unset;
       background-color: unset;
     }
   }

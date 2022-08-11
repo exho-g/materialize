@@ -1024,8 +1024,23 @@
                 background-color: rgba(var(--secondary-color-rgb), 0.30);
             }
 
-            &[disabled]+.lever {
-                background-color: rgba(255, 255, 255, 0.15);
+            &[disabled] {
+                +.lever {
+                    background-color: rgba(255, 255, 255, 0.15);
+
+                    &::before,
+                    &::after {
+                        background-color: color('grey', 'darken-2');
+                    }
+                }
+
+                &:checked+.lever {
+
+                    &::before,
+                    &::after {
+                        background-color: color('grey', 'base');
+                    }
+                }
             }
         }
 

@@ -93,13 +93,14 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
   background-color: $input-disabled-solid-color;
 }
 
-.switch.gen3 {
+.switch.md3 {
   label {
     .lever {
       background-color: unset;
       border: 2px solid var(--secondary-color);
       width: 38px;
       height: 20px;
+      transition: border 0.3s ease, background 0.3s ease;
 
       &::before,
       &::after {
@@ -108,6 +109,7 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
         left: 2px;
         width: 12px;
         height: 12px;
+        transition: left 0.3s ease, background 0.3s ease, width 0.1s ease;
       }
 
       &::after {
@@ -119,6 +121,7 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
     input[type=checkbox]:checked+.lever {
       background-color: var(--secondary-color);
 
+      &::after,
       &::before {
         background-color: #FFF;
         left: 18px;
@@ -126,18 +129,51 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
         height: 16px;
         top: 0;
       }
+
+      &::after {
+        font-family: 'Material Icons';
+        content: 'done';
+        color: var(--secondary-color);
+        text-align: center;
+        line-height: 1.5;
+      }
     }
 
     input[type=checkbox]:checked:not(:disabled)~.lever:active::before,
     input[type=checkbox]:checked:not(:disabled).tabbed:focus~.lever::before {
-      transform: unset;
-      background-color: unset;
+
+      &::before,
+      &::after {
+        transform: unset;
+        background-color: #FFF;
+        width: 18px;
+        left: 16px;
+      }
     }
 
-    input[type=checkbox]:not(:disabled)~.lever:active:before,
-    input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
-      transform: unset;
-      background-color: unset;
+    input[type=checkbox]:not(:disabled)~.lever:active,
+    input[type=checkbox]:not(:disabled).tabbed:focus~.lever {
+
+      &::before,
+      &::after {
+        transform: unset;
+        background-color: var(--secondary-color);
+        width: 14px;
+      }
+    }
+
+    input[type=checkbox][disabled] {
+      +.lever {
+        border-color: $input-disabled-solid-color;
+      }
+
+      &:checked+.lever {
+        background-color: $input-disabled-solid-color;
+
+        &::after {
+          color: $input-disabled-solid-color;
+        }
+      }
     }
   }
 }

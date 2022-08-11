@@ -1005,28 +1005,56 @@
     }
 
     .switch {
-        [type=checkbox] {
+        label .lever {
+            background-color: color('grey', 'darken-3');
+        }
+
+        input[type=checkbox] {
             &:checked {
                 +span:before {
                     border: unset;
                 }
 
                 +.lever:after {
-                    background-color: var(--secondary-color-lighten-20);
+                    background-color: var(--secondary-color-lighten-10);
                 }
             }
 
             &:not(:disabled)~.lever:active:before {
                 background-color: rgba(var(--secondary-color-rgb), 0.30);
             }
+
+            &[disabled]+.lever {
+                background-color: rgba(255, 255, 255, 0.15);
+            }
         }
 
-        label .lever {
-            background-color: color('grey', 'darken-3');
-        }
+        &.md3 {
+            label {
+                .lever {
+                    background-color: transparent;
+                    border-color: var(--secondary-color-lighten-10);
 
-        input[type=checkbox][disabled]+.lever {
-            background-color: rgba(255, 255, 255, 0.15);
+                    &::before,
+                    &::after {
+                        background-color: var(--secondary-color-lighten-10);
+                    }
+                }
+
+                input[type=checkbox] {
+                    &:checked+.lever {
+                        background-color: var(--secondary-color-lighten-10);
+
+                        &::after {
+                            color: var(--secondary-color-lighten-10);
+                        }
+                    }
+
+                    &[disabled]+.lever {
+                        background-color: rgba(255, 255, 255, 0.15);
+                    }
+                }
+            }
         }
     }
 

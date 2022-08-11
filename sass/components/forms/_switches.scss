@@ -139,13 +139,13 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
       }
     }
 
-    input[type=checkbox]:checked:not(:disabled)~.lever:active::before,
-    input[type=checkbox]:checked:not(:disabled).tabbed:focus~.lever::before {
+    input[type=checkbox]:checked:not(:disabled)~.lever:active,
+    input[type=checkbox]:checked:not(:disabled).tabbed:focus~.lever {
 
       &::before,
       &::after {
         transform: unset;
-        background-color: #FFF;
+        background-color: var(--secondary-color);
         width: 18px;
         left: 16px;
       }

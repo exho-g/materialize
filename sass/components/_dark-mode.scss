@@ -1064,16 +1064,16 @@
                             background-color: #FFF;
                             color: var(--secondary-color-lighten-10);
                         }
-                    }
 
-                    &:not(:disabled) {
+                        &:not(:disabled) {
 
-                        ~.lever:active,
-                        &.tabbed:focus~.lever {
+                            ~.lever:active,
+                            &.tabbed:focus~.lever {
 
-                            &::before,
-                            &::after {
-                                background: #FFF;
+                                &::before,
+                                &::after {
+                                    background: #FFF;
+                                }
                             }
                         }
                     }

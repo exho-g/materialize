@@ -1046,12 +1046,43 @@
                         background-color: var(--secondary-color-lighten-10);
 
                         &::after {
+                            background-color: #FFF;
                             color: var(--secondary-color-lighten-10);
                         }
                     }
 
-                    &[disabled]+.lever {
-                        background-color: rgba(255, 255, 255, 0.15);
+                    &:not(:disabled) {
+
+                        ~.lever:active,
+                        &.tabbed:focus~.lever {
+
+                            &::before,
+                            &::after {
+                                background: #FFF;
+                            }
+                        }
+                    }
+
+                    &[disabled] {
+                        +.lever {
+                            background-color: color('grey', 'darken-4');
+                            border-color: color('grey', 'darken-3');
+
+                            &::before,
+                            &::after {
+                                background-color: color('grey', 'darken-3');
+                            }
+                        }
+
+                        &:checked+.lever {
+                            background-color: color('grey', 'darken-3');
+
+                            &::before,
+                            &::after {
+                                color: color('grey', 'darken-3');
+                                background-color: color('grey', 'base');
+                            }
+                        }
                     }
                 }
             }

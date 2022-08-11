@@ -1056,6 +1056,15 @@
                     }
                 }
 
+                ~.lever:active,
+                &.tabbed:focus~.lever {
+
+                    &::before,
+                    &::after {
+                        background-color: var(--secondary-color-lighten-10);
+                    }
+                }
+
                 input[type=checkbox] {
                     &:checked+.lever {
                         background-color: var(--secondary-color-lighten-10);

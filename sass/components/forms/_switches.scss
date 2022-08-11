@@ -134,6 +134,7 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
 
           &::after {
             font-family: 'Material Icons';
+            font-weight: bold;
             content: 'done';
             color: var(--secondary-color);
             text-align: center;

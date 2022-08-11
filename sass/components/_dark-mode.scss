@@ -265,10 +265,14 @@
 
         &.dark-light {
             color: #000;
-            background-color: #efefef;
+            background-color: #FAFAFA;
+
+            &:hover {
+                background-color: #EEE;
+            }
 
             &:focus {
-                background-color: #dedede;
+                background-color: #E0E0E0;
             }
         }
 
@@ -326,18 +330,23 @@
     }
 
     .btn-soft {
-        background-color: var(--secondary-color-darken-30);
+        background-color: var(--secondary-color-darken-25);
         color: var(--secondary-color-lighten-20);
 
         &:hover {
-            background-color: rgba(var(--secondary-color-rgb), 0.70);
+            background-color: var(--secondary-color-darken-30);
         }
 
         &.dark {
             color: #FFF;
+            background-color: rgba(20, 20, 20, 0.8);
 
             &:hover {
-                background-color: rgba(#000, 0.7);
+                background-color: rgba(50, 50, 50, 0.8);
+            }
+
+            &:focus {
+                background-color: rgba(70, 70, 70, 0.7);
             }
         }
 
@@ -363,10 +372,10 @@
         // }
         &.primary {
             color: var(--primary-color-lighten-25);
-            background-color: var(--primary-color-darken-30);
+            background-color: var(--primary-color-darken-25);
 
             &:hover {
-                background-color: rgba(var(--primary-color-darken-30), 0.7);
+                background-color: var(--primary-color-darken-30);
             }
         }
 
@@ -407,7 +416,7 @@
         }
     }
 
-    .btn-outlined:not(.light):not(.dark) {
+    .btn-outlined:not(.light):not(.dark):not(.dark-light) {
         border-color: var(--secondary-color-lighten-10);
         color: var(--secondary-color-lighten-10);
 
@@ -507,28 +516,32 @@
                 }
             }
         }
+    }
 
+    .btn-outlined {
+
+        &.light,
         &.dark-light {
-            color: rgb(200, 200, 200);
-            border-color: rgba(200, 200, 200);
+            color: rgb(240, 240, 240);
+            border-color: rgb(240, 240, 240);
 
             &:not(.as-badge) {
                 &:hover {
-                    background-color: rgba(255, 255, 255, 0.1);
+                    background-color: rgba(255, 255, 255, 0.2);
                 }
 
                 &:focus,
                 &:active {
-                    color: rgb(200, 200, 200);
                     background-color: rgba(255, 255, 255, 0.3);
                 }
             }
         }
-    }
 
-    .btn-outlined.light {
-        color: rgb(200, 200, 200);
-        border-color: rgba(200, 200, 200);
+        &.dark:not(.as-badge) {
+            &:hover {
+                background-color: rgba(#212121, 0.2);
+            }
+        }
     }
 
     // buttons disabled

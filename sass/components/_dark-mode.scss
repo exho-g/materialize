@@ -878,7 +878,21 @@
 
     //progress
     .progress {
-        background-color: var(--secondary-color-darken-30);
+        background-color: var(--secondary-color-darken-25);
+
+        .determinate,
+        .indeterminate {
+            background-color: var(--secondary-color-lighten-10);
+        }
+
+        &.primary {
+            background-color: var(--primary-color-darken-25);
+
+            .determinate,
+            .indeterminate {
+                background-color: var(--primary-color-lighten-10);
+            }
+        }
     }
 
     //pagination

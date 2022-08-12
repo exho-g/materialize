@@ -765,6 +765,7 @@ th {
     }
 
     &.primary {
+        background-color: var(--primary-color-lighten-30);
 
         .determinate,
         .indeterminate {

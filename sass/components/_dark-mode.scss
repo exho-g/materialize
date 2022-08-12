@@ -1412,10 +1412,7 @@
                 background-color: darken($danger-color, 20%);
             }
 
-            &.light {
-                color: #222;
-            }
-
+            &.light,
             &.dark-light {
                 background-color: #FFF;
                 color: #222;

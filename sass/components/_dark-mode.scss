@@ -113,17 +113,22 @@
         }
 
         li a:not(.brand-logo) {
-            color: var(--primary-color);
+            color: #FFF;
 
-            &:not(.brand-logo):not(.breadcrumb) {
-                color: #FFF;
-
-                &:hover {
-                    background-color: lighten(color('grey', 'darken-4'), 5%);
-                }
+            &:hover {
+                background-color: lighten(color('grey', 'darken-4'), 5%);
             }
+        }
 
-            &.breadcrumb {
+        .brand-logo {
+            img {
+                opacity: 1;
+            }
+        }
+
+        &.breadcrumbs {
+
+            .segment {
                 color: rgba(255, 255, 255, 0.5);
 
                 &:before {
@@ -134,26 +139,21 @@
                     color: var(--primary-color-lighten-10);
                 }
             }
-        }
 
-        .brand-logo {
-            img {
-                opacity: 1;
-            }
-        }
+            &.flat {
+                background-color: transparent;
 
-        &.flat {
-            background-color: transparent;
-
-            .breadcrumb {
-                color: rgba(255, 255, 255, .5);
-
-                &:before {
+                .segment {
                     color: rgba(255, 255, 255, .5);
-                }
 
-                &:last-child:before {
-                    color: var(--primary-color-lighten-10);
+                    &:before {
+                        color: rgba(255, 255, 255, .5);
+                    }
+
+                    &:last-child,
+                    &:last-child {
+                        color: var(--primary-color-lighten-10);
+                    }
                 }
             }
         }

@@ -763,6 +763,14 @@ th {
             animation-delay: 1.15s;
         }
     }
+
+    &.primary {
+
+        .determinate,
+        .indeterminate {
+            background-color: var(--primary-color);
+        }
+    }
 }
 
 @keyframes indeterminate {

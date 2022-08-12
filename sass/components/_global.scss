@@ -957,22 +957,22 @@ th {
 
 .br {
     &-s {
-        border-radius: 2px;
+        border-radius: 2px !important;
         overflow: hidden;
     }
 
     &-m {
-        border-radius: 5px;
+        border-radius: 5px !important;
         overflow: hidden;
     }
 
     &-l {
-        border-radius: 10px;
+        border-radius: 10px !important;
         overflow: hidden;
     }
 
     &-xl {
-        border-radius: 15px;
+        border-radius: 15px !important;
         overflow: hidden;
     }
 }

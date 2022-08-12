@@ -315,7 +315,8 @@ nav.breadcrumbs {
                 color: rgba(0, 0, 0, .5);
             }
 
-            &:last-child {
+            &:last-child,
+            &:last-child::before {
                 color: $primary-color;
             }
         }

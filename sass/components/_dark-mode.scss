@@ -135,7 +135,8 @@
                     color: rgba(255, 255, 255, 0.5);
                 }
 
-                &:last-child {
+                &:last-child,
+                &:last-child::before {
                     color: var(--primary-color-lighten-10);
                 }
             }

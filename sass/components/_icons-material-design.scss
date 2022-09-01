@@ -1,29 +1,36 @@
 /* This is needed for some mobile phones to display the Google Icon font properly */
-.material-icons {
+// .material-icons {
+//   text-rendering: optimizeLegibility;
+//   font-feature-settings: 'liga';
+
+//   &.s18 {
+//     font-size: 18px;
+//   }
+
+//   &.s24 {
+//     font-size: 24px;
+//   }
+
+//   &.s36 {
+//     font-size: 36px;
+//   }
+
+//   &.s48 {
+//     font-size: 48px;
+//   }
+// }
+
+.material-icons,
+.material-icons-two-one,
+.material-icons-outlined,
+.material-icons-round,
+.material-icons-sharp,
+.material-symbols-sharp,
+.material-symbols-rounded,
+.material-symbols-outlined {
   text-rendering: optimizeLegibility;
   font-feature-settings: 'liga';
 
-  &.s18 {
-    font-size: 18px;
-  }
-
-  &.s24 {
-    font-size: 24px;
-  }
-
-  &.s36 {
-    font-size: 36px;
-  }
-
-  &.s48 {
-    font-size: 48px;
-  }
-}
-
-.material-symbols-sharp,
-.material-symbols-round,
-.material-symbols-rounded,
-.material-symbols-outlined {
   &.s18 {
     font-size: 18px;
   }

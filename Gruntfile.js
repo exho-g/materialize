@@ -588,7 +588,7 @@ module.exports = function (grunt) {
                     position: 'top',
                     banner: '/*!\n * Materialize v' +
                         grunt.option('newver') +
-                        ' (https://iamjerichog.github.io/materialize)\n * Copyright 2014-2021 Materialize\n * MIT License (https://raw.githubusercontent.com/iamjerichog/materialize/master/LICENSE)\n */',
+                        ' (https://exho-g.github.io/materialize)\n * Copyright 2014-2021 Materialize\n * MIT License (https://raw.githubusercontent.com/exho-g/materialize/master/LICENSE)\n */',
                     linebreak: true
                 },
                 files: {

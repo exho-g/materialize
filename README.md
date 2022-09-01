@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://iamjerichog.github.io/materialize/">
-    <img src="https://iamjerichog.github.io/materialize/res/materialize.svg" width="150">
+  <a href="https://exho-g.github.io/materialize/">
+    <img src="https://exho-g.github.io/materialize/res/materialize.svg" width="150">
   </a>
 </p>
 
@@ -9,11 +9,11 @@
 <p align="center">
   Materialize, a CSS Framework based on material design.
   <br>
-  <a href="https://iamjerichog.github.io/materialize/"><strong>-- Browse the docs --</strong></a>
+  <a href="https://exho-g.github.io/materialize/"><strong>-- Browse the docs --</strong></a>
   <br>
   <br>
-  <a href="https://github.com/iamjerichog/materialize/actions/">
-    <img src="https://github.com/iamjerichog/materialize/actions/workflows/nightly.yml/badge.svg" alt="GitHub Actions badge">
+  <a href="https://github.com/exho-g/materialize/actions/">
+    <img src="https://github.com/exho-g/materialize/actions/workflows/nightly.yml/badge.svg" alt="GitHub Actions badge">
   </a>
 </p>
 
@@ -24,12 +24,12 @@
 - [Copyright and license](#copyright-and-license)
 
 ## Quickstart:
-Read the [getting started guide](https://iamjerichog.github.io/materialize/getting-started.html) for more information on how to use materialize.
+Read the [getting started guide](https://exho-g.github.io/materialize/getting-started.html) for more information on how to use materialize.
 
-- [Get the latest release](https://github.com/iamjerichog/materialize/tree/gh-pages/dist) of materialize directly from GitHub.
+- [Get the latest release](https://github.com/exho-g/materialize/tree/gh-pages/dist) of materialize directly from GitHub.
 
 ## Documentation
-To check the documentation, click [here](https://iamjerichog.github.io/materialize).
+To check the documentation, click [here](https://exho-g.github.io/materialize).
 
 ## Supported Browsers:
 Materialize is compatible with:

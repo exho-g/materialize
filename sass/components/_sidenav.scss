@@ -84,13 +84,31 @@
         &>i,
         &>[class^="mdi-"],
         li>a>[class*="mdi-"],
-        &>i.material-icons {
-            float: left;
-            height: $sidenav-item-height;
-            line-height: $sidenav-line-height;
-            margin: 0 ($sidenav-padding * 2) 0 0;
-            width: $sidenav-item-height * 0.5;
-            color: rgba(0, 0, 0, .54);
+        &> {
+
+            .material-icons,
+            .material-icons-two-one,
+            .material-icons-outlined,
+            .material-icons-round,
+            .material-icons-sharp,
+            .material-symbols-sharp,
+            .material-symbols-rounded,
+            .material-symbols-outlined,
+            .fa,
+            .fa-duotone,
+            .fa-light,
+            .fa-regular,
+            .fa-solid,
+            .fa-thin,
+            .fa-sharp,
+            .fa-brands {
+                float: left;
+                height: $sidenav-item-height;
+                line-height: $sidenav-line-height;
+                margin: 0 ($sidenav-padding * 2) 0 0;
+                width: $sidenav-item-height * 0.5;
+                color: rgba(0, 0, 0, .54);
+            }
         }
     }
 

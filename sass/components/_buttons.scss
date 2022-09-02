@@ -20,7 +20,22 @@
         font-size: 12px;
         padding: 0 12px;
 
-        i {
+        .material-icons,
+        .material-icons-two-one,
+        .material-icons-outlined,
+        .material-icons-round,
+        .material-icons-sharp,
+        .material-symbols-sharp,
+        .material-symbols-rounded,
+        .material-symbols-outlined,
+        .fa,
+        .fa-duotone,
+        .fa-light,
+        .fa-regular,
+        .fa-solid,
+        .fa-thin,
+        .fa-sharp,
+        .fa-brands {
             font-size: .8rem;
 
             &.right {
@@ -38,7 +53,22 @@
         line-height: $button-small-height;
         font-size: $button-small-font-size;
 
-        i {
+        .material-icons,
+        .material-icons-two-one,
+        .material-icons-outlined,
+        .material-icons-round,
+        .material-icons-sharp,
+        .material-symbols-sharp,
+        .material-symbols-rounded,
+        .material-symbols-outlined,
+        .fa,
+        .fa-duotone,
+        .fa-light,
+        .fa-regular,
+        .fa-solid,
+        .fa-thin,
+        .fa-sharp,
+        .fa-brands {
             font-size: $button-small-icon-font-size;
         }
     }
@@ -49,7 +79,22 @@
         font-size: $button-large-font-size;
         padding: 0 28px;
 
-        i {
+        .material-icons,
+        .material-icons-two-one,
+        .material-icons-outlined,
+        .material-icons-round,
+        .material-icons-sharp,
+        .material-symbols-sharp,
+        .material-symbols-rounded,
+        .material-symbols-outlined,
+        .fa,
+        .fa-duotone,
+        .fa-light,
+        .fa-regular,
+        .fa-solid,
+        .fa-thin,
+        .fa-sharp,
+        .fa-brands {
             font-size: $button-large-icon-font-size;
         }
     }
@@ -395,8 +440,26 @@ button.btn-floating {
 
     &.toolbar {
         &.active {
-            &>a i {
-                opacity: 0;
+            &>a {
+
+                .material-icons,
+                .material-icons-two-one,
+                .material-icons-outlined,
+                .material-icons-round,
+                .material-icons-sharp,
+                .material-symbols-sharp,
+                .material-symbols-rounded,
+                .material-symbols-outlined,
+                .fa,
+                .fa-duotone,
+                .fa-light,
+                .fa-regular,
+                .fa-solid,
+                .fa-thin,
+                .fa-sharp,
+                .fa-brands {
+                    opacity: 0;
+                }
             }
         }
 
@@ -428,7 +491,22 @@ button.btn-floating {
                     line-height: $button-floating-large-size;
                     z-index: 1;
 
-                    i {
+                    .material-icons,
+                    .material-icons-two-one,
+                    .material-icons-outlined,
+                    .material-icons-round,
+                    .material-icons-sharp,
+                    .material-symbols-sharp,
+                    .material-symbols-rounded,
+                    .material-symbols-outlined,
+                    .fa,
+                    .fa-duotone,
+                    .fa-light,
+                    .fa-regular,
+                    .fa-solid,
+                    .fa-thin,
+                    .fa-sharp,
+                    .fa-brands {
                         line-height: inherit;
                     }
                 }

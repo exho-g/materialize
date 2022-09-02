@@ -63,10 +63,10 @@ textarea.materialize-textarea {
   }
 
   // Hide helper text on data message
-  &.valid ~ .helper-text[data-success],
-  &:focus.valid ~ .helper-text[data-success],
-  &.invalid ~ .helper-text[data-error],
-  &:focus.invalid ~ .helper-text[data-error] {
+  &.valid~.helper-text[data-success],
+  &:focus.valid~.helper-text[data-success],
+  &.invalid~.helper-text[data-error],
+  &:focus.invalid~.helper-text[data-error] {
     @extend %hidden-text;
   }
 
@@ -77,11 +77,12 @@ textarea.materialize-textarea {
   }
 
   // Custom Success Message
-  &.valid ~ .helper-text:after,
-  &:focus.valid ~ .helper-text:after {
+  &.valid~.helper-text:after,
+  &:focus.valid~.helper-text:after {
     @extend %custom-success-message;
   }
-  &:focus.valid ~ label {
+
+  &:focus.valid~label {
     color: $input-success-color;
   }
 
@@ -92,21 +93,22 @@ textarea.materialize-textarea {
   }
 
   // Custom Error message
-  &.invalid ~ .helper-text:after,
-  &:focus.invalid ~ .helper-text:after {
+  &.invalid~.helper-text:after,
+  &:focus.invalid~.helper-text:after {
     @extend %custom-error-message;
   }
-  &:focus.invalid ~ label {
+
+  &:focus.invalid~label {
     color: $input-error-color;
   }
 
   // Full width label when using validate for error messages
-  &.validate + label {
+  &.validate+label {
     width: 100%;
   }
 
   // Form Message Shared Styles
-  & + label:after {
+  &+label:after {
     @extend %input-after-style;
   }
 }
@@ -117,23 +119,28 @@ textarea.materialize-textarea {
   border-bottom: 1px solid $input-success-color;
   box-shadow: 0 1px 0 0 $input-success-color;
 }
+
 %invalid-input-style {
   border-bottom: $input-invalid-border;
   box-shadow: 0 1px 0 0 $input-error-color;
 }
+
 %hidden-text {
   color: transparent;
   user-select: none;
   pointer-events: none;
 }
+
 %custom-success-message {
   content: attr(data-success);
   color: $input-success-color;
 }
+
 %custom-error-message {
   content: attr(data-error);
   color: $input-error-color;
 }
+
 %input-after-style {
   display: block;
   content: "";
@@ -147,6 +154,7 @@ textarea.materialize-textarea {
 
 // Styling for input field wrapper
 .input-field {
+
   // Inline styles
   &.inline {
     display: inline-block;
@@ -165,10 +173,10 @@ textarea.materialize-textarea {
       left: $gutter-width * 0.5;
     }
 
-    .prefix ~ label,
-    .prefix ~ .validate ~ label,
-    .suffix ~ label,
-    .suffix ~ .validate ~ label  {
+    .prefix~label,
+    .prefix~.validate~label,
+    .suffix~label,
+    .suffix~.validate~label {
       width: calc(100% - 3rem - #{$gutter-width});
     }
   }
@@ -177,7 +185,7 @@ textarea.materialize-textarea {
   margin-top: 1rem;
   margin-bottom: 1rem;
 
-  & > label {
+  &>label {
     color: $input-border-color;
     position: absolute;
     top: 0;
@@ -196,9 +204,9 @@ textarea.materialize-textarea {
   }
 
   // Autofill + date + time inputs
-  & > input[type]:-webkit-autofill:not(.browser-default):not([type="search"]) + label,
-  & > input[type=date]:not(.browser-default) + label,
-  & > input[type=time]:not(.browser-default) + label {
+  &>input[type]:-webkit-autofill:not(.browser-default):not([type="search"])+label,
+  &>input[type=date]:not(.browser-default)+label,
+  &>input[type=time]:not(.browser-default)+label {
     transform: translateY(-14px) scale(.8);
     transform-origin: 0 0;
   }
@@ -215,45 +223,52 @@ textarea.materialize-textarea {
     min-height: 18px;
     display: block;
     font-size: 12px;
-    color: rgba(0,0,0,.54);
+    color: rgba(0, 0, 0, .54);
   }
 
   // Prefix Icons
-  .prefix, .suffix {
+  .prefix,
+  .suffix {
     position: absolute;
     width: $input-height;
     font-size: $input-icon-size;
     transition: color .2s;
     top: ($input-height - $input-icon-size) * 0.5;
 
-    &.active { color: $input-focus-color; }
+    &.active {
+      color: $input-focus-color;
+    }
   }
 
-  .prefix ~ input,
-  .prefix ~ textarea,
-  .prefix ~ .select-wrapper,
-  .prefix ~ label,
-  .prefix ~ .validate ~ label,
-  .prefix ~ .helper-text,
-  .prefix ~ .autocomplete-content {
+  .prefix~input,
+  .prefix~textarea,
+  .prefix~.select-wrapper,
+  .prefix~label,
+  .prefix~.validate~label,
+  .prefix~.helper-text,
+  .prefix~.autocomplete-content {
     margin-left: 3rem;
     width: 92%;
     width: calc(100% - 3rem);
   }
 
-  .prefix ~ label { margin-left: 3rem; }
+  .prefix~label {
+    margin-left: 3rem;
+  }
 
   @media #{$medium-and-down} {
-    .prefix ~ input,
-    .suffix ~ input {
+
+    .prefix~input,
+    .suffix~input {
       width: 86%;
       width: calc(100% - 3rem);
     }
   }
 
   @media #{$small-and-down} {
-    .prefix ~ input,
-    .suffix ~ input {
+
+    .prefix~input,
+    .suffix~input {
       width: 80%;
       width: calc(100% - 3rem);
     }
@@ -265,19 +280,21 @@ textarea.materialize-textarea {
     right: 0;
   }
 
-  .suffix ~ input,
-  .suffix ~ textarea,
-  .suffix ~ .select-wrapper,
-  .suffix ~ label,
-  .suffix ~ .validate ~ label,
-  .suffix ~ .helper-text,
-  .suffix ~ .autocomplete-content {
+  .suffix~input,
+  .suffix~textarea,
+  .suffix~.select-wrapper,
+  .suffix~label,
+  .suffix~.validate~label,
+  .suffix~.helper-text,
+  .suffix~.autocomplete-content {
     margin-right: 3rem;
     width: 92%;
     width: calc(100% - 3rem);
   }
 
-  .suffix ~ label { margin-right: 3rem; }
+  .suffix~label {
+    margin-right: 3rem;
+  }
 
 }
 
@@ -302,27 +319,63 @@ textarea.materialize-textarea {
     box-shadow: none;
     color: #444;
 
-    & + label i,
-    & ~ .mdi-navigation-close,
-    & ~ .material-icons {
-      color: #444;
+    &+label i,
+    &~.mdi-navigation-close,
+    &~ {
+
+      .material-icons,
+      .material-icons-two-one,
+      .material-icons-outlined,
+      .material-icons-round,
+      .material-icons-sharp,
+      .material-symbols-sharp,
+      .material-symbols-rounded,
+      .material-symbols-outlined,
+      .fa,
+      .fa-duotone,
+      .fa-light,
+      .fa-regular,
+      .fa-solid,
+      .fa-thin,
+      .fa-sharp,
+      .fa-brands {
+        color: #444;
+      }
     }
   }
 
-  & + .label-icon {
+  &+.label-icon {
     transform: none;
     left: 1rem;
   }
 
-  & ~ .mdi-navigation-close,
-  & ~ .material-icons {
-    position: absolute;
-    top: 0;
-    right: 1rem;
-    color: transparent;
-    cursor: pointer;
-    font-size: $input-icon-size;
-    transition: .3s color;
+  &~.mdi-navigation-close,
+  &~ {
+
+    .material-icons,
+    .material-icons-two-one,
+    .material-icons-outlined,
+    .material-icons-round,
+    .material-icons-sharp,
+    .material-symbols-sharp,
+    .material-symbols-rounded,
+    .material-symbols-outlined,
+    .fa,
+    .fa-duotone,
+    .fa-light,
+    .fa-regular,
+    .fa-solid,
+    .fa-thin,
+    .fa-sharp,
+    .fa-brands {
+      position: absolute;
+      top: 0;
+      right: 1rem;
+      color: transparent;
+      cursor: pointer;
+      font-size: $input-icon-size;
+      transition: .3s color;
+    }
   }
 }
 
@@ -337,8 +390,10 @@ textarea {
 
   &.materialize-textarea {
     line-height: normal;
-    overflow-y: hidden; /* prevents scroll bar flash */
-    padding: .8rem 0 .8rem 0; /* prevents text jump on Enter keypress */
+    overflow-y: hidden;
+    /* prevents scroll bar flash */
+    padding: .8rem 0 .8rem 0;
+    /* prevents text jump on Enter keypress */
     resize: none;
     min-height: $input-height;
     box-sizing: border-box;
@@ -350,8 +405,10 @@ textarea {
   visibility: hidden;
   white-space: pre-wrap;
   word-wrap: break-word;
-  overflow-wrap: break-word; /* future version of deprecated 'word-wrap' */
-  padding-top: 1.2rem; /* prevents text jump on Enter keypress */
+  overflow-wrap: break-word;
+  /* future version of deprecated 'word-wrap' */
+  padding-top: 1.2rem;
+  /* prevents text jump on Enter keypress */
 
   // Reduces repaints
   position: absolute;
@@ -363,7 +420,9 @@ textarea {
 /* Autocomplete */
 .autocomplete-content {
   li {
-    .highlight { color: #444; }
+    .highlight {
+      color: #444;
+    }
 
     img {
       height: $dropdown-item-height - 10;

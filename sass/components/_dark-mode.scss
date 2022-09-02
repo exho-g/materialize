@@ -548,15 +548,12 @@
     // buttons disabled
     .btn.disabled,
     .btn-floating.disabled,
-    .btn-small.disabled,
     .btn-soft.disabled,
     .btn:disabled,
     .btn-floating:disabled,
-    .btn-small:disabled,
     .btn-soft:disabled,
     .btn[disabled],
     .btn-floating[disabled],
-    .btn-small[disabled],
     .btn-soft[disabled] {
         background-color: rgba($button-disabled-background, 0.2) !important;
         color: rgba($button-disabled-color, 0.3) !important;

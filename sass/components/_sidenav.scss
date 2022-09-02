@@ -59,14 +59,12 @@
         }
 
         &.btn,
-        &.btn-large,
         &.btn-flat,
         &.btn-floating {
             margin: 10px 15px;
         }
 
         &.btn,
-        &.btn-large,
         &.btn-floating {
             color: $button-raised-color;
         }
@@ -75,8 +73,7 @@
             color: $button-flat-color;
         }
 
-        &.btn:hover,
-        &.btn-large:hover {
+        &.btn:hover {
             background-color: var(--secondary-color-lighten-5);
         }
 

@@ -548,17 +548,14 @@
     // buttons disabled
     .btn.disabled,
     .btn-floating.disabled,
-    .btn-large.disabled,
     .btn-small.disabled,
     .btn-soft.disabled,
     .btn:disabled,
     .btn-floating:disabled,
-    .btn-large:disabled,
     .btn-small:disabled,
     .btn-soft:disabled,
     .btn[disabled],
     .btn-floating[disabled],
-    .btn-large[disabled],
     .btn-small[disabled],
     .btn-soft[disabled] {
         background-color: rgba($button-disabled-background, 0.2) !important;
@@ -1766,8 +1763,6 @@
 }
 
 .btn,
-.btn-small,
-.btn-large,
 .btn-soft,
 .btn-outlined,
 .btn-flat {

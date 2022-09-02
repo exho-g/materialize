@@ -71,12 +71,6 @@ ul.stepper {
                     }
                 }
 
-                .btn-large {
-                    &:not(:last-child) {
-                        margin-right: 5px;
-                    }
-                }
-
                 .btn {
                     &:not(:last-child) {
                         margin-right: 5px;
@@ -300,13 +294,6 @@ ul.stepper {
                     flex-direction: row-reverse;
 
                     .btn-flat {
-                        &:not(:last-child) {
-                            margin-left: 5px;
-                            margin-right: 0;
-                        }
-                    }
-
-                    .btn-large {
                         &:not(:last-child) {
                             margin-left: 5px;
                             margin-right: 0;

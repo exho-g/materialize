@@ -70,20 +70,14 @@
 // Disabled shared style
 .btn.disabled,
 .btn-floating.disabled,
-//.btn-large.disabled,
-//.btn-small.disabled,
 .btn-flat.disabled,
 .btn-soft.disabled,
 .btn:disabled,
 .btn-floating:disabled,
-//.btn-large:disabled,
-//.btn-small:disabled,
 .btn-flat:disabled,
 .btn-soft:disabled,
 .btn[disabled],
 .btn-floating[disabled],
-//.btn-large[disabled],
-//.btn-small[disabled],
 .btn-flat[disabled],
 .btn-soft[disabled] {
     pointer-events: none;
@@ -135,8 +129,6 @@
 // Shared icon styles
 .btn,
 .btn-floating,
-//.btn-large,
-//.btn-small,
 .btn-flat,
 .btn-soft,
 .btn-outlined {
@@ -776,29 +768,6 @@ button.btn-floating {
         }
     }
 }
-
-// // Large button
-// .btn-large {
-//     @extend .btn;
-//     height: $button-large-height;
-//     line-height: $button-large-height;
-//     font-size: $button-large-font-size;
-//     padding: 0 28px;
-//     i {
-//         font-size: $button-large-icon-font-size;
-//     }
-// }
-
-// // Small button
-// .btn-small {
-//     @extend .btn;
-//     height: $button-small-height;
-//     line-height: $button-small-height;
-//     font-size: $button-small-font-size;
-//     i {
-//         font-size: $button-small-icon-font-size;
-//     }
-// }
 
 // Block button
 .block {

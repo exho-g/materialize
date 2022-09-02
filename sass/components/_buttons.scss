@@ -180,7 +180,22 @@
     font-size: $button-font-size;
     outline: 0;
 
-    i {
+    .material-icons,
+    .material-icons-two-one,
+    .material-icons-outlined,
+    .material-icons-round,
+    .material-icons-sharp,
+    .material-symbols-sharp,
+    .material-symbols-rounded,
+    .material-symbols-outlined,
+    .fa,
+    .fa-duotone,
+    .fa-light,
+    .fa-regular,
+    .fa-solid,
+    .fa-thin,
+    .fa-sharp,
+    .fa-brands {
         font-size: $button-icon-font-size;
         line-height: inherit;
     }
@@ -300,53 +315,6 @@
 
 // Floating button
 .btn-floating {
-    &:hover {
-        background-color: $button-floating-background-hover;
-        @extend .z-depth-1-half;
-    }
-
-    &:before {
-        border-radius: 0;
-    }
-
-    &.large {
-        &.halfway-fab {
-            bottom: -$button-floating-large-size * 0.5;
-        }
-
-        width: $button-floating-large-size;
-        height: $button-floating-large-size;
-        padding: 0;
-
-        i {
-            line-height: $button-floating-large-size;
-        }
-    }
-
-    &.small {
-        &.halfway-fab {
-            bottom: -$button-floating-small-size * 0.5;
-        }
-
-        width: $button-floating-small-size;
-        height: $button-floating-small-size;
-
-        i {
-            line-height: $button-floating-small-size;
-        }
-    }
-
-    &.halfway-fab {
-        &.left {
-            right: auto;
-            left: 24px;
-        }
-
-        position: absolute;
-        right: 24px;
-        bottom: -$button-floating-size * 0.5;
-    }
-
     display: inline-block;
     color: $button-floating-color;
     position: relative;
@@ -363,13 +331,118 @@
     cursor: pointer;
     vertical-align: middle;
 
-    i {
+    &:hover {
+        background-color: $button-floating-background-hover;
+        @extend .z-depth-1-half;
+    }
+
+    &:before {
+        border-radius: 0;
+    }
+
+    &.halfway-fab {
+        &.left {
+            right: auto;
+            left: 24px;
+        }
+
+        position: absolute;
+        right: 24px;
+        bottom: -$button-floating-size * 0.5;
+    }
+
+    &.square {
+        border-radius: $button-floating-square-default-radius;
+    }
+
+    .material-icons,
+    .material-icons-two-one,
+    .material-icons-outlined,
+    .material-icons-round,
+    .material-icons-sharp,
+    .material-symbols-sharp,
+    .material-symbols-rounded,
+    .material-symbols-outlined,
+    .fa,
+    .fa-duotone,
+    .fa-light,
+    .fa-regular,
+    .fa-solid,
+    .fa-thin,
+    .fa-sharp,
+    .fa-brands {
         width: inherit;
         display: inline-block;
         text-align: center;
         color: $button-floating-color;
         font-size: $button-large-icon-font-size;
         //line-height: $button-floating-size;
+    }
+
+    &.large {
+        &.halfway-fab {
+            bottom: -$button-floating-large-size * 0.5;
+        }
+
+        &.square {
+            border-radius: $button-floating-square-large-radius;
+        }
+
+        width: $button-floating-large-size;
+        height: $button-floating-large-size;
+        padding: 0;
+
+        .material-icons,
+        .material-icons-two-one,
+        .material-icons-outlined,
+        .material-icons-round,
+        .material-icons-sharp,
+        .material-symbols-sharp,
+        .material-symbols-rounded,
+        .material-symbols-outlined,
+        .fa,
+        .fa-duotone,
+        .fa-light,
+        .fa-regular,
+        .fa-solid,
+        .fa-thin,
+        .fa-sharp,
+        .fa-brands {
+            line-height: $button-floating-large-size;
+        }
+    }
+
+    &.small {
+        &.halfway-fab {
+            bottom: -$button-floating-small-size * 0.5;
+        }
+
+        &.square {
+            border-radius: $button-floating-square-small-radius;
+        }
+
+        width: $button-floating-small-size;
+        height: $button-floating-small-size;
+
+        .material-icons,
+        .material-icons-two-one,
+        .material-icons-outlined,
+        .material-icons-round,
+        .material-icons-sharp,
+        .material-symbols-sharp,
+        .material-symbols-rounded,
+        .material-symbols-outlined,
+        .fa,
+        .fa-duotone,
+        .fa-light,
+        .fa-regular,
+        .fa-solid,
+        .fa-thin,
+        .fa-sharp,
+        .fa-brands {
+            line-height: $button-floating-small-size;
+            font-size: $button-small-icon-font-size;
+        }
     }
 }
 

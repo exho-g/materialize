@@ -204,6 +204,55 @@
   }
         </code></pre>
             </div>
+
+            <!--  Primary Color Section  -->
+            <div id="primary" class="section scrollspy">
+                <h3 class="header">CSS Color Variables</h3>
+                <p class="caption">
+                    If you need to change the primary or secondary color, on your custom CSS file, you just need to
+                    update the following CSS variables. Please note that this does not require you to recompile the SCSS
+                    files.
+                </p>
+                <pre><code class="language-css">
+  :root {
+    /** Provide the RGB values **/
+    --primary-color-rgb: 25, 118, 210;
+    --secondary-color-rgb: 96, 125, 139;
+
+    /** Provide the HSL values **/
+    --primary-color-hs: 210deg, 79%;
+    --primary-color-l: 46%;
+    --secondary-color-hs: 200deg, 18%;
+    --secondary-color-l: 46%;
+  }
+        </code></pre>
+                <p class="caption">
+                    To use your primary and secondary color on your custom css file, you can use the following css
+                    variables:
+                </p>
+                <pre><code class="language-css">
+  :root {
+    /** You can change the word primary to secondary **/
+    --primary-color-light;
+    --primary-color-dark;
+
+    --primary-color-lighten-40;
+    --primary-color-lighten-30;
+    --primary-color-lighten-25;
+    --primary-color-lighten-20;
+    --primary-color-lighten-10;
+    --primary-color-lighten-5;
+
+    --primary-color-darken-5;
+    --primary-color-darken-10;
+    --primary-color-darken-20;
+    --primary-color-darken-25;
+    --primary-color-darken-30;
+    --primary-color-darken-40;
+  }
+        </code></pre>
+            </div>
+
             <div id="palette" class="section scrollspy">
 
                 <h3 class="header">Color Palette</h3>
@@ -519,6 +568,7 @@
                     <ul class="section table-of-contents">
                         <li><a href="#color-usage">Usage</a></li>
                         <li><a href="#sass">Sass</a></li>
+                        <li><a href="#primary">CSS Color Variables</a></li>
                         <li><a href="#palette">Color Palette</a></li>
                     </ul>
                 </div>

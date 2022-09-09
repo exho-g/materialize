@@ -100,13 +100,14 @@
     }
 
     // Rounded Buttons
-    &.rounded,
-    &.rounded.small {
+    &.rounded {
         border-radius: 35px;
-        padding: 0 18px;
+
+        &.small {
+            padding: 0 18px;
+        }
 
         &.large {
-            border-radius: 35px;
             padding: 0 30px;
         }
     }

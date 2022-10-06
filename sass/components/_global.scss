@@ -580,6 +580,10 @@ table {
     &.striped {
         tr {
             border-bottom: none;
+
+            &:nth-child(odd) {
+                background-color: color('grey', 'lighten-4');
+            }
         }
     }
 

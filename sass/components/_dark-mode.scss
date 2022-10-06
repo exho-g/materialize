@@ -30,7 +30,7 @@
 }
 
 @mixin soft-colors-secondary {
-    background-color: var(--secondary-color-darken-25);
+    background-color: var(--secondary-color-darken-30);
     color: var(--secondary-color-lighten-20);
 }
 
@@ -50,27 +50,27 @@
 
     &.primary {
         color: var(--primary-color-lighten-25);
-        background-color: var(--primary-color-darken-25);
+        background-color: var(--primary-color-darken-30);
     }
 
     &.info {
         color: lighten($info-color, 25%);
-        background-color: darken($info-color, 30%);
+        background-color: darken($info-color, 40%);
     }
 
     &.success {
         color: lighten($success-color, 25%);
-        background-color: darken($success-color, 30%);
+        background-color: darken($success-color, 40%);
     }
 
     &.warning {
         color: lighten($warning-color, 25%);
-        background-color: darken($warning-color, 30%);
+        background-color: darken($warning-color, 40%);
     }
 
     &.danger {
         color: lighten($danger-color, 25%);
-        background-color: darken($danger-color, 30%);
+        background-color: darken($danger-color, 40%);
     }
 }
 
@@ -1533,7 +1533,11 @@
             background-color: rgba(255, 255, 255, .1);
         }
 
-        &:not(.outlined):not(.dark) {
+        &.soft {
+            @include soft-colors;
+        }
+
+        &:not(.outlined):not(.soft):not(.dark) {
             background-color: var(--secondary-color-darken-20);
 
             &.primary {
@@ -1561,10 +1565,6 @@
                 background-color: #FFF;
                 color: #222;
             }
-        }
-
-        &.soft {
-            @include soft-colors;
         }
 
         &.outlined:not(.dark):not(.light) {

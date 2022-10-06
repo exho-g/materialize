@@ -2080,14 +2080,17 @@ M.resizeStaggeredCards = function () {
 
 var closeAlert = function (alertComp) {
   alertComp.style.height = alertComp.offsetHeight + 'px';
-  alertComp.style.transition = 'transform .2s, height .2s, margin .2s, padding .2s';
+  alertComp.style.transition = 'opacity .2s, transform .2s, height .5s, margin .5s, padding .5s';
   setTimeout(function () {
-    alertComp.style.height = 0;
-    alertComp.style.margin = 0;
-    alertComp.style.padding = 0;
-    alertComp.style.transform = 'scale(0)';
+    alertComp.style.opacitu = 0;
+    alertComp.style.transform = 'scale(0.5)';
     setTimeout(function () {
-      alertComp.remove();
+      alertComp.style.padding = 0;
+      alertComp.style.margin = 0;
+      alertComp.style.height = 0;
+      setTimeout(function () {
+        alertComp.remove();
+      }, 500);
     }, 200);
   }, 1);
 };

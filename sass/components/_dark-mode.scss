@@ -46,6 +46,10 @@
                 .ondark-#{$color_name}-text {
                     color: $color_value  !important;
                 }
+
+                .ondark-border-#{$color_name} {
+                    border-color: $color_value  !important;
+                }
             }
 
             @else if $color_name  !="shades" {
@@ -65,6 +69,10 @@
                 .ondark-#{$color_name}-text.ondark-text-#{$color_type} {
                     color: $color_value  !important;
                 }
+
+                .ondark-border-#{$color_name}.ondark-border-#{$color_type} {
+                    border-color: $color_value  !important;
+                }
             }
         }
     }
@@ -79,10 +87,44 @@
         .ondark-#{$color}-text {
             color: $color_value  !important;
         }
+
+        .border-#{$color} {
+            border-color: $color_value  !important;
+        }
+    }
+
+    .border {
+        &-primary {
+            border-color: var(--primary-color) !important;
+        }
+
+        &-secondary {
+            border-color: var(--secondary-color) !important;
+        }
+
+        &-secondary {
+            border-color: var(--secondary-color) !important;
+        }
+
+        &-success {
+            border-color: lighten($success-color, 15%);
+        }
+
+        &-info {
+            border-color: lighten($info-color, 15%);
+        }
+
+        &-danger {
+            border-color: lighten($danger-color, 15%);
+        }
+
+        &-warning {
+            border-color: lighten($warning-color, 15%);
+        }
     }
 
     a {
-        color: var(--primary-color-lighten-10);
+        color: var(--secondary-color-lighten-10);
     }
 
     .secondary-content {

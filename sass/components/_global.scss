@@ -1010,6 +1010,28 @@ table {
     }
 }
 
+.br {
+    &-s {
+        border-radius: 2px !important;
+        overflow: hidden;
+    }
+
+    &-m {
+        border-radius: 5px !important;
+        overflow: hidden;
+    }
+
+    &-l {
+        border-radius: 10px !important;
+        overflow: hidden;
+    }
+
+    &-xl {
+        border-radius: 15px !important;
+        overflow: hidden;
+    }
+}
+
 .no-br {
     border-radius: unset !important;
 }
@@ -1032,25 +1054,73 @@ table {
     }
 }
 
-.br {
-    &-s {
-        border-radius: 2px !important;
-        overflow: hidden;
+.border {
+    @for $i from 1 through 5 {
+        &-#{$i}x {
+            border-width: #{$i}px !important;
+        }
     }
 
-    &-m {
-        border-radius: 5px !important;
-        overflow: hidden;
+    &-primary {
+        border-color: var(--primary-color) !important;
+    }
+
+    &-secondary {
+        border-color: var(--secondary-color) !important;
+    }
+
+    &-success {
+        border-color: $success-color  !important;
+    }
+
+    &-info {
+        border-color: $info-color  !important;
+    }
+
+    &-danger {
+        border-color: $danger-color  !important;
+    }
+
+    &-warning {
+        border-color: $warning-color  !important;
+    }
+
+    &-solid {
+        border-style: solid !important;
+    }
+
+    &-dashed {
+        border-style: dashed !important;
+    }
+
+    &-dotted {
+        border-style: dotted !important;
+    }
+
+    &-double {
+        border-style: double !important;
+    }
+}
+
+.no-border {
+    border: unset !important;
+}
+
+.no-border {
+    &-t {
+        border-top: unset !important;
+    }
+
+    &-r {
+        border-right: unset !important;
+    }
+
+    &-b {
+        border-bottom: unset !important;
     }
 
     &-l {
-        border-radius: 10px !important;
-        overflow: hidden;
-    }
-
-    &-xl {
-        border-radius: 15px !important;
-        overflow: hidden;
+        border-left: unset !important;
     }
 }
 

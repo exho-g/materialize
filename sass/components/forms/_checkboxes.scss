@@ -178,8 +178,8 @@
 
   &.soft:checked {
     +span:not(.lever):before {
-      border-right: 2px solid $secondary-background;
-      border-bottom: 2px solid $secondary-background;
+      border-right: 2px solid $secondary-color;
+      border-bottom: 2px solid $secondary-color;
     }
 
     +span:not(.lever):after {

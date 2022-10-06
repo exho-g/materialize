@@ -9,9 +9,14 @@
     padding-left: 10px;
   }
 
-  input.file-path { width: 100%; }
+  input.file-path {
+    width: 100%;
+  }
 
-  .btn {
+  .btn,
+  .btn-flat,
+  .btn-soft,
+  .btn-outlined {
     float: left;
     height: $input-height;
     line-height: $input-height;

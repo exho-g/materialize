@@ -220,4 +220,11 @@
     background-color: $input-disabled-solid-color;
     border-color: $input-disabled-solid-color;
   }
+
+  &.soft:checked:disabled {
+    +span:not(.lever):before {
+      border-right: 2px solid #FFF;
+      border-bottom: 2px solid #FFF;
+    }
+  }
 }

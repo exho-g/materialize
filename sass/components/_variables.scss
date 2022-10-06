@@ -186,7 +186,7 @@ $button-floating-square-small-radius: 12.3px !default;
     }
 }
 
-@mixin soft-colors-hover-foucs-secondary {
+@mixin soft-colors-hover-focus-secondary {
     &:hover {
         background-color: rgba(var(--secondary-color-rgb), 0.3);
         box-shadow: unset;
@@ -198,7 +198,7 @@ $button-floating-square-small-radius: 12.3px !default;
 }
 
 @mixin soft-colors-hover-focus {
-    @include soft-colors-hover-foucs-secondary;
+    @include soft-colors-hover-focus-secondary;
 
     &.primary {
         &:hover {

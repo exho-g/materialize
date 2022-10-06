@@ -129,6 +129,8 @@
     }
 
     &.soft {
+        box-shadow: unset;
+
         @include soft-colors;
     }
 

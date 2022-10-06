@@ -29,6 +29,110 @@
     }
 }
 
+@mixin soft-colors-secondary {
+    background-color: var(--secondary-color-darken-25);
+    color: var(--secondary-color-lighten-20);
+}
+
+@mixin soft-colors {
+    @include soft-colors-secondary;
+
+    &.dark {
+        color: #FFF;
+        background-color: rgba(20, 20, 20, 0.8);
+    }
+
+    &.light,
+    &.dark-light {
+        color: #000;
+        background-color: rgb(200, 200, 200);
+    }
+
+    &.primary {
+        color: var(--primary-color-lighten-25);
+        background-color: var(--primary-color-darken-25);
+    }
+
+    &.info {
+        color: lighten($info-color, 25%);
+        background-color: darken($info-color, 30%);
+    }
+
+    &.success {
+        color: lighten($success-color, 25%);
+        background-color: darken($success-color, 30%);
+    }
+
+    &.warning {
+        color: lighten($warning-color, 25%);
+        background-color: darken($warning-color, 30%);
+    }
+
+    &.danger {
+        color: lighten($danger-color, 25%);
+        background-color: darken($danger-color, 30%);
+    }
+}
+
+@mixin soft-colors-hover-focus-secondary {
+    &:hover {
+        background-color: var(--secondary-color-darken-30);
+    }
+}
+
+@mixin soft-colors-hover-focus {
+    @include soft-colors-hover-focus-secondary;
+
+    &.dark {
+        color: #FFF;
+        background-color: rgba(20, 20, 20, 0.8);
+
+        &:hover {
+            background-color: rgba(50, 50, 50, 0.8);
+        }
+
+        &:focus {
+            background-color: rgba(70, 70, 70, 0.7);
+        }
+    }
+
+    &.light,
+    &.dark-light {
+        color: #000;
+        background-color: rgb(200, 200, 200);
+    }
+
+    &.primary {
+        &:hover {
+            background-color: var(--primary-color-darken-30);
+        }
+    }
+
+    &.info {
+        &:hover {
+            background-color: rgba(darken($info-color, 30%), 0.7);
+        }
+    }
+
+    &.success {
+        &:hover {
+            background-color: rgba(darken($success-color, 30%), 0.7);
+        }
+    }
+
+    &.warning {
+        &:hover {
+            background-color: rgba(darken($warning-color, 30%), 0.7);
+        }
+    }
+
+    &.danger {
+        &:hover {
+            background-color: rgba(darken($danger-color, 30%), 0.7);
+        }
+    }
+}
+
 @mixin dark-mode {
     color: #FFF;
 
@@ -417,90 +521,8 @@
     }
 
     .btn-soft {
-        background-color: var(--secondary-color-darken-25);
-        color: var(--secondary-color-lighten-20);
-
-        &:hover {
-            background-color: var(--secondary-color-darken-30);
-        }
-
-        &.dark {
-            color: #FFF;
-            background-color: rgba(20, 20, 20, 0.8);
-
-            &:hover {
-                background-color: rgba(50, 50, 50, 0.8);
-            }
-
-            &:focus {
-                background-color: rgba(70, 70, 70, 0.7);
-            }
-        }
-
-        &.light,
-        &.dark-light {
-            color: #000;
-            background-color: rgb(200, 200, 200);
-
-            &:hover {
-                background-color: rgba(200, 200, 200, 0.7);
-            }
-        }
-
-        // &.dark-light {
-        //     color: #000;
-        //     background-color: rgba(255, 255, 255, 0.8);
-        //     &:hover {
-        //         background-color: rgba(240, 240, 240, 0.8);
-        //     }
-        //     &:focus {
-        //         background-color: rgba(220, 220, 220, 0.7);
-        //     }
-        // }
-        &.primary {
-            color: var(--primary-color-lighten-25);
-            background-color: var(--primary-color-darken-25);
-
-            &:hover {
-                background-color: var(--primary-color-darken-30);
-            }
-        }
-
-        &.info {
-            color: lighten($info-color, 25%);
-            background-color: darken($info-color, 30%);
-
-            &:hover {
-                background-color: rgba(darken($info-color, 30%), 0.7);
-            }
-        }
-
-        &.success {
-            color: lighten($success-color, 25%);
-            background-color: darken($success-color, 30%);
-
-            &:hover {
-                background-color: rgba(darken($success-color, 30%), 0.7);
-            }
-        }
-
-        &.warning {
-            color: lighten($warning-color, 25%);
-            background-color: darken($warning-color, 30%);
-
-            &:hover {
-                background-color: rgba(darken($warning-color, 30%), 0.7);
-            }
-        }
-
-        &.danger {
-            color: lighten($danger-color, 25%);
-            background-color: darken($danger-color, 30%);
-
-            &:hover {
-                background-color: rgba(darken($danger-color, 30%), 0.7);
-            }
-        }
+        @include soft-colors;
+        @include soft-colors-hover-focus;
     }
 
     .btn-outlined:not(.light):not(.dark):not(.dark-light) {
@@ -1539,6 +1561,10 @@
                 background-color: #FFF;
                 color: #222;
             }
+        }
+
+        &.soft {
+            @include soft-colors;
         }
 
         &.outlined:not(.dark):not(.light) {

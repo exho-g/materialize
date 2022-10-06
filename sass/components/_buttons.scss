@@ -385,7 +385,7 @@
         //line-height: $button-floating-size;
     }
 
-    .soft {
+    &.soft {
         @include soft-colors;
         @include soft-colors-hover-focus;
     }

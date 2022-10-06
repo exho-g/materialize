@@ -111,6 +111,46 @@
         }
     }
 
+    .secondary-color {
+        background-color: var(--secondary-color);
+
+        &-text {
+            color: var(--secondary-color);
+        }
+    }
+
+    .success-color {
+        background-color: lighten($success-color, 15%);
+
+        &-text {
+            color: lighten($success-color, 15%);
+        }
+    }
+
+    .info-color {
+        background-color: lighten($info-color, 15%);
+
+        &-text {
+            color: lighten($info-color, 15%);
+        }
+    }
+
+    .danger-color {
+        background-color: lighten($danger-color, 15%);
+
+        &-text {
+            color: lighten($danger-color, 15%);
+        }
+    }
+
+    .warning-color {
+        background-color: lighten($warning-color, 15%);
+
+        &-text {
+            color: lighten($warning-color, 15%);
+        }
+    }
+
     //check if allow dark mode
     body {
         background-color: #101010;

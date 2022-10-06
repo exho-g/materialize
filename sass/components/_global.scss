@@ -51,6 +51,38 @@ a {
     }
 }
 
+.success-color {
+    background-color: $success-color;
+
+    &-text {
+        color: $success-color;
+    }
+}
+
+.info-color {
+    background-color: $info-color;
+
+    &-text {
+        color: $info-color;
+    }
+}
+
+.danger-color {
+    background-color: $danger-color;
+
+    &-text {
+        color: $danger-color;
+    }
+}
+
+.warning-color {
+    background-color: $warning-color;
+
+    &-text {
+        color: $warning-color;
+    }
+}
+
 
 
 // Positioning

@@ -140,6 +140,130 @@ $button-floating-radius: 50% !default;
 $button-floating-square-default-radius: 21.3px !default;
 $button-floating-square-large-radius: 15.2px !default;
 $button-floating-square-small-radius: 12.3px !default;
+
+@mixin soft-colors {
+    color: var(--secondary-color-darken-5);
+    background-color: rgba(var(--secondary-color-rgb), 0.2);
+
+    &.primary {
+        color: var(--primary-color-darken-5);
+        background-color: rgba(var(--primary-color-rgb), 0.2);
+    }
+
+    &.info {
+        color: darken($info-color, 5%);
+        background-color: rgba($info-color, 0.2);
+    }
+
+    &.success {
+        color: darken($success-color, 5%);
+        background-color: rgba($success-color, 0.2);
+    }
+
+    &.warning {
+        color: darken($warning-color, 5%);
+        background-color: rgba($warning-color, 0.2);
+    }
+
+    &.danger {
+        color: darken($danger-color, 5%);
+        background-color: rgba($danger-color, 0.2);
+    }
+
+    &.light {
+        color: initial;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    &.dark,
+    &.dark-light {
+        color: #FFF;
+        background-color: rgba(20, 20, 20, 0.8);
+    }
+}
+
+@mixin soft-colors-hover-focus {
+    &:hover {
+        background-color: rgba(var(--secondary-color-rgb), 0.3);
+        box-shadow: unset;
+    }
+
+    &:focus {
+        background-color: rgba(var(--secondary-color-rgb), 0.5);
+    }
+
+    &.primary {
+        &:hover {
+            background-color: rgba(var(--primary-color-rgb), 0.3);
+        }
+
+        &:focus {
+            background-color: rgba(var(--primary-color-rgb), 0.5);
+        }
+    }
+
+    &.info {
+        &:hover {
+            background-color: rgba($info-color, 0.3);
+        }
+
+        &:focus {
+            background-color: rgba($info-color, 0.5);
+        }
+    }
+
+    &.success {
+        &:hover {
+            background-color: rgba($success-color, 0.3);
+        }
+
+        &:focus {
+            background-color: rgba($success-color, 0.5);
+        }
+    }
+
+    &.warning {
+        &:hover {
+            background-color: rgba($warning-color, 0.3);
+        }
+
+        &:focus {
+            background-color: rgba($warning-color, 0.5);
+        }
+    }
+
+    &.danger {
+        &:hover {
+            background-color: rgba($danger-color, 0.3);
+        }
+
+        &:focus {
+            background-color: rgba($danger-color, 0.5);
+        }
+    }
+
+    &.light {
+        &:hover {
+            background-color: rgba(230, 230, 230, 0.8);
+        }
+
+        &:focus {
+            background-color: rgba(220, 220, 220, 0.7);
+        }
+    }
+
+    &.dark,
+    &.dark-light {
+        &:hover {
+            background-color: rgba(50, 50, 50, 0.8);
+        }
+
+        &:focus {
+            background-color: rgba(70, 70, 70, 0.7);
+        }
+    }
+}
+
 // 4. Cards
 // ==========================================================================
 $card-padding: 24px !default;

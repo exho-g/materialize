@@ -76,7 +76,7 @@
 
 @mixin soft-colors-hover-focus-secondary {
     &:hover {
-        background-color: var(--secondary-color-darken-30);
+        background-color: var(--secondary-color-darken-25);
     }
 }
 
@@ -84,9 +84,6 @@
     @include soft-colors-hover-focus-secondary;
 
     &.dark {
-        color: #FFF;
-        background-color: rgba(20, 20, 20, 0.8);
-
         &:hover {
             background-color: rgba(50, 50, 50, 0.8);
         }
@@ -98,38 +95,34 @@
 
     &.light,
     &.dark-light {
-        color: #000;
-        background-color: rgb(200, 200, 200);
-    }
-
-    &.primary {
         &:hover {
-            background-color: var(--primary-color-darken-30);
+            background-color: rgba(200, 200, 200, 0.7);
         }
     }
 
-    &.info {
-        &:hover {
-            background-color: rgba(darken($info-color, 30%), 0.7);
-        }
+    &.primary:hover {
+        background-color: var(--primary-color-darken-25);
+
     }
 
-    &.success {
-        &:hover {
-            background-color: rgba(darken($success-color, 30%), 0.7);
-        }
+    &.info:hover {
+        background-color: rgba(darken($info-color, 30%), 0.7);
+
     }
 
-    &.warning {
-        &:hover {
-            background-color: rgba(darken($warning-color, 30%), 0.7);
-        }
+    &.success:hover {
+        background-color: rgba(darken($success-color, 30%), 0.7);
+
     }
 
-    &.danger {
-        &:hover {
-            background-color: rgba(darken($danger-color, 30%), 0.7);
-        }
+    &.warning:hover {
+        background-color: rgba(darken($warning-color, 30%), 0.7);
+
+    }
+
+    &.danger:hover {
+        background-color: rgba(darken($danger-color, 30%), 0.7);
+
     }
 }
 

@@ -102,24 +102,20 @@
             border-color: var(--secondary-color) !important;
         }
 
-        &-secondary {
-            border-color: var(--secondary-color) !important;
-        }
-
         &-success {
-            border-color: lighten($success-color, 15%);
+            border-color: lighten($success-color, 5%);
         }
 
         &-info {
-            border-color: lighten($info-color, 15%);
+            border-color: lighten($info-color, 5%);
         }
 
         &-danger {
-            border-color: lighten($danger-color, 15%);
+            border-color: lighten($danger-color, 5%);
         }
 
         &-warning {
-            border-color: lighten($warning-color, 15%);
+            border-color: lighten($warning-color, 5%);
         }
     }
 
@@ -138,7 +134,7 @@
     }
 
     .primary-color {
-        background-color: var(--primary-color-light);
+        background-color: var(--primary-color-darken-5);
 
         &-text {
             color: var(--primary-color-light);
@@ -146,50 +142,42 @@
     }
 
     .secondary-color {
-        background-color: var(--secondary-color-light);
+        background-color: var(--secondary-color-darken-5);
 
         &-text {
             color: var(--secondary-color-light);
         }
     }
 
-    .secondary-color {
-        background-color: var(--secondary-color);
-
-        &-text {
-            color: var(--secondary-color);
-        }
-    }
-
     .success-color {
-        background-color: lighten($success-color, 15%);
+        background-color: darken($success-color, 5%);
 
         &-text {
-            color: lighten($success-color, 15%);
+            color: lighten($success-color, 5%);
         }
     }
 
     .info-color {
-        background-color: lighten($info-color, 15%);
+        background-color: darken($info-color, 5%);
 
         &-text {
-            color: lighten($info-color, 15%);
+            color: lighten($info-color, 5%);
         }
     }
 
     .danger-color {
-        background-color: lighten($danger-color, 15%);
+        background-color: darken($danger-color, 5%);
 
         &-text {
-            color: lighten($danger-color, 15%);
+            color: lighten($danger-color, 5%);
         }
     }
 
     .warning-color {
-        background-color: lighten($warning-color, 15%);
+        background-color: darken($warning-color, 5%);
 
         &-text {
-            color: lighten($warning-color, 15%);
+            color: lighten($warning-color, 5%);
         }
     }
 

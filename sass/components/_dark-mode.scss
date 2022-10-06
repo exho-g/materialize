@@ -434,8 +434,29 @@
         // &:hover {
         //     background-color: var(--primary-color-darken-5);
         // }
-        i {
+        .icon,
+        .material-icons,
+        .material-icons-two-one,
+        .material-icons-outlined,
+        .material-icons-round,
+        .material-icons-sharp,
+        .material-symbols-sharp,
+        .material-symbols-rounded,
+        .material-symbols-outlined,
+        .fa,
+        .fa-duotone,
+        .fa-light,
+        .fa-regular,
+        .fa-solid,
+        .fa-thin,
+        .fa-sharp,
+        .fa-brands {
             color: #FFF;
+        }
+
+        .soft {
+            @include soft-colors;
+            @include soft-colors-hover-focus;
         }
     }
 

@@ -385,6 +385,11 @@
         //line-height: $button-floating-size;
     }
 
+    .soft {
+        @include soft-colors;
+        @include soft-colors-hover-focus;
+    }
+
     &.large {
         &.halfway-fab {
             bottom: -$button-floating-large-size * 0.5;

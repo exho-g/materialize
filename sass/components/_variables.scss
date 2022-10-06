@@ -141,9 +141,13 @@ $button-floating-square-default-radius: 21.3px !default;
 $button-floating-square-large-radius: 15.2px !default;
 $button-floating-square-small-radius: 12.3px !default;
 
-@mixin soft-colors {
+@mixin soft-colors-secondary {
     color: var(--secondary-color-darken-5);
     background-color: rgba(var(--secondary-color-rgb), 0.2);
+}
+
+@mixin soft-colors {
+    @include soft-colors-secondary;
 
     &.primary {
         color: var(--primary-color-darken-5);
@@ -182,7 +186,7 @@ $button-floating-square-small-radius: 12.3px !default;
     }
 }
 
-@mixin soft-colors-hover-focus {
+@mixin soft-colors-hover-foucs-secondary {
     &:hover {
         background-color: rgba(var(--secondary-color-rgb), 0.3);
         box-shadow: unset;
@@ -191,6 +195,10 @@ $button-floating-square-small-radius: 12.3px !default;
     &:focus {
         background-color: rgba(var(--secondary-color-rgb), 0.5);
     }
+}
+
+@mixin soft-colors-hover-focus {
+    @include soft-colors-hover-foucs-secondary;
 
     &.primary {
         &:hover {

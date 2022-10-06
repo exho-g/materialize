@@ -438,7 +438,7 @@ let closeAlert = function(alertComp) {
   alertComp.style.height = alertComp.offsetHeight + 'px';
   alertComp.style.transition = 'opacity .2s, transform .2s, height .5s, margin .5s, padding .5s';
   setTimeout(function() {
-    alertComp.style.opacitu = 0;
+    alertComp.style.opacity = 0;
     alertComp.style.transform = 'scale(0.5)';
     setTimeout(function() {
       alertComp.style.padding = 0;

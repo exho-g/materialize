@@ -34,6 +34,11 @@
   }
 }
 
+// Prevent emojis from being italic
+i.icon {
+  font-style: normal;
+}
+
 .material-icons,
 .material-icons-two-one,
 .material-icons-outlined,

@@ -147,7 +147,7 @@
   }
 
   &.soft:not(:checked)+span:not(.lever):after {
-    background-color: rgba(var(--seconary-color-rgb), 0.3);
+    background-color: rgba(var(--secondary-color-rgb), 0.3);
     border: unset;
   }
 
@@ -183,7 +183,7 @@
     }
 
     +span:not(.lever):after {
-      background-color: rgba(var(--seconary-color-rgb), 0.2);
+      background-color: rgba(var(--secondary-color-rgb), 0.2);
       border: unset;
     }
   }

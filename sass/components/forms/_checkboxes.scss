@@ -147,7 +147,7 @@
   }
 
   &.soft:not(:checked)+span:not(.lever):after {
-    background-color: rgba(var(--secondary-color-rgb), 0.3);
+    background-color: rgba(var(--secondary-color-rgb), 0.2);
     border: unset;
   }
 
@@ -178,8 +178,8 @@
 
   &.soft:checked {
     +span:not(.lever):before {
-      border-right: 2px solid $secondary-color;
-      border-bottom: 2px solid $secondary-color;
+      border-right: 2px solid var(--secondary-color-darken-5);
+      border-bottom: 2px solid var(--secondary-color-darken-5);
     }
 
     +span:not(.lever):after {

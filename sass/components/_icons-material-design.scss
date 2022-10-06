@@ -1,25 +1,3 @@
-/* This is needed for some mobile phones to display the Google Icon font properly */
-// .material-icons {
-//   text-rendering: optimizeLegibility;
-//   font-feature-settings: 'liga';
-
-//   &.s18 {
-//     font-size: 18px;
-//   }
-
-//   &.s24 {
-//     font-size: 24px;
-//   }
-
-//   &.s36 {
-//     font-size: 36px;
-//   }
-
-//   &.s48 {
-//     font-size: 48px;
-//   }
-// }
-
 @mixin icon-sizes {
   font-size: 24px;
 
@@ -66,11 +44,10 @@
 .material-symbols-outlined {
   text-rendering: optimizeLegibility;
   font-feature-settings: 'liga';
-
-  @include icon-sizes;
 }
 
-
+// default, any icon
+.icon,
 // FontAwesome Support
 .fa,
 .fa-duotone,
@@ -79,6 +56,15 @@
 .fa-solid,
 .fa-thin,
 .fa-sharp,
-.fa-brands {
+.fa-brands,
+// Material Icons Support
+.material-icons,
+.material-icons-two-one,
+.material-icons-outlined,
+.material-icons-round,
+.material-icons-sharp,
+.material-symbols-sharp,
+.material-symbols-rounded,
+.material-symbols-outlined {
   @include icon-sizes;
 }

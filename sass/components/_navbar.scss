@@ -48,9 +48,9 @@ nav {
         color: $navbar-font-color;
     }
 
-    i,
     [class^="mdi-"],
     [class*="mdi-"],
+    .icon,
     .material-icons,
     .material-icons-two-one,
     .material-icons-outlined,
@@ -136,9 +136,9 @@ nav {
             padding: 0;
         }
 
-        i,
         [class^="mdi-"],
         [class*="mdi-"],
+        .icon,
         .material-icons,
         .material-icons-two-one,
         .material-icons-outlined,
@@ -198,6 +198,7 @@ nav {
 
                 &> {
 
+                    .icon,
                     .material-icons,
                     .material-icons-two-one,
                     .material-icons-outlined,

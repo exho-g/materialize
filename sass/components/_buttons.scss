@@ -20,6 +20,7 @@
         font-size: 12px;
         padding: 0 12px;
 
+        .icon,
         .material-icons,
         .material-icons-two-one,
         .material-icons-outlined,
@@ -53,6 +54,7 @@
         line-height: $button-small-height;
         font-size: $button-small-font-size;
 
+        .icon,
         .material-icons,
         .material-icons-two-one,
         .material-icons-outlined,
@@ -79,6 +81,7 @@
         font-size: $button-large-font-size;
         padding: 0 28px;
 
+        .icon,
         .material-icons,
         .material-icons-two-one,
         .material-icons-outlined,
@@ -181,6 +184,7 @@
     font-size: $button-font-size;
     outline: 0;
 
+    .icon,
     .material-icons,
     .material-icons-two-one,
     .material-icons-outlined,
@@ -356,6 +360,7 @@
         border-radius: $button-floating-square-default-radius;
     }
 
+    .icon,
     .material-icons,
     .material-icons-two-one,
     .material-icons-outlined,
@@ -393,6 +398,7 @@
         height: $button-floating-large-size;
         padding: 0;
 
+        .icon,
         .material-icons,
         .material-icons-two-one,
         .material-icons-outlined,
@@ -425,6 +431,7 @@
         width: $button-floating-small-size;
         height: $button-floating-small-size;
 
+        .icon,
         .material-icons,
         .material-icons-two-one,
         .material-icons-outlined,
@@ -516,6 +523,7 @@ button.btn-floating {
         &.active {
             &>a {
 
+                .icon,
                 .material-icons,
                 .material-icons-two-one,
                 .material-icons-outlined,
@@ -565,6 +573,7 @@ button.btn-floating {
                     line-height: $button-floating-large-size;
                     z-index: 1;
 
+                    .icon,
                     .material-icons,
                     .material-icons-two-one,
                     .material-icons-outlined,

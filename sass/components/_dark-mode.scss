@@ -1439,7 +1439,7 @@
         }
 
         &.striped {
-            tbody>tr {
+            tbody tr {
                 border-bottom: unset;
 
                 &:nth-child(odd) {

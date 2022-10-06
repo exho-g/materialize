@@ -649,7 +649,7 @@ table {
     }
 
     &.striped {
-        tr {
+        tbody tr {
             border-bottom: none;
 
             &:nth-child(odd) {

@@ -95,6 +95,22 @@
         color: color('red', 'lighten-4');
     }
 
+    .primary-color {
+        background-color: var(--primary-color-light);
+
+        &-text {
+            color: var(--primary-color-light);
+        }
+    }
+
+    .secondary-color {
+        background-color: var(--secondary-color-light);
+
+        &-text {
+            color: var(--secondary-color-light);
+        }
+    }
+
     //check if allow dark mode
     body {
         background-color: #101010;

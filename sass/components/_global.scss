@@ -29,11 +29,29 @@ ul {
 }
 
 a {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     text-decoration: none;
     // Gets rid of tap active state
     -webkit-tap-highlight-color: transparent;
 }
+
+.primary-color {
+    background-color: var(--primary-color);
+
+    &-text {
+        color: var(--primary-color);
+    }
+}
+
+.secondary-color {
+    background-color: var(--secondary-color);
+
+    &-text {
+        color: var(--secondary-color);
+    }
+}
+
+
 
 // Positioning
 .valign-wrapper {

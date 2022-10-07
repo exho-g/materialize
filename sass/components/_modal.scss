@@ -63,7 +63,7 @@
     }
 
     &.blur-bg {
-        background: rgba(255, 255, 255, .7);
+        background-color: rgba(255, 255, 255, .7);
         backdrop-filter: blur(7px);
 
         &.acrylic {
@@ -100,12 +100,12 @@
     right: 0;
     height: 125%;
     width: 100%;
-    background: rgba(0, 0, 0, .6);
+    background-color: rgba(0, 0, 0, .6);
     display: none;
     will-change: opacity;
 
     &.blur-overlay {
-        background: rgba(0, 0, 0, .5);
+        background-color: rgba(0, 0, 0, .5);
         backdrop-filter: blur(2px);
     }
 }

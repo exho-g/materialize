@@ -1730,6 +1730,10 @@
         }
     }
 
+    .ondark-z-depth-0 {
+        box-shadow: none !important;
+    }
+
     @media #{$large-and-up} {
         .scrollbar {
 

@@ -372,11 +372,11 @@
 
     &.soft {
         background-color: var(--secondary-color-lighten-40);
-        box-shadow: coloredShadow("x1", $secondary-color);
+        box-shadow: coloredShadow("x1", var(--secondary-color-rgb), true);
 
         &:hover {
             transition: background-color .3s, box-shadow .25s;
-            box-shadow: coloredShadow("x1_2", $secondary-color);
+            box-shadow: coloredShadow("x1_2", var(--secondary-color-rgb), true);
         }
 
         .icon,
@@ -386,10 +386,10 @@
 
         &.primary {
             background-color: var(--primary-color-lighten-40);
-            box-shadow: coloredShadow("x1", $primary-color);
+            box-shadow: coloredShadow("x1", var(--primary-color-rgb), true);
 
             &:hover {
-                box-shadow: coloredShadow("x1_2", $primary-color);
+                box-shadow: coloredShadow("x1_2", var(--primary-color-rgb), true);
             }
 
             .icon,

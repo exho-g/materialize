@@ -7,6 +7,10 @@
     &.blur-bg {
         background-color: transparent;
         backdrop-filter: blur(10px);
+
+        &.acrylic {
+            background-image: unset;
+        }
     }
 }
 
@@ -72,6 +76,10 @@
 .timepicker-modal.blur-bg {
     .timepicker-digital-display {
         background-color: rgba(var(--secondary-color-rgb), 0.50);
+    }
+
+    &.acrylic .timepicker-digital-display {
+        background-image: $acrylic-background;
     }
 
     .timepicker-analog-display {

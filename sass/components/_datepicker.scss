@@ -8,6 +8,10 @@
     &.blur-bg {
         background-color: transparent;
         backdrop-filter: blur(10px);
+
+        &.acrylic {
+            background-image: unset;
+        }
     }
 }
 
@@ -155,6 +159,10 @@
 .datepicker-modal.blur-bg {
     .datepicker-date-display {
         background-color: rgba(var(--secondary-color-rgb), 0.50);
+    }
+
+    &.acrylic .datepicker-date-display {
+        background-image: $acrylic-background;
     }
 
     .datepicker-calendar-container {

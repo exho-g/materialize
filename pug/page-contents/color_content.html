@@ -29,7 +29,7 @@
 
                     <h5 class="col s12 m3">Text Color</h5>
                     <div class="col s12 m9">
-                        <p>To apply a text color, just append <code class="languague-markup">-text</code> to the color
+                        <p>To apply a text color, just append <code class="language-markup">-text</code> to the color
                             class like this:</p>
                         <div class="card-panel"><span class="blue-text text-darken-2">This is a card panel with dark
                                 blue text</span></div>
@@ -51,21 +51,25 @@
                         <p>To apply a border color, just prefix <code class="languague-markup">.border-</code> to the
                             color
                             class like this:</p>
-                        <div class="card-panel border-1x border-solid border-red border-lighten-2"><span
-                                class="blue-text text-darken-2">This is
-                                a card panel with red border color</span></div>
+                        <div
+                            class="card-panel border-5x border-dashed border-red border-darken-2 ondark-border-red ondark-border-darken-1">
+                            <span>This is
+                                a card panel with red 5x-width dashed border</span>
+                        </div>
                         <pre style="padding-top: 0px;">
               <span class="copyMessage">Copied!</span>
               <i class="material-icons copyButton">content_copy</i>
               <code class="language-markup copiedText">
-  &lt;div class="card-panel border-1x border-solid border-red border-lighten-2">
-    &lt;span class="blue-text text-darken-2">This is a card panel with red border color&lt;/span>
+  &lt;div class="card-panel border-5x border-dashed border-red border-darken-2 ondark-border-red ondark-border-darken-1">
+    &lt;span>This is
+    a card panel with red 5x-width dashed border&lt;/span>
   &lt;/div>
               </code>
             </pre>
                         <p>You can also use primary or secondary color like <code
                                 class="language-markup">.border-primary</code> or by semantic purpose like <code
-                                class="language-markup">.border-success, .border-info, .border-danger, etc...</code></p>
+                                class="language-markup">.border-success, .border-info, .border-danger, etc...</code>.
+                            Please refer to CSS > Helpers to check other border helper classes</p>
                     </div>
                 </div>
             </div>
@@ -150,7 +154,7 @@
     .secondary-color-text
                           </code></pre>
                 <p class="caption">
-                    We also support colors by purposes
+                    We also support colors by semantic purposes
                 </p>
                 <pre><code class="language-markup">
     .success-color

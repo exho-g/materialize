@@ -116,7 +116,7 @@ $semanticColors: (
     $color: $curColor;
 
     @if $fixed {
-        $color: red($curColor) ", " blue($curColor) ", " green($curColor);
+        $color: red($curColor) ", " green($curColor) ", " blue($curColor);
     }
 
     $boxShadow: map-get((x1: "0 2px 2px 0 rgba(#{$color}, 0.14), 0 3px 1px -2px rgba(#{$color}, 0.12), 0 1px 5px 0 rgba(#{$color}, 0.2)",
@@ -282,11 +282,11 @@ $card-link-color-light: var(--secondary-color-lighten-20) !default;
 // ==========================================================================
 $carousel-height: 400px !default;
 $carousel-item-height: $carousel-height * 0.5 !default;
-$carousel-item-width: $carousel-item-height  !default;
+$carousel-item-width: $carousel-item-height !default;
 // 6. Collapsible
 // ==========================================================================
 $collapsible-height: 3rem !default;
-$collapsible-line-height: $collapsible-height  !default;
+$collapsible-line-height: $collapsible-height !default;
 $collapsible-header-color: #fff !default;
 $collapsible-border-color: #ddd !default;
 // 7. Chips
@@ -321,10 +321,10 @@ $dropdown-item-height: 50px !default;
 // Text Inputs + Textarea
 $input-height: 3rem !default;
 $input-border-color: color("grey", "base") !default;
-$input-border: 1px solid $input-border-color  !default;
+$input-border: 1px solid $input-border-color !default;
 $input-background: #fff !default;
-$input-error-color: $danger-color  !default;
-$input-success-color: $success-color  !default;
+$input-error-color: $danger-color !default;
+$input-success-color: $success-color !default;
 $input-focus-color: var(--secondary-color) !default;
 $input-font-size: 16px !default;
 $input-margin-bottom: 8px;
@@ -333,14 +333,14 @@ $input-padding: 0 !default;
 $label-font-size: .8rem !default;
 $input-disabled-color: rgba(0, 0, 0, .42) !default;
 $input-disabled-solid-color: #949494 !default;
-$input-disabled-border: 1px dotted $input-disabled-color  !default;
-$input-invalid-border: 1px solid $input-error-color  !default;
+$input-disabled-border: 1px dotted $input-disabled-color !default;
+$input-invalid-border: 1px solid $input-error-color !default;
 $input-icon-size: 2rem;
 $placeholder-text-color: lighten($input-border-color, 20%) !default;
 // Radio Buttons
 $radio-fill-color: var(--secondary-color) !default;
 $radio-empty-color: #5a5a5a !default;
-$radio-border: 2px solid $radio-fill-color  !default;
+$radio-border: 2px solid $radio-fill-color !default;
 // Range
 $range-height: 14px !default;
 $range-width: 14px !default;
@@ -385,9 +385,9 @@ $element-bottom-margin: math.div($gutter-width*2, 3) !default;
 // 13. Navigation Bar
 // ==========================================================================
 $navbar-height: 64px !default;
-$navbar-line-height: $navbar-height  !default;
+$navbar-line-height: $navbar-height !default;
 $navbar-height-mobile: 56px !default;
-$navbar-line-height-mobile: $navbar-height-mobile  !default;
+$navbar-line-height-mobile: $navbar-height-mobile !default;
 $navbar-font-size: 1rem !default;
 $navbar-font-color: #fff !default;
 $navbar-brand-font-size: 2.1rem !default;
@@ -399,7 +399,7 @@ $sidenav-font-color: rgba(0, 0, 0, .87) !default;
 $sidenav-bg-color: #fff !default;
 $sidenav-padding: 16px !default;
 $sidenav-item-height: 48px !default;
-$sidenav-line-height: $sidenav-item-height  !default;
+$sidenav-line-height: $sidenav-item-height !default;
 // 15. Photo Slider
 // ==========================================================================
 $slider-bg-color: color('grey', 'base') !default;
@@ -445,12 +445,12 @@ $h6-fontsize: 1.15rem !default;
 // 21. Footer
 // ==========================================================================
 $footer-font-color: #fff !default;
-$footer-bg-color: $primary-color  !default;
+$footer-bg-color: $primary-color !default;
 $footer-copyright-font-color: rgba(255, 255, 255, .8) !default;
 $footer-copyright-bg-color: rgba(51, 51, 51, .08) !default;
 // 22. Flow Text
 // ==========================================================================
-$range: $large-screen - $small-screen  !default;
+$range: $large-screen - $small-screen !default;
 $intervals: 20 !default;
 $interval-size: math.div($range, $intervals) !default;
 // 23. Collections

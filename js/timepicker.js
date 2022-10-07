@@ -16,7 +16,7 @@
     i18n: {
       cancel: 'Cancel',
       clear: 'Clear',
-      done: 'Ok'
+      done: 'OK'
     },
 
     autoClose: false, // auto close when minute is selected
@@ -251,6 +251,8 @@
       this.spanAmPm = this.modalEl.querySelector('.timepicker-span-am-pm');
       this.footer = this.modalEl.querySelector('.timepicker-footer');
       this.amOrPm = 'PM';
+
+      console.log(this.el.className);
 
       if (this.el.classList.contains('blur-bg')) {
         this.modalEl.classList.add('blur-bg');

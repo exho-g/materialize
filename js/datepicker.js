@@ -59,7 +59,7 @@
     i18n: {
       cancel: 'Cancel',
       clear: 'Clear',
-      done: 'Ok',
+      done: 'OK',
       previousMonth: '‹',
       nextMonth: '›',
       months: [
@@ -799,6 +799,8 @@
           return this.date.getFullYear();
         }
       };
+
+      console.log(this.el.className);
 
       if (this.el.classList.contains('blur-bg')) {
         this.modalEl.classList.add('blur-bg');

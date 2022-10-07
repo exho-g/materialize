@@ -137,19 +137,19 @@
         $color_value in $color {
             @if $color_type=="base" {
                 .ondark-#{$color_name} {
-                    background-color: $color_value  !important;
+                    background-color: $color_value !important;
                 }
 
                 .ondark-#{$color_name}-text {
-                    color: $color_value  !important;
+                    color: $color_value !important;
                 }
 
                 .ondark-border-#{$color_name} {
-                    border-color: $color_value  !important;
+                    border-color: $color_value !important;
                 }
             }
 
-            @else if $color_name  !="shades" {
+            @else if $color_name !="shades" {
 
                 // // if same color as light mode
                 // .#{$color_name}.ondark-#{$color_type} {
@@ -160,15 +160,15 @@
                 // }
                 //if not the same color as light mode
                 .ondark-#{$color_name}.ondark-#{$color_type} {
-                    background-color: $color_value  !important;
+                    background-color: $color_value !important;
                 }
 
                 .ondark-#{$color_name}-text.ondark-text-#{$color_type} {
-                    color: $color_value  !important;
+                    color: $color_value !important;
                 }
 
                 .ondark-border-#{$color_name}.ondark-border-#{$color_type} {
-                    border-color: $color_value  !important;
+                    border-color: $color_value !important;
                 }
             }
         }
@@ -178,15 +178,15 @@
     @each $color,
     $color_value in $shades {
         .ondark-#{$color} {
-            background-color: $color_value  !important;
+            background-color: $color_value !important;
         }
 
         .ondark-#{$color}-text {
-            color: $color_value  !important;
+            color: $color_value !important;
         }
 
         .border-#{$color} {
-            border-color: $color_value  !important;
+            border-color: $color_value !important;
         }
     }
 
@@ -430,33 +430,59 @@
     //fabs
     .btn-floating {
 
-        // background-color: var(--primary-color);
-        // &:hover {
-        //     background-color: var(--primary-color-darken-5);
-        // }
+        background-color: var(--secondary-color-darken-20);
+
+        &:hover {
+            background-color: var(--secondary-color-dark);
+        }
+
         .icon,
-        .material-icons,
-        .material-icons-two-one,
-        .material-icons-outlined,
-        .material-icons-round,
-        .material-icons-sharp,
-        .material-symbols-sharp,
-        .material-symbols-rounded,
-        .material-symbols-outlined,
-        .fa,
-        .fa-duotone,
-        .fa-light,
-        .fa-regular,
-        .fa-solid,
-        .fa-thin,
-        .fa-sharp,
-        .fa-brands {
+        #{$icon-brand-selectors} {
             color: #FFF;
         }
 
-        &.soft {
-            @include soft-colors;
-            @include soft-colors-hover-focus;
+        &.soft:not(.disabled) {
+            background-color: var(--secondary-color-darken-30);
+            box-shadow: unset;
+
+            &:hover {
+                box-shadow: unset;
+            }
+
+            .icon,
+            #{$icon-brand-selectors} {
+                color: var(--secondary-color-lighten-20);
+            }
+
+            &.primary {
+                background-color: var(--primary-color-darken-30);
+                box-shadow: unset;
+
+                &:hover {
+                    box-shadow: unset;
+                }
+
+                .icon,
+                #{$icon-brand-selectors} {
+                    color: var(--primary-color-lighten-20);
+                }
+            }
+
+            @each $sP in $semanticPurposes {
+                &.#{$sP} {
+                    background-color: darken(semanticColorLookUp($sP), 30%);
+                    box-shadow: unset;
+
+                    &:hover {
+                        box-shadow: unset;
+                    }
+
+                    .icon,
+                    #{$icon-brand-selectors} {
+                        color: lighten(semanticColorLookUp($sP), 20%);
+                    }
+                }
+            }
         }
     }
 

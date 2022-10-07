@@ -21,22 +21,7 @@
         padding: 0 12px;
 
         .icon,
-        .material-icons,
-        .material-icons-two-one,
-        .material-icons-outlined,
-        .material-icons-round,
-        .material-icons-sharp,
-        .material-symbols-sharp,
-        .material-symbols-rounded,
-        .material-symbols-outlined,
-        .fa,
-        .fa-duotone,
-        .fa-light,
-        .fa-regular,
-        .fa-solid,
-        .fa-thin,
-        .fa-sharp,
-        .fa-brands {
+        #{$icon-brand-selectors} {
             font-size: .8rem;
 
             &.right {
@@ -55,22 +40,7 @@
         font-size: $button-small-font-size;
 
         .icon,
-        .material-icons,
-        .material-icons-two-one,
-        .material-icons-outlined,
-        .material-icons-round,
-        .material-icons-sharp,
-        .material-symbols-sharp,
-        .material-symbols-rounded,
-        .material-symbols-outlined,
-        .fa,
-        .fa-duotone,
-        .fa-light,
-        .fa-regular,
-        .fa-solid,
-        .fa-thin,
-        .fa-sharp,
-        .fa-brands {
+        #{$icon-brand-selectors} {
             font-size: $button-small-icon-font-size;
         }
     }
@@ -82,22 +52,7 @@
         padding: 0 28px;
 
         .icon,
-        .material-icons,
-        .material-icons-two-one,
-        .material-icons-outlined,
-        .material-icons-round,
-        .material-icons-sharp,
-        .material-symbols-sharp,
-        .material-symbols-rounded,
-        .material-symbols-outlined,
-        .fa,
-        .fa-duotone,
-        .fa-light,
-        .fa-regular,
-        .fa-solid,
-        .fa-thin,
-        .fa-sharp,
-        .fa-brands {
+        #{$icon-brand-selectors} {
             font-size: $button-large-icon-font-size;
         }
     }
@@ -130,17 +85,21 @@
 .btn-flat[disabled],
 .btn-soft[disabled] {
     pointer-events: none;
-    background-color: $button-disabled-background  !important;
+    background-color: $button-disabled-background !important;
     box-shadow: none;
-    color: $button-disabled-color  !important;
+    color: $button-disabled-color !important;
     cursor: default;
 
+    .icon,
+    #{$icon-brand-selectors} {
+        color: $button-disabled-color !important;
+    }
+
     &:hover {
-        background-color: $button-disabled-background  !important;
-        color: $button-disabled-color  !important;
+        background-color: $button-disabled-background !important;
+        color: $button-disabled-color !important;
     }
 }
-
 
 
 .btn-outlined {
@@ -170,8 +129,8 @@
         pointer-events: none;
         cursor: default;
         background-color: transparent !important;
-        color: $button-disabled-color  !important;
-        border-color: $button-disabled-background  !important;
+        color: $button-disabled-color !important;
+        border-color: $button-disabled-background !important;
     }
 }
 
@@ -185,22 +144,7 @@
     outline: 0;
 
     .icon,
-    .material-icons,
-    .material-icons-two-one,
-    .material-icons-outlined,
-    .material-icons-round,
-    .material-icons-sharp,
-    .material-symbols-sharp,
-    .material-symbols-rounded,
-    .material-symbols-outlined,
-    .fa,
-    .fa-duotone,
-    .fa-light,
-    .fa-regular,
-    .fa-solid,
-    .fa-thin,
-    .fa-sharp,
-    .fa-brands {
+    #{$icon-brand-selectors} {
         font-size: $button-icon-font-size;
         line-height: inherit;
     }
@@ -243,51 +187,17 @@
         }
     }
 
-    &.info {
-        background-color: $info-color;
+    @each $sP in $semanticPurposes {
+        &.#{$sP} {
+            background-color: semanticColorLookUp($sP);
 
-        &:hover {
-            background-color: lighten($info-color, 5%);
-        }
+            &:hover {
+                background-color: lighten(semanticColorLookUp($sP), 5%);
+            }
 
-        &:focus {
-            background-color: darken($info-color, 10%);
-        }
-    }
-
-    &.success {
-        background-color: $success-color;
-
-        &:hover {
-            background-color: lighten($success-color, 5%);
-        }
-
-        &:focus {
-            background-color: darken($success-color, 10%);
-        }
-    }
-
-    &.warning {
-        background-color: $warning-color;
-
-        &:hover {
-            background-color: lighten($warning-color, 5%);
-        }
-
-        &:focus {
-            background-color: darken($warning-color, 10%);
-        }
-    }
-
-    &.danger {
-        background-color: $danger-color;
-
-        &:hover {
-            background-color: lighten($danger-color, 5%);
-        }
-
-        &:focus {
-            background-color: darken($danger-color, 10%);
+            &:focus {
+                background-color: darken(semanticColorLookUp($sP), 10%);
+            }
         }
     }
 
@@ -370,7 +280,7 @@
         //line-height: $button-floating-size;
     }
 
-    &.soft {
+    &.soft:not(.disabled) {
         background-color: var(--secondary-color-lighten-40);
         box-shadow: coloredShadow("x1", var(--secondary-color-rgb), false);
         transition: background-color .3s,
@@ -430,22 +340,7 @@
         padding: 0;
 
         .icon,
-        .material-icons,
-        .material-icons-two-one,
-        .material-icons-outlined,
-        .material-icons-round,
-        .material-icons-sharp,
-        .material-symbols-sharp,
-        .material-symbols-rounded,
-        .material-symbols-outlined,
-        .fa,
-        .fa-duotone,
-        .fa-light,
-        .fa-regular,
-        .fa-solid,
-        .fa-thin,
-        .fa-sharp,
-        .fa-brands {
+        #{$icon-brand-selectors} {
             line-height: $button-floating-large-size;
         }
     }
@@ -463,22 +358,7 @@
         height: $button-floating-small-size;
 
         .icon,
-        .material-icons,
-        .material-icons-two-one,
-        .material-icons-outlined,
-        .material-icons-round,
-        .material-icons-sharp,
-        .material-symbols-sharp,
-        .material-symbols-rounded,
-        .material-symbols-outlined,
-        .fa,
-        .fa-duotone,
-        .fa-light,
-        .fa-regular,
-        .fa-solid,
-        .fa-thin,
-        .fa-sharp,
-        .fa-brands {
+        #{$icon-brand-selectors} {
             line-height: $button-floating-small-size;
             font-size: $button-small-icon-font-size;
         }
@@ -555,22 +435,7 @@ button.btn-floating {
             &>a {
 
                 .icon,
-                .material-icons,
-                .material-icons-two-one,
-                .material-icons-outlined,
-                .material-icons-round,
-                .material-icons-sharp,
-                .material-symbols-sharp,
-                .material-symbols-rounded,
-                .material-symbols-outlined,
-                .fa,
-                .fa-duotone,
-                .fa-light,
-                .fa-regular,
-                .fa-solid,
-                .fa-thin,
-                .fa-sharp,
-                .fa-brands {
+                #{$icon-brand-selectors} {
                     opacity: 0;
                 }
             }
@@ -605,22 +470,7 @@ button.btn-floating {
                     z-index: 1;
 
                     .icon,
-                    .material-icons,
-                    .material-icons-two-one,
-                    .material-icons-outlined,
-                    .material-icons-round,
-                    .material-icons-sharp,
-                    .material-symbols-sharp,
-                    .material-symbols-rounded,
-                    .material-symbols-outlined,
-                    .fa,
-                    .fa-duotone,
-                    .fa-light,
-                    .fa-regular,
-                    .fa-solid,
-                    .fa-thin,
-                    .fa-sharp,
-                    .fa-brands {
+                    #{$icon-brand-selectors} {
                         line-height: inherit;
                     }
                 }
@@ -687,7 +537,7 @@ button.btn-floating {
     &.disabled,
     &.btn-flat[disabled] {
         background-color: transparent !important;
-        color: $button-flat-disabled-color  !important;
+        color: $button-flat-disabled-color !important;
         cursor: default;
     }
 }

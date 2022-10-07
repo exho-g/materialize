@@ -361,22 +361,7 @@
     }
 
     .icon,
-    .material-icons,
-    .material-icons-two-one,
-    .material-icons-outlined,
-    .material-icons-round,
-    .material-icons-sharp,
-    .material-symbols-sharp,
-    .material-symbols-rounded,
-    .material-symbols-outlined,
-    .fa,
-    .fa-duotone,
-    .fa-light,
-    .fa-regular,
-    .fa-solid,
-    .fa-thin,
-    .fa-sharp,
-    .fa-brands {
+    #{$icon-brand-selectors} {
         width: inherit;
         display: inline-block;
         text-align: center;
@@ -386,8 +371,47 @@
     }
 
     &.soft {
-        @include soft-colors;
-        @include soft-colors-hover-focus;
+        background-color: var(--secondary-color-lighten-40);
+        box-shadow: coloredShadow("x1", $secondary-color);
+
+        &:hover {
+            transition: background-color .3s, box-shadow .25s;
+            box-shadow: coloredShadow("x1_2", $secondary-color);
+        }
+
+        .icon,
+        #{$icon-brand-selectors} {
+            color: var(--secondary-color-darken-5);
+        }
+
+        &.primary {
+            background-color: var(--primary-color-lighten-40);
+            box-shadow: coloredShadow("x1", $primary-color);
+
+            &:hover {
+                box-shadow: coloredShadow("x1_2", $primary-color);
+            }
+
+            .icon,
+            #{$icon-brand-selectors} {
+                color: var(--primary-color-darken-5);
+            }
+        }
+
+        @each $sP in $semanticPurposes {
+            &.#{$sP} {
+                background-color: lighten(variable-lookup($sP), 40%);
+                box-shadow: coloredShadow("x1", variable-lookup($sP));
+
+                &:hover {
+                    box-shadow: coloredShadow("x1_2", variable-lookup($sP));
+                }
+
+                .icon {
+                    color: darken(variable-lookup($sP), 5%);
+                }
+            }
+        }
     }
 
     &.large {

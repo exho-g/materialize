@@ -800,13 +800,21 @@
         }
       };
 
-      console.log(this.el.className);
-
       if (this.el.classList.contains('blur-bg')) {
         this.modalEl.classList.add('blur-bg');
 
         if (this.el.classList.contains('acrylic')) {
           this.modalEl.classList.add('acrylic');
+        } else {
+          if (this.el.previousElementSibling) {
+            if (this.el.previousElementSibling.classList.contains('acrylic')) {
+              this.modalEl.classList.add('acrylic');
+            }
+          } else if (this.el.nextElementSibling) {
+            if (this.el.nextElementSibling.classList.contains('acrylic')) {
+              this.modalEl.classList.add('acrylic');
+            }
+          }
         }
       }
 

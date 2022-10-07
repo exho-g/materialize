@@ -407,7 +407,8 @@
                     box-shadow: coloredShadow("x1_2", semanticColorLookUp($sP));
                 }
 
-                .icon {
+                .icon,
+                #{$icon-brand-selectors} {
                     color: darken(semanticColorLookUp($sP), 5%);
                 }
             }

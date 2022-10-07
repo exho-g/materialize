@@ -940,8 +940,6 @@
         return;
       }
 
-      console.log(this.el, this.modalEl);
-
       this.isOpen = true;
       if (typeof this.options.onOpen === 'function') {
         this.options.onOpen.call(this);

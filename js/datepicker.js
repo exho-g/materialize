@@ -805,16 +805,6 @@
 
         if (this.el.classList.contains('acrylic')) {
           this.modalEl.classList.add('acrylic');
-        } else {
-          if (this.el.previousElementSibling) {
-            if (this.el.previousElementSibling.classList.contains('acrylic')) {
-              this.modalEl.classList.add('acrylic');
-            }
-          } else if (this.el.nextElementSibling) {
-            if (this.el.nextElementSibling.classList.contains('acrylic')) {
-              this.modalEl.classList.add('acrylic');
-            }
-          }
         }
       }
 
@@ -949,6 +939,8 @@
       if (this.isOpen) {
         return;
       }
+
+      console.log(this.el, this.modalEl);
 
       this.isOpen = true;
       if (typeof this.options.onOpen === 'function') {

@@ -371,9 +371,26 @@
     }
 
     &.soft {
+        @each $sP in $semanticPurposes {
+            &.#{$sP} {
+                background-color: lighten(semanticColorLookUp($sP), 40%);
+                box-shadow: coloredShadow("x1", semanticColorLookUp($sP));
+
+                &:hover {
+                    box-shadow: coloredShadow("x1_2", semanticColorLookUp($sP));
+                }
+
+                .icon,
+                #{$icon-brand-selectors} {
+                    color: darken(semanticColorLookUp($sP), 5%);
+                }
+            }
+        }
+
         background-color: var(--secondary-color-lighten-40);
         box-shadow: coloredShadow("x1", var(--secondary-color-rgb), false);
-        transition: background-color .3s, box-shadow .25s;
+        transition: background-color .3s,
+        box-shadow .25s;
 
         &:hover {
             box-shadow: coloredShadow("x1_2", var(--secondary-color-rgb), false);
@@ -395,23 +412,6 @@
             .icon,
             #{$icon-brand-selectors} {
                 color: var(--primary-color-darken-5);
-            }
-        }
-
-        @each $sP in $semanticPurposes {
-            &.#{$sP} {
-                $curColor: semanticColorLookUp($sP);
-                background-color: lighten($curColor, 40%);
-                box-shadow: coloredShadow("x1", $curColor);
-
-                &:hover {
-                    box-shadow: coloredShadow("x1_2", $curColor);
-                }
-
-                .icon,
-                #{$icon-brand-selectors} {
-                    color: darken($curColor, 5%);
-                }
             }
         }
     }

@@ -31,7 +31,7 @@
 
 @mixin soft-colors-secondary {
     background-color: var(--secondary-color-darken-30);
-    color: var(--secondary-color-lighten-20);
+    color: var(--secondary-color-lighten-25);
 }
 
 @mixin soft-colors {
@@ -53,24 +53,11 @@
         background-color: var(--primary-color-darken-30);
     }
 
-    &.info {
-        color: lighten($info-color, 25%);
-        background-color: darken($info-color, 40%);
-    }
-
-    &.success {
-        color: lighten($success-color, 25%);
-        background-color: darken($success-color, 40%);
-    }
-
-    &.warning {
-        color: lighten($warning-color, 25%);
-        background-color: darken($warning-color, 40%);
-    }
-
-    &.danger {
-        color: lighten($danger-color, 25%);
-        background-color: darken($danger-color, 40%);
+    @each $sP in $semanticPurposes {
+        &.#{$sP} {
+            color: lighten(semanticColorLookUp($sP), 25%);
+            background-color: darken(semanticColorLookUp($sP), 30%);
+        }
     }
 }
 
@@ -105,24 +92,10 @@
 
     }
 
-    &.info:hover {
-        background-color: rgba(darken($info-color, 30%), 0.7);
-
-    }
-
-    &.success:hover {
-        background-color: rgba(darken($success-color, 30%), 0.7);
-
-    }
-
-    &.warning:hover {
-        background-color: rgba(darken($warning-color, 30%), 0.7);
-
-    }
-
-    &.danger:hover {
-        background-color: rgba(darken($danger-color, 30%), 0.7);
-
+    @each $sP in $semanticPurposes {
+        &.#{$sP}:hover {
+            background-color: rgba(darken(semanticColorLookUp($sP), 30%), 0.7);
+        }
     }
 }
 
@@ -199,20 +172,10 @@
             border-color: var(--secondary-color) !important;
         }
 
-        &-success {
-            border-color: lighten($success-color, 5%);
-        }
-
-        &-info {
-            border-color: lighten($info-color, 5%);
-        }
-
-        &-danger {
-            border-color: lighten($danger-color, 5%);
-        }
-
-        &-warning {
-            border-color: lighten($warning-color, 5%);
+        @each $sP in $semanticPurposes {
+            &-#{$sP} {
+                border-color: lighten(semanticColorLookUp($sP), 5%);
+            }
         }
     }
 
@@ -246,35 +209,13 @@
         }
     }
 
-    .success-color {
-        background-color: darken($success-color, 5%);
+    @each $sP in $semanticPurposes {
+        .#{$sP}-color {
+            background-color: darken(semanticColorLookUp($sP), 5%);
 
-        &-text {
-            color: lighten($success-color, 5%);
-        }
-    }
-
-    .info-color {
-        background-color: darken($info-color, 5%);
-
-        &-text {
-            color: lighten($info-color, 5%);
-        }
-    }
-
-    .danger-color {
-        background-color: darken($danger-color, 5%);
-
-        &-text {
-            color: lighten($danger-color, 5%);
-        }
-    }
-
-    .warning-color {
-        background-color: darken($warning-color, 5%);
-
-        &-text {
-            color: lighten($warning-color, 5%);
+            &-text {
+                color: lighten(semanticColorLookUp($sP), 5%);
+            }
         }
     }
 
@@ -384,6 +325,14 @@
                 >i,
                 &:not(.subheader) {
                     color: #FFF !important;
+                }
+
+                > {
+
+                    .icon,
+                    #{$icon-brand-selectors} {
+                        color: #FFF !important;
+                    }
                 }
 
                 &.subheader {
@@ -525,35 +474,13 @@
                 }
             }
 
-            &.info {
-                background-color: darken($info-color, 20%);
+            @each $sP in $semanticPurposes {
+                &.#{$sP} {
+                    background-color: darken(semanticColorLookUp($sP), 20%);
 
-                &:hover {
-                    background-color: darken($info-color, 15%);
-                }
-            }
-
-            &.success {
-                background-color: darken($success-color, 20%);
-
-                &:hover {
-                    background-color: darken($success-color, 15%);
-                }
-            }
-
-            &.warning {
-                background-color: darken($warning-color, 20%);
-
-                &:hover {
-                    background-color: darken($warning-color, 15%);
-                }
-            }
-
-            &.danger {
-                background-color: darken($danger-color, 20%);
-
-                &:hover {
-                    background-color: darken($danger-color, 15%);
+                    &:hover {
+                        background-color: darken(semanticColorLookUp($sP), 15%);
+                    }
                 }
             }
         }
@@ -601,70 +528,21 @@
             }
         }
 
-        &.info {
-            border-color: lighten($info-color, 10%);
-            color: lighten($info-color, 10%);
+        @each $sP in $semanticPurposes {
+            &.#{$sP} {
+                border-color: lighten(semanticColorLookUp($sP), 10%);
+                color: lighten(semanticColorLookUp($sP), 10%);
 
-            &:not(.as-badge) {
-                &:hover {
-                    background-color: rgba($info-color, 0.3);
-                }
+                &:not(.as-badge) {
+                    &:hover {
+                        background-color: rgba(semanticColorLookUp($sP), 0.3);
+                    }
 
-                &:focus,
-                &:active {
-                    color: lighten($info-color, 25%);
-                    background-color: rgba($info-color, 0.5);
-                }
-            }
-        }
-
-        &.success {
-            border-color: lighten($success-color, 10%);
-            color: lighten($success-color, 10%);
-
-            &:not(.as-badge) {
-                &:hover {
-                    background-color: rgba($success-color, 0.3);
-                }
-
-                &:focus,
-                &:active {
-                    color: lighten($success-color, 25%);
-                    background-color: rgba($success-color, 0.5);
-                }
-            }
-        }
-
-        &.warning {
-            border-color: lighten($warning-color, 10%);
-            color: lighten($warning-color, 10%);
-
-            &:not(.as-badge) {
-                &:hover {
-                    background-color: rgba($warning-color, 0.3);
-                }
-
-                &:focus,
-                &:active {
-                    color: lighten($warning-color, 25%);
-                    background-color: rgba($warning-color, 0.5);
-                }
-            }
-        }
-
-        &.danger {
-            border-color: lighten($danger-color, 10%);
-            color: lighten($danger-color, 10%);
-
-            &:not(.as-badge) {
-                &:hover {
-                    background-color: rgba($danger-color, 0.3);
-                }
-
-                &:focus,
-                &:active {
-                    color: lighten($danger-color, 25%);
-                    background-color: rgba($danger-color, 0.5);
+                    &:focus,
+                    &:active {
+                        color: lighten(semanticColorLookUp($sP), 25%);
+                        background-color: rgba(semanticColorLookUp($sP), 0.5);
+                    }
                 }
             }
         }
@@ -715,22 +593,7 @@
         }
 
         .icon,
-        .material-icons,
-        .material-icons-two-one,
-        .material-icons-outlined,
-        .material-icons-round,
-        .material-icons-sharp,
-        .material-symbols-sharp,
-        .material-symbols-rounded,
-        .material-symbols-outlined,
-        .fa,
-        .fa-duotone,
-        .fa-light,
-        .fa-regular,
-        .fa-solid,
-        .fa-thin,
-        .fa-sharp,
-        .fa-brands {
+        #{$icon-brand-selectors} {
             color: rgba($button-disabled-color, 0.3) !important;
         }
     }
@@ -966,20 +829,10 @@
                 border-color: var(--primary-color-light);
             }
 
-            &.success {
-                border-color: lighten($success-color, 15%);
-            }
-
-            &.info {
-                border-color: lighten($info-color, 15%);
-            }
-
-            &.danger {
-                border-color: lighten($danger-color, 15%);
-            }
-
-            &.warning {
-                border-color: lighten($warning-color, 15%);
+            @each $sP in $semanticPurposes {
+                &.#{$sP} {
+                    border-color: lighten(semanticColorLookUp($sP), 15%);
+                }
             }
         }
     }
@@ -1587,20 +1440,10 @@
                 background-color: var(--primary-color-darken-20);
             }
 
-            &.info {
-                background-color: darken($info-color, 20%);
-            }
-
-            &.success {
-                background-color: darken($success-color, 20%);
-            }
-
-            &.warning {
-                background-color: darken($warning-color, 20%);
-            }
-
-            &.danger {
-                background-color: darken($danger-color, 20%);
+            @each $sP in $semanticPurposes {
+                &.#{$sP} {
+                    background-color: darken(semanticColorLookUp($sP), 20%);
+                }
             }
 
             &.light,
@@ -1619,24 +1462,11 @@
                 color: var(--primary-color-lighten-20);
             }
 
-            &.info {
-                border-color: $info-color;
-                color: lighten($info-color, 20%);
-            }
-
-            &.success {
-                border-color: $success-color;
-                color: lighten($success-color, 20%);
-            }
-
-            &.warning {
-                border-color: $warning-color;
-                color: lighten($warning-color, 20%);
-            }
-
-            &.danger {
-                border-color: $danger-color;
-                color: lighten($danger-color, 20%);
+            @each $sP in $semanticPurposes {
+                &.#{$sP} {
+                    border-color: semanticColorLookUp($sP);
+                    color: lighten(semanticColorLookUp($sP), 20%);
+                }
             }
 
             &.dark-light {

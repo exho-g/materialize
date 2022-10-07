@@ -617,66 +617,20 @@ button.btn-floating {
         }
     }
 
-    &.info {
-        color: $info-color;
-        border-color: $info-color;
+    @each $sP in $semanticPurposes {
+        &.#{$sP} {
+            color: semanticColorLookUp($sP);
+            border-color: semanticColorLookUp($sP);
 
-        &:not(.as-badge) {
-            &:hover {
-                background-color: rgba($info-color, 0.1);
-            }
+            &:not(.as-badge) {
+                &:hover {
+                    background-color: rgba(semanticColorLookUp($sP), 0.1);
+                }
 
-            &:focus,
-            &:active {
-                background-color: rgba($info-color, 0.3);
-            }
-        }
-    }
-
-    &.success {
-        color: $success-color;
-        border-color: $success-color;
-
-        &:not(.as-badge) {
-            &:hover {
-                background-color: rgba($success-color, 0.1);
-            }
-
-            &:focus,
-            &:active {
-                background-color: rgba($success-color, 0.3);
-            }
-        }
-    }
-
-    &.warning {
-        color: $warning-color;
-        border-color: $warning-color;
-
-        &:not(.as-badge) {
-            &:hover {
-                background-color: rgba($warning-color, 0.1);
-            }
-
-            &:focus,
-            &:active {
-                background-color: rgba($warning-color, 0.3);
-            }
-        }
-    }
-
-    &.danger {
-        color: $danger-color;
-        border-color: $danger-color;
-
-        &:not(.as-badge) {
-            &:hover {
-                background-color: rgba($danger-color, 0.1);
-            }
-
-            &:focus,
-            &:active {
-                background-color: rgba($danger-color, 0.3);
+                &:focus,
+                &:active {
+                    background-color: rgba(semanticColorLookUp($sP), 0.3);
+                }
             }
         }
     }

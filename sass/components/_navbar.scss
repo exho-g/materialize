@@ -51,22 +51,7 @@ nav {
     [class^="mdi-"],
     [class*="mdi-"],
     .icon,
-    .material-icons,
-    .material-icons-two-one,
-    .material-icons-outlined,
-    .material-icons-round,
-    .material-icons-sharp,
-    .material-symbols-sharp,
-    .material-symbols-rounded,
-    .material-symbols-outlined,
-    .fa,
-    .fa-duotone,
-    .fa-light,
-    .fa-regular,
-    .fa-solid,
-    .fa-thin,
-    .fa-sharp,
-    .fa-brands {
+    #{$icon-brand-selectors} {
         display: block;
         font-size: 24px;
         height: $navbar-height-mobile;
@@ -139,22 +124,7 @@ nav {
         [class^="mdi-"],
         [class*="mdi-"],
         .icon,
-        .material-icons,
-        .material-icons-two-one,
-        .material-icons-outlined,
-        .material-icons-round,
-        .material-icons-sharp,
-        .material-symbols-sharp,
-        .material-symbols-rounded,
-        .material-symbols-outlined,
-        .fa,
-        .fa-duotone,
-        .fa-light,
-        .fa-regular,
-        .fa-solid,
-        .fa-thin,
-        .fa-sharp,
-        .fa-brands {
+        #{$icon-brand-selectors} {
             float: left;
             margin-right: 15px;
         }
@@ -199,22 +169,7 @@ nav {
                 &> {
 
                     .icon,
-                    .material-icons,
-                    .material-icons-two-one,
-                    .material-icons-outlined,
-                    .material-icons-round,
-                    .material-icons-sharp,
-                    .material-symbols-sharp,
-                    .material-symbols-rounded,
-                    .material-symbols-outlined,
-                    .fa,
-                    .fa-duotone,
-                    .fa-light,
-                    .fa-regular,
-                    .fa-solid,
-                    .fa-thin,
-                    .fa-sharp,
-                    .fa-brands {
+                    #{$icon-brand-selectors} {
                         height: inherit;
                         line-height: inherit;
                     }
@@ -319,6 +274,15 @@ nav.flat {
     nav a.sidenav-trigger i {
         height: $navbar-height;
         line-height: $navbar-line-height;
+    }
+
+    nav {
+
+        .icon,
+        #{$icon-brand-selectors} {
+            height: $navbar-height;
+            line-height: $navbar-line-height;
+        }
     }
 
     .navbar-fixed {

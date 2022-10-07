@@ -322,24 +322,13 @@ textarea.materialize-textarea {
     &+label i,
     &~.mdi-navigation-close,
     &~ {
+      color: #444;
+    }
+
+    &+label {
 
       .icon,
-      .material-icons,
-      .material-icons-two-one,
-      .material-icons-outlined,
-      .material-icons-round,
-      .material-icons-sharp,
-      .material-symbols-sharp,
-      .material-symbols-rounded,
-      .material-symbols-outlined,
-      .fa,
-      .fa-duotone,
-      .fa-light,
-      .fa-regular,
-      .fa-solid,
-      .fa-thin,
-      .fa-sharp,
-      .fa-brands {
+      #{$icon-brand-selectors} {
         color: #444;
       }
     }
@@ -354,22 +343,7 @@ textarea.materialize-textarea {
   &~ {
 
     .icon,
-    .material-icons,
-    .material-icons-two-one,
-    .material-icons-outlined,
-    .material-icons-round,
-    .material-icons-sharp,
-    .material-symbols-sharp,
-    .material-symbols-rounded,
-    .material-symbols-outlined,
-    .fa,
-    .fa-duotone,
-    .fa-light,
-    .fa-regular,
-    .fa-solid,
-    .fa-thin,
-    .fa-sharp,
-    .fa-brands {
+    #{$icon-brand-selectors} {
       position: absolute;
       top: 0;
       right: 1rem;

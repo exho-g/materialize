@@ -24,22 +24,7 @@
     > {
 
         .icon,
-        .material-icons,
-        .material-icons-two-one,
-        .material-icons-outlined,
-        .material-icons-round,
-        .material-icons-sharp,
-        .material-symbols-sharp,
-        .material-symbols-rounded,
-        .material-symbols-outlined,
-        .fa,
-        .fa-duotone,
-        .fa-light,
-        .fa-regular,
-        .fa-solid,
-        .fa-thin,
-        .fa-sharp,
-        .fa-brands {
+        #{$icon-brand-selectors} {
             margin-right: 10px;
         }
     }
@@ -77,39 +62,14 @@
         }
     }
 
-    &.info {
-        background-color: $info-color;
-        color: #FFF;
-
-        .content {
+    @each $sP in $semanticPurposes {
+        &.#{$sP} {
+            background-color: semanticColorLookUp($sP);
             color: #FFF;
-        }
-    }
 
-    &.success {
-        background-color: $success-color;
-        color: #FFF;
-
-        .content {
-            color: #FFF;
-        }
-    }
-
-    &.danger {
-        background-color: $danger-color;
-        color: #FFF;
-
-        .content {
-            color: #FFF;
-        }
-    }
-
-    &.warning {
-        background-color: $warning-color;
-        color: #FFF;
-
-        .content {
-            color: #FFF;
+            .content {
+                color: #FFF;
+            }
         }
     }
 
@@ -155,24 +115,11 @@
             color: var(--primary-color-darken-10);
         }
 
-        &.info {
-            border-color: $info-color;
-            color: darken($info-color, 10%);
-        }
-
-        &.success {
-            border-color: $success-color;
-            color: darken($success-color, 10%);
-        }
-
-        &.danger {
-            border-color: $danger-color;
-            color: darken($danger-color, 10%);
-        }
-
-        &.warning {
-            border-color: $warning-color;
-            color: darken($warning-color, 10%);
+        @each $sP in $semanticPurposes {
+            &.#{$sP} {
+                border-color: semanticColorLookUp($sP);
+                color: darken(semanticColorLookUp($sP), 10%);
+            }
         }
 
         &.light {
@@ -194,22 +141,7 @@
             margin-bottom: .75rem;
 
             .icon,
-            .material-icons,
-            .material-icons-two-one,
-            .material-icons-outlined,
-            .material-icons-round,
-            .material-icons-sharp,
-            .material-symbols-sharp,
-            .material-symbols-rounded,
-            .material-symbols-outlined,
-            .fa,
-            .fa-duotone,
-            .fa-light,
-            .fa-regular,
-            .fa-solid,
-            .fa-thin,
-            .fa-sharp,
-            .fa-brands {
+            #{$icon-brand-selectors} {
                 float: left;
                 margin-right: 10px;
             }

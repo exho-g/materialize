@@ -83,20 +83,10 @@
             border-color: var(--primary-color);
         }
 
-        &.success {
-            border-color: $success-color;
-        }
-
-        &.info {
-            border-color: $info-color;
-        }
-
-        &.danger {
-            border-color: $danger-color;
-        }
-
-        &.warning {
-            border-color: $warning-color;
+        @each $sP in $semanticPurposes {
+            &.#{$sP} {
+                border-color: semanticColorLookUp($sP);
+            }
         }
     }
 }

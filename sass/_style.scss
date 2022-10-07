@@ -590,22 +590,7 @@ $height: auto;
 
 // Icons
 .icon,
-.material-icons,
-.material-icons-two-one,
-.material-icons-outlined,
-.material-icons-round,
-.material-icons-sharp,
-.material-symbols-sharp,
-.material-symbols-rounded,
-.material-symbols-outlined,
-.fa,
-.fa-duotone,
-.fa-light,
-.fa-regular,
-.fa-solid,
-.fa-thin,
-.fa-sharp,
-.fa-brands {
+#{$icon-brand-selectors} {
     &.icon-demo {
         line-height: 50px;
     }

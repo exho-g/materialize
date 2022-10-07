@@ -442,7 +442,7 @@ let closeAlert = function(alertComp) {
     alertComp.style.transform = 'scale(0.5)';
     setTimeout(function() {
       alertComp.style.padding = 0;
-      alertComp.style.margin = 0;
+      alertComp.style.margin = '-25px 0';
       alertComp.style.height = 0;
       setTimeout(function() {
         alertComp.remove();

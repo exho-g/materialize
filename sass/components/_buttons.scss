@@ -287,6 +287,7 @@
             box-shadow .25s;
 
         &:hover {
+            background-color: var(--secondary-color-lighten-30);
             box-shadow: coloredShadow("x1_2", var(--secondary-color-rgb), false);
         }
 
@@ -300,6 +301,7 @@
             box-shadow: coloredShadow("x1", var(--primary-color-rgb), false);
 
             &:hover {
+                background-color: var(--primary-color-lighten-30);
                 box-shadow: coloredShadow("x1_2", var(--primary-color-rgb), false);
             }
 
@@ -315,6 +317,7 @@
                 box-shadow: coloredShadow("x1", semanticColorLookUp($sP));
 
                 &:hover {
+                    background-color: lighten(semanticColorLookUp($sP), 30%);
                     box-shadow: coloredShadow("x1_2", semanticColorLookUp($sP));
                 }
 

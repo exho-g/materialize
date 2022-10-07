@@ -446,6 +446,7 @@
             box-shadow: unset;
 
             &:hover {
+                background-color: var(--secondary-color-darken-25);
                 box-shadow: unset;
             }
 
@@ -459,6 +460,7 @@
                 box-shadow: unset;
 
                 &:hover {
+                    background-color: var(--primary-color-darken-25);
                     box-shadow: unset;
                 }
 
@@ -474,6 +476,7 @@
                     box-shadow: unset;
 
                     &:hover {
+                        background-color: darken(semanticColorLookUp($sP), 25%);
                         box-shadow: unset;
                     }
 

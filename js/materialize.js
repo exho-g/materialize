@@ -9258,7 +9258,7 @@ $jscomp.polyfill = function (e, r, p, m) {
     i18n: {
       cancel: 'Cancel',
       clear: 'Clear',
-      done: 'Ok',
+      done: 'OK',
       previousMonth: '‹',
       nextMonth: '›',
       months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
@@ -9890,6 +9890,8 @@ $jscomp.polyfill = function (e, r, p, m) {
           }
         };
 
+        console.log(this.el.className);
+
         if (this.el.classList.contains('blur-bg')) {
           this.modalEl.classList.add('blur-bg');
 
@@ -10161,7 +10163,7 @@ $jscomp.polyfill = function (e, r, p, m) {
     i18n: {
       cancel: 'Cancel',
       clear: 'Clear',
-      done: 'Ok'
+      done: 'OK'
     },
 
     autoClose: false, // auto close when minute is selected
@@ -10374,6 +10376,8 @@ $jscomp.polyfill = function (e, r, p, m) {
         this.spanAmPm = this.modalEl.querySelector('.timepicker-span-am-pm');
         this.footer = this.modalEl.querySelector('.timepicker-footer');
         this.amOrPm = 'PM';
+
+        console.log(this.el.className);
 
         if (this.el.classList.contains('blur-bg')) {
           this.modalEl.classList.add('blur-bg');

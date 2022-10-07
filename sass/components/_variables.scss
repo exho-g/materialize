@@ -112,16 +112,16 @@ $semanticColors: (
     @return $value;
 }
 
-@function coloredShadow($zDepth, $curColor, $fixed: false) {
+@function coloredShadow($zDepth, $curColor, $fixed: true) {
     $color: $curColor;
 
-    @if $fixed ==false {
+    @if $fixed {
         $color: red($curColor) ", " blue($curColor) ", " green($curColor);
     }
 
     $boxShadow: map-get((x1: "0 2px 2px 0 rgba(#{$color}, 0.14), 0 3px 1px -2px rgba(#{$color}, 0.12), 0 1px 5px 0 rgba(#{$color}, 0.2)",
 
-                x1_2 : "0 3px 3px 0 rgba(#{$color}, 0.14), 0 1px 7px 0 rgba(#{$color} 0.12), 0 3px 1px -1px rgba(#{$color}, 0.2)",
+                x1_2 : "0 3px 3px 0px rgba(#{$color}, 0.14), 0 1px 7px 0px rgba(#{$color}, 0.12), 0 3px 1px 1px rgba(#{$color}, 0.2)",
 
                 x2 : "0 4px 5px 0 rgba(#{$color}, 0.14), 0 1px 10px 0 rgba(#{$color}, 0.12), 0 2px 4px -1px rgba(#{$color}, 0.3)",
 

@@ -400,15 +400,15 @@
 
         @each $sP in $semanticPurposes {
             &.#{$sP} {
-                background-color: lighten(variable-lookup($sP), 40%);
-                box-shadow: coloredShadow("x1", variable-lookup($sP));
+                background-color: lighten(semanticColorLookUp($sP), 40%);
+                box-shadow: coloredShadow("x1", semanticColorLookUp($sP));
 
                 &:hover {
-                    box-shadow: coloredShadow("x1_2", variable-lookup($sP));
+                    box-shadow: coloredShadow("x1_2", semanticColorLookUp($sP));
                 }
 
                 .icon {
-                    color: darken(variable-lookup($sP), 5%);
+                    color: darken(semanticColorLookUp($sP), 5%);
                 }
             }
         }

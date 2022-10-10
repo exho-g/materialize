@@ -163,7 +163,10 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
               transform: unset;
               background-color: #FFF;
               width: 18px;
-              left: 15px;
+              //left: 15px;
+              height: 18px;
+              left: 0;
+              top: 0;
             }
           }
         }

@@ -112,7 +112,7 @@ $semanticColors: (
     @return $value;
 }
 
-@function coloredShadow($zDepth, $curColor, $fixed: true) {
+@function coloredShadow($zDepth, $curColor: #000000, $fixed: true) {
     $color: $curColor;
 
     @if $fixed {

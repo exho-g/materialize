@@ -120,7 +120,7 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
         left: 4px;
         width: 16px;
         height: 16px;
-        transition: left 0.3s ease, background 0.3s ease, width 0.1s ease;
+        transition: left 0.3s ease, background 0.3s ease, width 0.3s ease, height 0.3s ease, top 0.3s ease;
       }
 
       &::after {
@@ -133,7 +133,6 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
         color: transparent;
         text-align: center;
         line-height: 1.4;
-        transition: color 0.3 ease;
       }
     }
 
@@ -149,9 +148,12 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
             background-color: var(--secondary-color);
             width: 24px;
             height: 24px;
+            top: 0;
+            left: 0;
           }
 
           &::after {
+            line-height: 1.5;
             color: #FFF;
           }
         }
@@ -189,13 +191,11 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
             &::after {
               transform: unset;
               background-color: #FFF;
-              width: 18px;
-              height: 18px;
               left: 20px;
             }
 
             &::after {
-              line-height: 1.5;
+              color: var(--secondary-color);
             }
           }
         }

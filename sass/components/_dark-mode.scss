@@ -1124,24 +1124,27 @@
                     }
                 }
 
-                ~.lever:active,
-                &.tabbed:focus~.lever {
-
-                    &::before,
-                    &::after {
-                        background-color: var(--secondary-color-darken-25);
-                    }
-                }
-
                 input[type=checkbox] {
+                    &:not(:disabled) {
+
+                        ~.lever:active,
+                        &.tabbed:focus~.lever {
+
+                            &::before,
+                            &::after {
+                                background-color: var(--secondary-color-darken-10);
+                            }
+                        }
+                    }
+
                     &:checked+.lever {
                         background-color: var(--secondary-color-lighten-10);
 
                         &::after {
                             //background-color: #FFF;
                             //color: var(--secondary-color-lighten-10);
-                            background-color: var(--secondary-color-darken-30);
-                            color: var(--secondary-color-lighten-30);
+                            background-color: var(--secondary-color-darken-30) !important;
+                            color: var(--secondary-color-lighten-30) !important;
                         }
 
                         &:not(:disabled) {

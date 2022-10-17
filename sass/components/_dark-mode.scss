@@ -1132,20 +1132,22 @@
 
                             &::before,
                             &::after {
-                                background-color: var(--secondary-color-darken-10);
+                                background-color: var(--secondary-color-lighten-10);
                                 color: #FFF;
                             }
                         }
                     }
 
-                    &:checked+.lever {
-                        background-color: var(--secondary-color-lighten-10);
+                    &:checked {
+                        +.lever {
+                            background-color: var(--secondary-color-lighten-10);
 
-                        &::after {
-                            //background-color: #FFF;
-                            //color: var(--secondary-color-lighten-10);
-                            background-color: var(--secondary-color-darken-30);
-                            color: var(--secondary-color-lighten-30);
+                            &::after {
+                                //background-color: #FFF;
+                                //color: var(--secondary-color-lighten-10);
+                                background-color: var(--secondary-color-darken-30);
+                                color: var(--secondary-color-lighten-30);
+                            }
                         }
 
                         &:not(:disabled) {
@@ -1156,7 +1158,7 @@
                                 &::before,
                                 &::after {
                                     //background: #FFF;
-                                    background-color: var(--secondary-color-darken-25);
+                                    background-color: var(--secondary-color-darken-20);
                                 }
                             }
                         }

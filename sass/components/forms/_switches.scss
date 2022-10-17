@@ -208,7 +208,7 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
     }
   }
 
-  &.with-icon {
+  &.with-icon label .lever {
     &::after {
       content: 'done';
       font-size: 1.15rem;

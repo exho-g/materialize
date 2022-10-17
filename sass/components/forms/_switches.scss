@@ -126,12 +126,7 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
       &::after {
         background-color: unset;
         box-shadow: unset;
-        font-size: 1.15rem;
-        font-family: 'Material Icons';
-        font-weight: bold;
-        content: 'done';
         color: transparent;
-        text-align: center;
         line-height: 1.4;
       }
     }
@@ -173,11 +168,7 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
           }
 
           &::after {
-            font-family: 'Material Icons';
-            font-weight: bold;
-            content: 'done';
             color: var(--secondary-color);
-            text-align: center;
             line-height: 1.4;
           }
         }
@@ -214,6 +205,16 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
           }
         }
       }
+    }
+  }
+
+  &.with-icon {
+    &::after {
+      content: 'done';
+      font-size: 1.15rem;
+      font-family: 'Material Icons';
+      font-weight: bold;
+      text-align: center;
     }
   }
 }

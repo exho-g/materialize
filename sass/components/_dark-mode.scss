@@ -1132,7 +1132,8 @@
 
                             &::before,
                             &::after {
-                                background-color: var(--secondary-color-darken-10);
+                                background-color: var(--secondary-color-darken-20);
+                                color: #FFF;
                             }
                         }
                     }
@@ -1143,8 +1144,8 @@
                         &::after {
                             //background-color: #FFF;
                             //color: var(--secondary-color-lighten-10);
-                            background-color: var(--secondary-color-darken-30) !important;
-                            color: var(--secondary-color-lighten-30) !important;
+                            background-color: var(--secondary-color-darken-30);
+                            color: var(--secondary-color-lighten-30);
                         }
 
                         &:not(:disabled) {

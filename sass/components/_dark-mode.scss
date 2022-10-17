@@ -1129,7 +1129,7 @@
 
                     &::before,
                     &::after {
-                        background-color: var(--secondary-color-lighten-10);
+                        background-color: var(--secondary-color-darken-25);
                     }
                 }
 
@@ -1152,7 +1152,7 @@
                                 &::before,
                                 &::after {
                                     //background: #FFF;
-                                    background-color: var(--secondary-color-darken-30);
+                                    background-color: var(--secondary-color-darken-25);
                                 }
                             }
                         }

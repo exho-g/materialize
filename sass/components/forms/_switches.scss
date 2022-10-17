@@ -109,27 +109,54 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
     .lever {
       background-color: rgba(var(--secondary-color-rgb), 0.20);
       border: 2px solid var(--secondary-color);
-      width: 38px;
-      height: 22px;
+      width: 48px;
+      height: 28px;
       transition: border 0.3s ease, background 0.3s ease;
 
       &::before,
       &::after {
         background-color: var(--secondary-color);
-        top: 3px;
-        left: 3px;
-        width: 12px;
-        height: 12px;
+        top: 4px;
+        left: 4px;
+        width: 16px;
+        height: 16px;
         transition: left 0.3s ease, background 0.3s ease, width 0.1s ease;
       }
 
       &::after {
         background-color: unset;
         box-shadow: unset;
+        font-size: 1.15rem;
+        font-family: 'Material Icons';
+        font-weight: bold;
+        content: 'done';
+        color: transparent;
+        text-align: center;
+        line-height: 1.4;
+        transition: color 0.3 ease;
       }
     }
 
     input[type=checkbox] {
+      &:not(:disabled) {
+
+        ~.lever:active,
+        &.tabbed:focus~.lever {
+
+          &::before,
+          &::after {
+            transform: unset;
+            background-color: var(--secondary-color);
+            width: 24px;
+            height: 24px;
+          }
+
+          &::after {
+            color: #FFF;
+          }
+        }
+      }
+
       &:checked {
         +.lever {
           background-color: var(--secondary-color);
@@ -137,9 +164,9 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
           &::after,
           &::before {
             background-color: #FFF;
-            left: 17px;
-            width: 16px;
-            height: 16px;
+            left: 20px;
+            width: 22px;
+            height: 22px;
             top: 1px;
           }
 
@@ -149,7 +176,7 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
             content: 'done';
             color: var(--secondary-color);
             text-align: center;
-            line-height: 1.5;
+            line-height: 1.4;
           }
         }
 
@@ -163,25 +190,13 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
               transform: unset;
               background-color: #FFF;
               width: 18px;
-              //left: 15px;
               height: 18px;
-              left: 0;
-              top: 0;
+              left: 20px;
             }
-          }
-        }
-      }
 
-      &:not(:disabled) {
-
-        ~.lever:active,
-        &.tabbed:focus~.lever {
-
-          &::before,
-          &::after {
-            transform: unset;
-            background-color: var(--secondary-color);
-            width: 14px;
+            &::after {
+              line-height: 1.5;
+            }
           }
         }
       }

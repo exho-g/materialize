@@ -311,6 +311,7 @@
                     }
 
                     &[disabled]:checked+.lever::after {
+                        background-color: transparent;
                         border-color: color('grey', 'darken-2');
                     }
                 }

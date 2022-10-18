@@ -46,7 +46,7 @@
     --primary-color-light: hsl(var(--primary-color-hs), calc(var(--primary-color-l) + 15%));
     --primary-color-dark: hsl(var(--primary-color-hs), calc(var(--primary-color-l) - 15%));
 
-    --secondary-color: hsla(var(--secondary-color-hsl));
+    --secondary-color: hsl(var(--secondary-color-hsl));
     --secondary-color-light: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) + 15%));
     --secondary-color-dark: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) - 15%));
 

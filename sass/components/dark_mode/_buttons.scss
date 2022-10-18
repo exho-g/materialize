@@ -1,0 +1,234 @@
+//fabs
+.btn-floating {
+
+    background-color: var(--secondary-color-darken-20);
+
+    &:hover {
+        background-color: var(--secondary-color-dark);
+    }
+
+    .icon,
+    #{$icon-brand-selectors} {
+        color: #FFF;
+    }
+
+    &.soft:not(.disabled) {
+        background-color: var(--secondary-color-darken-30);
+        box-shadow: unset;
+
+        &:hover {
+            background-color: var(--secondary-color-darken-25);
+            box-shadow: unset;
+        }
+
+        .icon,
+        #{$icon-brand-selectors} {
+            color: var(--secondary-color-lighten-20);
+        }
+
+        &.primary {
+            background-color: var(--primary-color-darken-30);
+            box-shadow: unset;
+
+            &:hover {
+                background-color: var(--primary-color-darken-25);
+                box-shadow: unset;
+            }
+
+            .icon,
+            #{$icon-brand-selectors} {
+                color: var(--primary-color-lighten-20);
+            }
+        }
+
+        @each $sP in $semanticPurposes {
+            &.#{$sP} {
+                background-color: darken(semanticColorLookUp($sP), 30%);
+                box-shadow: unset;
+
+                &:hover {
+                    background-color: darken(semanticColorLookUp($sP), 25%);
+                    box-shadow: unset;
+                }
+
+                .icon,
+                #{$icon-brand-selectors} {
+                    color: lighten(semanticColorLookUp($sP), 20%);
+                }
+            }
+        }
+    }
+}
+
+//buttons
+.btn {
+    color: #FFF;
+
+    &.light {
+        color: #000;
+    }
+
+    &.dark-light {
+        color: #000;
+        background-color: #FAFAFA;
+
+        &:hover {
+            background-color: #EEE;
+        }
+
+        &:focus {
+            background-color: #E0E0E0;
+        }
+    }
+
+    &:not(.light):not(.dark):not(.dark-light) {
+        background-color: var(--secondary-color-darken-20);
+
+        &:hover {
+            background-color: var(--secondary-color-dark);
+        }
+
+        &.primary {
+            background-color: var(--primary-color-darken-20);
+
+            &:hover {
+                background-color: var(--primary-color-dark);
+            }
+        }
+
+        @each $sP in $semanticPurposes {
+            &.#{$sP} {
+                background-color: darken(semanticColorLookUp($sP), 20%);
+
+                &:hover {
+                    background-color: darken(semanticColorLookUp($sP), 15%);
+                }
+            }
+        }
+    }
+}
+
+.btn-flat {
+    color: #FFF;
+}
+
+.btn-soft {
+    @include soft-colors;
+    @include soft-colors-hover-focus;
+}
+
+.btn-outlined:not(.light):not(.dark):not(.dark-light) {
+    border-color: var(--secondary-color-lighten-10);
+    color: var(--secondary-color-lighten-10);
+
+    &:not(.as-badge) {
+        &:hover {
+            background-color: hsla(var(--secondary-color-hsl), 0.30);
+        }
+
+        &:focus,
+        &:active {
+            color: var(--secondary-color-lighten-25);
+            background-color: hsla(var(--secondary-color-hsl), 0.50);
+        }
+    }
+
+    &.primary {
+        border-color: var(--primary-color-lighten-10);
+        color: var(--primary-color-lighten-10);
+
+        &:not(.as-badge) {
+            &:hover {
+                background-color: hsla(var(--primary-color-hsl), 0.3);
+            }
+
+            &:focus,
+            &:active {
+                color: var(--primary-color-lighten-25);
+                background-color: hsla(var(--primary-color-hsl), 0.5);
+            }
+        }
+    }
+
+    @each $sP in $semanticPurposes {
+        &.#{$sP} {
+            border-color: lighten(semanticColorLookUp($sP), 10%);
+            color: lighten(semanticColorLookUp($sP), 10%);
+
+            &:not(.as-badge) {
+                &:hover {
+                    background-color: rgba(semanticColorLookUp($sP), 0.3);
+                }
+
+                &:focus,
+                &:active {
+                    color: lighten(semanticColorLookUp($sP), 25%);
+                    background-color: rgba(semanticColorLookUp($sP), 0.5);
+                }
+            }
+        }
+    }
+}
+
+.btn-outlined {
+
+    &.light,
+    &.dark-light {
+        color: rgb(240, 240, 240);
+        border-color: rgb(240, 240, 240);
+
+        &:not(.as-badge) {
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+
+            &:focus,
+            &:active {
+                background-color: rgba(255, 255, 255, 0.3);
+            }
+        }
+    }
+
+    &.dark:not(.as-badge) {
+        &:hover {
+            background-color: rgba(#212121, 0.2);
+        }
+    }
+}
+
+// buttons disabled
+.btn.disabled,
+.btn-floating.disabled,
+.btn-soft.disabled,
+.btn:disabled,
+.btn-floating:disabled,
+.btn-soft:disabled,
+.btn[disabled],
+.btn-floating[disabled],
+.btn-soft[disabled] {
+    background-color: rgba($button-disabled-background, 0.2) !important;
+    color: rgba($button-disabled-color, 0.3) !important;
+
+    &:hover {
+        background-color: rgba($button-disabled-background, 0.2) !important;
+        color: rgba($button-disabled-color, 0.3) !important;
+    }
+
+    .icon,
+    #{$icon-brand-selectors} {
+        color: rgba($button-disabled-color, 0.3) !important;
+    }
+}
+
+.btn-flat.disabled,
+.btn-flat:disabled,
+.btn-flat[disabled] {
+    color: rgba($button-disabled-color, 0.3) !important;
+}
+
+.btn-outlined.disabled,
+.btn-outlined:disabled,
+.btn-outlined[disabled] {
+    color: rgba($button-disabled-color, 0.3) !important;
+    border-color: rgba($button-disabled-background, 0.2) !important;
+}

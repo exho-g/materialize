@@ -1,0 +1,124 @@
+// Navigations
+nav {
+    background-color: darken(color('grey', 'darken-4'), 1%);
+
+    &.blur-bg {
+        background-color: rgba(#000000, 0.7);
+
+        &.acrylic {
+            background-image: $acrylic-background-ondark;
+        }
+    }
+
+    li a:not(.brand-logo) {
+        color: #FFF;
+
+        &:hover {
+            background-color: lighten(color('grey', 'darken-4'), 5%);
+        }
+    }
+
+    .brand-logo {
+        img {
+            opacity: 1;
+        }
+    }
+
+    &.breadcrumbs {
+
+        .segment {
+            color: rgba(255, 255, 255, 0.5);
+
+            &:before {
+                color: rgba(255, 255, 255, 0.5);
+            }
+
+            &:last-child,
+            &:last-child::before {
+                color: var(--primary-color-lighten-10);
+            }
+        }
+
+        &.flat {
+            background-color: transparent;
+
+            .segment {
+                color: rgba(255, 255, 255, .5);
+
+                &:before {
+                    color: rgba(255, 255, 255, .5);
+                }
+
+                &:last-child,
+                &:last-child::before {
+                    color: var(--primary-color-lighten-10);
+                }
+            }
+        }
+    }
+}
+
+// Side navigations
+.sidenav {
+    background-color: color('grey', 'darken-4');
+
+    &.blur-bg {
+        background-color: rgba(color('grey', 'darken-4'), .5);
+
+        &.acrylic {
+            background-image: $acrylic-background-ondark;
+        }
+    }
+
+    li {
+        >a {
+
+            >i,
+            &:not(.subheader) {
+                color: #FFF !important;
+            }
+
+            > {
+
+                .icon,
+                #{$icon-brand-selectors} {
+                    color: #FFF !important;
+                }
+            }
+
+            &.subheader {
+                color: color('red', 'lighten-1');
+            }
+
+            &:hover {
+                background-color: lighten(color('grey', 'darken-4'), 5%);
+            }
+        }
+
+        &.active {
+            background-color: rgba(255, 255, 255, .05);
+            ;
+
+            >a:hover {
+                background-color: transparent;
+            }
+        }
+    }
+
+    .collapsible {
+        border: unset;
+
+        .collapsible-header {
+            border: unset;
+
+            &:hover {
+                background-color: lighten(color('grey', 'darken-4'), 5%);
+            }
+        }
+
+        .collapsible-body {
+            border: unset;
+            background-color: lighten(color('grey', 'darken-4'), 2%);
+        }
+    }
+}

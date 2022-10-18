@@ -1,0 +1,139 @@
+// Tree view
+$tree-line: #383838;
+$tree-line-hover: #4d4d4d;
+$tree-span-hover: rgba(255, 255, 255, .2);
+$tree-span-child-hover: rgba(255, 255, 255, .15);
+
+.tree {
+
+    .root,
+    li span,
+    li a {
+        background-color: rgba(255, 255, 255, .1);
+
+        &.active {
+            background-color: var(--secondary-color);
+        }
+
+        &.disabled {
+            background-color: rgba(255, 255, 255, .05);
+            color: rgba(255, 255, 255, .5);
+        }
+    }
+
+    &.outlined {
+
+        .root,
+        li span,
+        li a {
+            background-color: unset;
+            border: 2px solid $tree-line;
+
+            &.active {
+                border-color: var(--secondary-color-lighten-10);
+                color: var(--secondary-color-light);
+            }
+
+            &.disabled {
+                border-color: rgba(255, 255, 255, .03);
+                color: rgba(255, 255, 255, .5);
+            }
+        }
+    }
+
+    li {
+        &:before {
+            border-left-color: $tree-line;
+            border-bottom-color: $tree-line;
+        }
+
+        &:after {
+            border-left-color: $tree-line;
+            border-top-color: $tree-line;
+        }
+    }
+
+    .branches {
+        li {
+            &:before {
+                border-left-color: $tree-line;
+                border-bottom-color: $tree-line;
+            }
+
+            &:after {
+                border-left-color: $tree-line;
+            }
+        }
+
+        &:hover+ul,
+        &:focus+ul {
+            li {
+
+                &:after,
+                &:before {
+                    border-color: $tree-line-hover;
+                }
+            }
+        }
+    }
+
+    .branches li span,
+    .branches li a,
+    .root {
+        &:not(.active):not(.disabled) {
+
+            &:hover,
+            &:focus {
+                background: $tree-span-hover;
+
+                &+ul {
+
+                    li span,
+                    li a {
+                        &:not(.active):not(.disabled) {
+                            background: $tree-span-child-hover;
+                        }
+                    }
+                }
+            }
+        }
+
+        &:hover+ul,
+        &:focus+ul {
+            li {
+
+                &:after,
+                &:before {
+                    border-color: $tree-line-hover;
+                }
+            }
+        }
+    }
+
+    &.outlined {
+
+        .root,
+        li span,
+        li a {
+            &:not(.active):not(.disabled) {
+
+                &:hover,
+                &:focus {
+                    background-color: unset;
+                    border-color: $tree-line-hover;
+
+                    &+ul {
+
+                        li span,
+                        li a {
+                            &:not(.active):not(.disabled) {
+                                background-color: unset;
+                                border-color: $tree-line-hover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

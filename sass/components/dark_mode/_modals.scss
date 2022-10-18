@@ -1,0 +1,35 @@
+// Modals
+.modal {
+    background-color: color('grey', 'darken-4');
+
+    .modal-footer,
+    .modal-header {
+        background-color: rgba(color('grey', 'darken-4'), .5);
+    }
+
+    &.blur-bg {
+        background-color: rgba(color('grey', 'darken-4'), .5);
+
+        &.acrylic {
+            background-image: $acrylic-background-ondark;
+        }
+    }
+
+    &.outlined {
+        border-color: var(--secondary-color-light);
+
+        &.primary {
+            border-color: var(--primary-color-light);
+        }
+
+        @each $sP in $semanticPurposes {
+            &.#{$sP} {
+                border-color: lighten(semanticColorLookUp($sP), 15%);
+            }
+        }
+    }
+}
+
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+}

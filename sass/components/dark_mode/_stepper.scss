@@ -1,0 +1,75 @@
+// Steppers
+ul.stepper {
+    .step {
+        .step-title::after {
+            color: color('grey', 'lighten-1');
+        }
+
+        &:not(:last-of-type)::after {
+            background-color: color('grey', 'darken-2');
+        }
+
+        &::before {
+            background-color: var(--secondary-color-darken-10);
+            font-weight: 500;
+            color: color('grey', 'base');
+        }
+
+        &.active::before {
+            background-color: var(--secondary-color-lighten-10);
+            color: color('grey', 'lighten-4');
+        }
+
+        &.done::before {
+            background-color: darken($success-color, 10%);
+            color: color('grey', 'lighten-4');
+        }
+
+        &.wrong::before {
+            background-color: darken($danger-color, 10%);
+            color: color('grey', 'lighten-4');
+        }
+    }
+
+    &.horizontal {
+        &::before {
+            background-color: color('grey', 'darken-4');
+            box-shadow: unset;
+            border-bottom: 1px solid color('grey', 'darken-3');
+        }
+
+        .step {
+            &:not(:last-of-type)::after {
+                background-color: color('grey', 'darken-2');
+                z-index: 1;
+            }
+
+            .step-title {
+                &::after {
+                    color: color('grey', 'lighten-1');
+                }
+
+                &::before {
+                    background-color: var(--secondary-color-darken-10);
+                    font-weight: 500;
+                    color: color('grey', 'base');
+                }
+            }
+
+            &.active .step-title::before {
+                background-color: var(--secondary-color-lighten-10);
+                color: color('grey', 'lighten-4');
+            }
+
+            &.done .step-title::before {
+                background-color: darken($success-color, 10%);
+                color: color('grey', 'lighten-4');
+            }
+
+            &.wrong .step-title::before {
+                background-color: darken($danger-color, 10%);
+                color: color('grey', 'lighten-4');
+            }
+        }
+    }
+}

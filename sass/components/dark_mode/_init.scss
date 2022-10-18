@@ -1,0 +1,116 @@
+// Init helper
+.ondark-show {
+    display: none !important;
+}
+
+.btn,
+.btn-soft,
+.btn-outlined,
+.btn-flat {
+    &.ondark-show {
+        display: inline-block;
+    }
+}
+
+
+// Mixins
+@mixin beautify-darkmode-scrollbar {
+
+    /* width */
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 5px;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 5px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.5);
+    }
+
+    /* Corner */
+    &::-webkit-scrollbar-corner {
+        background: rgba(255, 255, 255, 0);
+    }
+}
+
+@mixin soft-colors-secondary {
+    background-color: var(--secondary-color-darken-30);
+    color: var(--secondary-color-lighten-25);
+}
+
+@mixin soft-colors {
+    @include soft-colors-secondary;
+
+    &.dark {
+        color: #FFF;
+        background-color: rgba(20, 20, 20, 0.8);
+    }
+
+    &.light,
+    &.dark-light {
+        color: #000;
+        background-color: rgb(200, 200, 200);
+    }
+
+    &.primary {
+        color: var(--primary-color-lighten-25);
+        background-color: var(--primary-color-darken-30);
+    }
+
+    @each $sP in $semanticPurposes {
+        &.#{$sP} {
+            color: lighten(semanticColorLookUp($sP), 25%);
+            background-color: darken(semanticColorLookUp($sP), 30%);
+        }
+    }
+}
+
+@mixin soft-colors-hover-focus-secondary {
+    &:hover {
+        background-color: var(--secondary-color-darken-25);
+    }
+}
+
+@mixin soft-colors-hover-focus {
+    @include soft-colors-hover-focus-secondary;
+
+    &.dark {
+        &:hover {
+            background-color: rgba(50, 50, 50, 0.8);
+        }
+
+        &:focus {
+            background-color: rgba(70, 70, 70, 0.7);
+        }
+    }
+
+    &.light,
+    &.dark-light {
+        &:hover {
+            background-color: rgba(200, 200, 200, 0.7);
+        }
+    }
+
+    &.primary:hover {
+        background-color: var(--primary-color-darken-25);
+
+    }
+
+    @each $sP in $semanticPurposes {
+        &.#{$sP}:hover {
+            background-color: rgba(darken(semanticColorLookUp($sP), 30%), 0.7);
+        }
+    }
+}

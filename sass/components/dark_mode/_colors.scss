@@ -1,0 +1,120 @@
+//colors
+@each $color_name,
+$color in $colors {
+
+    @each $color_type,
+    $color_value in $color {
+        @if $color_type=="base" {
+            .ondark-#{$color_name} {
+                background-color: $color_value !important;
+            }
+
+            .ondark-#{$color_name}-text {
+                color: $color_value !important;
+            }
+
+            .ondark-border-#{$color_name} {
+                border-color: $color_value !important;
+            }
+        }
+
+        @else if $color_name !="shades" {
+
+            // // if same color as light mode
+            // .#{$color_name}.ondark-#{$color_type} {
+            //     background-color: $color_value !important;
+            // }
+            // .#{$color_name}-text.ondark-text-#{$color_type} {
+            //     color: $color_value !important;
+            // }
+            //if not the same color as light mode
+            .ondark-#{$color_name}.ondark-#{$color_type} {
+                background-color: $color_value !important;
+            }
+
+            .ondark-#{$color_name}-text.ondark-text-#{$color_type} {
+                color: $color_value !important;
+            }
+
+            .ondark-border-#{$color_name}.ondark-border-#{$color_type} {
+                border-color: $color_value !important;
+            }
+        }
+    }
+}
+
+// Shade classes
+@each $color,
+$color_value in $shades {
+    .ondark-#{$color} {
+        background-color: $color_value !important;
+    }
+
+    .ondark-#{$color}-text {
+        color: $color_value !important;
+    }
+
+    .border-#{$color} {
+        border-color: $color_value !important;
+    }
+}
+
+.border {
+    &-primary {
+        border-color: var(--primary-color) !important;
+    }
+
+    &-secondary {
+        border-color: var(--secondary-color) !important;
+    }
+
+    @each $sP in $semanticPurposes {
+        &-#{$sP} {
+            border-color: lighten(semanticColorLookUp($sP), 5%);
+        }
+    }
+}
+
+a {
+    color: var(--secondary-color-lighten-10);
+}
+
+.secondary-content {
+    color: var(--primary-color);
+}
+
+//error notes
+.error-notes {
+    background-color: darken(color('red', 'darken-4'), 20%);
+    color: color('red', 'lighten-4');
+}
+
+.primary-color {
+    background-color: var(--primary-color-darken-5);
+
+    &-text {
+        color: var(--primary-color-light);
+    }
+}
+
+.secondary-color {
+    background-color: var(--secondary-color-darken-5);
+
+    &-text {
+        color: var(--secondary-color-light);
+    }
+}
+
+@each $sP in $semanticPurposes {
+    .#{$sP}-color {
+        background-color: darken(semanticColorLookUp($sP), 5%);
+
+        &-text {
+            color: lighten(semanticColorLookUp($sP), 5%);
+        }
+    }
+}
+
+body {
+    background-color: #101010;
+}

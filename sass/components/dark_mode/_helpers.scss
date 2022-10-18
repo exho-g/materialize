@@ -1,0 +1,72 @@
+//helpers
+.ondark-hide {
+    display: none !important;
+}
+
+.ondark-show {
+    display: block !important;
+}
+
+.btn,
+.btn-floating,
+.btn-soft,
+.btn-outlined,
+.btn-flat {
+    &.ondark-show {
+        display: inline-block !important;
+    }
+}
+
+.ondark-z-depth-0 {
+    box-shadow: none !important;
+}
+
+@media #{$large-and-up} {
+    .scrollbar {
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+    }
+
+    body.scrollbar {
+        * {
+
+            /* Track */
+            &::-webkit-scrollbar-track {
+                background: rgba(255, 255, 255, 0.1);
+            }
+
+            /* Handle */
+            &::-webkit-scrollbar-thumb {
+                background: rgba(255, 255, 255, 0.3);
+            }
+
+            /* Handle on hover */
+            &::-webkit-scrollbar-thumb:hover {
+                background: rgba(255, 255, 255, 0.5);
+            }
+        }
+    }
+}
+
+.scrollbar.force {
+    @include beautify-darkmode-scrollbar();
+}
+
+body.scrollbar.force {
+    * {
+        @include beautify-darkmode-scrollbar();
+    }
+}

@@ -42,8 +42,14 @@
             fill: rgba(255, 255, 255, .87);
         }
 
-        &.disabled+label {
-            color: rgba(255, 255, 255, .5);
+        &.disabled {
+            +label {
+                color: rgba(255, 255, 255, .5);
+            }
+
+            .caret {
+                fill: rgba(255, 255, 255, .5);
+            }
         }
     }
 

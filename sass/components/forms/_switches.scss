@@ -113,21 +113,13 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
       height: 28px;
       transition: border 0.3s ease, background 0.3s ease;
 
-      &::before,
-      &::after {
+      &::before {
         background-color: var(--secondary-color);
         top: 4px;
         left: 4px;
         width: 16px;
         height: 16px;
         transition: left 0.3s ease, background 0.3s ease, width 0.3s ease, height 0.3s ease, top 0.3s ease;
-      }
-
-      &::after {
-        background-color: unset;
-        box-shadow: unset;
-        color: transparent;
-        line-height: 1.4;
       }
     }
 
@@ -137,8 +129,7 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
         ~.lever:active,
         &.tabbed:focus~.lever {
 
-          &::before,
-          &::after {
+          &::before {
             transform: unset;
             background-color: var(--secondary-color);
             width: 24px;
@@ -158,7 +149,6 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
         +.lever {
           background-color: var(--secondary-color);
 
-          &::after,
           &::before {
             background-color: #FFF;
             left: 20px;
@@ -178,8 +168,7 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
           ~.lever:active,
           &.tabbed:focus~.lever {
 
-            &::before,
-            &::after {
+            &::before {
               transform: unset;
               background-color: #FFF;
               left: 20px;
@@ -208,13 +197,56 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
     }
   }
 
-  &.with-icon label .lever {
-    &::after {
-      content: 'done';
-      font-size: 1.15rem;
-      font-family: 'Material Icons';
-      font-weight: bold;
-      text-align: center;
+  &.with-icon label {
+    .lever::after {
+      content: '';
+      border: 2px solid transparent;
+      border-top: unset;
+      border-left: unset;
+      transform: rotate(45deg);
+      top: 5px;
+      left: 8px;
+    }
+
+    input[type=checkbox] {
+      &:not(:disabled) {
+
+        ~.lever:active,
+        &.tabbed:focus~.lever {
+
+          &::after {
+            border-color: #FFF;
+          }
+        }
+      }
+
+      &:checked {
+        +.lever::after {
+          border-color: var(--secondary-color);
+          left: 28px;
+          top: 3px;
+          width: 7px;
+          height: 14px;
+        }
+
+        &:not(:disabled) {
+
+          ~.lever:active,
+          &.tabbed:focus~.lever {
+
+            &::after {
+              top: 3px;
+              left: 29px;
+            }
+          }
+        }
+      }
+
+      &[disabled] {
+        &:checked+.lever::after {
+          border-color: $input-disabled-solid-color;
+        }
+      }
     }
   }
 }

@@ -223,8 +223,7 @@
                     background-color: hsla(var(--secondary-color-hsl), 0.30);
                     border-color: var(--secondary-color-lighten-10);
 
-                    &::before,
-                    &::after {
+                    &::before {
                         background-color: var(--secondary-color-lighten-10);
                     }
                 }
@@ -235,8 +234,7 @@
                         ~.lever:active,
                         &.tabbed:focus~.lever {
 
-                            &::before,
-                            &::after {
+                            &::before {
                                 background-color: var(--secondary-color-lighten-10);
                                 color: #FFF;
                             }
@@ -246,13 +244,6 @@
                     &:checked {
                         +.lever {
                             background-color: var(--secondary-color-lighten-10);
-
-                            &::after {
-                                //background-color: #FFF;
-                                //color: var(--secondary-color-lighten-10);
-                                background-color: var(--secondary-color-darken-30);
-                                color: var(--secondary-color-lighten-30);
-                            }
                         }
 
                         &:not(:disabled) {
@@ -260,8 +251,7 @@
                             ~.lever:active,
                             &.tabbed:focus~.lever {
 
-                                &::before,
-                                &::after {
+                                &::before {
                                     //background: #FFF;
                                     background-color: var(--secondary-color-darken-20);
                                 }
@@ -274,8 +264,7 @@
                             background-color: color('grey', 'darken-4');
                             border-color: color('grey', 'darken-3');
 
-                            &::before,
-                            &::after {
+                            &::before {
                                 background-color: color('grey', 'darken-3');
                             }
                         }
@@ -283,11 +272,50 @@
                         &:checked+.lever {
                             background-color: color('grey', 'darken-3');
 
-                            &::before,
-                            &::after {
+                            &::before {
                                 color: color('grey', 'darken-3');
                                 background-color: color('grey', 'base');
                             }
+                        }
+                    }
+                }
+            }
+
+            &.with-icon label {
+                .lever::after {
+                    border-color: transparent;
+                }
+
+                input[type=checkbox] {
+                    &:not(:disabled) {
+
+                        ~.lever:active,
+                        &.tabbed:focus~.lever {
+
+                            &::after {
+                                border-color: #FFF;
+                            }
+                        }
+                    }
+
+                    &:checked:not(:disabled) {
+
+                        ~.lever:active,
+                        &.tabbed:focus~.lever {
+
+                            &::after {
+                                border-color: var(--secondary-color-darken-30);
+                            }
+                        }
+                    }
+
+                    &[disabled] {
+                        &::after {
+                            border-color: color('grey', 'darken-3');
+                        }
+
+                        &:checked+.lever::after {
+                            border-color: color('grey', 'base');
                         }
                     }
                 }

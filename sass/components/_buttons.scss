@@ -624,12 +624,12 @@ button.btn-floating {
 
             &:not(.as-badge) {
                 &:hover {
-                    background-color: rgba(semanticColorLookUp($sP, true), 0.1);
+                    background-color: rgba(semanticColorLookUp($sP), 0.1);
                 }
 
                 &:focus,
                 &:active {
-                    background-color: rgba(semanticColorLookUp($sP, true), 0.3);
+                    background-color: rgba(semanticColorLookUp($sP), 0.3);
                 }
             }
         }

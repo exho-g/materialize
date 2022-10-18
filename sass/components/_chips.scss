@@ -9,7 +9,7 @@
   height: 32px;
   font-size: 13px;
   font-weight: 500;
-  color: rgba(0,0,0,.6);
+  color: rgba(0, 0, 0, .6);
   line-height: 32px;
   padding: 0 12px;
   border-radius: 16px;
@@ -17,7 +17,7 @@
   margin-bottom: $chip-margin;
   margin-right: $chip-margin;
 
-  > img {
+  >img {
     float: left;
     margin: 0 8px 0 -12px;
     height: 32px;
@@ -28,9 +28,10 @@
   .close {
     cursor: pointer;
     float: right;
-    font-size: 16px;
+    font-size: 12px;
     line-height: 32px;
     padding-left: 8px;
+    font-style: unset;
   }
 }
 
@@ -55,7 +56,7 @@
   input:not([type]):not(.browser-default).input {
     background: none;
     border: 0;
-    color: rgba(0,0,0,.6);
+    color: rgba(0, 0, 0, .6);
     display: inline-block;
     font-size: $input-font-size;
     height: $input-height;
@@ -79,18 +80,20 @@
 }
 
 // Form prefix
-.prefix ~ .chips {
+.prefix~.chips {
   margin-left: 3rem;
   width: 92%;
   width: calc(100% - 3rem);
 }
+
 // Form suffix
-.suffix ~ .chips {
+.suffix~.chips {
   margin-right: 3rem;
   width: 92%;
   width: calc(100% - 3rem);
 }
-.chips:empty ~ label  {
+
+.chips:empty~label {
   font-size: 0.8rem;
   transform: translateY(-140%);
 }

@@ -1,18 +1,29 @@
+@import "dark_mode/init";
+@import "dark_mode/colors";
+@import "dark_mode/misc";
+@import "dark_mode/navigations";
+@import "dark_mode/buttons";
+@import "dark_mode/form-inputs";
+@import "dark_mode/alerts";
+@import "dark_mode/tree";
+@import "dark_mode/modals";
+@import "dark_mode/stepper";
+@import "dark_mode/helpers";
+
 @mixin dark-mode {
     color: #FFF;
 
-    @import "dark_mode/init";
-    @import "dark_mode/colors";
-    @import "dark_mode/misc";
-    @import "dark_mode/navigations";
-    @import "dark_mode/buttons";
-    @import "dark_mode/form-inputs";
-    @import "dark_mode/alerts";
-    @import "dark_mode/tree";
-    @import "dark_mode/modals";
-    @import "dark_mode/stepper";
-    @import "dark_mode/helpers";
-
+    @include init-helper;
+    @include colors;
+    @include misc;
+    @include navigations;
+    @include buttons;
+    @include form-inputs;
+    @include alerts;
+    @include tree;
+    @include modals;
+    @include stepper;
+    @include helpers;
 }
 
 //auto dark mode - using system preferred if html tag doesn't have .no-dark-mode class

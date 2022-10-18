@@ -1,14 +1,17 @@
-// Init helper
-.ondark-show {
-    display: none !important;
-}
+@mixin init-helper {
 
-.btn,
-.btn-soft,
-.btn-outlined,
-.btn-flat {
-    &.ondark-show {
-        display: inline-block;
+    // Init helper
+    .ondark-show {
+        display: none !important;
+    }
+
+    .btn,
+    .btn-soft,
+    .btn-outlined,
+    .btn-flat {
+        &.ondark-show {
+            display: inline-block;
+        }
     }
 }
 

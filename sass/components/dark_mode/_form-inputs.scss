@@ -1,96 +1,79 @@
-// Labels
-label,
-.helper-text {
-    color: color('grey', 'lighten-1');
-}
+@mixin form-inputs {
 
-// Misc
-.input-field input[type=search]:focus:not(.browser-default) {
-    background-color: color('grey', 'lighten-1');
-}
+    // Labels
+    label,
+    .helper-text {
+        color: color('grey', 'lighten-1');
+    }
+
+    // Misc
+    .input-field input[type=search]:focus:not(.browser-default) {
+        background-color: color('grey', 'lighten-1');
+    }
 
 
-// Range
-input[type=range] {
-    border: unset;
-}
+    // Range
+    input[type=range] {
+        border: unset;
+    }
 
-.noUi-target {
-    background: color('grey', 'darken-3');
-}
+    .noUi-target {
+        background: color('grey', 'darken-3');
+    }
 
-// Select
-select {
-    background-color: rgba(20, 20, 20, 0.9);
-    color: #FFF;
-    border-color: rgba(255, 255, 255, .5);
-
-    &:disabled {
-        color: rgba(255, 255, 255, .5);
+    // Select
+    select {
+        background-color: rgba(20, 20, 20, 0.9);
+        color: #FFF;
         border-color: rgba(255, 255, 255, .5);
 
-        +label {
+        &:disabled {
+            color: rgba(255, 255, 255, .5);
+            border-color: rgba(255, 255, 255, .5);
+
+            +label {
+                color: rgba(255, 255, 255, .5);
+            }
+        }
+    }
+
+    .select-wrapper {
+        .caret {
+            fill: rgba(255, 255, 255, .87);
+        }
+
+        &.disabled+label {
             color: rgba(255, 255, 255, .5);
         }
     }
-}
 
-.select-wrapper {
-    .caret {
-        fill: rgba(255, 255, 255, .87);
-    }
-
-    &.disabled+label {
+    // if label is before the disabled select
+    label:has(+select.browser-default:disabled) {
         color: rgba(255, 255, 255, .5);
     }
-}
-
-// if label is before the disabled select
-label:has(+select.browser-default:disabled) {
-    color: rgba(255, 255, 255, .5);
-}
 
 
-// Radio
-[type=radio] {
-    &:not(:checked)+span:before {
-        border: 2px solid color('grey', 'lighten-1');
-    }
-
-    &:checked+span:after,
-    &.with-gap:checked+span:after {
-        background-color: var(--secondary-color-lighten-20);
-        border-color: var(--secondary-color-lighten-20);
-    }
-
-    &.with-gap:checked+span:before {
-        border-color: var(--secondary-color-lighten-20);
-    }
-
-    &:disabled {
-        +span {
-            color: color('grey', 'darken-1');
-
-            &:before {
-                border-color: color('grey', 'darken-1');
-            }
-
-            &:after {
-                background-color: color('grey', 'darken-1');
-            }
+    // Radio
+    [type=radio] {
+        &:not(:checked)+span:before {
+            border: 2px solid color('grey', 'lighten-1');
         }
 
-        &:checked+span:after {
-            border-color: color('grey', 'darken-1');
+        &:checked+span:after,
+        &.with-gap:checked+span:after {
+            background-color: var(--secondary-color-lighten-20);
+            border-color: var(--secondary-color-lighten-20);
         }
-    }
 
-    &.with-gap {
+        &.with-gap:checked+span:before {
+            border-color: var(--secondary-color-lighten-20);
+        }
+
         &:disabled {
             +span {
+                color: color('grey', 'darken-1');
 
-                &:before,
-                &:checked:before {
+                &:before {
                     border-color: color('grey', 'darken-1');
                 }
 
@@ -98,155 +81,149 @@ label:has(+select.browser-default:disabled) {
                     background-color: color('grey', 'darken-1');
                 }
             }
+
+            &:checked+span:after {
+                border-color: color('grey', 'darken-1');
+            }
+        }
+
+        &.with-gap {
+            &:disabled {
+                +span {
+
+                    &:before,
+                    &:checked:before {
+                        border-color: color('grey', 'darken-1');
+                    }
+
+                    &:after {
+                        background-color: color('grey', 'darken-1');
+                    }
+                }
+            }
         }
     }
-}
 
-// Checkboxes
-[type=checkbox] {
+    // Checkboxes
+    [type=checkbox] {
 
-    +span:not(.lever):before,
-    &:not(.filled-in)+span:not(.lever):after {
-        border: 2px solid color('grey', 'lighten-1');
-    }
+        +span:not(.lever):before,
+        &:not(.filled-in)+span:not(.lever):after {
+            border: 2px solid color('grey', 'lighten-1');
+        }
 
-    &:checked+span:before {
-        border: unset;
-        border-right: 2px solid var(--secondary-color-lighten-20);
-        border-bottom: 2px solid var(--secondary-color-lighten-20);
-    }
-
-    &.soft:checked {
-        +span:not(.lever):before {
+        &:checked+span:before {
+            border: unset;
             border-right: 2px solid var(--secondary-color-lighten-20);
             border-bottom: 2px solid var(--secondary-color-lighten-20);
         }
 
-        +span:not(.lever):after {
-            background-color: var(--secondary-color-darken-25);
-        }
-    }
-
-    &:disabled+span {
-        color: color('grey', 'darken-1');
-
-        &:before {
-            border-right: 2px solid color('grey', 'darken-2');
-            border-bottom: 2px solid color('grey', 'darken-2');
-        }
-    }
-
-    &:not(:checked):disabled:not(.filled-in)+span:not(.lever):before {
-        border: 2px solid color('grey', 'darken-2');
-        background-color: unset;
-    }
-
-    &:indeterminate {
-        +span:not(.lever):before {
-            border: unset;
-            border-right: 2px solid var(--secondary-color-lighten-20);
-        }
-
-        &:disabled,
-        &.disabled {
+        &.soft:checked {
             +span:not(.lever):before {
-                border: unset !important;
-                border-right: 2px solid color('grey', 'darken-2') !important;
+                border-right: 2px solid var(--secondary-color-lighten-20);
+                border-bottom: 2px solid var(--secondary-color-lighten-20);
+            }
+
+            +span:not(.lever):after {
+                background-color: var(--secondary-color-darken-25);
             }
         }
-    }
 
-    &.soft:checked:disabled {
-        +span:not(.lever):before {
-            border-right: 2px solid rgba($button-disabled-color, 0.3);
-            border-bottom: 2px solid rgba($button-disabled-color, 0.3);
+        &:disabled+span {
+            color: color('grey', 'darken-1');
+
+            &:before {
+                border-right: 2px solid color('grey', 'darken-2');
+                border-bottom: 2px solid color('grey', 'darken-2');
+            }
         }
 
-        +span:not(.lever):after {
-            background-color: rgba($button-disabled-background, 0.2);
+        &:not(:checked):disabled:not(.filled-in)+span:not(.lever):before {
+            border: 2px solid color('grey', 'darken-2');
+            background-color: unset;
         }
-    }
-}
 
-// Switches
-.switch {
-    label .lever {
-        background-color: color('grey', 'darken-3');
-    }
-
-    input[type=checkbox] {
-        &:checked {
-            +span:before {
+        &:indeterminate {
+            +span:not(.lever):before {
                 border: unset;
+                border-right: 2px solid var(--secondary-color-lighten-20);
             }
 
-            +.lever:after {
-                background-color: var(--secondary-color-lighten-10);
+            &:disabled,
+            &.disabled {
+                +span:not(.lever):before {
+                    border: unset !important;
+                    border-right: 2px solid color('grey', 'darken-2') !important;
+                }
             }
         }
 
-        &:not(:disabled)~.lever:active:before {
-            background-color: hsla(var(--secondary-color-hsl), 0.30);
-        }
-
-        &[disabled] {
-            +.lever {
-                background-color: rgba(255, 255, 255, 0.15);
-
-                &::before,
-                &::after {
-                    background-color: color('grey', 'darken-2');
-                }
+        &.soft:checked:disabled {
+            +span:not(.lever):before {
+                border-right: 2px solid rgba($button-disabled-color, 0.3);
+                border-bottom: 2px solid rgba($button-disabled-color, 0.3);
             }
 
-            &:checked+.lever {
-
-                &::before,
-                &::after {
-                    background-color: color('grey', 'base');
-                }
+            +span:not(.lever):after {
+                background-color: rgba($button-disabled-background, 0.2);
             }
         }
     }
 
-    &.md3 {
-        label {
-            .lever {
-                background-color: hsla(var(--secondary-color-hsl), 0.30);
-                border-color: var(--secondary-color-lighten-10);
+    // Switches
+    .switch {
+        label .lever {
+            background-color: color('grey', 'darken-3');
+        }
 
-                &::before,
-                &::after {
+        input[type=checkbox] {
+            &:checked {
+                +span:before {
+                    border: unset;
+                }
+
+                +.lever:after {
                     background-color: var(--secondary-color-lighten-10);
                 }
             }
 
-            input[type=checkbox] {
-                &:not(:disabled) {
+            &:not(:disabled)~.lever:active:before {
+                background-color: hsla(var(--secondary-color-hsl), 0.30);
+            }
 
-                    ~.lever:active,
-                    &.tabbed:focus~.lever {
+            &[disabled] {
+                +.lever {
+                    background-color: rgba(255, 255, 255, 0.15);
 
-                        &::before,
-                        &::after {
-                            background-color: var(--secondary-color-lighten-10);
-                            color: #FFF;
-                        }
+                    &::before,
+                    &::after {
+                        background-color: color('grey', 'darken-2');
                     }
                 }
 
-                &:checked {
-                    +.lever {
-                        background-color: var(--secondary-color-lighten-10);
+                &:checked+.lever {
 
-                        &::after {
-                            //background-color: #FFF;
-                            //color: var(--secondary-color-lighten-10);
-                            background-color: var(--secondary-color-darken-30);
-                            color: var(--secondary-color-lighten-30);
-                        }
+                    &::before,
+                    &::after {
+                        background-color: color('grey', 'base');
                     }
+                }
+            }
+        }
 
+        &.md3 {
+            label {
+                .lever {
+                    background-color: hsla(var(--secondary-color-hsl), 0.30);
+                    border-color: var(--secondary-color-lighten-10);
+
+                    &::before,
+                    &::after {
+                        background-color: var(--secondary-color-lighten-10);
+                    }
+                }
+
+                input[type=checkbox] {
                     &:not(:disabled) {
 
                         ~.lever:active,
@@ -254,170 +231,196 @@ label:has(+select.browser-default:disabled) {
 
                             &::before,
                             &::after {
-                                //background: #FFF;
-                                background-color: var(--secondary-color-darken-20);
+                                background-color: var(--secondary-color-lighten-10);
+                                color: #FFF;
+                            }
+                        }
+                    }
+
+                    &:checked {
+                        +.lever {
+                            background-color: var(--secondary-color-lighten-10);
+
+                            &::after {
+                                //background-color: #FFF;
+                                //color: var(--secondary-color-lighten-10);
+                                background-color: var(--secondary-color-darken-30);
+                                color: var(--secondary-color-lighten-30);
+                            }
+                        }
+
+                        &:not(:disabled) {
+
+                            ~.lever:active,
+                            &.tabbed:focus~.lever {
+
+                                &::before,
+                                &::after {
+                                    //background: #FFF;
+                                    background-color: var(--secondary-color-darken-20);
+                                }
+                            }
+                        }
+                    }
+
+                    &[disabled] {
+                        +.lever {
+                            background-color: color('grey', 'darken-4');
+                            border-color: color('grey', 'darken-3');
+
+                            &::before,
+                            &::after {
+                                background-color: color('grey', 'darken-3');
+                            }
+                        }
+
+                        &:checked+.lever {
+                            background-color: color('grey', 'darken-3');
+
+                            &::before,
+                            &::after {
+                                color: color('grey', 'darken-3');
+                                background-color: color('grey', 'base');
                             }
                         }
                     }
                 }
+            }
+        }
+    }
 
-                &[disabled] {
-                    +.lever {
-                        background-color: color('grey', 'darken-4');
-                        border-color: color('grey', 'darken-3');
+    // Chips
+    .chips input:not([type]):not(.browser-default).input {
+        color: color('grey', 'lighten-3');
+    }
 
-                        &::before,
-                        &::after {
-                            background-color: color('grey', 'darken-3');
-                        }
-                    }
+    .chip {
+        background-color: color('grey', 'darken-3');
+        color: color('grey', 'lighten-3');
 
-                    &:checked+.lever {
-                        background-color: color('grey', 'darken-3');
+        &:focus {
+            background-color: var(--secondary-color-lighten-10);
+        }
+    }
 
-                        &::before,
-                        &::after {
-                            color: color('grey', 'darken-3');
-                            background-color: color('grey', 'base');
-                        }
-                    }
+    // Pickers
+    .datepicker-modal {
+
+        .month-prev,
+        .month-next {
+            svg {
+                fill: color('grey', 'lighten-3');
+            }
+        }
+
+        .datepicker-table {
+            tr {
+                border: unset;
+            }
+
+            td {
+                &.is-today {
+                    color: var(--secondary-color-lighten-30);
+                }
+
+                &.is-selected {
+                    color: #FFF;
                 }
             }
         }
-    }
-}
 
-// Chips
-.chips input:not([type]):not(.browser-default).input {
-    color: color('grey', 'lighten-3');
-}
-
-.chip {
-    background-color: color('grey', 'darken-3');
-    color: color('grey', 'lighten-3');
-
-    &:focus {
-        background-color: var(--secondary-color-lighten-10);
-    }
-}
-
-// Pickers
-.datepicker-modal {
-
-    .month-prev,
-    .month-next {
-        svg {
-            fill: color('grey', 'lighten-3');
-        }
-    }
-
-    .datepicker-table {
-        tr {
-            border: unset;
+        .datepicker-cancel,
+        .datepicker-clear,
+        .datepicker-today,
+        .datepicker-done {
+            color: var(--secondary-color-lighten-40);
+            font-weight: 500;
         }
 
-        td {
-            &.is-today {
-                color: var(--secondary-color-lighten-30);
+        &.blur-bg {
+            background-color: transparent;
+
+            .datepicker-date-display {
+                background-color: hsla(var(--secondary-color-hsl), 0.30);
             }
 
-            &.is-selected {
-                color: #FFF;
+            &.acrylic .datepicker-date-display {
+                background-image: $acrylic-background-ondark;
+            }
+
+            .datepicker-calendar-container {
+                background-color: color('grey', 'darken-4');
             }
         }
     }
 
-    .datepicker-cancel,
-    .datepicker-clear,
-    .datepicker-today,
-    .datepicker-done {
-        color: var(--secondary-color-lighten-40);
-        font-weight: 500;
-    }
-
-    &.blur-bg {
-        background-color: transparent;
-
-        .datepicker-date-display {
-            background-color: hsla(var(--secondary-color-hsl), 0.30);
-        }
-
-        &.acrylic .datepicker-date-display {
-            background-image: $acrylic-background-ondark;
-        }
-
-        .datepicker-calendar-container {
+    .timepicker-modal {
+        .timepicker-plate {
             background-color: color('grey', 'darken-4');
-        }
-    }
-}
 
-.timepicker-modal {
-    .timepicker-plate {
-        background-color: color('grey', 'darken-4');
-
-        .timepicker-tick {
-            color: color('grey', 'lighten-3');
-        }
-    }
-
-    .timepicker-close {
-        color: var(--secondary-color-lighten-40);
-        font-weight: 500;
-    }
-
-    &.blur-bg {
-        background-color: transparent;
-
-        .timepicker-digital-display {
-            background-color: hsla(var(--secondary-color-hsl), .3);
+            .timepicker-tick {
+                color: color('grey', 'lighten-3');
+            }
         }
 
-        &.acrylic .timepicker-digital-display {
-            background-image: $acrylic-background-ondark;
+        .timepicker-close {
+            color: var(--secondary-color-lighten-40);
+            font-weight: 500;
         }
 
-        .timepicker-analog-display {
-            background-color: color('grey', 'darken-4');
-        }
-    }
-}
+        &.blur-bg {
+            background-color: transparent;
 
-// Inputs
-input:not([type]):not(.browser-default),
-input[type=text]:not(.browser-default),
-input[type=password]:not(.browser-default),
-input[type=email]:not(.browser-default),
-input[type=url]:not(.browser-default),
-input[type=time]:not(.browser-default),
-input[type=date]:not(.browser-default),
-input[type=datetime]:not(.browser-default),
-input[type=datetime-local]:not(.browser-default),
-input[type=tel]:not(.browser-default),
-input[type=number]:not(.browser-default),
-input[type=search]:not(.browser-default),
-textarea.materialize-textarea {
-    color: #FFF;
+            .timepicker-digital-display {
+                background-color: hsla(var(--secondary-color-hsl), .3);
+            }
 
-    &:focus {
-        border-color: var(--secondary-color-lighten-20);
-        box-shadow: 0 1px 0 0 var(--secondary-color-lighten-20);
+            &.acrylic .timepicker-digital-display {
+                background-image: $acrylic-background-ondark;
+            }
 
-        +label {
-            color: var(--secondary-color-lighten-20);
+            .timepicker-analog-display {
+                background-color: color('grey', 'darken-4');
+            }
         }
     }
 
-    // Disabled input style
-    &:disabled,
-    &[readonly="readonly"] {
-        color: rgba(255, 255, 255, .5);
-        border-bottom: 1px dotted rgba(255, 255, 255, .5);
-    }
+    // Inputs
+    input:not([type]):not(.browser-default),
+    input[type=text]:not(.browser-default),
+    input[type=password]:not(.browser-default),
+    input[type=email]:not(.browser-default),
+    input[type=url]:not(.browser-default),
+    input[type=time]:not(.browser-default),
+    input[type=date]:not(.browser-default),
+    input[type=datetime]:not(.browser-default),
+    input[type=datetime-local]:not(.browser-default),
+    input[type=tel]:not(.browser-default),
+    input[type=number]:not(.browser-default),
+    input[type=search]:not(.browser-default),
+    textarea.materialize-textarea {
+        color: #FFF;
 
-    // Disabled label style
-    &:disabled+label,
-    &[readonly="readonly"]+label {
-        color: rgba(255, 255, 255, .5);
+        &:focus {
+            border-color: var(--secondary-color-lighten-20);
+            box-shadow: 0 1px 0 0 var(--secondary-color-lighten-20);
+
+            +label {
+                color: var(--secondary-color-lighten-20);
+            }
+        }
+
+        // Disabled input style
+        &:disabled,
+        &[readonly="readonly"] {
+            color: rgba(255, 255, 255, .5);
+            border-bottom: 1px dotted rgba(255, 255, 255, .5);
+        }
+
+        // Disabled label style
+        &:disabled+label,
+        &[readonly="readonly"]+label {
+            color: rgba(255, 255, 255, .5);
+        }
     }
 }

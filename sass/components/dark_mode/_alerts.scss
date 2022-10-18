@@ -1,60 +1,63 @@
-//alerts
-.alert {
-    color: #FFF;
+@mixin alerts {
 
-    .btn-flat {
-        background-color: rgba(255, 255, 255, .1);
-    }
+    //alerts
+    .alert {
+        color: #FFF;
 
-    &.soft {
-        @include soft-colors;
-    }
-
-    &:not(.outlined):not(.soft):not(.dark) {
-        background-color: var(--secondary-color-darken-20);
-
-        &.primary {
-            background-color: var(--primary-color-darken-20);
+        .btn-flat {
+            background-color: rgba(255, 255, 255, .1);
         }
 
-        @each $sP in $semanticPurposes {
-            &.#{$sP} {
-                background-color: darken(semanticColorLookUp($sP), 20%);
+        &.soft {
+            @include soft-colors;
+        }
+
+        &:not(.outlined):not(.soft):not(.dark) {
+            background-color: var(--secondary-color-darken-20);
+
+            &.primary {
+                background-color: var(--primary-color-darken-20);
+            }
+
+            @each $sP in $semanticPurposes {
+                &.#{$sP} {
+                    background-color: darken(semanticColorLookUp($sP), 20%);
+                }
+            }
+
+            &.light,
+            &.dark-light {
+                background-color: #FFF;
+                color: #222;
             }
         }
 
-        &.light,
-        &.dark-light {
-            background-color: #FFF;
-            color: #222;
-        }
-    }
+        &.outlined:not(.dark):not(.light) {
+            border-color: var(--secondary-color);
+            color: var(--secondary-color-lighten-20);
 
-    &.outlined:not(.dark):not(.light) {
-        border-color: var(--secondary-color);
-        color: var(--secondary-color-lighten-20);
+            &.primary {
+                border-color: var(--primary-color);
+                color: var(--primary-color-lighten-20);
+            }
 
-        &.primary {
-            border-color: var(--primary-color);
-            color: var(--primary-color-lighten-20);
-        }
+            @each $sP in $semanticPurposes {
+                &.#{$sP} {
+                    border-color: semanticColorLookUp($sP);
+                    color: lighten(semanticColorLookUp($sP), 20%);
+                }
+            }
 
-        @each $sP in $semanticPurposes {
-            &.#{$sP} {
-                border-color: semanticColorLookUp($sP);
-                color: lighten(semanticColorLookUp($sP), 20%);
+            &.dark-light {
+                border-color: #FFF;
+                color: #FFF;
             }
         }
 
-        &.dark-light {
-            border-color: #FFF;
-            color: #FFF;
-        }
-    }
-
-    &.multiline {
-        .content {
-            color: #FFF;
+        &.multiline {
+            .content {
+                color: #FFF;
+            }
         }
     }
 }

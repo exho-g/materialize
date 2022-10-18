@@ -1,52 +1,38 @@
-// Navigations
-nav {
-    background-color: darken(color('grey', 'darken-4'), 1%);
+@mixin navigations {
 
-    &.blur-bg {
-        background-color: rgba(#000000, 0.7);
+    // Navigations
+    nav {
+        background-color: darken(color('grey', 'darken-4'), 1%);
 
-        &.acrylic {
-            background-image: $acrylic-background-ondark;
-        }
-    }
+        &.blur-bg {
+            background-color: rgba(#000000, 0.7);
 
-    li a:not(.brand-logo) {
-        color: #FFF;
-
-        &:hover {
-            background-color: lighten(color('grey', 'darken-4'), 5%);
-        }
-    }
-
-    .brand-logo {
-        img {
-            opacity: 1;
-        }
-    }
-
-    &.breadcrumbs {
-
-        .segment {
-            color: rgba(255, 255, 255, 0.5);
-
-            &:before {
-                color: rgba(255, 255, 255, 0.5);
-            }
-
-            &:last-child,
-            &:last-child::before {
-                color: var(--primary-color-lighten-10);
+            &.acrylic {
+                background-image: $acrylic-background-ondark;
             }
         }
 
-        &.flat {
-            background-color: transparent;
+        li a:not(.brand-logo) {
+            color: #FFF;
+
+            &:hover {
+                background-color: lighten(color('grey', 'darken-4'), 5%);
+            }
+        }
+
+        .brand-logo {
+            img {
+                opacity: 1;
+            }
+        }
+
+        &.breadcrumbs {
 
             .segment {
-                color: rgba(255, 255, 255, .5);
+                color: rgba(255, 255, 255, 0.5);
 
                 &:before {
-                    color: rgba(255, 255, 255, .5);
+                    color: rgba(255, 255, 255, 0.5);
                 }
 
                 &:last-child,
@@ -54,71 +40,88 @@ nav {
                     color: var(--primary-color-lighten-10);
                 }
             }
-        }
-    }
-}
 
-// Side navigations
-.sidenav {
-    background-color: color('grey', 'darken-4');
+            &.flat {
+                background-color: transparent;
 
-    &.blur-bg {
-        background-color: rgba(color('grey', 'darken-4'), .5);
+                .segment {
+                    color: rgba(255, 255, 255, .5);
 
-        &.acrylic {
-            background-image: $acrylic-background-ondark;
-        }
-    }
+                    &:before {
+                        color: rgba(255, 255, 255, .5);
+                    }
 
-    li {
-        >a {
-
-            >i,
-            &:not(.subheader) {
-                color: #FFF !important;
+                    &:last-child,
+                    &:last-child::before {
+                        color: var(--primary-color-lighten-10);
+                    }
+                }
             }
+        }
+    }
 
-            > {
+    // Side navigations
+    .sidenav {
+        background-color: color('grey', 'darken-4');
 
-                .icon,
-                #{$icon-brand-selectors} {
+        &.blur-bg {
+            background-color: rgba(color('grey', 'darken-4'), .5);
+
+            &.acrylic {
+                background-image: $acrylic-background-ondark;
+            }
+        }
+
+        li {
+            >a {
+
+                >i,
+                &:not(.subheader) {
                     color: #FFF !important;
+                }
+
+                > {
+
+                    .icon,
+                    #{$icon-brand-selectors} {
+                        color: #FFF !important;
+                    }
+                }
+
+                &.subheader {
+                    color: color('red', 'lighten-1');
+                }
+
+                &:hover {
+                    background-color: lighten(color('grey', 'darken-4'), 5%);
                 }
             }
 
-            &.subheader {
-                color: color('red', 'lighten-1');
-            }
+            &.active {
+                background-color: rgba(255, 255, 255, .05);
+                ;
 
-            &:hover {
-                background-color: lighten(color('grey', 'darken-4'), 5%);
-            }
-        }
-
-        &.active {
-            background-color: rgba(255, 255, 255, .05);
-            ;
-
-            >a:hover {
-                background-color: transparent;
+                >a:hover {
+                    background-color: transparent;
+                }
             }
         }
-    }
 
-    .collapsible {
-        border: unset;
-
-        .collapsible-header {
+        .collapsible {
             border: unset;
 
-            &:hover {
-                background-color: lighten(color('grey', 'darken-4'), 5%);
-            }
-        }
+            .collapsible-header {
+                border: unset;
 
-        .collapsible-body {
-            border: unset;
-            background-color: lighten(color('grey', 'darken-4'), 2%);
+                &:hover {
+                    background-color: lighten(color('grey', 'darken-4'), 5%);
+                }
+            }
+
+            .collapsible-body {
+                border: unset;
+                background-color: lighten(color('grey', 'darken-4'), 2%);
+            }
         }
     }
 }

@@ -244,6 +244,10 @@
                     &:checked {
                         +.lever {
                             background-color: var(--secondary-color-lighten-10);
+
+                            &::before {
+                                background-color: var(--secondary-color-darken-25);
+                            }
                         }
 
                         &:not(:disabled) {
@@ -300,6 +304,12 @@
                     }
 
                     &:checked:not(:disabled) {
+
+                        +.lever {
+                            &::after {
+                                border-color: var(--secondary-color-light);
+                            }
+                        }
 
                         ~.lever:active,
                         &.tabbed:focus~.lever {

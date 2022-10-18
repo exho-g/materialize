@@ -107,10 +107,6 @@
                 </p>
                 <pre><code class="language-css">
   :root {
-    /** Provide the RGB values **/
-    --primary-color-rgb: 25, 118, 210;
-    --secondary-color-rgb: 96, 125, 139;
-
     /** Provide the HSL values **/
     --primary-color-hs: 210deg, 79%;
     --primary-color-l: 46%;
@@ -142,9 +138,18 @@
     --primary-color-darken-30;
     --primary-color-darken-40;
   }
+
+  /** Usage Example **/
+
+  .card {
+    background-color: var(--secondary-color-lighten-40);
+    color: var(--primary-color-dark);
+    border: 2px solid var(--primary-color);
+  }
         </code></pre>
                 <p class="caption">
-                    You can also use the following classes to set the element's background or text color to primary or
+                    You can also use the following classes for quick setting of the element's background or text color
+                    to primary or
                     secondary color:
                 </p>
                 <pre><code class="language-markup">

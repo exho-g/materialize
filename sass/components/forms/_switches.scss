@@ -60,7 +60,7 @@
   }
 
   &:before {
-    background-color: rgba(var(--secondary-color-rgb), .85);
+    background-color: hsla(var(--secondary-color-hsl), .85);
   }
 
   &:after {
@@ -73,7 +73,7 @@
 input[type=checkbox]:checked:not(:disabled)~.lever:active::before,
 input[type=checkbox]:checked:not(:disabled).tabbed:focus~.lever::before {
   transform: scale(2.4);
-  background-color: rgba(var(--secondary-color-rgb), .85);
+  background-color: hsla(var(--secondary-color-hsl), .85);
 }
 
 input[type=checkbox]:not(:disabled)~.lever:active:before,
@@ -107,7 +107,7 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
 .switch.md3 {
   label {
     .lever {
-      background-color: rgba(var(--secondary-color-rgb), 0.20);
+      background-color: hsla(var(--secondary-color-hsl), 0.20);
       border: 2px solid var(--secondary-color);
       width: 48px;
       height: 28px;

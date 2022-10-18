@@ -33,19 +33,20 @@
 @use "sass:math";
 
 :root {
-    --primary-color-rgb: 25, 118, 210;
     --primary-color-hs: 210deg, 79%;
     --primary-color-l: 46%;
 
-    --secondary-color-rgb: 96, 125, 139;
     --secondary-color-hs: 200deg, 18%;
     --secondary-color-l: 46%;
 
-    --primary-color: rgb(var(--primary-color-rgb));
+    --primary-color-hsl: var(--primary-color-hs), var(--primary-color-l);
+    --secondary-color-hsl: var(--secondary-color-hs), var(--secondary-color-l);
+
+    --primary-color: hsl(var(--primary-color-hsl));
     --primary-color-light: hsl(var(--primary-color-hs), calc(var(--primary-color-l) + 15%));
     --primary-color-dark: hsl(var(--primary-color-hs), calc(var(--primary-color-l) - 15%));
 
-    --secondary-color: rgb(var(--secondary-color-rgb));
+    --secondary-color: hsla(var(--secondary-color-hsl));
     --secondary-color-light: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) + 15%));
     --secondary-color-dark: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) - 15%));
 
@@ -119,19 +120,19 @@ $semanticColors: (
         $color: red($curColor) ", " green($curColor) ", " blue($curColor);
     }
 
-    $boxShadow: map-get((x1: "0 2px 2px 0 rgba(#{$color}, 0.14), 0 3px 1px -2px rgba(#{$color}, 0.12), 0 1px 5px 0 rgba(#{$color}, 0.2)",
+    $boxShadow: map-get((x1: "0 2px 2px 0 hsla(#{$color}, 0.14), 0 3px 1px -2px hsla(#{$color}, 0.12), 0 1px 5px 0 hsla(#{$color}, 0.2)",
 
-                x1_2 : "0 3px 3px 0px rgba(#{$color}, 0.14), 0 1px 7px 0px rgba(#{$color}, 0.12), 0 3px 1px 1px rgba(#{$color}, 0.2)",
+                x1_2 : "0 3px 3px 0px hsla(#{$color}, 0.14), 0 1px 7px 0px hsla(#{$color}, 0.12), 0 3px 1px 1px hsla(#{$color}, 0.2)",
 
-                x2 : "0 4px 5px 0 rgba(#{$color}, 0.14), 0 1px 10px 0 rgba(#{$color}, 0.12), 0 2px 4px -1px rgba(#{$color}, 0.3)",
+                x2 : "0 4px 5px 0 hsla(#{$color}, 0.14), 0 1px 10px 0 hsla(#{$color}, 0.12), 0 2px 4px -1px hsla(#{$color}, 0.3)",
 
-                x3: "0 8px 17px 2px rgba(#{$color}, 0.14), 0 3px 14px 2px rgba(#{$color}, 0.12), 0 5px 5px -3px rgba(#{$color}, 0.2)",
+                x3: "0 8px 17px 2px hsla(#{$color}, 0.14), 0 3px 14px 2px hsla(#{$color}, 0.12), 0 5px 5px -3px hsla(#{$color}, 0.2)",
 
-                x4: "0 16px 24px 2px rgba(#{$color}, 0.14), 0 6px 30px 5px rgba(#{$color}, 0.12), 0 8px 10px -7px rgba(#{$color}, 0.2)",
+                x4: "0 16px 24px 2px hsla(#{$color}, 0.14), 0 6px 30px 5px hsla(#{$color}, 0.12), 0 8px 10px -7px hsla(#{$color}, 0.2)",
 
-                x5: "0 24px 38px 3px rgba(#{$color}, 0.14), 0 9px 46px 8px rgba(#{$color}, 0.12), 0 11px 15px -7px rgba(#{$color}, 0.2)",
+                x5: "0 24px 38px 3px hsla(#{$color}, 0.14), 0 9px 46px 8px hsla(#{$color}, 0.12), 0 11px 15px -7px hsla(#{$color}, 0.2)",
 
-                hover: "0 8px 17px 0 rgba(#{$color}, 0.2), 0 6px 20px 0 rgba(#{$color}, .19)"), $zDepth);
+                hover: "0 8px 17px 0 hsla(#{$color}, 0.2), 0 6px 20px 0 hsla(#{$color}, .19)"), $zDepth);
 
     @return unquote($boxShadow);
 }
@@ -184,7 +185,7 @@ $button-floating-square-small-radius: 12.3px !default;
 
 @mixin soft-colors-secondary {
     color: var(--secondary-color-darken-5);
-    background-color: rgba(var(--secondary-color-rgb), 0.2);
+    background-color: hsla(var(--secondary-color-hsl), 0.2);
 }
 
 @mixin soft-colors {
@@ -192,7 +193,7 @@ $button-floating-square-small-radius: 12.3px !default;
 
     &.primary {
         color: var(--primary-color-darken-5);
-        background-color: rgba(var(--primary-color-rgb), 0.2);
+        background-color: hsla(var(--primary-color-hsl), 0.2);
     }
 
     @each $sP in $semanticPurposes {
@@ -216,12 +217,12 @@ $button-floating-square-small-radius: 12.3px !default;
 
 @mixin soft-colors-hover-focus-secondary {
     &:hover {
-        background-color: rgba(var(--secondary-color-rgb), 0.3);
+        background-color: hsla(var(--secondary-color-hsl), 0.3);
         box-shadow: unset;
     }
 
     &:focus {
-        background-color: rgba(var(--secondary-color-rgb), 0.5);
+        background-color: hsla(var(--secondary-color-hsl), 0.5);
     }
 }
 
@@ -230,11 +231,11 @@ $button-floating-square-small-radius: 12.3px !default;
 
     &.primary {
         &:hover {
-            background-color: rgba(var(--primary-color-rgb), 0.3);
+            background-color: hsla(var(--primary-color-hsl), 0.3);
         }
 
         &:focus {
-            background-color: rgba(var(--primary-color-rgb), 0.5);
+            background-color: hsla(var(--primary-color-hsl), 0.5);
         }
     }
 
@@ -306,7 +307,7 @@ $datepicker-year: rgba(255, 255, 255, .7) !default;
 $datepicker-focus: rgba(0, 0, 0, .05) !default;
 $datepicker-selected: var(--secondary-color) !default;
 $datepicker-selected-outfocus: var(--secondary-color-lighten-25) !default;
-$datepicker-day-focus: rgba(var(--secondary-color-rgb), 0.75) !default;
+$datepicker-day-focus: hsla(var(--secondary-color-hsl), 0.75) !default;
 $datepicker-disabled-day-color: rgba(0, 0, 0, .3) !default;
 $timepicker-clock-color: rgba(0, 0, 0, .87) !default;
 $timepicker-clock-plate-bg: #eee !default;

@@ -501,13 +501,13 @@
 
         &:not(.as-badge) {
             &:hover {
-                background-color: rgba(var(--secondary-color-rgb), 0.30);
+                background-color: hsla(var(--secondary-color-hsl), 0.30);
             }
 
             &:focus,
             &:active {
                 color: var(--secondary-color-lighten-25);
-                background-color: rgba(var(--secondary-color-rgb), 0.50);
+                background-color: hsla(var(--secondary-color-hsl), 0.50);
             }
         }
 
@@ -517,13 +517,13 @@
 
             &:not(.as-badge) {
                 &:hover {
-                    background-color: rgba(var(--primary-color-rgb), 0.3);
+                    background-color: hsla(var(--primary-color-hsl), 0.3);
                 }
 
                 &:focus,
                 &:active {
                     color: var(--primary-color-lighten-25);
-                    background-color: rgba(var(--primary-color-rgb), 0.5);
+                    background-color: hsla(var(--primary-color-hsl), 0.5);
                 }
             }
         }
@@ -1089,7 +1089,7 @@
             }
 
             &:not(:disabled)~.lever:active:before {
-                background-color: rgba(var(--secondary-color-rgb), 0.30);
+                background-color: hsla(var(--secondary-color-hsl), 0.30);
             }
 
             &[disabled] {
@@ -1115,7 +1115,7 @@
         &.md3 {
             label {
                 .lever {
-                    background-color: rgba(var(--secondary-color-rgb), 0.30);
+                    background-color: hsla(var(--secondary-color-hsl), 0.30);
                     border-color: var(--secondary-color-lighten-10);
 
                     &::before,
@@ -1231,7 +1231,7 @@
             background-color: transparent;
 
             .datepicker-date-display {
-                background-color: rgba(var(--secondary-color-rgb), 0.30);
+                background-color: hsla(var(--secondary-color-hsl), 0.30);
             }
 
             &.acrylic .datepicker-date-display {
@@ -1262,7 +1262,7 @@
             background-color: transparent;
 
             .timepicker-digital-display {
-                background-color: rgba(var(--secondary-color-rgb), .3);
+                background-color: hsla(var(--secondary-color-hsl), .3);
             }
 
             &.acrylic .timepicker-digital-display {

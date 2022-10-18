@@ -158,7 +158,7 @@
 
 .datepicker-modal.blur-bg {
     .datepicker-date-display {
-        background-color: rgba(var(--secondary-color-rgb), 0.50);
+        background-color: hsla(var(--secondary-color-hsl), 0.50);
     }
 
     &.acrylic .datepicker-date-display {

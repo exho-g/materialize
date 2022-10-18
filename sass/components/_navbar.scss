@@ -21,7 +21,7 @@ nav {
     line-height: $navbar-line-height-mobile;
 
     &.blur-bg {
-        background-color: rgba(var(--primary-color-rgb), 0.7);
+        background-color: hsla(var(--primary-color-hsl), 0.7);
         backdrop-filter: blur(15px);
 
         &.acrylic {

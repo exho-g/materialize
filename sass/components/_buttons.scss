@@ -282,13 +282,13 @@
 
     &.soft:not(.disabled) {
         background-color: var(--secondary-color-lighten-40);
-        box-shadow: coloredShadow("x1", var(--secondary-color-rgb), false);
+        box-shadow: coloredShadow("x1", var(--secondary-color-hsl), false);
         transition: background-color .3s,
             box-shadow .25s;
 
         &:hover {
             background-color: var(--secondary-color-lighten-30);
-            box-shadow: coloredShadow("x1_2", var(--secondary-color-rgb), false);
+            box-shadow: coloredShadow("x1_2", var(--secondary-color-hsl), false);
         }
 
         .icon,
@@ -298,11 +298,11 @@
 
         &.primary {
             background-color: var(--primary-color-lighten-40);
-            box-shadow: coloredShadow("x1", var(--primary-color-rgb), false);
+            box-shadow: coloredShadow("x1", var(--primary-color-hsl), false);
 
             &:hover {
                 background-color: var(--primary-color-lighten-30);
-                box-shadow: coloredShadow("x1_2", var(--primary-color-rgb), false);
+                box-shadow: coloredShadow("x1_2", var(--primary-color-hsl), false);
             }
 
             .icon,
@@ -582,13 +582,13 @@ button.btn-floating {
         cursor: pointer;
 
         &:hover {
-            background-color: rgba(var(--secondary-color-rgb), 0.1);
+            background-color: hsla(var(--secondary-color-hsl), 0.1);
             box-shadow: unset;
         }
 
         &:focus,
         &:active {
-            background-color: rgba(var(--secondary-color-rgb), 0.3);
+            background-color: hsla(var(--secondary-color-hsl), 0.3);
         }
     }
 
@@ -607,12 +607,12 @@ button.btn-floating {
 
         &:not(.as-badge) {
             &:hover {
-                background-color: rgba(var(--primary-color-rgb), 0.1);
+                background-color: hsla(var(--primary-color-hsl), 0.1);
             }
 
             &:focus,
             &:active {
-                background-color: rgba(var(--primary-color-rgb), 0.3);
+                background-color: hsla(var(--primary-color-hsl), 0.3);
             }
         }
     }
@@ -624,12 +624,12 @@ button.btn-floating {
 
             &:not(.as-badge) {
                 &:hover {
-                    background-color: rgba(semanticColorLookUp($sP), 0.1);
+                    background-color: hsla(semanticColorLookUp($sP), 0.1);
                 }
 
                 &:focus,
                 &:active {
-                    background-color: rgba(semanticColorLookUp($sP), 0.3);
+                    background-color: hsla(semanticColorLookUp($sP), 0.3);
                 }
             }
         }

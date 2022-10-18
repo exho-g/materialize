@@ -24,6 +24,15 @@ select {
     background-color: rgba(20, 20, 20, 0.9);
     color: #FFF;
     border-color: rgba(255, 255, 255, .5);
+
+    &:disabled {
+        color: rgba(255, 255, 255, .5);
+        border-color: rgba(255, 255, 255, .5);
+
+        +label {
+            color: rgba(255, 255, 255, .5);
+        }
+    }
 }
 
 .select-wrapper {
@@ -34,6 +43,11 @@ select {
     &.disabled+label {
         color: rgba(255, 255, 255, .5);
     }
+}
+
+// if label is before the disabled select
+label:has(+select.browser-default:disabled) {
+    color: rgba(255, 255, 255, .5);
 }
 
 

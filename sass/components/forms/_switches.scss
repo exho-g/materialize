@@ -121,6 +121,10 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
         height: 16px;
         transition: left 0.3s ease, background 0.3s ease, width 0.3s ease, height 0.3s ease, top 0.3s ease;
       }
+
+      &:after {
+        content: unset;
+      }
     }
 
     input[type=checkbox] {
@@ -136,11 +140,6 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
             height: 24px;
             top: 0;
             left: 0;
-          }
-
-          &::after {
-            line-height: 1.5;
-            color: #FFF;
           }
         }
       }
@@ -200,12 +199,18 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
   &.with-icon label {
     .lever::after {
       content: '';
+      border-radius: unset;
+      box-shadow: unset;
+      background-color: unset;
       border: 2px solid transparent;
       border-top: unset;
       border-left: unset;
       transform: rotate(45deg);
       top: 5px;
       left: 8px;
+      width: 6px;
+      height: 12px;
+      transition: top 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
     }
 
     input[type=checkbox] {
@@ -222,6 +227,7 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
 
       &:checked {
         +.lever::after {
+          background-color: unset;
           border-color: var(--secondary-color);
           left: 28px;
           top: 3px;
@@ -235,6 +241,7 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
           &.tabbed:focus~.lever {
 
             &::after {
+              border-color: var(--secondary-color);
               top: 3px;
               left: 29px;
             }

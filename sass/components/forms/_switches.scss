@@ -124,6 +124,7 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
 
       &:after {
         content: unset;
+        border: unset;
       }
     }
 
@@ -155,11 +156,6 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
             height: 22px;
             top: 1px;
           }
-
-          &::after {
-            color: var(--secondary-color);
-            line-height: 1.4;
-          }
         }
 
         &:not(:disabled) {
@@ -172,24 +168,26 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
               background-color: #FFF;
               left: 20px;
             }
-
-            &::after {
-              color: var(--secondary-color);
-            }
           }
         }
       }
 
       &[disabled] {
         +.lever {
-          border-color: $input-disabled-solid-color;
+          background-color: transparent;
+          border-color: rgba($input-disabled-solid-color, 0.3);
+
+          &:before {
+            border: unset;
+          }
         }
 
         &:checked+.lever {
-          background-color: $input-disabled-solid-color;
+          background-color: rgba($input-disabled-solid-color, 0.3);
+          border-color: transparent;
 
-          &::after {
-            color: $input-disabled-solid-color;
+          &:before {
+            border: unset;
           }
         }
       }
@@ -206,10 +204,10 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
       border-top: unset;
       border-left: unset;
       transform: rotate(45deg);
-      top: 5px;
+      top: 6px;
       left: 8px;
       width: 6px;
-      height: 12px;
+      height: 11px;
       transition: top 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
     }
 
@@ -230,9 +228,7 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
           background-color: unset;
           border-color: var(--secondary-color);
           left: 28px;
-          top: 3px;
-          width: 7px;
-          height: 14px;
+          top: 6px;
         }
 
         &:not(:disabled) {
@@ -242,8 +238,10 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
 
             &::after {
               border-color: var(--secondary-color);
-              top: 3px;
+              top: 5px;
               left: 29px;
+              width: 7px;
+              height: 12px;
             }
           }
         }

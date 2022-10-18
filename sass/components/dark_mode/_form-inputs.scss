@@ -261,20 +261,20 @@
 
                     &[disabled] {
                         +.lever {
-                            background-color: color('grey', 'darken-4');
-                            border-color: color('grey', 'darken-3');
+                            background-color: transparent;
+                            border-color: rgba($input-disabled-solid-color, 0.3);
 
                             &::before {
-                                background-color: color('grey', 'darken-3');
+                                background-color: color('grey', 'darken-2');
                             }
                         }
 
                         &:checked+.lever {
-                            background-color: color('grey', 'darken-3');
+                            background-color: rgba($input-disabled-solid-color, 0.3);
+                            border-color: transparent;
 
                             &::before {
-                                color: color('grey', 'darken-3');
-                                background-color: color('grey', 'base');
+                                background-color: color('grey', 'darken-4');
                             }
                         }
                     }
@@ -284,6 +284,7 @@
             &.with-icon label {
                 .lever::after {
                     border-color: transparent;
+                    background-color: transparent;
                 }
 
                 input[type=checkbox] {
@@ -309,14 +310,8 @@
                         }
                     }
 
-                    &[disabled] {
-                        &::after {
-                            border-color: color('grey', 'darken-3');
-                        }
-
-                        &:checked+.lever::after {
-                            border-color: color('grey', 'base');
-                        }
+                    &[disabled]:checked+.lever::after {
+                        border-color: color('grey', 'darken-2');
                     }
                 }
             }

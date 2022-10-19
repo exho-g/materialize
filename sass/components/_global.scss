@@ -944,7 +944,7 @@ table {
     overflow: hidden;
 }
 
-@for $i from 2 through 5 {
+@for $i from 1 through 5 {
     .truncate-#{$i} {
         @include multiple-truncation;
         -webkit-line-clamp: #{$i};

@@ -611,6 +611,11 @@
      * @param {String} transform
      */
     _updateItemStyle(el, opacity, zIndex, transform) {
+      if (this.el.classList.contains('blur-inactive')) {
+        let blurRadius = 16 - 16 * opacity;
+        let grayscaleLevel = 1 - opacity;
+        el.style.filter = 'blur(' + blurRadius + 'px) grayscale(' + grayscaleLevel + ')';
+      }
       el.style[this.xform] = transform;
       el.style.zIndex = zIndex;
       el.style.opacity = opacity;

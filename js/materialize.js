@@ -11606,6 +11606,11 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_updateItemStyle",
       value: function _updateItemStyle(el, opacity, zIndex, transform) {
+        if (this.el.classList.contains('blur-inactive')) {
+          var blurRadius = 16 - 16 * opacity;
+          var grayscaleLevel = 1 - opacity;
+          el.style.filter = 'blur(' + blurRadius + 'px) grayscale(' + grayscaleLevel + ')';
+        }
         el.style[this.xform] = transform;
         el.style.zIndex = zIndex;
         el.style.opacity = opacity;

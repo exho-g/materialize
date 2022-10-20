@@ -68,7 +68,7 @@
             </pre>
                         <p>You can also use primary or secondary color like <code
                                 class="language-markup">.border-primary</code> or by semantic purpose like <code
-                                class="language-markup">.border-success, .border-info, .border-danger, etc...</code>.
+                                class="language-markup">.border-success, .border-danger, etc...</code>.
                             Please refer to CSS > Helpers to check other border helper classes</p>
                     </div>
                 </div>
@@ -105,12 +105,15 @@
                     update the following CSS variables. Please note that this does not require you to recompile the SCSS
                     files.
                 </p>
+                <p class="caption">We recommend updating only the hue and saturation value and leave the lightness to
+                    50%.</p>
                 <pre><code class="language-css">
   :root {
     /** Provide the HSL values **/
-    --primary-color-hs: 210deg, 79%;
-    --primary-color-l: 46%;
-    --secondary-color-hs: 200deg, 18%;
+    --primary-color-hs: 8deg, 34%;
+    --primary-color-l: 50%;
+
+    --secondary-color-hs: 188deg, 34%;
     --secondary-color-l: 46%;
   }
         </code></pre>
@@ -121,10 +124,12 @@
                 <pre><code class="language-css">
   :root {
     /** You can change the word primary to secondary **/
-    --primary-color-light;
-    --primary-color-dark;
+    --primary-color-light; /** +15%  **/
+    --primary-color-dark; /** -15%  **/
 
+    --primary-color-lighten-45;
     --primary-color-lighten-40;
+    --primary-color-lighten-35;
     --primary-color-lighten-30;
     --primary-color-lighten-25;
     --primary-color-lighten-20;
@@ -136,7 +141,9 @@
     --primary-color-darken-20;
     --primary-color-darken-25;
     --primary-color-darken-30;
+    --primary-color-darken-35;
     --primary-color-darken-40;
+    --primary-color-darken-45;
   }
 
   /** Usage Example **/
@@ -155,6 +162,7 @@
                 <pre><code class="language-markup">
     .primary-color
     .primary-color-text
+
     .secondary-color
     .secondary-color-text
                           </code></pre>
@@ -164,10 +172,13 @@
                 <pre><code class="language-markup">
     .success-color
     .success-color-text
+
     .info-color
     .info-color-text
+
     .danger-color
     .danger-color-text
+
     .warning-color
     .warning-color-text
                           </code></pre>

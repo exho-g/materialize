@@ -57,6 +57,10 @@
   }
 
   &.blur-inactive {
+    .carousel-item {
+      transition: filter 0.1s linear;
+    }
+
     .carousel-item:not(.active) {
       filter: blur(3px);
     }

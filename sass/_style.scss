@@ -341,7 +341,7 @@ a.sidenav-trigger.top-nav {
 #download-button,
 #upgrade-button {
     &:hover {
-        background-color: var(--primary-color-lighten-30);
+        background-color: var(--primary-color-lighten-5);
     }
 
     background-color: var(--primary-color);
@@ -813,8 +813,8 @@ body.parallax-demo footer {
 
     .btn {
         &:not(.waves-light) {
-            background-color: color("shades", "white");
-            color: #212121;
+            background-color: color("shades", "white") !important;
+            color: #212121 !important;
         }
     }
 }

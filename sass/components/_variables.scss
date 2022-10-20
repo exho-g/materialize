@@ -117,7 +117,7 @@ $semanticColors: (
     $color: $curColor;
 
     @if $fixed {
-        $color: red($curColor) ", " green($curColor) ", " blue($curColor);
+        $color: hue($curColor) ", " saturation($curColor) ", " lightness($curColor);
     }
 
     $boxShadow: map-get((x1: "0 2px 2px 0 hsla(#{$color}, 0.14), 0 3px 1px -2px hsla(#{$color}, 0.12), 0 1px 5px 0 hsla(#{$color}, 0.2)",

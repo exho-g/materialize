@@ -402,7 +402,7 @@ a.sidenav-trigger.top-nav {
     text-align: center;
     line-height: 50px;
     font-size: 28px;
-    background-color: tomato;
+    background-color: var(--secondary-color);
     color: white;
     padding: 0;
 
@@ -427,12 +427,12 @@ a.sidenav-trigger.top-nav {
 }
 
 #site-layout-example-right {
-    background-color: color("teal", "lighten-1");
+    background-color: var(--secondary-color);
     height: 300px;
 }
 
 #site-layout-example-top {
-    background-color: color("red", "lighten-2");
+    background-color: var(--primary-color);
     height: 42px;
 }
 

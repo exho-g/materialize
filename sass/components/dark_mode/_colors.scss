@@ -92,27 +92,27 @@
     }
 
     .primary-color {
-        background-color: var(--primary-color-darken-5);
+        background-color: var(--primary-color-darken-5) !important;
 
         &-text {
-            color: var(--primary-color-light);
+            color: var(--primary-color-light) !important;
         }
     }
 
     .secondary-color {
-        background-color: var(--secondary-color-darken-5);
+        background-color: var(--secondary-color-darken-5) !important;
 
         &-text {
-            color: var(--secondary-color-light);
+            color: var(--secondary-color-light) !important;
         }
     }
 
     @each $sP in $semanticPurposes {
         .#{$sP}-color {
-            background-color: darken(semanticColorLookUp($sP), 5%);
+            background-color: darken(semanticColorLookUp($sP), 5%) !important;
 
             &-text {
-                color: lighten(semanticColorLookUp($sP), 5%);
+                color: lighten(semanticColorLookUp($sP), 5%) !important;
             }
         }
     }

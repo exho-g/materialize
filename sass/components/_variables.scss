@@ -33,11 +33,11 @@
 @use "sass:math";
 
 :root {
-    --primary-color-hs: 210deg, 79%;
-    --primary-color-l: 46%;
+    --primary-color-hs: 8deg, 34%;
+    --primary-color-l: 50%;
 
-    --secondary-color-hs: 200deg, 18%;
-    --secondary-color-l: 46%;
+    --secondary-color-hs: 188deg, 34%;
+    --secondary-color-l: 50%;
 
     --primary-color-hsl: var(--primary-color-hs), var(--primary-color-l);
     --secondary-color-hsl: var(--secondary-color-hs), var(--secondary-color-l);
@@ -54,14 +54,18 @@
 
     --secondary-btn-focus: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) + 4%));
 
+    --primary-color-lighten-45: hsl(var(--primary-color-hs), calc(var(--primary-color-l) + 45%));
     --primary-color-lighten-40: hsl(var(--primary-color-hs), calc(var(--primary-color-l) + 40%));
+    --primary-color-lighten-35: hsl(var(--primary-color-hs), calc(var(--primary-color-l) + 35%));
     --primary-color-lighten-30: hsl(var(--primary-color-hs), calc(var(--primary-color-l) + 30%));
     --primary-color-lighten-25: hsl(var(--primary-color-hs), calc(var(--primary-color-l) + 25%));
     --primary-color-lighten-20: hsl(var(--primary-color-hs), calc(var(--primary-color-l) + 20%));
     --primary-color-lighten-10: hsl(var(--primary-color-hs), calc(var(--primary-color-l) + 10%));
     --primary-color-lighten-5: hsl(var(--primary-color-hs), calc(var(--primary-color-l) + 5%));
 
+    --secondary-color-lighten-45: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) + 45%));
     --secondary-color-lighten-40: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) + 40%));
+    --secondary-color-lighten-35: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) + 35%));
     --secondary-color-lighten-30: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) + 30%));
     --secondary-color-lighten-25: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) + 25%));
     --secondary-color-lighten-20: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) + 20%));
@@ -73,14 +77,18 @@
     --primary-color-darken-20: hsl(var(--primary-color-hs), calc(var(--primary-color-l) - 20%));
     --primary-color-darken-25: hsl(var(--primary-color-hs), calc(var(--primary-color-l) - 25%));
     --primary-color-darken-30: hsl(var(--primary-color-hs), calc(var(--primary-color-l) - 30%));
+    --primary-color-darken-35: hsl(var(--primary-color-hs), calc(var(--primary-color-l) - 35%));
     --primary-color-darken-40: hsl(var(--primary-color-hs), calc(var(--primary-color-l) - 40%));
+    --primary-color-darken-45: hsl(var(--primary-color-hs), calc(var(--primary-color-l) - 45%));
 
     --secondary-color-darken-5: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) - 5%));
     --secondary-color-darken-10: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) - 10%));
     --secondary-color-darken-20: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) - 20%));
     --secondary-color-darken-25: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) - 25%));
     --secondary-color-darken-30: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) - 30%));
+    --secondary-color-darken-35: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) - 35%));
     --secondary-color-darken-40: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) - 40%));
+    --secondary-color-darken-45: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) - 45%));
 }
 
 $primary-color: var(--primary-color) !default;
@@ -112,6 +120,15 @@ $semanticColors: (
 
     @return $value;
 }
+
+$shadowLevels: (
+    x1: 1,
+    x1_2: "1-half",
+    x2: 2,
+    x3: 3,
+    x4: 4,
+    x5: 5
+);
 
 @function coloredShadow($zDepth, $curColor: #000000, $fixed: true) {
     $color: $curColor;

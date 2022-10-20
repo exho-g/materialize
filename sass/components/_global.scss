@@ -36,50 +36,28 @@ a {
 }
 
 .primary-color {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color) !important;
 
     &-text {
-        color: var(--primary-color);
+        color: var(--primary-color) !important;
     }
 }
 
 .secondary-color {
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-color) !important;
 
     &-text {
-        color: var(--secondary-color);
+        color: var(--secondary-color) !important;
     }
 }
 
-.success-color {
-    background-color: $success-color;
+@each $sP in $semanticPurposes {
+    .#{$sP}-color {
+        background-color: semanticColorLookUp($sP) !important;
 
-    &-text {
-        color: $success-color;
-    }
-}
-
-.info-color {
-    background-color: $info-color;
-
-    &-text {
-        color: $info-color;
-    }
-}
-
-.danger-color {
-    background-color: $danger-color;
-
-    &-text {
-        color: $danger-color;
-    }
-}
-
-.warning-color {
-    background-color: $warning-color;
-
-    &-text {
-        color: $warning-color;
+        &-text {
+            color: semanticColorLookUp($sP) !important;
+        }
     }
 }
 
@@ -145,6 +123,56 @@ a {
 
     &:hover {
         box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+}
+
+/* Shadow by semantic colors */
+
+@each $zDepth,
+$level in $shadowLevels {
+    .z-depth-#{$level}-primary {
+        box-shadow: coloredShadow($zDepth, var(--primary-color-hsl), false);
+    }
+}
+
+.primary-hoverable {
+    transition: box-shadow .25s;
+
+    &:hover {
+        box-shadow: coloredShadow(hover, var(--primary-color-hsl), false);
+    }
+}
+
+@each $zDepth,
+$level in $shadowLevels {
+    .z-depth-#{$level}-secondary {
+        box-shadow: coloredShadow($zDepth, var(--secondary-color-hsl), false);
+    }
+}
+
+.secondary-hoverable {
+    transition: box-shadow .25s;
+
+    &:hover {
+        box-shadow: coloredShadow(hover, var(--secondary-color-hsl), false);
+    }
+}
+
+@each $sP in $semanticPurposes {
+
+    @each $zDepth,
+    $level in $shadowLevels {
+        .z-depth-#{$level}-#{$sP} {
+            box-shadow: coloredShadow($zDepth, semanticColorLookUp($sP));
+        }
+    }
+
+    .#{$sP}-hoverable {
+        transition: box-shadow .25s;
+
+        &:hover {
+            box-shadow: coloredShadow(hover, semanticColorLookUp($sP));
+        }
     }
 }
 
@@ -953,9 +981,7 @@ table {
 
 .no-padding {
     padding: unset !important;
-}
 
-.no-padding {
     &-t {
         padding-top: unset !important;
     }
@@ -975,9 +1001,7 @@ table {
 
 .no-margin {
     margin: unset !important;
-}
 
-.no-margin {
     &-t {
         margin-top: unset !important;
     }
@@ -1019,9 +1043,7 @@ table {
 
 .no-br {
     border-radius: unset !important;
-}
 
-.no-br {
     &-tl {
         border-top-left-radius: unset !important;
     }
@@ -1080,9 +1102,7 @@ table {
 
 .no-border {
     border: unset !important;
-}
 
-.no-border {
     &-t {
         border-top: unset !important;
     }

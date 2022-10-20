@@ -10,10 +10,11 @@
 @import "dark_mode/stepper";
 @import "dark_mode/helpers";
 
+@include init-helper;
+
 @mixin dark-mode {
     color: #FFF;
 
-    @include init-helper;
     @include colors;
     @include misc;
     @include navigations;

@@ -392,53 +392,53 @@
     }
 
     /* Shadows */
-    @each $zDepth,
-    $level in $shadowLevels {
-        .z-depth-#{$level}-primary {
-            box-shadow: coloredShadow($zDepth, (var(--primary-color-hs), calc(var(--primary-color-l) - 5%)), false);
-        }
-    }
+    // @each $zDepth,
+    // $level in $shadowLevels {
+    //     .z-depth-#{$level}-primary {
+    //         box-shadow: coloredShadow($zDepth, (var(--primary-color-hs), calc(var(--primary-color-l) - 5%)), false);
+    //     }
+    // }
 
-    .primary-hoverable {
-        transition: box-shadow .25s;
+    // .primary-hoverable {
+    //     transition: box-shadow .25s;
 
-        &:hover {
-            box-shadow: coloredShadow(hover, (var(--primary-color-hs), calc(var(--primary-color-l) - 5%)), false);
-        }
-    }
+    //     &:hover {
+    //         box-shadow: coloredShadow(hover, (var(--primary-color-hs), calc(var(--primary-color-l) - 5%)), false);
+    //     }
+    // }
 
-    @each $zDepth,
-    $level in $shadowLevels {
-        .z-depth-#{$level}-secondary {
-            box-shadow: coloredShadow($zDepth, (var(--secondary-color-hs), calc(var(--secondary-color-l) - 5%)), false);
-        }
-    }
+    // @each $zDepth,
+    // $level in $shadowLevels {
+    //     .z-depth-#{$level}-secondary {
+    //         box-shadow: coloredShadow($zDepth, (var(--secondary-color-hs), calc(var(--secondary-color-l) - 5%)), false);
+    //     }
+    // }
 
-    .secondary-hoverable {
-        transition: box-shadow .25s;
+    // .secondary-hoverable {
+    //     transition: box-shadow .25s;
 
-        &:hover {
-            box-shadow: coloredShadow(hover, (var(--secondary-color-hs), calc(var(--secondary-color-l) - 5%)), false);
-        }
-    }
+    //     &:hover {
+    //         box-shadow: coloredShadow(hover, (var(--secondary-color-hs), calc(var(--secondary-color-l) - 5%)), false);
+    //     }
+    // }
 
-    @each $sP in $semanticPurposes {
+    // @each $sP in $semanticPurposes {
 
-        @each $zDepth,
-        $level in $shadowLevels {
-            .z-depth-#{$level}-#{$sP} {
-                box-shadow: coloredShadow($zDepth, darken(semanticColorLookUp($sP), 5%));
-            }
-        }
+    //     @each $zDepth,
+    //     $level in $shadowLevels {
+    //         .z-depth-#{$level}-#{$sP} {
+    //             box-shadow: coloredShadow($zDepth, darken(semanticColorLookUp($sP), 5%));
+    //         }
+    //     }
 
-        .#{$sP}-hoverable {
-            transition: box-shadow .25s;
+    //     .#{$sP}-hoverable {
+    //         transition: box-shadow .25s;
 
-            &:hover {
-                box-shadow: coloredShadow(hover, darken(semanticColorLookUp($sP), 5%));
-            }
-        }
-    }
+    //         &:hover {
+    //             box-shadow: coloredShadow(hover, darken(semanticColorLookUp($sP), 5%));
+    //         }
+    //     }
+    // }
 
     // Waves effect
     .waves-effect {

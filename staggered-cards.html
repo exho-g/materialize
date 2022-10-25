@@ -307,12 +307,13 @@
                 class="language-markup">.col</code> class.</p>
 
             <p class="caption">You can also customize the number of columns depending on screen size like this <code
-                class="language-markup">class="masonry-cards s1 m2 l4 xl8"</code>. You can specify the number of columns
+                class="language-markup">class="staggered-cards s1 m2 l4 xl8"</code>. You can specify the number of
+              columns
               from 1 to 12. If not specified, the will default number of columns will be <code
                 class="language-markup">s1 m2 l3 xl4</code>.
             </p>
 
-            <div class="masonry-cards s1 m2">
+            <div class="staggered-cards s1 m2">
               <div class="card-panel">
                 <h4 class="no-margin-t">Card</h4>
                 <p>This is a panel in a staggered card</p>
@@ -472,7 +473,7 @@
 <script src="js/init.js"></script>
     <script type="text/javascript">
       window.onload = function(){
-        M.resizeStaggeredCards();
+        M.resizeMasonryCards();
       };
     </script>
   </body>

@@ -2,10 +2,6 @@
   &.tabs-transparent {
     background-color: transparent;
 
-    .tab a {
-      border-bottom: unset; // remove anchor text style
-    }
-
     .tab a,
     .tab.disabled a,
     .tab.disabled a:hover {
@@ -49,6 +45,7 @@
     text-transform: uppercase;
 
     a {
+      border-bottom: unset; // remove anchor text style
 
       &:focus,
       &:focus.active {

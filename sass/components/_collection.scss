@@ -72,7 +72,6 @@
   }
 
   a.collection-item {
-    border-bottom: unset; // remove anchor text style
     display: block;
     transition: .25s;
     color: $collection-link-color;

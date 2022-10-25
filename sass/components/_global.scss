@@ -33,13 +33,10 @@ a {
     text-decoration: none;
     // Gets rid of tap active state
     -webkit-tap-highlight-color: transparent;
+    border-bottom: 1px solid;
 
-    &:not(.no-text-decoration) {
-        border-bottom: 1px solid;
-
-        &:hover {
-            border-bottom-width: 2px;
-        }
+    &:hover {
+        border-bottom-width: 2px;
     }
 }
 
@@ -1133,6 +1130,10 @@ table {
     &-l {
         border-left: unset !important;
     }
+}
+
+a.no-text-decoration {
+    border-bottom: unset !important;
 }
 
 .responsive-container {

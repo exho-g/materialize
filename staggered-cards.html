@@ -144,16 +144,17 @@
 
         <div class="row">
           <div class="col s12">
-            <p class="caption">Staggered Cards makes a Pinterest like layout.</p>
+            <p class="caption">Staggered/Masonry Cards makes a Pinterest like layout.</p>
 
             <h3 class="header">Basic</h3>
-            <p>To get started, just enclose your cards with <code class="language-markup">.staggered-grid</code> class
+            <p>To get started, just enclose your cards or card panel with <code
+                class="language-markup">.masonry-grid</code> class
               and each cards enclosed with <code class="language-markup">.item</code> class. It is recommended to use
               <code class="language-markup">.card</code> or <code class="language-markup">.card-panel</code> as root
               elements inside <code class="language-markup">.item</code>
             </p>
 
-            <div class="staggered-cards">
+            <div class="masonry-cards">
               <div class="item">
                 <div class="card-panel">
                   <h4 class="no-margin-t">Card</h4>
@@ -238,7 +239,7 @@
 
             <br>
             <pre><code class="language-markup">
-  &lt;div class="staggered-cards">
+  &lt;div class="masonry-cards">
     &lt;div class="item">
       &lt;div class="card-panel">
         &lt;h4 class="no-margin">Card&lt;/h4>
@@ -282,22 +283,22 @@
         <div class="row">
           <div class="col s12">
             <h3 class="header">Initialization</h3>
-            <p class="caption">You can run the following code snippet to initialize the staggered card's.</p>
+            <p class="caption">You can run the following code snippet to initialize the masonry card's.</p>
             <pre><code class="language-javascript">
-  M.resizeStaggeredCards();
+  M.resizeMasonryCards();
             </code></pre>
             <br>
           </div>
         </div>
       </div>
 
-      <div id="masonry" class="section scrollspy">
+      <div id="staggered" class="section scrollspy">
         <div class="row">
           <!-- Card Panel -->
           <div class="col s12">
-            <h3 class="header">Masonry Cards</h3>
+            <h3 class="header">Staggered Cards</h3>
             <p class="caption">Use this if you prefer the non-javascript version.</p>
-            <p class="caption">To use, just add a container with a <code class="language-markup">.masonry-cards</code>
+            <p class="caption">To use, just add a container with a <code class="language-markup">.staggered-cards</code>
               class, and then add your <code class="language-markup">.card</code>
               or <code class="language-markup">.card-panel</code> inside. Credit's to MichaelLNorth for this helper.
               You can checkout his codepen <a href="https://codepen.io/mike-north/pen/MwVoYp" target="_blank"
@@ -305,7 +306,13 @@
             <p class="caption">Please note that this will not work if the card has a <code
                 class="language-markup">.col</code> class.</p>
 
-            <div class="masonry-cards">
+            <p class="caption">You can also customize the number of columns depending on screen size like this <code
+                class="language-markup">class="masonry-cards s1 m2 l4 xl8"</code>. You can specify the number of columns
+              from 1 to 12. If not specified, the will default number of columns will be <code
+                class="language-markup">s1 m2 l3 xl4</code>.
+            </p>
+
+            <div class="masonry-cards s1 m2">
               <div class="card-panel">
                 <h4 class="no-margin-t">Card</h4>
                 <p>This is a panel in a staggered card</p>
@@ -349,7 +356,7 @@
             </div>
 
             <pre><code class="language-markup">        
-  &lt;div class="masonry-cards">
+  &lt;div class="masonry-cards s1 m2">
     &lt;div class="card-panel">
       &lt;h4 class="no-margin-t">Card&lt;/h4>
       &lt;p>This is a panel in a staggered card&lt;/p>
@@ -405,7 +412,7 @@
           <ul class="section table-of-contents">
             <li><a href="#basic">Basic</a></li>
             <li><a href="#initialization">Initialization</a></li>
-            <li><a href="#masonry">Masonry Cards</a></li>
+            <li><a href="#staggerd">Staggered Cards</a></li>
           </ul>
         </div>
       </div>

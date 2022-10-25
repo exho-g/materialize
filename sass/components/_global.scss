@@ -33,6 +33,14 @@ a {
     text-decoration: none;
     // Gets rid of tap active state
     -webkit-tap-highlight-color: transparent;
+
+    &:not(.no-text-decoration) {
+        border-bottom: 1px solid;
+
+        &:hover {
+            border-bottom-width: 2px;
+        }
+    }
 }
 
 .primary-color {
@@ -280,6 +288,7 @@ img:after {
         height: 30px;
 
         a {
+            border-bottom: unset; // remove anchor text style
             color: #444;
             display: inline-block;
             font-size: 1.2rem;
@@ -333,6 +342,8 @@ nav.breadcrumbs {
     padding: 0 12px;
 
     .segment {
+        border-bottom: unset; // remove anchor text style
+
         display: inline-block;
         font-size: 18px;
         color: rgba(255, 255, 255, .7);
@@ -613,6 +624,10 @@ ul.staggered-list li {
         padding: 10px 0px;
         color: $footer-copyright-font-color;
         background-color: $footer-copyright-bg-color;
+    }
+
+    a {
+        border-bottom: unset; // remove anchor text style
     }
 }
 

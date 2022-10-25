@@ -2,6 +2,10 @@
   &.tabs-transparent {
     background-color: transparent;
 
+    .tab a {
+      border-bottom: unset; // remove anchor text style
+    }
+
     .tab a,
     .tab.disabled a,
     .tab.disabled a:hover {

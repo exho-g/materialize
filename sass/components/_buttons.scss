@@ -140,6 +140,8 @@
 .btn-flat,
 .btn-soft,
 .btn-outlined {
+    border-bottom: unset; // remove anchor text style
+
     font-size: $button-font-size;
     outline: 0;
 

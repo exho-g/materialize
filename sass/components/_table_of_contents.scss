@@ -3,13 +3,15 @@
 ***************/
 .table-of-contents {
   &.fixed {
-      position: fixed;
-    }
+    position: fixed;
+  }
 
   li {
     padding: 2px 0;
   }
+
   a {
+    border-bottom: unset; // remove anchor text style
     display: inline-block;
     font-weight: 300;
     color: #757575;
@@ -24,6 +26,7 @@
       padding-left: 15px;
       border-left: 1px solid $primary-color;
     }
+
     &.active {
       font-weight: 500;
       padding-left: 14px;

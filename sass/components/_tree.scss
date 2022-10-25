@@ -36,7 +36,9 @@ $left: -($ident);
     }
 
     .branch>li a,
-    .branches>li a  {
+    .branches>li a {
+
+        border-bottom: unset; // remove anchor text style
 
         &.active,
         &.disabled {
@@ -172,6 +174,7 @@ $left: -($ident);
                 background-color: $tree-span-hover;
 
                 &+.branch {
+
                     >li span,
                     >li a {
                         &:not(.active):not(.disabled) {
@@ -185,6 +188,7 @@ $left: -($ident);
         &:hover+.branch,
         &:focus+.branch {
             >li {
+
                 &:after,
                 &:before {
                     border-color: $tree-line-hover;
@@ -201,12 +205,14 @@ $left: -($ident);
         .branch>li a,
         .branches>li a {
             &:not(.active):not(.disabled) {
+
                 &:hover,
                 &:focus {
                     background-color: unset;
                     border-color: $tree-line-hover;
 
                     &+.branch {
+
                         >li span,
                         >li a {
                             &:not(.active):not(.disabled) {

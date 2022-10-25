@@ -46,6 +46,7 @@
     }
 
     li>a {
+        border-bottom: unset; // remove anchor text style
         color: $sidenav-font-color;
         display: block;
         font-size: $sidenav-font-size;

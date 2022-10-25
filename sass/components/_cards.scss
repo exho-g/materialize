@@ -198,6 +198,7 @@
         padding: 16px $card-padding;
 
         a:not(.btn):not(.btn-floating) {
+            border-bottom: unset; // remove anchor text style
             color: $card-link-color;
             margin-right: $card-padding;
             transition: color .3s ease;

@@ -1,4 +1,3 @@
-
 // Collections
 .collection {
   margin: $element-top-margin 0 $element-bottom-margin 0;
@@ -21,8 +20,8 @@
       position: relative;
 
       // Don't style circles inside preloader classes.
-      &:not(.circle-clipper) > .circle,
-      :not(.circle-clipper) > .circle {
+      &:not(.circle-clipper)>.circle,
+      :not(.circle-clipper)>.circle {
         position: absolute;
         width: 42px;
         height: 42px;
@@ -31,6 +30,7 @@
         display: inline-block;
         vertical-align: middle;
       }
+
       i.circle {
         font-size: 18px;
         line-height: 42px;
@@ -70,10 +70,13 @@
       }
     }
   }
-  a.collection-item{
+
+  a.collection-item {
+    border-bottom: unset; // remove anchor text style
     display: block;
     transition: .25s;
     color: $collection-link-color;
+
     &:not(.active) {
       &:hover {
         background-color: $collection-hover-bg-color;
@@ -87,20 +90,25 @@
       border-bottom: 1px solid $collection-border-color;
       padding: 10px 20px;
     }
+
     .collection-item {
       padding-left: 30px;
     }
+
     .collection-item.avatar {
       padding-left: 72px;
     }
   }
 
 }
+
 // Made less specific to allow easier overriding
 .secondary-content {
+  border-bottom: unset; // remove anchor text style
   float: right;
   color: $secondary-color;
 }
+
 .collapsible .collection {
   margin: 0;
   border: none;

@@ -992,6 +992,7 @@ body.parallax-demo footer {
         background-color: #fff;
 
         a {
+            border-bottom: unset;
 
             &:hover,
             &.focused {

@@ -11,6 +11,11 @@
         background-color: color('grey', 'lighten-1');
     }
 
+    // AutoComplete
+    .autocomplete-content li .highlight {
+        color: var(--secondary-color-light);
+    }
+
 
     // Range
     input[type=range] {

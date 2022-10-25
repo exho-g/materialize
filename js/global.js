@@ -413,8 +413,8 @@ M.throttle = function(func, wait, options) {
   };
 };
 
-M.resizeStaggeredCards = function() {
-  if ((grids = document.querySelectorAll('.staggered-cards'))) {
+M.resizeMasonryCards = function() {
+  if ((grids = document.querySelectorAll('.masonry-cards'))) {
     grids.forEach(function(grid) {
       if ((items = grid.querySelectorAll('.item'))) {
         items.forEach(function(item) {
@@ -430,7 +430,7 @@ M.resizeStaggeredCards = function() {
         });
       }
     });
-    //window.addEventListener('resize', M.resizeStaggeredCards());
+    //window.addEventListener('resize', M.resizeMasonryCards());
   }
 };
 

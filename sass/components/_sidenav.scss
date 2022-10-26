@@ -173,6 +173,18 @@
     }
 
     &.md3 {
+        border-top-right-radius: 16px;
+        border-bottom-right-radius: 16px;
+
+        // Right Align
+        &.right-aligned {
+            border-top-right-radius: unset;
+            border-bottom-right-radius: unset;
+
+            border-top-left-radius: 16px;
+            border-bottom-left-radius: 16px;
+        }
+
         li {
             >a {
                 border-radius: 24px;

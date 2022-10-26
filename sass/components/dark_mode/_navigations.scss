@@ -77,19 +77,19 @@
 
                 >i,
                 &:not(.subheader) {
-                    color: #FFF !important;
+                    color: #FFF;
                 }
 
                 > {
 
                     .icon,
                     #{$icon-brand-selectors} {
-                        color: #FFF !important;
+                        color: #FFF;
                     }
                 }
 
                 &.subheader {
-                    color: color('red', 'lighten-1');
+                    color: var(--primary-color-light);
                 }
 
                 &:hover {
@@ -121,6 +121,74 @@
             .collapsible-body {
                 border: unset;
                 background-color: lighten(color('grey', 'darken-4'), 2%);
+            }
+        }
+
+        &.md3 {
+            li {
+                >a {
+                    color: var(--primary-color-lighten-40);
+
+                    &:hover {
+                        background-color: rgba(255, 255, 255, 0.05);
+                    }
+
+                    &:focus,
+                    &:active {
+                        background-color: rgba(255, 255, 255, 0.1);
+                    }
+
+                    >i,
+                    &:not(.subheader) {
+                        color: var(--primary-color-lighten-40);
+                    }
+
+                    > {
+
+                        .icon,
+                        #{$icon-brand-selectors} {
+                            color: var(--primary-color-lighten-40);
+                        }
+                    }
+                }
+
+                &.active {
+                    background-color: unset;
+
+                    >a {
+                        background-color: hsla(var(--primary-color-hsl), 0.2);
+
+                        &:hover {
+                            background-color: var(--primary-color-darken-25);
+                        }
+
+                        &:focus,
+                        &:active {
+                            background-color: hsla(var(--primary-color-hsl), 0.15);
+                        }
+                    }
+                }
+
+                &.title {
+
+                    a,
+                    span {
+                        color: var(--primary-color-lighten-30);
+                    }
+
+                    &.active a {
+                        background-color: unset;
+                    }
+
+                    a {
+
+                        &:hover,
+                        &:focus,
+                        &:active {
+                            background-color: unset;
+                        }
+                    }
+                }
             }
         }
     }

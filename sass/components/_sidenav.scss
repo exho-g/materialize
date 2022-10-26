@@ -185,6 +185,12 @@
             border-bottom-left-radius: 16px;
         }
 
+        @media #{$large-and-up} {
+            &.sidenav-fixed {
+                box-shadow: unset;
+            }
+        }
+
         li {
             >a {
                 border-radius: 24px;

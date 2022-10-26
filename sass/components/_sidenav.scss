@@ -108,7 +108,7 @@
                 transition: background-color 0.1s linear;
 
                 &:hover {
-                    background-color: rgba(0, 0, 0, .5);
+                    background-color: rgba(0, 0, 0, .05);
                 }
 
                 &:focus,
@@ -135,6 +135,7 @@
             }
 
             &.title {
+                padding: 16px 0;
 
                 a,
                 span {

@@ -158,6 +158,10 @@
                     &.subheader {
                         color: var(--primary-color-lighten-40);
                     }
+
+                    span.badge {
+                        color: rgba($color: #FFF, $alpha: 0.5);
+                    }
                 }
 
                 &.active {

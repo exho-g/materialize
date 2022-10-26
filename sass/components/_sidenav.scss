@@ -99,67 +99,6 @@
         }
     }
 
-    &.md3 {
-        li {
-            >a {
-                border-radius: 24px;
-                margin: 0 18px;
-                padding: 0 16px;
-                transition: background-color 0.1s linear;
-
-                &:hover {
-                    background-color: rgba(0, 0, 0, .05);
-                }
-
-                &:focus,
-                &:active {
-                    background-color: rgba(0, 0, 0, .1);
-                }
-            }
-
-            &.active {
-                background-color: unset;
-
-                >a {
-                    background-color: var(--primary-color-lighten-40);
-
-                    &:hover {
-                        background-color: var(--primary-color-lighten-25);
-                    }
-
-                    &:focus,
-                    &:active {
-                        background-color: var(--primary-color-lighten-30);
-                    }
-                }
-            }
-
-            &.title {
-                padding: 16px 0;
-
-                a,
-                span {
-                    margin: 0 18px;
-                    padding: 0 16px;
-                    font-weight: 500;
-                }
-
-                &.active a {
-                    background-color: unset;
-                }
-
-                a {
-
-                    &:hover,
-                    &:focus,
-                    &:active {
-                        background-color: unset;
-                    }
-                }
-            }
-        }
-    }
-
     .divider {
         margin: ($sidenav-padding * 0.5) 0 0 0;
     }
@@ -230,6 +169,75 @@
         .email {
             padding-bottom: 16px;
             font-weight: 400;
+        }
+    }
+
+    &.md3 {
+        li {
+            >a {
+                border-radius: 24px;
+                margin: 0 18px;
+                padding: 0 16px;
+                transition: background-color 0.1s linear;
+
+                &:hover {
+                    background-color: rgba(0, 0, 0, .05);
+                }
+
+                &:focus,
+                &:active {
+                    background-color: rgba(0, 0, 0, .1);
+                }
+
+                span.badge {
+                    color: rgba(0, 0, 0, .87);
+                }
+            }
+
+            &.active {
+                background-color: unset;
+
+                >a {
+                    background-color: var(--primary-color-lighten-40);
+
+                    &:hover {
+                        background-color: var(--primary-color-lighten-25);
+                    }
+
+                    &:focus,
+                    &:active {
+                        background-color: var(--primary-color-lighten-30);
+                    }
+                }
+            }
+
+            &.title {
+                padding: 16px 0;
+
+                a,
+                span {
+                    margin: 0 18px;
+                    padding: 0 16px;
+                    font-weight: 500;
+                }
+
+                &.active a {
+                    background-color: unset;
+                }
+
+                a {
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        background-color: unset;
+                    }
+                }
+            }
+
+            .divider {
+                margin: ($sidenav-padding * 0.5) 32px 0 32px;
+            }
         }
     }
 }

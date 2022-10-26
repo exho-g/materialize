@@ -150,6 +150,10 @@
                             color: var(--primary-color-lighten-40);
                         }
                     }
+
+                    &.subheader {
+                        color: var(--primary-color-lighten-40);
+                    }
                 }
 
                 &.active {

@@ -126,6 +126,10 @@
 
         &.md3 {
             li {
+                .subheader {
+                    color: var(--primary-color-lighten-40);
+                }
+
                 >a {
                     color: var(--primary-color-lighten-40);
 

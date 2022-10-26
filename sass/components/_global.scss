@@ -1106,7 +1106,6 @@ table {
 
     @each $sP in $semanticPurposes {
         &-#{$sP} {
-            background-color: rgba(darken(semanticColorLookUp($sP), 30%), 0.7);
             border-color: semanticColorLookUp($sP) !important;
         }
     }

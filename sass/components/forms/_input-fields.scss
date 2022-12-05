@@ -320,8 +320,7 @@ textarea.materialize-textarea {
     color: #444;
 
     &+label i,
-    &~.mdi-navigation-close,
-    &~ {
+    &~.mdi-navigation-close {
       color: #444;
     }
 
@@ -339,8 +338,7 @@ textarea.materialize-textarea {
     left: 1rem;
   }
 
-  &~.mdi-navigation-close,
-  &~ {
+  &~.mdi-navigation-close {
 
     .icon,
     #{$icon-brand-selectors} {

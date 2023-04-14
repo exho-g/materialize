@@ -1,11 +1,10 @@
-
 @use "sass:math";
 
 a {
   text-decoration: none;
 }
 
-html{
+html {
   line-height: 1.5;
 
   @media only screen and (min-width: 0) {
@@ -24,39 +23,225 @@ html{
   font-weight: normal;
   color: $off-black;
 }
-h1, h2, h3, h4, h5, h6 {
-	font-weight: 400;
-	line-height: 1.3;
+
+$headers: h1, h2, h3, h4, h5, h6;
+
+#{$headers} {
+  font-weight: 400;
+  line-height: 1.3;
 }
 
 // Header Styles
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
-h1 { font-size: $h1-fontsize; line-height: 110%; margin: math.div($h1-fontsize, 1.5) 0 math.div($h1-fontsize, 2.5) 0;}
-h2 { font-size: $h2-fontsize; line-height: 110%; margin: math.div($h2-fontsize, 1.5) 0 math.div($h2-fontsize, 2.5) 0;}
-h3 { font-size: $h3-fontsize; line-height: 110%; margin: math.div($h3-fontsize, 1.5) 0 math.div($h3-fontsize, 2.5) 0;}
-h4 { font-size: $h4-fontsize; line-height: 110%; margin: math.div($h4-fontsize, 1.5) 0 math.div($h4-fontsize, 2.5) 0;}
-h5 { font-size: $h5-fontsize; line-height: 110%; margin: math.div($h5-fontsize, 1.5) 0 math.div($h5-fontsize, 2.5) 0;}
-h6 { font-size: $h6-fontsize; line-height: 110%; margin: math.div($h6-fontsize, 1.5) 0 math.div($h6-fontsize, 2.5) 0;}
+#{$headers} {
+  a {
+    font-weight: inherit;
+  }
+}
+
+h1 {
+  font-size: $h1-fontsize;
+  line-height: 110%;
+  margin: math.div($h1-fontsize, 1.5) 0 math.div($h1-fontsize, 2.5) 0;
+}
+
+h2 {
+  font-size: $h2-fontsize;
+  line-height: 110%;
+  margin: math.div($h2-fontsize, 1.5) 0 math.div($h2-fontsize, 2.5) 0;
+}
+
+h3 {
+  font-size: $h3-fontsize;
+  line-height: 110%;
+  margin: math.div($h3-fontsize, 1.5) 0 math.div($h3-fontsize, 2.5) 0;
+}
+
+h4 {
+  font-size: $h4-fontsize;
+  line-height: 110%;
+  margin: math.div($h4-fontsize, 1.5) 0 math.div($h4-fontsize, 2.5) 0;
+}
+
+h5 {
+  font-size: $h5-fontsize;
+  line-height: 110%;
+  margin: math.div($h5-fontsize, 1.5) 0 math.div($h5-fontsize, 2.5) 0;
+}
+
+h6 {
+  font-size: $h6-fontsize;
+  line-height: 110%;
+  margin: math.div($h6-fontsize, 1.5) 0 math.div($h6-fontsize, 2.5) 0;
+}
 
 // Text Styles
-em { font-style: italic; }
-strong { font-weight: 500; }
-small { font-size: 75%; }
-.light { font-weight: 300; }
-.thin { font-weight: 200; }
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: 500;
+}
+
+small {
+  font-size: 75%;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.thin {
+  font-weight: 200;
+}
 
 
-.flow-text{
+.flow-text {
   $i: 0;
-  @while $i <= $intervals {
-    @media only screen and (min-width : 360 + ($i * $interval-size)) {
+
+  @while $i <=$intervals {
+    @media only screen and (min-width : (360 + ($i * $interval-size))) {
       font-size: 1.2rem * (1 + (.02 * $i));
     }
+
     $i: $i + 1;
   }
 
   // Handle below 360px screen
   @media only screen and (max-width: 360px) {
     font-size: 1.2rem;
+  }
+}
+
+// MATERIAL DESIGN 3
+
+$md3-typography-styles: (
+  display: (small: (font-size: 2.25rem,
+      line-height: 2.75rem,
+      font-weight: 700,
+    ),
+    medium: (font-size: 2.625rem,
+      line-height: 3rem,
+      font-weight: 700,
+    ),
+    large: (font-size: 3.5625rem,
+      line-height: 4.125rem,
+      font-weight: 700,
+    ),
+  ),
+  headline: (small: (font-size: 1.75rem,
+      line-height: 2rem,
+      font-weight: 600,
+    ),
+    medium: (font-size: 2rem,
+      line-height: 2.25rem,
+      font-weight: 600,
+    ),
+    large: (font-size: 2.25rem,
+      line-height: 2.5rem,
+      font-weight: 600,
+    ),
+  ),
+  title: (small: (font-size: 1.375rem,
+      line-height: 1.75rem,
+      font-weight: 600,
+    ),
+    medium: (font-size: 1.5rem,
+      line-height: 1.875rem,
+      font-weight: 600,
+    ),
+    large: (font-size: 1.625rem,
+      line-height: 2rem,
+      font-weight: 600,
+    ),
+  ),
+  label: (small: (font-size: 1rem,
+      line-height: 1.25rem,
+      font-weight: 600,
+    ),
+    medium: (font-size: 1.125rem,
+      line-height: 1.375rem,
+      font-weight: 600,
+    ),
+    large: (font-size: 1.25rem,
+      line-height: 1.5rem,
+      font-weight: 600,
+    ),
+  ),
+  body: (small: (font-size: 1rem,
+      line-height: 1.5rem,
+      font-weight: 400,
+    ),
+    medium: (font-size: 1.125rem,
+      line-height: 1.5rem,
+      font-weight: 400,
+    ),
+    large: (font-size: 1.25rem,
+      line-height: 1.5rem,
+      font-weight: 400,
+    ),
+  ),
+);
+
+$typeface-attributes-to-use: font-size, line-height, font-weight;
+
+h1.md3 {
+  @each $attr in $typeface-attributes-to-use {
+    #{$attr}: map-get(map-get(map-get($md3-typography-styles, display), large), #{$attr});
+  }
+}
+
+h2.md3 {
+  @each $attr in $typeface-attributes-to-use {
+    #{$attr}: map-get(map-get(map-get($md3-typography-styles, display), medium), #{$attr});
+  }
+}
+
+h3.md3 {
+  @each $attr in $typeface-attributes-to-use {
+    #{$attr}: map-get(map-get(map-get($md3-typography-styles, headline), large), #{$attr});
+  }
+}
+
+h4.md3 {
+  @each $attr in $typeface-attributes-to-use {
+    #{$attr}: map-get(map-get(map-get($md3-typography-styles, headline), medium), #{$attr});
+  }
+}
+
+h5.md3 {
+  @each $attr in $typeface-attributes-to-use {
+    #{$attr}: map-get(map-get(map-get($md3-typography-styles, title), large), #{$attr});
+  }
+}
+
+h6.md3 {
+  @each $attr in $typeface-attributes-to-use {
+    #{$attr}: map-get(map-get(map-get($md3-typography-styles, title), medium), #{$attr});
+  }
+}
+
+.md3 {
+
+  @each $typography,
+  $variants in $md3-typography-styles {
+    &.#{$typography} {
+      // default attributes which is based on large variant
+
+      @each $attr in $typeface-attributes-to-use {
+        #{$attr}: map-get(map-get($variants, large), #{$attr});
+      }
+
+      @each $variant,
+      $properties in $variants {
+        &.#{$variant} {
+
+          // variant's attributes          
+          @each $attr in $typeface-attributes-to-use {
+            #{$attr}: map-get($properties, #{$attr});
+          }
+        }
+      }
+    }
   }
 }

@@ -419,7 +419,7 @@ textarea.materialize-textarea {
         background-color: rgba(#000, 0);
         backdrop-filter: blur(128px) grayscale(1) brightness(1);
         width: auto !important;
-        top: 0.5rem;
+        top: 0.25rem;
         left: 1.25rem;
       }
 
@@ -491,6 +491,7 @@ textarea.materialize-textarea {
       label {
         padding: 0 0.5rem;
         left: 1.25rem;
+        top: 0;
 
         &.active {
           @include active-label;

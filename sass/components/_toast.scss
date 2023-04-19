@@ -22,7 +22,7 @@
 }
 
 .toast {
-    @extend .z-depth-1;
+    box-shadow: $z-depth-1-shadow;
     border-radius: 5px;
     top: 35px;
     width: auto;

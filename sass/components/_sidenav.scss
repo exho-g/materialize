@@ -13,7 +13,7 @@
     will-change: transform;
     backface-visibility: hidden;
     transform: translateX(-105%);
-    @extend .z-depth-1;
+    box-shadow: $z-depth-1-shadow;
 
     &.blur-bg {
         background-color: rgba($sidenav-bg-color, .6);

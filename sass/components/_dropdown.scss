@@ -3,7 +3,7 @@
         outline: 0;
     }
 
-    @extend .z-depth-1;
+    box-shadow: $z-depth-1-shadow;
     background-color: $dropdown-bg-color;
     margin: 0;
     display: none;

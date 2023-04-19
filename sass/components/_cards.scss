@@ -3,7 +3,7 @@
     padding: $card-padding;
     margin: $element-top-margin 0 $element-bottom-margin 0;
     border-radius: 10px;
-    @extend .z-depth-1;
+    box-shadow: $z-depth-1-shadow;
     background-color: $card-bg-color;
     overflow: hidden;
 
@@ -27,7 +27,7 @@
     transition: box-shadow .25s;
     border-radius: 10px;
     overflow: hidden;
-    @extend .z-depth-1;
+    box-shadow: $z-depth-1-shadow;
 
     &.float {
         border-radius: 15px;

@@ -3,7 +3,7 @@
         outline: none;
     }
 
-    @extend .z-depth-5;
+    box-shadow: $z-depth-5-shadow;
     display: none;
     position: fixed;
     left: 0;

@@ -14,7 +14,7 @@ nav {
     }
 
     color: $navbar-font-color;
-    @extend .z-depth-1;
+    box-shadow: $z-depth-1-shadow;
     background-color: $primary-color;
     width: 100%;
     height: $navbar-height-mobile;

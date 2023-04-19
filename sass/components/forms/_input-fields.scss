@@ -9,18 +9,10 @@
 
 /* Text inputs */
 
-input:not([type]):not(.browser-default),
-input[type=text]:not(.browser-default),
-input[type=password]:not(.browser-default),
-input[type=email]:not(.browser-default),
-input[type=url]:not(.browser-default),
-input[type=time]:not(.browser-default),
-input[type=date]:not(.browser-default),
-input[type=datetime]:not(.browser-default),
-input[type=datetime-local]:not(.browser-default),
-input[type=tel]:not(.browser-default),
-input[type=number]:not(.browser-default),
-input[type=search]:not(.browser-default),
+$input-selectors: "input:not([type]):not(.browser-default), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=month]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default)";
+
+
+#{$input-selectors},
 textarea.materialize-textarea {
 
   // General Styles
@@ -294,6 +286,301 @@ textarea.materialize-textarea {
 
   .suffix~label {
     margin-right: 3rem;
+  }
+
+  // Material Design 3, Filled
+  &.md3 {
+
+    @mixin active-label {
+      top: 1.5rem;
+    }
+
+    label {
+      width: calc(100% - 1.5rem) !important;
+      top: 0.25rem;
+      color: #333;
+      left: 1.75rem;
+      transition: left 0.2s ease-out, top 0.2s ease-out, transform 0.2s ease-out;
+
+      &.active {
+        @include active-label;
+      }
+    }
+
+    .helper-text {
+      margin-top: 4px;
+      margin-left: 1rem;
+    }
+
+    &.inline label {
+      left: 1rem;
+    }
+
+    ::placeholder {
+      color: rgba(#000, 0.5);
+    }
+
+    #{$input-selectors},
+    textarea.materialize-textarea {
+      background-color: rgba(#444, 0.04);
+      border-top-right-radius: 4px;
+      border-top-left-radius: 4px;
+      margin: 0;
+      width: calc(100% - 2rem);
+      padding: 2rem 1rem 0.5rem 1rem;
+      line-height: 2;
+      height: 1rem;
+
+      &:hover {
+        background-color: rgba(#000, 0.06);
+      }
+
+      &:focus {
+        background-color: rgba(#000, 0.09);
+
+        +label {
+          @include active-label;
+        }
+      }
+    }
+
+    textarea.materialize-textarea {
+      width: 100%;
+    }
+
+    &:has(.prefix) {
+      .prefix {
+        top: 0.75rem;
+        left: 1.5rem;
+      }
+
+      label {
+        left: 1.25rem;
+        width: calc(100% - 5.5rem) !important;
+      }
+
+      &.inline {
+        .prefix {
+          left: 0.75rem;
+        }
+
+        label {
+          left: 0.5rem;
+          width: calc(100% - 4rem) !important;
+        }
+      }
+
+      #{$input-selectors},
+      textarea.materialize-textarea {
+        padding-left: 3.5rem;
+        width: calc(100% - 4.5rem);
+      }
+    }
+
+    &:has(.suffix) {
+      .suffix {
+        top: 0.75rem;
+        right: 0.5rem;
+      }
+
+      label {
+        width: calc(100% - 5.75rem) !important;
+      }
+
+      &.inline {
+        .suffix {
+          right: -0.25rem;
+        }
+
+        label {
+          width: calc(100% - 4.25rem) !important;
+        }
+      }
+
+      #{$input-selectors},
+      textarea.materialize-textarea {
+        padding-right: 3.5rem;
+        width: calc(100% - 4.5rem);
+      }
+    }
+
+    &:has(.suffix):has(.prefix) {
+
+      #{$input-selectors},
+      textarea.materialize-textarea {
+        padding-left: 3.5rem;
+        padding-right: 3.5rem;
+        width: calc(100% - 7rem);
+      }
+    }
+
+    &.outlined {
+      @mixin active-label {
+        background-color: rgba(#000, 0);
+        backdrop-filter: blur(128px) grayscale(1) brightness(1);
+        width: auto !important;
+        top: 0.5rem;
+        left: 1.25rem;
+      }
+
+      #{$input-selectors},
+      textarea.materialize-textarea {
+        border-radius: 4px;
+        border: 1px solid #9e9e9e;
+        transition: unset;
+        padding: 1.25rem 1rem 1.25rem 1rem;
+        background-color: unset;
+
+        &:focus {
+          border: 2px solid var(--secondary-color);
+          margin-top: -1px;
+          margin-bottom: -1px;
+          margin-left: -1px;
+          width: calc(100% - 2rem - 1px);
+          box-shadow: unset;
+
+          +label {
+            @include active-label;
+            max-width: calc(100% - 3.5rem);
+          }
+        }
+
+        @mixin input-outlined-success {
+          border: 1px solid $input-success-color;
+          box-shadow: unset;
+
+          +label {
+            color: $input-success-color;
+          }
+        }
+
+        &.valid {
+          @include input-outlined-success;
+        }
+
+        &:focus.valid {
+          @include input-outlined-success;
+          border-width: 2px;
+        }
+
+        @mixin input-outlined-error {
+          border: 1px solid $input-error-color;
+          box-shadow: unset;
+
+          +label {
+            color: $input-error-color;
+          }
+        }
+
+        &.invalid {
+          @include input-outlined-error;
+        }
+
+        &:focus.invalid {
+          @include input-outlined-error;
+          border-width: 2px;
+        }
+      }
+
+      textarea.materialize-textarea:focus {
+        width: 100%;
+        margin-top: 0;
+        margin-left: 0;
+      }
+
+      label {
+        padding: 0 0.5rem;
+        left: 1.25rem;
+
+        &.active {
+          @include active-label;
+          max-width: calc(100% - 3.5rem);
+        }
+      }
+
+      &.inline {
+
+        #{$input-selectors},
+        textarea.materialize-textarea {
+          &:focus+label {
+            left: .5rem;
+          }
+        }
+
+        label {
+          left: .5rem;
+
+          &.active {
+            left: .5rem;
+          }
+        }
+
+
+      }
+
+      &:has(.prefix) {
+        @mixin outlined-prefix-active {
+          left: -1.75rem;
+        }
+
+        #{$input-selectors},
+        textarea.materialize-textarea {
+          padding: 1.25rem 1rem 1.25rem 3.25rem;
+          width: calc(100% - 4.25rem);
+
+          &:focus+label {
+            @include outlined-prefix-active;
+          }
+        }
+
+        label {
+          left: 1rem;
+
+          &.active {
+            @include outlined-prefix-active;
+          }
+        }
+
+        &.inline {
+          @mixin outlined-inline-prefix-active {
+            left: -2.5rem;
+          }
+
+          #{$input-selectors},
+          textarea.materialize-textarea {
+            &:focus+label {
+              @include outlined-inline-prefix-active;
+            }
+          }
+
+          label {
+            left: 0;
+
+            &.active {
+              @include outlined-inline-prefix-active;
+            }
+          }
+        }
+      }
+
+      &:has(.suffix) {
+
+        #{$input-selectors},
+        textarea.materialize-textarea {
+          padding: 1.25rem 3.25rem 1.25rem 1rem;
+          width: calc(100% - 4.25rem);
+        }
+      }
+
+      &:has(.prefix):has(.suffix) {
+
+        #{$input-selectors},
+        textarea.materialize-textarea {
+          padding: 1.25rem 3.25rem 1.25rem 3.25rem;
+          width: calc(100% - 6.5rem);
+        }
+      }
+    }
   }
 
 }

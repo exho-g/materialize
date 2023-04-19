@@ -430,20 +430,10 @@
         }
     }
 
+    $input-selectors: "input:not([type]):not(.browser-default), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=month]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea";
+
     // Inputs
-    input:not([type]):not(.browser-default),
-    input[type=text]:not(.browser-default),
-    input[type=password]:not(.browser-default),
-    input[type=email]:not(.browser-default),
-    input[type=url]:not(.browser-default),
-    input[type=time]:not(.browser-default),
-    input[type=date]:not(.browser-default),
-    input[type=datetime]:not(.browser-default),
-    input[type=datetime-local]:not(.browser-default),
-    input[type=tel]:not(.browser-default),
-    input[type=number]:not(.browser-default),
-    input[type=search]:not(.browser-default),
-    textarea.materialize-textarea {
+    #{$input-selectors} {
         color: #FFF;
 
         &:focus {
@@ -466,6 +456,34 @@
         &:disabled+label,
         &[readonly="readonly"]+label {
             color: rgba(255, 255, 255, .5);
+        }
+    }
+
+    .input-field.md3 {
+        label {
+            color: #ddd;
+        }
+
+        ::placeholder {
+            color: rgba(#fff, 0.5);
+        }
+
+        #{$input-selectors} {
+            background-color: rgba(#ddd, 0.04);
+
+            &:hover {
+                background-color: rgba(#fff, 0.06);
+            }
+
+            &:focus {
+                background-color: rgba(#fff, 0.09);
+            }
+        }
+
+        &.outlined {
+            #{$input-selectors} {
+                background-color: unset;
+            }
         }
     }
 }

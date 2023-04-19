@@ -45,7 +45,7 @@ nav {
     }
 
     a {
-        border-bottom: unset; // remove anchor text style
+        border-bottom: unset !important; // remove anchor text style
         color: $navbar-font-color;
     }
 

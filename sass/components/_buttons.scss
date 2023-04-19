@@ -473,6 +473,7 @@ button.btn-floating {
                     color: #fff;
                     line-height: $button-floating-large-size;
                     z-index: 1;
+                    border-bottom: unset !important;
 
                     .icon,
                     #{$icon-brand-selectors} {

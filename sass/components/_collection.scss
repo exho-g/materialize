@@ -103,7 +103,7 @@
 
 // Made less specific to allow easier overriding
 .secondary-content {
-  border-bottom: unset; // remove anchor text style
+  border-bottom: unset !important; // remove anchor text style
   float: right;
   color: $secondary-color;
 }

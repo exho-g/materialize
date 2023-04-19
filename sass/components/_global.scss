@@ -28,7 +28,11 @@ ul {
     }
 }
 
-a:not(.btn-outlined) {
+a:not(.btn,
+    .btn-flat,
+    .btn-soft,
+    .btn-outlined,
+    .btn-floating) {
     color: var(--secondary-color);
     text-decoration: none;
     // Gets rid of tap active state

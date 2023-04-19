@@ -391,7 +391,41 @@
         background-color: color('grey', 'darken-4');
     }
 
+
     /* Shadows */
+    @for $i from 1 to 6 {
+        .z-depth-#{$i} {
+            box-shadow: unset;
+        }
+    }
+
+    .z-depth-1:not(.ondark-z-depth-0),
+    .z-depth-1-half:not(.ondark-z-depth-0) {
+        background-color: #1D1B20;
+    }
+
+    .z-depth-2:not(.ondark-z-depth-0) {
+        background-color: #211F26;
+    }
+
+    .z-depth-3:not(.ondark-z-depth-0),
+    .z-depth-4:not(.ondark-z-depth-0) {
+        background-color: #2B2930;
+    }
+
+    .z-depth-5:not(.ondark-z-depth-0),
+    .z-depth-6:not(.ondark-z-depth-0) {
+        background-color: #36343B;
+    }
+
+    .hoverable {
+        background-color: #3b3941;
+    }
+
+    .ondark-z-depth-0 {
+        box-shadow: unset;
+    }
+
     // @each $zDepth,
     // $level in $shadowLevels {
     //     .z-depth-#{$level}-primary {

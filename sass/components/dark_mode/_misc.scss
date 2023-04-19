@@ -399,27 +399,41 @@
         }
     }
 
-    .z-depth-1:not(.ondark-z-depth-0),
+    .z-depth-1:not(.ondark-z-depth-0) {
+        background-color: #0A0A0D;
+    }
+
     .z-depth-1-half:not(.ondark-z-depth-0) {
-        background-color: #1D1B20;
+        background-color: #131317;
     }
 
     .z-depth-2:not(.ondark-z-depth-0) {
+        background-color: #1D1B20;
+    }
+
+    .z-depth-3:not(.ondark-z-depth-0) {
         background-color: #211F26;
     }
 
-    .z-depth-3:not(.ondark-z-depth-0),
     .z-depth-4:not(.ondark-z-depth-0) {
         background-color: #2B2930;
     }
 
-    .z-depth-5:not(.ondark-z-depth-0),
-    .z-depth-6:not(.ondark-z-depth-0) {
+    .z-depth-5:not(.ondark-z-depth-0) {
         background-color: #36343B;
     }
 
+    .z-depth-6:not(.ondark-z-depth-0) {
+        background-color: #403E45;
+    }
+
     .hoverable {
-        background-color: #3b3941;
+        transition: background-color .25s;
+
+        &:hover {
+            box-shadow: unset;
+            background-color: #4B494F;
+        }
     }
 
     .ondark-z-depth-0 {

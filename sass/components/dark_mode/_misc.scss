@@ -423,16 +423,12 @@
         background-color: #36343B;
     }
 
-    .z-depth-6:not(.ondark-z-depth-0) {
-        background-color: #403E45;
-    }
-
     .hoverable {
         transition: background-color .25s;
 
         &:hover {
             box-shadow: unset;
-            background-color: #4B494F;
+            background-color: #403E45;
         }
     }
 

@@ -28,7 +28,7 @@ ul {
     }
 }
 
-a {
+a:not(.btn-outlined) {
     color: var(--secondary-color);
     text-decoration: none;
     // Gets rid of tap active state

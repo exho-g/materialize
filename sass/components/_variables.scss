@@ -443,7 +443,8 @@ $toast-text-color: #fff !default;
 $toast-action-color: var(--primary-color);
 // 20. Typography
 // ==========================================================================
-$font-stack: -apple-system,
+$font-stack: "Roboto",
+    -apple-system,
     BlinkMacSystemFont,
     "Segoe UI",
     Roboto,

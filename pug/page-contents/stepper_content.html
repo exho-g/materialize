@@ -122,10 +122,12 @@
             <p class="caption">To check all the available options, checkout the documentation <a
                 href="https://kinark.github.io/Materialize-stepper/" target="_blank" rel="noreferrer">here</a>.</p>
             <pre><code class="language-javascript">
-  var stepper = document.querySelector('.stepper');
-  var stepperInstace = new MStepper(stepper, {
-    // options
-    firstActive: 0 // this is the default
+  document.addEventListener('DOMContentLoaded', function() {
+    var elem = document.querySelector('.stepper');
+    var instance = new MStepper(elem, {
+      // options
+      firstActive: 0 // this is the default
+    });
   });
             </code></pre>
             <br>

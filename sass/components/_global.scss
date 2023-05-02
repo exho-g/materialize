@@ -32,7 +32,8 @@ a:not(.btn,
     .btn-flat,
     .btn-soft,
     .btn-outlined,
-    .btn-floating) {
+    .btn-floating,
+    .no-text-decoration) {
     color: var(--secondary-color);
     text-decoration: none;
     // Gets rid of tap active state
@@ -1137,10 +1138,6 @@ table {
     &-l {
         border-left: unset !important;
     }
-}
-
-a.no-text-decoration {
-    border-bottom: unset !important;
 }
 
 .responsive-container {

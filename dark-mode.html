@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark-mode" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -267,6 +267,29 @@
         </div>
 
     </div>
+
+    <div class="fixed-action-btn">
+        <a class="btn-floating large red" id="toggle-dark-mode">
+          <i class="material-icons">light_mode</i>
+        </a>
+    </div>
+
+    <script>
+        if(toggleDM = document.querySelector("#toggle-dark-mode")) {
+            toggleDM.addEventListener("click", function() {
+                var curHTML = document.querySelector("html");
+                if(curHTML.classList.contains("dark-mode")) {
+                    curHTML.classList.add("no-dark-mode");
+                    curHTML.classList.remove("dark-mode");
+                    toggleDM.querySelector('.mateirlai-icons').innerHTML = "dark_mode";
+                } else {
+                    curHTML.classList.add("dark-mode");
+                    curHTML.classList.remove("no-dark-mode");
+                    toggleDM.querySelector('.mateirlai-icons').innerHTML = "light_mode";
+                }
+            });
+        }
+    </script>
 </div>
     </main><footer class="page-footer docs-footer">
     <div class="container">

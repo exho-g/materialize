@@ -149,6 +149,24 @@
         <br>
         <h5>Demo Code</h5>
         <pre><code class="language-javascript">
+  // Pushpin Demo Init
+  const pushPinDemoNavElems = document.querySelectorAll('.pushpin-demo-nav');
+  
+  pushPinDemoNavElems.forEach(navElem => {
+
+    const navBox = navElem.getBoundingClientRect();    
+    const contentElem = document.querySelector('#'+navElem.getAttribute('data-target'));
+    const contentBox = contentElem.getBoundingClientRect();
+    const offsetTop = Math.floor(contentBox.top + window.scrollY - document.documentElement.clientTop);
+
+    M.Pushpin.init(navElem, {
+      top: offsetTop,
+      bottom: offsetTop + contentBox.height - navBox.height
+    });
+  });
+
+  // Or with jQuery
+
   $('.pushpin-demo-nav').each(function() {
     var $this = $(this);
     var $target = $('#' + $(this).attr('data-target'));

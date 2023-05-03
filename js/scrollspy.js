@@ -212,7 +212,8 @@
         // onEnter callback
         if (typeof this.options.onEnter === 'function') {
           // params: this object, active section el, active link in table of contents
-          const activeEl = this.el;
+          console.log(this);
+          console.log(this.el)
           this.options.onEnter.call(this, this.el, document.querySelector(this.options.getActiveElement(activeEl.attr('id'))));
         }
 
@@ -246,8 +247,7 @@
         // onExit callback
         if (typeof this.options.onExit === 'function') {
           // params: this object, active section el, active link in table of contents
-          const activeEl = this.el;
-          this.options.onExit.call(this, this.el, document.querySelector(this.options.getActiveElement(activeEl.attr('id'))));
+          this.options.onExit.call(this, this.el, document.querySelector(this.options.getActiveElement(ScrollSpy._visibleElements[0].attr('id'))));
         }
 
         $(this.options.getActiveElement(ScrollSpy._visibleElements[0].attr('id'))).removeClass(

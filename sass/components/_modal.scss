@@ -85,7 +85,7 @@
 
         @each $sP in $semanticPurposes {
             &.#{$sP} {
-                border-color: semanticColorLookUp($sP);
+                border-color: var(--#{$sP}-color); //semanticColorLookUp($sP);
             }
         }
     }

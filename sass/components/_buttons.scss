@@ -191,14 +191,14 @@
 
     @each $sP in $semanticPurposes {
         &.#{$sP} {
-            background-color: semanticColorLookUp($sP);
+            background-color: var(--#{$sP}-color); //semanticColorLookUp($sP);
 
             &:hover {
-                background-color: lighten(semanticColorLookUp($sP), 5%);
+                background-color: var(--#{$sP}-color-lighten-5); //lighten(semanticColorLookUp($sP), 5%);
             }
 
             &:focus {
-                background-color: darken(semanticColorLookUp($sP), 10%);
+                background-color: var(--#{$sP}-color-lighten-10); //darken(semanticColorLookUp($sP), 10%);
             }
         }
     }
@@ -284,13 +284,13 @@
 
     &.soft:not(.disabled) {
         background-color: var(--secondary-color-lighten-40);
-        box-shadow: coloredShadow("x1", var(--secondary-color-hsl), false);
+        box-shadow: coloredShadow("x1", var(--secondary-color-hsl));
         transition: background-color .3s,
             box-shadow .25s;
 
         &:hover {
             background-color: var(--secondary-color-lighten-30);
-            box-shadow: coloredShadow("x1_2", var(--secondary-color-hsl), false);
+            box-shadow: coloredShadow("x1_2", var(--secondary-color-hsl));
         }
 
         .icon,
@@ -300,11 +300,11 @@
 
         &.primary {
             background-color: var(--primary-color-lighten-40);
-            box-shadow: coloredShadow("x1", var(--primary-color-hsl), false);
+            box-shadow: coloredShadow("x1", var(--primary-color-hsl));
 
             &:hover {
                 background-color: var(--primary-color-lighten-30);
-                box-shadow: coloredShadow("x1_2", var(--primary-color-hsl), false);
+                box-shadow: coloredShadow("x1_2", var(--primary-color-hsl));
             }
 
             .icon,
@@ -315,17 +315,17 @@
 
         @each $sP in $semanticPurposes {
             &.#{$sP} {
-                background-color: lighten(semanticColorLookUp($sP), 40%);
-                box-shadow: coloredShadow("x1", semanticColorLookUp($sP));
+                background-color: var(--#{$sP}-color-lighten-40); //lighten(semanticColorLookUp($sP), 40%);
+                box-shadow: coloredShadow("x1", var(--#{$sP}-color-hsl)); //coloredShadow("x1", semanticColorLookUp($sP));
 
                 &:hover {
-                    background-color: lighten(semanticColorLookUp($sP), 30%);
-                    box-shadow: coloredShadow("x1_2", semanticColorLookUp($sP));
+                    background-color: var(--#{$sP}-color-lighten-30); //lighten(semanticColorLookUp($sP), 30%);
+                    box-shadow: coloredShadow("x1_2", var(--#{$sP}-color-hsl)); //coloredShadow("x1_2", semanticColorLookUp($sP));
                 }
 
                 .icon,
                 #{$icon-brand-selectors} {
-                    color: darken(semanticColorLookUp($sP), 5%);
+                    color: var(--#{$sP}-color-darken-5); //darken(semanticColorLookUp($sP), 5%);
                 }
             }
         }
@@ -622,17 +622,17 @@ button.btn-floating {
 
     @each $sP in $semanticPurposes {
         &.#{$sP} {
-            color: semanticColorLookUp($sP);
-            border-color: semanticColorLookUp($sP);
+            color: var(--#{$sP}-color); //semanticColorLookUp($sP);
+            border-color: var(--#{$sP}-color); //semanticColorLookUp($sP);
 
             &:not(.as-badge) {
                 &:hover {
-                    background-color: rgba(semanticColorLookUp($sP), 0.1);
+                    background-color: hsla(var(--#{$sP}-color-hsl), 0.1); //rgba(semanticColorLookUp($sP), 0.1);
                 }
 
                 &:focus,
                 &:active {
-                    background-color: rgba(semanticColorLookUp($sP), 0.3);
+                    background-color: hsla(var(--#{$sP}-color-hsl), 0.3); //rgba(semanticColorLookUp($sP), 0.3);
                 }
             }
         }

@@ -23,12 +23,12 @@
             }
 
             &.done::before {
-                background-color: darken($success-color, 10%);
+                background-color: var(--success-color-darken-10); //darken($success-color, 10%);
                 color: color('grey', 'lighten-4');
             }
 
             &.wrong::before {
-                background-color: darken($danger-color, 10%);
+                background-color: var(--danger-color-darken-10); //darken($danger-color, 10%);
                 color: color('grey', 'lighten-4');
             }
         }
@@ -64,12 +64,12 @@
                 }
 
                 &.done .step-title::before {
-                    background-color: darken($success-color, 10%);
+                    background-color: var(--success-color-darken-10); //darken($success-color, 10%);
                     color: color('grey', 'lighten-4');
                 }
 
                 &.wrong .step-title::before {
-                    background-color: darken($danger-color, 10%);
+                    background-color: var(--danger-color-darken-10); //darken($danger-color, 10%);
                     color: color('grey', 'lighten-4');
                 }
             }

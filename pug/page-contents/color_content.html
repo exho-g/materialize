@@ -118,12 +118,13 @@
   }
         </code></pre>
                 <p class="caption">
-                    To use your primary and secondary color on your custom css file, you can use the following css
+                    To use your primary and secondary color on your custom css file, you can use the following CSS
                     variables:
                 </p>
                 <pre><code class="language-css">
   :root {
     /** You can change the word primary to secondary **/
+    --primary-color;
     --primary-color-light; /** +15%  **/
     --primary-color-dark; /** -15%  **/
 
@@ -133,11 +134,13 @@
     --primary-color-lighten-30;
     --primary-color-lighten-25;
     --primary-color-lighten-20;
+    --primary-color-lighten-15;
     --primary-color-lighten-10;
     --primary-color-lighten-5;
 
     --primary-color-darken-5;
     --primary-color-darken-10;
+    --primary-color-darken-15;
     --primary-color-darken-20;
     --primary-color-darken-25;
     --primary-color-darken-30;
@@ -155,6 +158,46 @@
   }
         </code></pre>
                 <p class="caption">
+                    If you need the alpha channel, you can use the following CSS variables for your primary and secondary color:
+                </p>
+                <pre><code class="language-css">
+  :root {
+    /** You can change the word primary to secondary, success, info, danger, or warning, whichever you want to setup. **/
+
+    --primary-color-hsl;
+    --primary-color-light-hsl; /** +15%  **/
+    --primary-color-dark-hsl; /** -15%  **/
+
+    --primary-color-lighten-45-hsl;
+    --primary-color-lighten-40-hsl;
+    --primary-color-lighten-35-hsl;
+    --primary-color-lighten-30-hsl;
+    --primary-color-lighten-25-hsl;
+    --primary-color-lighten-20-hsl;
+    --primary-color-lighten-15-hsl;
+    --primary-color-lighten-10-hsl;
+    --primary-color-lighten-5-hsl;
+
+    --primary-color-darken-5-hsl;
+    --primary-color-darken-10-hsl;
+    --primary-color-darken-15-hsl;
+    --primary-color-darken-20-hsl;
+    --primary-color-darken-25-hsl;
+    --primary-color-darken-30-hsl;
+    --primary-color-darken-35-hsl;
+    --primary-color-darken-40-hsl;
+    --primary-color-darken-45-hsl;
+  }
+
+  /** Usage Example **/
+
+  .card {
+    background-color: hsla(var(--secondary-color-lighten-40-hsl), 50%);
+    color: hsla(var(--primary-color-darken-15-hsl), 0.9);
+    border: 2px solid hsla(var(--primary-color-hsl), .8);
+  }
+        </code></pre>
+                <p class="caption">
                     You can also use the following classes for quick setting of the element's background or text color
                     to primary or
                     secondary color:
@@ -167,8 +210,9 @@
     .secondary-color-text
                           </code></pre>
                 <p class="caption">
-                    We also support colors by semantic purposes
+                    We also support colors by semantic purposes.
                 </p>
+                
                 <pre><code class="language-markup">
     .success-color
     .success-color-text

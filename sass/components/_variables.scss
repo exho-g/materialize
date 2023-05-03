@@ -32,6 +32,33 @@
 // ==========================================================================
 @use "sass:math";
 
+@mixin colorDumps($name) {
+    --#{$name}-color: hsl(var(--#{$name}-color-hsl));
+    --#{$name}-color-light: hsl(var(--#{$name}-color-hs), calc(var(--#{$name}-color-l) + 15%));
+    --#{$name}-color-dark: hsl(var(--#{$name}-color-hs), calc(var(--#{$name}-color-l) - 15%));
+
+    --#{$name}-color-hsl: var(--#{$name}-color-hs),
+    var(--#{$name}-color-l);
+    --#{$name}-color-light-hsl: var(--#{$name}-color-hs),
+    calc(var(--#{$name}-color-l) + 15%);
+    --#{$name}-color-dark-hsl: var(--#{$name}-color-hs),
+    calc(var(--#{$name}-color-l) - 15%);
+
+    $color-iterator: 5;
+
+    @while $color-iterator <=45 {
+        --#{$name}-color-lighten-#{$color-iterator}-hsl: var(--#{$name}-color-hs),
+        calc(var(--#{$name}-color-l) + #{$color-iterator}%);
+        --#{$name}-color-darken-#{$color-iterator}-hsl: var(--#{$name}-color-hs),
+        calc(var(--#{$name}-color-l) - #{$color-iterator}%);
+
+        --#{$name}-color-lighten-#{$color-iterator}: hsl(var(--#{$name}-color-hs), calc(var(--#{$name}-color-l) + #{$color-iterator}%));
+        --#{$name}-color-darken-#{$color-iterator}: hsl(var(--#{$name}-color-hs), calc(var(--#{$name}-color-l) - #{$color-iterator}%));
+
+        $color-iterator: $color-iterator +5;
+    }
+}
+
 :root {
     --primary-color-hs: 8deg, 34%;
     --primary-color-l: 50%;
@@ -39,56 +66,25 @@
     --secondary-color-hs: 188deg, 34%;
     --secondary-color-l: 50%;
 
-    --primary-color-hsl: var(--primary-color-hs), var(--primary-color-l);
-    --secondary-color-hsl: var(--secondary-color-hs), var(--secondary-color-l);
-
-    --primary-color: hsl(var(--primary-color-hsl));
-    --primary-color-light: hsl(var(--primary-color-hs), calc(var(--primary-color-l) + 15%));
-    --primary-color-dark: hsl(var(--primary-color-hs), calc(var(--primary-color-l) - 15%));
-
-    --secondary-color: hsl(var(--secondary-color-hsl));
-    --secondary-color-light: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) + 15%));
-    --secondary-color-dark: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) - 15%));
+    --success-color-hs: 122.42deg, 39.44%;
+    --success-color-l: 50%;
+    --info-color-hs: 206.57deg, 89.74%;
+    --info-color-l: 50%;
+    --danger-color-hs: 1.36deg, 77.19%;
+    --danger-color-l: 50%;
+    --warning-color-hs: 30.37deg, 100%;
+    --warning-color-l: 50%;
 
     --primary-btn-focus: hsl(var(--primary-color-hs), calc(var(--primary-color-l) + 4%));
 
     --secondary-btn-focus: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) + 4%));
 
-    --primary-color-lighten-45: hsl(var(--primary-color-hs), calc(var(--primary-color-l) + 45%));
-    --primary-color-lighten-40: hsl(var(--primary-color-hs), calc(var(--primary-color-l) + 40%));
-    --primary-color-lighten-35: hsl(var(--primary-color-hs), calc(var(--primary-color-l) + 35%));
-    --primary-color-lighten-30: hsl(var(--primary-color-hs), calc(var(--primary-color-l) + 30%));
-    --primary-color-lighten-25: hsl(var(--primary-color-hs), calc(var(--primary-color-l) + 25%));
-    --primary-color-lighten-20: hsl(var(--primary-color-hs), calc(var(--primary-color-l) + 20%));
-    --primary-color-lighten-10: hsl(var(--primary-color-hs), calc(var(--primary-color-l) + 10%));
-    --primary-color-lighten-5: hsl(var(--primary-color-hs), calc(var(--primary-color-l) + 5%));
-
-    --secondary-color-lighten-45: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) + 45%));
-    --secondary-color-lighten-40: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) + 40%));
-    --secondary-color-lighten-35: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) + 35%));
-    --secondary-color-lighten-30: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) + 30%));
-    --secondary-color-lighten-25: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) + 25%));
-    --secondary-color-lighten-20: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) + 20%));
-    --secondary-color-lighten-10: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) + 10%));
-    --secondary-color-lighten-5: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) + 5%));
-
-    --primary-color-darken-5: hsl(var(--primary-color-hs), calc(var(--primary-color-l) - 5%));
-    --primary-color-darken-10: hsl(var(--primary-color-hs), calc(var(--primary-color-l) - 10%));
-    --primary-color-darken-20: hsl(var(--primary-color-hs), calc(var(--primary-color-l) - 20%));
-    --primary-color-darken-25: hsl(var(--primary-color-hs), calc(var(--primary-color-l) - 25%));
-    --primary-color-darken-30: hsl(var(--primary-color-hs), calc(var(--primary-color-l) - 30%));
-    --primary-color-darken-35: hsl(var(--primary-color-hs), calc(var(--primary-color-l) - 35%));
-    --primary-color-darken-40: hsl(var(--primary-color-hs), calc(var(--primary-color-l) - 40%));
-    --primary-color-darken-45: hsl(var(--primary-color-hs), calc(var(--primary-color-l) - 45%));
-
-    --secondary-color-darken-5: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) - 5%));
-    --secondary-color-darken-10: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) - 10%));
-    --secondary-color-darken-20: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) - 20%));
-    --secondary-color-darken-25: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) - 25%));
-    --secondary-color-darken-30: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) - 30%));
-    --secondary-color-darken-35: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) - 35%));
-    --secondary-color-darken-40: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) - 40%));
-    --secondary-color-darken-45: hsl(var(--secondary-color-hs), calc(var(--secondary-color-l) - 45%));
+    @include colorDumps(primary);
+    @include colorDumps(secondary);
+    @include colorDumps(success);
+    @include colorDumps(info);
+    @include colorDumps(danger);
+    @include colorDumps(warning);
 }
 
 $primary-color: var(--primary-color) !default;
@@ -99,27 +95,27 @@ $secondary-color: var(--secondary-color) !default;
 $secondary-color-light: var(--secondary-color-light) !default;
 $secondary-color-dark: var(--secondary-color-dark) !default;
 
-$success-color: color("green", "base") !default;
-$info-color: color("blue", "base") !default;
-$danger-color: color("red", "darken-1") !default;
-$warning-color: color("orange", "darken-2") !default;
+$success-color: var(--success-color) !default; // green base
+$info-color: var(--info-color) !default; // blue base
+$danger-color: var(--danger-color) !default; // red darken-1
+$warning-color: var(--warning-color) !default; // orange darken-2
 $semanticPurposes: "success", "info", "danger", "warning";
-$semanticColors: (
-    'success': $success-color,
-    'info': $info-color,
-    'danger': $danger-color,
-    'warning': $warning-color
-);
+// $semanticColors: (
+//     'success': $success-color,
+//     'info': $info-color,
+//     'danger': $danger-color,
+//     'warning': $warning-color
+// );
 
-@function semanticColorLookUp($color) {
-    $value: $primary-color;
+// @function semanticColorLookUp($color) {
+//     $value: $primary-color;
 
-    @if (map-has-key($semanticColors, unquote($color))) {
-        $value: map-get($semanticColors, unquote($color));
-    }
+//     @if (map-has-key($semanticColors, unquote($color))) {
+//         $value: map-get($semanticColors, unquote($color));
+//     }
 
-    @return $value;
-}
+//     @return $value;
+// }
 
 $shadowLevels: (
     x1: 1,
@@ -130,26 +126,20 @@ $shadowLevels: (
     x5: 5
 );
 
-@function coloredShadow($zDepth, $curColor: #000000, $fixed: true) {
+@function coloredShadow($zDepth, $curColor: #000000) {
     $color: $curColor;
 
-    @if $fixed {
-        $color: hue($curColor) ", " saturation($curColor) ", " lightness($curColor);
-    }
+    // @if $fixed {
+    //     $color: hue($curColor) ", " saturation($curColor) ", " lightness($curColor);
+    // }
 
     $boxShadow: map-get((x1: "0 2px 2px 0 hsla(#{$color}, 0.14), 0 3px 1px -2px hsla(#{$color}, 0.12), 0 1px 5px 0 hsla(#{$color}, 0.2)",
-
-                x1_2 : "0 3px 3px 0px hsla(#{$color}, 0.14), 0 1px 7px 0px hsla(#{$color}, 0.12), 0 3px 1px 1px hsla(#{$color}, 0.2)",
-
-                x2 : "0 4px 5px 0 hsla(#{$color}, 0.14), 0 1px 10px 0 hsla(#{$color}, 0.12), 0 2px 4px -1px hsla(#{$color}, 0.3)",
-
-                x3: "0 8px 17px 2px hsla(#{$color}, 0.14), 0 3px 14px 2px hsla(#{$color}, 0.12), 0 5px 5px -3px hsla(#{$color}, 0.2)",
-
-                x4: "0 16px 24px 2px hsla(#{$color}, 0.14), 0 6px 30px 5px hsla(#{$color}, 0.12), 0 8px 10px -7px hsla(#{$color}, 0.2)",
-
-                x5: "0 24px 38px 3px hsla(#{$color}, 0.14), 0 9px 46px 8px hsla(#{$color}, 0.12), 0 11px 15px -7px hsla(#{$color}, 0.2)",
-
-                hover: "0 8px 17px 0 hsla(#{$color}, 0.2), 0 6px 20px 0 hsla(#{$color}, .19)"), $zDepth);
+            x1_2 : "0 3px 3px 0px hsla(#{$color}, 0.14), 0 1px 7px 0px hsla(#{$color}, 0.12), 0 3px 1px 1px hsla(#{$color}, 0.2)",
+            x2 : "0 4px 5px 0 hsla(#{$color}, 0.14), 0 1px 10px 0 hsla(#{$color}, 0.12), 0 2px 4px -1px hsla(#{$color}, 0.3)",
+            x3: "0 8px 17px 2px hsla(#{$color}, 0.14), 0 3px 14px 2px hsla(#{$color}, 0.12), 0 5px 5px -3px hsla(#{$color}, 0.2)",
+            x4: "0 16px 24px 2px hsla(#{$color}, 0.14), 0 6px 30px 5px hsla(#{$color}, 0.12), 0 8px 10px -7px hsla(#{$color}, 0.2)",
+            x5: "0 24px 38px 3px hsla(#{$color}, 0.14), 0 9px 46px 8px hsla(#{$color}, 0.12), 0 11px 15px -7px hsla(#{$color}, 0.2)",
+            hover: "0 8px 17px 0 hsla(#{$color}, 0.2), 0 6px 20px 0 hsla(#{$color}, .19)"), $zDepth);
 
     @return unquote($boxShadow);
 }
@@ -215,8 +205,8 @@ $button-floating-square-small-radius: 12.3px !default;
 
     @each $sP in $semanticPurposes {
         &.#{$sP} {
-            color: darken(semanticColorLookUp($sP), 5%);
-            background-color: rgba(semanticColorLookUp($sP), 0.2);
+            color: var(--#{$sP}-color-darken-5); //darken(semanticColorLookUp($sP), 5%);
+            background-color: hsla(var(--#{$sP}-color-hsl), 0.2); //rgba(semanticColorLookUp($sP), 0.2);
         }
     }
 
@@ -259,11 +249,11 @@ $button-floating-square-small-radius: 12.3px !default;
     @each $sP in $semanticPurposes {
         &.#{$sP} {
             &:hover {
-                background-color: rgba(semanticColorLookUp($sP), 0.3);
+                background-color: hsla(var(--#{$sP}-color-hsl), 0.3); //rgba(semanticColorLookUp($sP), 0.3);
             }
 
             &:focus {
-                background-color: rgba(semanticColorLookUp($sP), 0.5);
+                background-color: hsla(var(--#{$sP}-color-hsl), 0.5); //rgba(semanticColorLookUp($sP), 0.5);
             }
         }
     }

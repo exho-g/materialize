@@ -26,7 +26,7 @@
 
             @each $sP in $semanticPurposes {
                 &.#{$sP} {
-                    border-color: lighten(semanticColorLookUp($sP), 15%);
+                    border-color: var(--#{$sP}-color-lighten-15); //lighten(semanticColorLookUp($sP), 15%);
                 }
             }
         }

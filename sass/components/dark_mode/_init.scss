@@ -74,8 +74,8 @@
 
     @each $sP in $semanticPurposes {
         &.#{$sP} {
-            color: lighten(semanticColorLookUp($sP), 25%);
-            background-color: darken(semanticColorLookUp($sP), 30%);
+            color: var(--#{$sP}-color-lighten-25); //lighten(semanticColorLookUp($sP), 25%);
+            background-color: var(--#{$sP}-color-darken-30); //darken(semanticColorLookUp($sP), 30%);
         }
     }
 }
@@ -113,7 +113,7 @@
 
     @each $sP in $semanticPurposes {
         &.#{$sP}:hover {
-            background-color: rgba(darken(semanticColorLookUp($sP), 30%), 0.7);
+            background-color: hsla(var(--#{$sP}-color-darken-30-hsl), 0.7); //rgba(darken(semanticColorLookUp($sP), 30%), 0.7);
         }
     }
 }

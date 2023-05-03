@@ -124,7 +124,7 @@
 
   @each $sP in $semanticPurposes {
     &.waves-#{$sP} .waves-ripple {
-      background-color: rgba(semanticColorLookUp($sP), 0.70);
+      background-color: hsla(var(--#{$sP}-color-hsl), 0.7); //rgba(semanticColorLookUp($sP), 0.70);
     }
   }
 

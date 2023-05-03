@@ -3,13 +3,16 @@
 
         <div class="col s12 m8 offset-m1 xl7 offset-xl1">
 
-            <!--  Collections Section  -->
+            <!--  Basic Section  -->
             <div id="basic" class="section scrollspy">
 
                 <div class="row">
                     <div class="col s12">
                         <p class="caption">Dark Mode displays dark surfaces across the majority of the UI. This will
                             make your website great for viewing at night time.</p>
+
+                        <p class="caption">You can try toggling between dark mode and light mode by clicking the floating action button at the bottom right of this page.</p>
+
                         <h3 class="header">Basic</h3>
 
                         <p class="caption">By default, dark mode is already enabled. This will use the css selector
@@ -17,7 +20,7 @@
                             current device's theme.
                         </p>
 
-                        <p class="caption">You can use the following helper classes to customize your website's theme:
+                        <p class="caption">You can use the following helper classes to update them on dark mode accordingly:
                         </p>
                         <table class="striped">
                             <thead>
@@ -59,6 +62,45 @@
                                 </tr>
                                 <tr>
                                     <td>
+                                        <code class="language-markup">.ondark-z-depth-0</code>
+                                    </td>
+                                    <td>Add this class to any element to remove its shadow on dark mode.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <code class="language-markup">.remove-dark-mode</code>
+                                    </td>
+                                    <td>Add this class to the <code class="language-markup">&lt;img/></code> element to
+                                        revert the <code class="language-css">opacity: 0.8</code>. Reduced opacity for
+                                        dark mode does not apply to the carousel.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                    </div>
+                </div>
+            </div>
+
+            <!--  Colors Section  -->
+            <div id="colors" class="section scrollspy">
+
+                <div class="row">
+                    <div class="col s12">
+                        <h3 class="header">Colors</h3>
+                        <p class="caption">You can also change the element's colors on dark mode by using the following helper classes.</p>
+
+                        <table class="striped">
+                            <thead>
+                                <tr>
+                                    <th>Class</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
                                         <code class="language-markup">.ondark-&lt;color></code>
                                     </td>
                                     <td>Add this class to any element to change its background color on dark mode.</td>
@@ -67,7 +109,7 @@
                                     <td>
                                         <code class="language-markup">.ondark-&lt;color-shade></code>
                                     </td>
-                                    <td>Add this class to any element to change its background color's shade on dark.
+                                    <td>Add this class to any element to change its background color's shade on dark mode.
                                     </td>
                                 </tr>
                                 <tr>
@@ -96,22 +138,6 @@
                                     <td>Add this class to any element to change its border color's shade on dark mode.
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>
-                                        <code class="language-markup">.ondark-z-depth-0</code>
-                                    </td>
-                                    <td>Add this class to any element to remove its shadow on dark mode.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <code class="language-markup">.remove-dark-mode</code>
-                                    </td>
-                                    <td>Add this class to the <code class="language-markup">&lt;img/></code> element to
-                                        revert the <code class="language-css">opacity: 0.8</code>. Reduced opacity for
-                                        dark mode does not apply to the carousel.
-                                    </td>
-                                </tr>
                             </tbody>
                         </table>
                         <br>
@@ -125,6 +151,7 @@
                 <div style="height: 1px;">
                     <ul class="section table-of-contents">
                         <li><a href="#basic">Basic</a></li>
+                        <li><a href="#colors">Colors</a></li>
                     </ul>
                 </div>
             </div>

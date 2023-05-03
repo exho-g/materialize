@@ -63,10 +63,10 @@ a:not(.btn,
 
 @each $sP in $semanticPurposes {
     .#{$sP}-color {
-        background-color: semanticColorLookUp($sP) !important;
+        background-color: var(--#{$sP}-color) !important; //semanticColorLookUp($sP) !important;
 
         &-text {
-            color: semanticColorLookUp($sP) !important;
+            color: var(--#{$sP}-color) !important; //semanticColorLookUp($sP) !important;
         }
     }
 }
@@ -145,7 +145,7 @@ $z-depth-5-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0
 @each $zDepth,
 $level in $shadowLevels {
     .z-depth-#{$level}-primary {
-        box-shadow: coloredShadow($zDepth, var(--primary-color-hsl), false);
+        box-shadow: coloredShadow($zDepth, var(--primary-color-hsl));
     }
 }
 
@@ -153,14 +153,14 @@ $level in $shadowLevels {
     transition: box-shadow .25s;
 
     &:hover {
-        box-shadow: coloredShadow(hover, var(--primary-color-hsl), false);
+        box-shadow: coloredShadow(hover, var(--primary-color-hsl));
     }
 }
 
 @each $zDepth,
 $level in $shadowLevels {
     .z-depth-#{$level}-secondary {
-        box-shadow: coloredShadow($zDepth, var(--secondary-color-hsl), false);
+        box-shadow: coloredShadow($zDepth, var(--secondary-color-hsl));
     }
 }
 
@@ -168,7 +168,7 @@ $level in $shadowLevels {
     transition: box-shadow .25s;
 
     &:hover {
-        box-shadow: coloredShadow(hover, var(--secondary-color-hsl), false);
+        box-shadow: coloredShadow(hover, var(--secondary-color-hsl));
     }
 }
 
@@ -177,7 +177,7 @@ $level in $shadowLevels {
     @each $zDepth,
     $level in $shadowLevels {
         .z-depth-#{$level}-#{$sP} {
-            box-shadow: coloredShadow($zDepth, semanticColorLookUp($sP));
+            box-shadow: coloredShadow($zDepth, var(--#{$sP}-color-hsl)); //coloredShadow($zDepth, semanticColorLookUp($sP));
         }
     }
 
@@ -185,7 +185,7 @@ $level in $shadowLevels {
         transition: box-shadow .25s;
 
         &:hover {
-            box-shadow: coloredShadow(hover, semanticColorLookUp($sP));
+            box-shadow: coloredShadow(hover, var(--#{$sP}-color-hsl)); //coloredShadow(hover, semanticColorLookUp($sP));
         }
     }
 }
@@ -1018,6 +1018,16 @@ table {
     &-l {
         padding-left: unset !important;
     }
+
+    &-x {
+        padding-left: unset !important;
+        padding-right: unset !important;
+    }
+
+    &-y {
+        padding-top: unset !important;
+        padding-bottom: unset !important;
+    }
 }
 
 .no-margin {
@@ -1037,6 +1047,16 @@ table {
 
     &-l {
         margin-left: unset !important;
+    }
+
+    &-x {
+        margin-left: unset !important;
+        margin-right: unset !important;
+    }
+
+    &-y {
+        margin-top: unset !important;
+        margin-bottom: unset !important;
     }
 }
 
@@ -1080,6 +1100,26 @@ table {
     &-br {
         border-bottom-right-radius: unset !important;
     }
+
+    &-t {
+        border-top-left-radius: unset !important;
+        border-top-right-radius: unset !important;
+    }
+
+    &-r {
+        border-top-right-radius: unset !important;
+        border-bottom-right-radius: unset !important;
+    }
+
+    &-b {
+        border-bottom-right-radius: unset !important;
+        border-bottom-left-radius: unset !important;
+    }
+
+    &-l {
+        border-bottom-left-radius: unset !important;
+        border-top-left-radius: unset !important;
+    }
 }
 
 .border {
@@ -1115,7 +1155,7 @@ table {
 
     @each $sP in $semanticPurposes {
         &-#{$sP} {
-            border-color: semanticColorLookUp($sP) !important;
+            border-color: var(--#{$sP}-color) !important; //semanticColorLookUp($sP) !important;
         }
     }
 }
@@ -1138,6 +1178,16 @@ table {
     &-l {
         border-left: unset !important;
     }
+
+    &-x {
+        border-left: unset !important;
+        border-right: unset !important;
+    }
+
+    &-y {
+        border-top: unset !important;
+        border-bottom: unset !important;
+    }
 }
 
 .responsive-container {
@@ -1146,4 +1196,13 @@ table {
     overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
+}
+
+.sticky-container {
+    position: relative;
+
+    .sticky-content {
+        position: sticky;
+        top: var(--sticky-content-top, 0);
+    }
 }

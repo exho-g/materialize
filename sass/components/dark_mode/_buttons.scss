@@ -45,17 +45,17 @@
 
             @each $sP in $semanticPurposes {
                 &.#{$sP} {
-                    background-color: darken(semanticColorLookUp($sP), 30%);
+                    background-color: var(--#{$sP}-color-darken-30); //darken(semanticColorLookUp($sP), 30%);
                     box-shadow: unset;
 
                     &:hover {
-                        background-color: darken(semanticColorLookUp($sP), 25%);
+                        background-color: var(--#{$sP}-color-darken-25); //darken(semanticColorLookUp($sP), 25%);
                         box-shadow: unset;
                     }
 
                     .icon,
                     #{$icon-brand-selectors} {
-                        color: lighten(semanticColorLookUp($sP), 20%);
+                        color: var(--#{$sP}-color-lighten-20); //lighten(semanticColorLookUp($sP), 20%);
                     }
                 }
             }
@@ -100,10 +100,10 @@
 
             @each $sP in $semanticPurposes {
                 &.#{$sP} {
-                    background-color: darken(semanticColorLookUp($sP), 20%);
+                    background-color: var(--#{$sP}-color-darken-20); //darken(semanticColorLookUp($sP), 20%);
 
                     &:hover {
-                        background-color: darken(semanticColorLookUp($sP), 15%);
+                        background-color: var(--#{$sP}-color-darken-15); //darken(semanticColorLookUp($sP), 15%);
                     }
                 }
             }
@@ -154,18 +154,18 @@
 
         @each $sP in $semanticPurposes {
             &.#{$sP} {
-                border-color: lighten(semanticColorLookUp($sP), 10%);
-                color: lighten(semanticColorLookUp($sP), 10%);
+                border-color: var(--#{$sP}-color-lighten-10); //lighten(semanticColorLookUp($sP), 10%);
+                color: var(--#{$sP}-color-lighten-10); //lighten(semanticColorLookUp($sP), 10%);
 
                 &:not(.as-badge) {
                     &:hover {
-                        background-color: rgba(semanticColorLookUp($sP), 0.3);
+                        background-color: hsla(var(--#{$sP}-color), 0.3); //rgba(semanticColorLookUp($sP), 0.3);
                     }
 
                     &:focus,
                     &:active {
-                        color: lighten(semanticColorLookUp($sP), 25%);
-                        background-color: rgba(semanticColorLookUp($sP), 0.5);
+                        color: var(--#{$sP}-color-darken-25); //lighten(semanticColorLookUp($sP), 25%);
+                        background-color: hsla(var(--#{$sP}-color), 0.5); //rgba(semanticColorLookUp($sP), 0.5);
                     }
                 }
             }

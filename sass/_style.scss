@@ -1072,6 +1072,16 @@ body.parallax-demo footer {
     .token.operator {
         background: unset;
     }
+
+    .token.property,
+    .token.tag,
+    .token.boolean,
+    .token.number,
+    .token.constant,
+    .token.symbol,
+    .token.deleted {
+        color: #e3027f;
+    }
 }
 
 @media (prefers-color-scheme: dark) {

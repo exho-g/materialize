@@ -362,6 +362,43 @@
                 </div>
             </div>
             <!--  Scrollbar Section-->
+
+            <!--  Sticky Section-->
+            <div id="sticky" class="section scrollspy">
+                <div class="row">
+                    <div class="col s12">
+                        <h3 class="header">Sticky Content</h3>
+                        <p class="caption">If you want an element to stick on the page while scrolling and leave when the container is out of view, you can try using sticky content.</p>
+
+                        <p class="caption">On your container, just add <code class="language-markup">sticky-container</code> class, this will make it as the basis where the element will stick. And on the child, add element or container add the <code
+                                class="language-markup">sticky-content</code> class to make it stick at the page view within the container's area. Optionally, you can add this style attribute <code class="language-css">--sticky-content-top: 1px;</code> to specify on where to stick the content relative to the container, the default value for this is 0.
+                        </p>
+
+                        <div class="col s12 sticky-container">
+                            <nav class="compact sticky-content">Sticky Nav</nav>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro temporibus aut numquam excepturi dolore eius placeat, dolor sit incidunt itaque ad dolores aperiam, vero tempora? Dignissimos voluptatibus deleniti numquam molestias.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro temporibus aut numquam excepturi dolore eius placeat, dolor sit incidunt itaque ad dolores aperiam, vero tempora? Dignissimos voluptatibus deleniti numquam molestias.</p>
+                        </div>
+
+                        <br>
+                        <br>
+                        <pre style="padding-top: 0px;">
+              <span class="copyMessage">Copied!</span>
+              <i class="material-icons copyButton">content_copy</i>
+              <code class="language-markup copiedText">
+  &lt;div class="col s12 sticky-container">
+    &lt;nav class="compact sticky-content">Sticky Nav&lt;/nav>
+    &lt;p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro temporibus aut numquam excepturi dolore eius placeat, dolor sit incidunt itaque ad dolores aperiam, vero tempora? Dignissimos voluptatibus deleniti numquam molestias.&lt;/p>
+    &lt;p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro temporibus aut numquam excepturi dolore eius placeat, dolor sit incidunt itaque ad dolores aperiam, vero tempora? Dignissimos voluptatibus deleniti numquam molestias.&lt;/p>
+  &lt;/div>
+              </code>
+            </pre>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <!--  Sticky Section-->
+
             <!--  Browser Default Section-->
             <div id="browser-default" class="section scrollspy">
                 <h3 class="header">Browser Defaults</h3>
@@ -469,8 +506,8 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td><code class="language-markup">.no-padding-&lt;t|r|b|l></code></td>
-                                <td>Remove specific padding (top, right, bottom, left)</td>
+                                <td><code class="language-markup">.no-padding-&lt;t|r|b|l|x|y></code></td>
+                                <td>Remove specific padding (top, right, bottom, left, x-axis or left right, y-axis or top bottom)</td>
                                 <td>
                                     <pre style="padding-top: 0px;">
                     <span class="copyMessage">Copied!</span>
@@ -499,8 +536,8 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td><code class="language-markup">.no-margin-&lt;t|r|b|l></code></td>
-                                <td>Remove specific margin (top, right, bottom, left)</td>
+                                <td><code class="language-markup">.no-margin-&lt;t|r|b|l|x|y></code></td>
+                                <td>Remove specific margin (top, right, bottom, left, x-axis or left right, y-axis or top bottom)</td>
                                 <td>
                                     <pre style="padding-top: 0px;">
                     <span class="copyMessage">Copied!</span>
@@ -529,8 +566,8 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td><code class="language-markup">.no-br-&lt;tl|tr|bl|br></code></td>
-                                <td>Remove specific border radius (top-left, top-right, bottom-left, bottom-right)</td>
+                                <td><code class="language-markup">.no-br-&lt;tl|tr|bl|br|t|r|b|l></code></td>
+                                <td>Remove specific border radius (top-left, top-right, bottom-left, bottom-right, top or top-left and top-right, right or top-right and bottom-right, bottom or bottom-right and bottom-left, left or top-left and bottom-left)</td>
                                 <td>
                                     <pre style="padding-top: 0px;">
                     <span class="copyMessage">Copied!</span>
@@ -622,8 +659,8 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td><code class="language-markup">.no-border-&lt;t|r|b|l></code></td>
-                                <td>Remove specific border (top, right, bottom, left)</td>
+                                <td><code class="language-markup">.no-border-&lt;t|r|b|l|x|y></code></td>
+                                <td>Remove specific border (top, right, bottom, left, x-axis or left right, y-axis or top bottom)</td>
                                 <td>
                                     <pre style="padding-top: 0px;">
                     <span class="copyMessage">Copied!</span>
@@ -638,7 +675,7 @@
                             </tr>
                             <tr>
                                 <td><code class="language-markup">.responsive-container</code></td>
-                                <td>Make container responsive. Shows scrollbar for overflowing contents</td>
+                                <td>Make container responsive. Shows scrollbar for overflowing contents. Typically used with tables.</td>
                                 <td>
                                     <pre style="padding-top: 0px;">
                     <span class="copyMessage">Copied!</span>
@@ -671,6 +708,7 @@
                         <li><a href="#hiding">Hiding/Showing Content</a></li>
                         <li><a href="#formatting">Formatting</a></li>
                         <li><a href="#scrollbar">Scrollbar</a></li>
+                        <li><a href="#sticky">Sticky Content</a></li>
                         <li><a href="#browser-default">Browser Defaults</a></li>
                         <li><a href="#others">Other Classes</a></li>
                     </ul>

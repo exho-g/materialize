@@ -6730,7 +6730,8 @@ $jscomp.polyfill = function (e, r, p, m) {
           // onEnter callback
           if (typeof this.options.onEnter === 'function') {
             // params: this object, active section el, active link in table of contents
-            var activeEl = this.el;
+            console.log(this);
+            console.log(this.el);
             this.options.onEnter.call(this, this.el, document.querySelector(this.options.getActiveElement(activeEl.attr('id'))));
           }
 
@@ -6759,8 +6760,7 @@ $jscomp.polyfill = function (e, r, p, m) {
           // onExit callback
           if (typeof this.options.onExit === 'function') {
             // params: this object, active section el, active link in table of contents
-            var activeEl = this.el;
-            this.options.onExit.call(this, this.el, document.querySelector(this.options.getActiveElement(activeEl.attr('id'))));
+            this.options.onExit.call(this, this.el, document.querySelector(this.options.getActiveElement(ScrollSpy._visibleElements[0].attr('id'))));
           }
 
           $(this.options.getActiveElement(ScrollSpy._visibleElements[0].attr('id'))).removeClass(this.options.activeClass);

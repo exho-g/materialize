@@ -232,6 +232,18 @@
               <td></td>
               <td>Used to find active element.</td>
             </tr>
+            <tr>
+              <td>onEnter</td>
+              <td>Function</td>
+              <td>null</td>
+              <td>Callback function called on section enter.</td>
+            </tr>
+            <tr>
+              <td>onExit</td>
+              <td>Function</td>
+              <td>null</td>
+              <td>Callback function called on section exit.</td>
+            </tr>
           </tbody>
         </table>
         <br>
@@ -242,6 +254,14 @@
   function(id) {
     return 'a[href="#' + id + '"]';
   }
+        </code></pre>
+        <br>
+        <h5>onEnter and onExit</h5>
+        These functions will also receive the active section element as the first parameter and the active section's link in the table of contents as the second paramter.
+        <pre><code class="language-javascript">
+          function(el, trigger) {
+            console.log(el, trigger);
+          }
         </code></pre>
       </div>
 

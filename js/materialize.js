@@ -6575,8 +6575,8 @@ $jscomp.polyfill = function (e, r, p, m) {
        * @prop {Number} [throttle=100] - Throttle of scroll handler
        * @prop {Number} [scrollOffset=200] - Offset for centering element when scrolled to
        * @prop {String} [activeClass='active'] - Class applied to active elements
-       * @prop {Function} onEnter - Callback function called when entering the next active section
-       * @prop {Function} onExit - Callback function called when exiting the current active section
+       * @prop {Function} onEnter - Callback function called on section enter
+       * @prop {Function} onExit - Callback function called on section exit
        * @prop {Function} [getActiveElement] - Used to find active element
        */
       _this35.options = $.extend({}, ScrollSpy.defaults, options);
@@ -6729,10 +6729,8 @@ $jscomp.polyfill = function (e, r, p, m) {
         if (ScrollSpy._visibleElements[0]) {
           // onEnter callback
           if (typeof this.options.onEnter === 'function') {
-            console.log(this);
-            console.log($(this.options.getActiveElement(ScrollSpy._visibleElements[0].attr('id'))));
-            console.log(ScrollSpy._visibleElements);
-            this.options.onEnter.call(this, $(this.options.getActiveElement(ScrollSpy._visibleElements[0].attr('id'))));
+            // params: this object, active section el, active link in table of contents
+            this.options.onEnter.call(this, this.el, this.options.getActiveElement(this.el.attr('id')));
           }
 
           $(this.options.getActiveElement(ScrollSpy._visibleElements[0].attr('id'))).removeClass(this.options.activeClass);
@@ -6759,10 +6757,8 @@ $jscomp.polyfill = function (e, r, p, m) {
         if (ScrollSpy._visibleElements[0]) {
           // onExit callback
           if (typeof this.options.onExit === 'function') {
-            console.log(this);
-            console.log($(this.options.getActiveElement(ScrollSpy._visibleElements[0].attr('id'))));
-            console.log(ScrollSpy._visibleElements);
-            this.options.onExit.call(this, $(this.options.getActiveElement(ScrollSpy._visibleElements[0].attr('id'))));
+            // params: this object, active section el, active link in table of contents
+            this.options.onEnter.call(this, this.el, this.options.getActiveElement(this.el.attr('id')));
           }
 
           $(this.options.getActiveElement(ScrollSpy._visibleElements[0].attr('id'))).removeClass(this.options.activeClass);

@@ -13,7 +13,7 @@
   <br>
   <br>
   <a href="https://github.com/exho-g/materialize/actions/">
-    <img src="https://github.com/exho-g/materialize/actions/workflows/nightly.yml/badge.svg" alt="GitHub Actions badge">
+    <img src="https://github.com/exho-g/materialize/actions/workflows/docs.yml/badge.svg" alt="GitHub Actions badge">
   </a>
 </p>
 

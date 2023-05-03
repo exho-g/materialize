@@ -6730,9 +6730,7 @@ $jscomp.polyfill = function (e, r, p, m) {
           // onEnter callback
           if (typeof this.options.onEnter === 'function') {
             // params: this object, active section el, active link in table of contents
-            console.log(this);
-            console.log(this.el);
-            this.options.onEnter.call(this, this.el, document.querySelector(this.options.getActiveElement(activeEl.attr('id'))));
+            this.options.onEnter.call(this, this.el, document.querySelector(this.options.getActiveElement(this.el.getAttribute("id"))));
           }
 
           $(this.options.getActiveElement(ScrollSpy._visibleElements[0].attr('id'))).removeClass(this.options.activeClass);

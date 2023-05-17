@@ -612,7 +612,7 @@ textarea.materialize-textarea {
       color: #444;
     }
 
-    &+label {
+    &+label~ {
 
       .icon,
       #{$icon-brand-selectors} {
@@ -626,8 +626,9 @@ textarea.materialize-textarea {
     left: 1rem;
   }
 
-  &~.mdi-navigation-close {
+  &~ {
 
+    .mdi-navigation-close,
     .icon,
     #{$icon-brand-selectors} {
       position: absolute;

@@ -12,13 +12,13 @@
             }
 
             &::before {
-                background-color: var(--secondary-color-darken-10);
+                background-color: var(--secondary-color-dark);
                 font-weight: 500;
-                color: color('grey', 'base');
+                color: color('grey', 'lighten-1');
             }
 
             &.active::before {
-                background-color: var(--secondary-color-lighten-10);
+                background-color: var(--secondary-color);
                 color: color('grey', 'lighten-4');
             }
 
@@ -52,14 +52,14 @@
                     }
 
                     &::before {
-                        background-color: var(--secondary-color-darken-10);
+                        background-color: var(--secondary-color-dark);
                         font-weight: 500;
-                        color: color('grey', 'base');
+                        color: color('grey', 'lighten-1');
                     }
                 }
 
                 &.active .step-title::before {
-                    background-color: var(--secondary-color-lighten-10);
+                    background-color: var(--secondary-color);
                     color: color('grey', 'lighten-4');
                 }
 

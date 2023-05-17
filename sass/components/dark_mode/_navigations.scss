@@ -12,11 +12,19 @@
             }
         }
 
-        li a:not(.brand-logo) {
-            color: #FFF;
+        ul {
+            li {
+                &.active {
+                    background-color: var(--primary-color-dark);
+                }
 
-            &:hover {
-                background-color: lighten(color('grey', 'darken-4'), 5%);
+                a:not(.brand-logo) {
+                    color: #FFF;
+
+                    &:hover {
+                        background-color: lighten(color('grey', 'darken-4'), 5%);
+                    }
+                }
             }
         }
 

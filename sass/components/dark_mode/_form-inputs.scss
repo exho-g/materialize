@@ -140,6 +140,16 @@
             }
         }
 
+        &.soft:indeterminate {
+            +span:not(.lever):before {
+                border: 1px solid var(--secondary-color-lighten-20);
+            }
+
+            +span:not(.lever):after {
+                background-color: var(--secondary-color-darken-25);
+            }
+        }
+
         &:disabled+span {
             color: color('grey', 'darken-1');
 
@@ -173,6 +183,16 @@
             +span:not(.lever):before {
                 border-right: 2px solid rgba($button-disabled-color, 0.3);
                 border-bottom: 2px solid rgba($button-disabled-color, 0.3);
+            }
+
+            +span:not(.lever):after {
+                background-color: rgba($button-disabled-background, 0.2);
+            }
+        }
+
+        &.soft:indeterminate:disabled {
+            +span:not(.lever):before {
+                border: 1px solid rgba($button-disabled-color, 0.3);
             }
 
             +span:not(.lever):after {

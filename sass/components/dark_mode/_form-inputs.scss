@@ -244,13 +244,14 @@
                 }
 
                 &:disabled {
-                    +span:not(.lever):before {
+                    &checked+span:not(.lever):before {
                         border-right: 2px solid rgba($button-disabled-color, 0.3);
                         border-bottom: 2px solid rgba($button-disabled-color, 0.3);
                     }
 
                     +span:not(.lever):after {
-                        background-color: rgba($button-disabled-background, 0.2);
+                        border: 2px solid color('grey', 'darken-3');
+                        background-color: color('grey', 'darken-3');
                     }
                 }
 

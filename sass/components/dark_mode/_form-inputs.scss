@@ -161,7 +161,7 @@
         &.filled-in {
             +span:not(.lever) {
                 &:before {
-                    border: 3px solid transparent;
+                    border: 2px solid transparent;
                 }
 
                 &:after {
@@ -172,7 +172,6 @@
 
             &:checked+span:not(.lever) {
                 &:before {
-                    border: unset;
                     border-right: 2px solid #FFF;
                     border-bottom: 2px solid #FFF;
                 }
@@ -186,7 +185,6 @@
             &:disabled,
             &.disabled {
                 &:checked+span:not(.lever):before {
-                    border: unset !important;
                     border-right: 2px solid color('grey', 'darken-2') !important;
                     border-bottom: 2px solid color('grey', 'darken-2') !important;
                 }
@@ -213,7 +211,6 @@
                 &:disabled,
                 &.disabled {
                     +span:not(.lever):before {
-                        border: unset !important;
                         border: 1px solid color('grey', 'darken-2') !important;
                     }
 

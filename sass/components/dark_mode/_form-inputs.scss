@@ -185,7 +185,7 @@
 
             &:disabled,
             &.disabled {
-                +span:not(.lever):before {
+                &:checked+span:not(.lever):before {
                     border: unset !important;
                     border-right: 2px solid color('grey', 'darken-2') !important;
                     border-bottom: 2px solid color('grey', 'darken-2') !important;
@@ -225,6 +225,12 @@
             }
 
             &.soft {
+                +span:not(.lever) {
+                    &:after {
+                        background: hsla(var(--secondary-color-darken-20-hsl), 0.5);
+                    }
+                }
+
                 &:checked {
                     +span:not(.lever):before {
                         border-right: 2px solid var(--secondary-color-lighten-20);
@@ -232,6 +238,7 @@
                     }
 
                     +span:not(.lever):after {
+                        border: 2px solid var(--secondary-color-darken-25);
                         background-color: var(--secondary-color-darken-25);
                     }
                 }
@@ -253,6 +260,7 @@
                     }
 
                     +span:not(.lever):after {
+                        border: 2px solid var(--secondary-color-darken-25);
                         background-color: var(--secondary-color-darken-25);
                     }
 

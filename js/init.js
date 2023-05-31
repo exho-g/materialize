@@ -130,6 +130,10 @@
         // Set checkbox on forms.html to indeterminate
         var indeterminateCheckbox = document.getElementById('indeterminate-checkbox');
         if (indeterminateCheckbox !== null) indeterminateCheckbox.indeterminate = true;
+        var otherIndeterminateCheckboxes = document.querySelectorAll('.checkbox-indeterminate');
+        otherIndeterminateCheckboxes?.forEach(e => {
+            e.indeterminate = true;
+        })
 
         // Pushpin Demo Init
         if ($('.pushpin-demo-nav').length) {

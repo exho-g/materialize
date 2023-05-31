@@ -159,9 +159,15 @@
         }
 
         &.filled-in {
-            +span:not(.lever):after {
-                border-color: color('grey', 'darken-2');
-                background-color: color('grey', 'darken-2');
+            +span:not(.lever) {
+                &:before {
+                    border: 3px solid transparent;
+                }
+
+                &:after {
+                    border-color: color('grey', 'darken-2');
+                    background-color: color('grey', 'darken-2');
+                }
             }
 
             &:checked+span:not(.lever) {
@@ -182,6 +188,7 @@
                 +span:not(.lever):before {
                     border: unset !important;
                     border-right: 2px solid color('grey', 'darken-2') !important;
+                    border-bottom: 2px solid color('grey', 'darken-2') !important;
                 }
 
                 +span:not(.lever):after {
@@ -194,7 +201,7 @@
                 +span:not(.lever) {
                     &:before {
                         border: unset;
-                        border: 1px solid color('grey', 'darken-1');
+                        border: 1px solid #FFF;
                     }
 
                     &:after {

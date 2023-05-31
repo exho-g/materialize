@@ -129,27 +129,6 @@
             border-bottom: 2px solid var(--secondary-color-lighten-20);
         }
 
-        &.soft:checked {
-            +span:not(.lever):before {
-                border-right: 2px solid var(--secondary-color-lighten-20);
-                border-bottom: 2px solid var(--secondary-color-lighten-20);
-            }
-
-            +span:not(.lever):after {
-                background-color: var(--secondary-color-darken-25);
-            }
-        }
-
-        &.soft:indeterminate {
-            +span:not(.lever):before {
-                border: 1px solid var(--secondary-color-lighten-20);
-            }
-
-            +span:not(.lever):after {
-                background-color: var(--secondary-color-darken-25);
-            }
-        }
-
         &:disabled+span {
             color: color('grey', 'darken-1');
 
@@ -179,24 +158,100 @@
             }
         }
 
-        &.soft:checked:disabled {
+        &.filled-in {
             +span:not(.lever):before {
-                border-right: 2px solid rgba($button-disabled-color, 0.3);
-                border-bottom: 2px solid rgba($button-disabled-color, 0.3);
+                border: unset !important;
+                border: 1px solid color('grey', 'darken-2') !important;
             }
 
             +span:not(.lever):after {
-                background-color: rgba($button-disabled-background, 0.2);
-            }
-        }
-
-        &.soft:indeterminate:disabled {
-            +span:not(.lever):before {
-                border: 1px solid rgba($button-disabled-color, 0.3);
+                border-color: #424242;
+                background-color: #424242;
             }
 
-            +span:not(.lever):after {
-                background-color: rgba($button-disabled-background, 0.2);
+            &:checked+span:not(.lever) {
+                &:before {
+                    border: unset;
+                    border-right: 2px solid #FFF;
+                    border-bottom: 2px solid #FFF;
+                }
+
+                &:after {
+                    border: 2px solid var(--secondary-color-dark);
+                    background-color: var(--secondary-color-dark);
+                }
+            }
+
+            &:disabled,
+            &.disabled {
+                +span:not(.lever):before {
+                    border: unset !important;
+                    border-right: 2px solid color('grey', 'darken-2') !important;
+                }
+
+                +span:not(.lever):after {
+                    border-color: #424242;
+                    background-color: #424242;
+                }
+            }
+
+            &:indeterminate {
+                +span:not(.lever):before {
+                    border: unset;
+                    border: 1px solid var(--secondary-color-lighten-20);
+                }
+
+                &:disabled,
+                &.disabled {
+                    +span:not(.lever):before {
+                        border: unset !important;
+                        border: 1px solid color('grey', 'darken-2') !important;
+                    }
+                }
+            }
+
+            &.soft {
+                &:checked {
+                    +span:not(.lever):before {
+                        border-right: 2px solid var(--secondary-color-lighten-20);
+                        border-bottom: 2px solid var(--secondary-color-lighten-20);
+                    }
+
+                    +span:not(.lever):after {
+                        background-color: var(--secondary-color-darken-25);
+                    }
+                }
+
+                &:disabled {
+                    +span:not(.lever):before {
+                        border-right: 2px solid rgba($button-disabled-color, 0.3);
+                        border-bottom: 2px solid rgba($button-disabled-color, 0.3);
+                    }
+
+                    +span:not(.lever):after {
+                        background-color: rgba($button-disabled-background, 0.2);
+                    }
+                }
+
+                &:indeterminate {
+                    +span:not(.lever):before {
+                        border: 1px solid var(--secondary-color-lighten-20);
+                    }
+
+                    +span:not(.lever):after {
+                        background-color: var(--secondary-color-darken-25);
+                    }
+
+                    &:disabled {
+                        +span:not(.lever):before {
+                            border: 1px solid rgba($button-disabled-color, 0.3);
+                        }
+
+                        +span:not(.lever):after {
+                            background-color: rgba($button-disabled-background, 0.2);
+                        }
+                    }
+                }
             }
         }
     }

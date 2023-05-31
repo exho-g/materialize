@@ -159,14 +159,9 @@
         }
 
         &.filled-in {
-            +span:not(.lever):before {
-                border: unset !important;
-                border: 1px solid color('grey', 'darken-2') !important;
-            }
-
             +span:not(.lever):after {
-                border-color: #424242;
-                background-color: #424242;
+                border-color: color('grey', 'darken-2');
+                background-color: color('grey', 'darken-2');
             }
 
             &:checked+span:not(.lever) {
@@ -190,15 +185,22 @@
                 }
 
                 +span:not(.lever):after {
-                    border-color: #424242;
-                    background-color: #424242;
+                    border-color: color('grey', 'darken-3');
+                    background-color: color('grey', 'darken-3');
                 }
             }
 
             &:indeterminate {
-                +span:not(.lever):before {
-                    border: unset;
-                    border: 1px solid var(--secondary-color-lighten-20);
+                +span:not(.lever) {
+                    &:before {
+                        border: unset;
+                        border: 1px solid color('grey', 'darken-1');
+                    }
+
+                    &:after {
+                        border: 2px solid var(--secondary-color-dark);
+                        background-color: var(--secondary-color-dark);
+                    }
                 }
 
                 &:disabled,
@@ -206,6 +208,11 @@
                     +span:not(.lever):before {
                         border: unset !important;
                         border: 1px solid color('grey', 'darken-2') !important;
+                    }
+
+                    +span:not(.lever):after {
+                        border-color: color('grey', 'darken-3');
+                        background-color: color('grey', 'darken-3');
                     }
                 }
             }

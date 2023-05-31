@@ -23,6 +23,25 @@
           </p>
           <p>
             <label>
+              <input id="indeterminate-checkbox" type="checkbox" />
+              <span>Indeterminate Style</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" disabled="disabled" />
+              <span>Green (Checked Disabled)</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" disabled="disabled" />
+              <span>Brown (Unchecked Disabled)</span>
+            </label>
+          </p>
+
+          <p>
+            <label>
               <input type="checkbox" class="filled-in" checked="checked" />
               <span>Filled in</span>
             </label>
@@ -43,24 +62,6 @@
             <label>
               <input type="checkbox" class="filled-in soft circle" checked="checked" />
               <span>Filled in soft circle</span>
-            </label>
-          </p>
-          <p>
-            <label>
-              <input id="indeterminate-checkbox" type="checkbox" />
-              <span>Indeterminate Style</span>
-            </label>
-          </p>
-          <p>
-            <label>
-              <input type="checkbox" checked="checked" disabled="disabled" />
-              <span>Green</span>
-            </label>
-          </p>
-          <p>
-            <label>
-              <input type="checkbox" disabled="disabled" />
-              <span>Brown</span>
             </label>
           </p>
         </form>
@@ -85,30 +86,6 @@
     &lt;/p>
     &lt;p>
       &lt;label>
-        &lt;input type="checkbox" class="filled-in" checked="checked" />
-        &lt;span>Filled in&lt;/span>
-      &lt;/label>
-    &lt;/p>
-    &lt;p>
-      &lt;label>
-        &lt;input type="checkbox" class="filled-in soft" checked="checked" />
-        &lt;span>Filled in soft&lt;/span>
-      &lt;/label>
-    &lt;/p>
-    &lt;p>
-      &lt;label>
-        &lt;input type="checkbox" class="filled-in circle" checked="checked" />
-        &lt;span>Filled in circle&lt;/span>
-      &lt;/label>
-    &lt;/p>
-    &lt;p>
-      &lt;label>
-        &lt;input type="checkbox" class="filled-in soft circle" checked="checked" />
-        &lt;span>Filled in soft circle&lt;/span>
-      &lt;/label>
-    &lt;/p>
-    &lt;p>
-      &lt;label>
         &lt;input id="indeterminate-checkbox" type="checkbox" />
         &lt;span>Indeterminate Style&lt;/span>
       &lt;/label>
@@ -116,17 +93,247 @@
     &lt;p>
       &lt;label>
         &lt;input type="checkbox" checked="checked" disabled="disabled" />
-        &lt;span>Green&lt;/span>
+        &lt;span>Green (Checked Disabled)&lt;/span>
       &lt;/label>
     &lt;/p>
     &lt;p>
       &lt;label>
         &lt;input type="checkbox" disabled="disabled" />
-        &lt;span>Brown&lt;/span>
+        &lt;span>Brown (Unchecked Disabled)&lt;/span>
       &lt;/label>
     &lt;/p>
   &lt;/form>
         </code></pre>
+      </div>
+
+      <!-- Filled In -->
+      <div id="filledin" class="section scrollspy">
+        <h3 class="header">Filled in</h3>
+        <p>Add the <code class="language-markup">filled-in</code> class to the checkbox input to use the this style.</p>
+
+        <form action="#">
+          <p>
+            <label>
+              <input type="checkbox" class="filled-in" />
+              <span>Red</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" class="filled-in" checked="checked" />
+              <span>Yellow</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" class="filled-in checkbox-indeterminate" />
+              <span>Indeterminate Style</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" class="filled-in" checked="checked" disabled="disabled" />
+              <span>Green (Checked Disabled)</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" class="filled-in" disabled="disabled" />
+              <span>Brown (Unchecked Disabled)</span>
+            </label>
+          </p>
+        </form>
+
+        <br>
+        <pre style="padding-top: 0px;">
+          <span class="copyMessage">Copied!</span>
+          <i class="material-icons copyButton">content_copy</i>
+          <code class="language-markup copiedText">
+  &lt;form action="#">
+    &lt;p>
+      &lt;label>
+        &lt;input type="checkbox" class="filled-in" />
+        &lt;span>Red&lt;/span>
+      &lt;/label>
+    &lt;/p>
+    &lt;p>
+      &lt;label>
+        &lt;input type="checkbox" class="filled-in" checked="checked" />
+        &lt;span>Yellow&lt;/span>
+      &lt;/label>
+    &lt;/p>
+    &lt;p>
+      &lt;label>
+        &lt;input id="indeterminate-checkbox" type="checkbox" class="filled-in" />
+        &lt;span>Indeterminate Style&lt;/span>
+      &lt;/label>
+    &lt;/p>
+    &lt;p>
+      &lt;label>
+        &lt;input type="checkbox" class="filled-in" checked="checked" disabled="disabled" />
+        &lt;span>Green (Checked Disabled)&lt;/span>
+      &lt;/label>
+    &lt;/p>
+    &lt;p>
+      &lt;label>
+        &lt;input type="checkbox" class="filled-in" disabled="disabled" />
+        &lt;span>Brown (Unchecked Disabled)&lt;/span>
+      &lt;/label>
+    &lt;/p>
+  &lt;/form>
+        </code></pre>
+        <br>
+
+        <h5>Circle</h5>
+        <p>Add the <code class="language-markup">circle</code> class to the checkbox input with filled-in class to make the checkbox circle.</p>
+        <form action="#">
+          <p>
+            <label>
+              <input type="checkbox" class="filled-in circle" />
+              <span>Red</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" class="filled-in circle" checked="checked" />
+              <span>Yellow</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" class="filled-in circle checkbox-indeterminate" />
+              <span>Indeterminate Style</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" class="filled-in circle" checked="checked" disabled="disabled" />
+              <span>Green (Checked Disabled)</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" class="filled-in circle" disabled="disabled" />
+              <span>Brown (Unchecked Disabled)</span>
+            </label>
+          </p>
+        </form>
+
+        <br>
+        <pre style="padding-top: 0px;">
+          <span class="copyMessage">Copied!</span>
+          <i class="material-icons copyButton">content_copy</i>
+          <code class="language-markup copiedText">
+  &lt;form action="#">
+    &lt;p>
+      &lt;label>
+        &lt;input type="checkbox" class="filled-in circle" />
+        &lt;span>Red&lt;/span>
+      &lt;/label>
+    &lt;/p>
+    &lt;p>
+      &lt;label>
+        &lt;input type="checkbox" class="filled-in circle" checked="checked" />
+        &lt;span>Yellow&lt;/span>
+      &lt;/label>
+    &lt;/p>
+    &lt;p>
+      &lt;label>
+        &lt;input id="indeterminate-checkbox" type="checkbox" class="filled-in circle" />
+        &lt;span>Indeterminate Style&lt;/span>
+      &lt;/label>
+    &lt;/p>
+    &lt;p>
+      &lt;label>
+        &lt;input type="checkbox" class="filled-in circle" checked="checked" disabled="disabled" />
+        &lt;span>Green (Checked Disabled)&lt;/span>
+      &lt;/label>
+    &lt;/p>
+    &lt;p>
+      &lt;label>
+        &lt;input type="checkbox" class="filled-in circle" disabled="disabled" />
+        &lt;span>Brown (Unchecked Disabled)&lt;/span>
+      &lt;/label>
+    &lt;/p>
+  &lt;/form>
+        </code></pre>
+        <br>
+
+        <h5>Soft</h5>
+        <p>Add the <code class="language-markup">soft</code> class to the checkbox input with filled-in class to make the background less opaque.</p>
+        <p>Please note that you can also combine this with <code class="language-markup">circle</code> class.</p>
+        <form action="#">
+          <p>
+            <label>
+              <input type="checkbox" class="filled-in soft" />
+              <span>Red</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" class="filled-in soft" checked="checked" />
+              <span>Yellow</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" class="filled-in soft checkbox-indeterminate" />
+              <span>Indeterminate Style</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" class="filled-in soft" checked="checked" disabled="disabled" />
+              <span>Green (Checked Disabled)</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" class="filled-in soft" disabled="disabled" />
+              <span>Brown (Unchecked Disabled)</span>
+            </label>
+          </p>
+        </form>
+
+        <br>
+        <pre style="padding-top: 0px;">
+          <span class="copyMessage">Copied!</span>
+          <i class="material-icons copyButton">content_copy</i>
+          <code class="language-markup copiedText">
+  &lt;form action="#">
+    &lt;p>
+      &lt;label>
+        &lt;input type="checkbox" class="filled-in soft" />
+        &lt;span>Red&lt;/span>
+      &lt;/label>
+    &lt;/p>
+    &lt;p>
+      &lt;label>
+        &lt;input type="checkbox" class="filled-in soft" checked="checked" />
+        &lt;span>Yellow&lt;/span>
+      &lt;/label>
+    &lt;/p>
+    &lt;p>
+      &lt;label>
+        &lt;input id="indeterminate-checkbox" type="checkbox" class="filled-in soft" />
+        &lt;span>Indeterminate Style&lt;/span>
+      &lt;/label>
+    &lt;/p>
+    &lt;p>
+      &lt;label>
+        &lt;input type="checkbox" class="filled-in soft" checked="checked" disabled="disabled" />
+        &lt;span>Green (Checked Disabled)&lt;/span>
+      &lt;/label>
+    &lt;/p>
+    &lt;p>
+      &lt;label>
+        &lt;input type="checkbox" class="filled-in soft" disabled="disabled" />
+        &lt;span>Brown (Unchecked Disabled)&lt;/span>
+      &lt;/label>
+    &lt;/p>
+  &lt;/form>
+        </code></pre>
+        <br>
       </div>
 
 
@@ -137,6 +344,7 @@
         <div style="height: 1px;">
           <ul class="section table-of-contents">
             <li><a href="#checkbox">Checkboxes</a></li>
+            <li><a href="#filledin">Filled in</a></li>
           </ul>
         </div>
       </div>

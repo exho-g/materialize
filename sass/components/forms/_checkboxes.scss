@@ -122,7 +122,7 @@
     left: 0;
     position: absolute;
     /* .1s delay is for check animation */
-    transition: border .25s, background-color .25s, width .20s .1s, height .20s .1s, top .20s .1s, left .20s .1s;
+    transition: border .25s, background-color .25s, width .20s .1s, height .20s .1s, top .20s .1s, left .20s .1s, transform .20s .1s;
     z-index: 1;
   }
 
